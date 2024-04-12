@@ -1,0 +1,2612 @@
+<!DOCTYPE html><html lang="EN-US"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="generator" content="ReSpec 34.5.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
+.warning{border-color:#f11;border-color:var(--warning-border,#f11);border-width:.2em;border-style:solid;background:#fbe9e9;background:var(--warning-bg,#fbe9e9);color:#000;color:var(--text,#000)}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;border-bottom-color:var(--indextable-hover-bg,#fff);top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1;border-bottom-color:var(--indextable-hover-bg,#a2a9b1)}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;color:var(--text,#000);margin-top:.25em}
+.dfn-panel ul a[href]{color:#333;color:var(--text,#333)}
+.dfn-panel>div{display:flex}
+.dfn-panel a.self-link{font-weight:700;margin-right:auto}
+.dfn-panel .marker{padding:.1em;margin-left:.5em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;color:#040b1c}
+.dfn-panel .marker.dfn-exported{background:#d1edfd;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel .marker.idl-block{background:#8ccbf2;box-shadow:0 0 0 .125em #0670b161}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
+</style>
+
+
+<title>Overlay Capabilities Inventory</title>
+
+
+<style>
+
+.rt {
+	  font-weight: bold;
+	      font-size: 110%;
+	                           color: darkred;
+				                  }
+
+</style>
+
+							                
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+:is(h1,h2,h3,h4,h5,h6,a) abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul{column-count:2}
+#issue-summary li{list-style:none;display:inline-block}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+.self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+aside.example .marker>a.self-link{color:inherit}
+.header-wrapper{display:flex;align-items:baseline}
+:is(h2,h3,h4,h5,h6):not(#toc>h2,#abstract>h2,#sotd>h2,.head>h2){position:relative;left:-.5em}
+:is(h2,h3,h4,h5,h6):not(#toch2)+a.self-link{color:inherit;order:-1;position:relative;left:-1.1em;font-size:1rem;opacity:.5}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";text-decoration:none;color:var(--heading-text)}
+:is(h2,h3)+a.self-link{top:-.2em}
+:is(h4,h5,h6)+a.self-link::before{color:#000}
+@media (max-width:767px){
+dd{margin-left:0}
+}
+@media print{
+.removeOnSave{display:none}
+}
+</style>
+									                
+
+<meta name="description" content="Lately various web based accessibility enhancement, remediation, and reporting services have been made available to web content providers under an umbrella term: Overlay.
+			Typically overlays work by adding a snippet of JavaScript into a web content provider's page. This single line of additional code functions to enable additional content processing on each page load delivered through
+			the overlay provider's servers,  prior to delivery to the end user. While this routing paradigm is by no means unique to accessibility applications, it does introduce accessibility opportunities and
+			challenges.">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#222}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#222;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
+  "trace": true,
+  "useExperimentalStyles": true,
+  "doRDFa": "1.1",
+  "includePermalinks": true,
+  "permalinkEdge": true,
+  "permalinkHide": false,
+  "noRecTrack": true,
+  "tocIntroductory": true,
+  "subtitle": "Inventory of edge capabilities",
+  "specStatus": "CG-DRAFT",
+  "diffTool": "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
+  "shortName": "a11yedge-capabilities",
+  "copyrightStart": "2022",
+  "license": "w3c-software-doc",
+  "previousPublishDate": "",
+  "editors": [
+    {
+      "name": "Janina Sajka",
+      "url": "http://rednote.net/",
+      "w3cid": 33688
+    }
+  ],
+  "authors": [
+    {
+      "name": "Janina Sajka",
+      "URL": "https://linkedin.com/in/jsajka",
+      "mailto": "janina@rednote.net",
+      "w3cid": 33688,
+      "url": "mailto:janina@rednote.net"
+    },
+    {
+      "name": "Lionel Wolberger",
+      "company": "Userway",
+      "companyURL": "https://userway.org/",
+      "mailto": "lionel@userway.org",
+      "w3cid": 106386,
+      "url": "mailto:lionel@userway.org"
+    },
+    {
+      "name": "Jason Taylor",
+      "company": "UsableNet",
+      "companyURL": "http://usablenet.com/",
+      "w3cid": 151178
+    }
+  ],
+  "group": "a11yedge",
+  "maxTocLevel": 3,
+  "publishISODate": "2024-04-12T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report April 12, 2024"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/cg-draft"></head>
+
+<body class="h-entry informative"><div class="head">
+    
+    <h1 id="title" class="title">Overlay Capabilities Inventory</h1> <h2 id="subtitle" class="subtitle">Inventory of edge capabilities</h2>
+    <p id="w3c-state">
+      <a href="https://www.w3.org/standards/types#reports">Draft Community Group Report</a>
+      <time class="dt-published" datetime="2024-04-12">April 12, 2024</time>
+    </p>
+    <dl>
+      
+      <dt>Latest published version:</dt><dd>
+              <a href="https://www.w3.org/a11yedge-capabilities/">https://www.w3.org/a11yedge-capabilities/</a>
+            </dd>
+      
+      
+      
+      
+      
+      <dt>Editor:</dt><dd class="editor p-author h-card vcard" data-editor-id="33688">
+    <a class="u-url url p-name fn" href="http://rednote.net/">Janina Sajka</a>
+  </dd>
+      
+      <dt>Authors:</dt><dd class="editor p-author h-card vcard" data-editor-id="33688">
+    <a class="ed_mailto u-email email p-name" href="mailto:janina@rednote.net">Janina Sajka</a>
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="106386">
+    <a class="ed_mailto u-email email p-name" href="mailto:lionel@userway.org">Lionel Wolberger</a> (<a class="p-org org h-org" href="https://userway.org/">Userway</a>)
+  </dd><dd class="editor p-author h-card vcard" data-editor-id="151178">
+    <span class="p-name fn">Jason Taylor</span> (<a class="p-org org h-org" href="http://usablenet.com/">UsableNet</a>)
+  </dd>
+      
+      
+    </dl>
+    
+    <p class="copyright">
+          <a href="https://www.w3.org/policies/#copyright">Copyright</a>
+          ©
+          2022-2024
+          
+          the Contributors to the Overlay Capabilities Inventory
+          Specification, published by the
+          <a href="https://www.w3.org/groups/cg/a11yedge">Accessibility at the Edge Community Group</a> under the
+          <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
+                <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
+                is available.
+              
+        </p>
+    <hr title="Separator for header">
+  </div>
+	<a href="https://www.w3.org/"><img alt="W3C" height="48" src="https://www.w3.org/Icons/w3c_home" width="72"></a>
+	 
+	<section class="title notoc"><div class="header-wrapper"><h2 id="overlay-capabilities-inventory"><b>Overlay Capabilities Inventory</b></h2><a class="self-link" href="#overlay-capabilities-inventory" aria-label="Permalink for this Section"></a></div>
+
+
+	</section>
+
+        <section id="abstract" class="introductory"><h2>Abstract</h2>
+		        
+			<p>Lately various web based accessibility enhancement, remediation, and reporting services have been made available to web content providers under an umbrella term: <q>Overlay.</q>
+			Typically overlays work by adding a snippet of JavaScript into a web content provider's page. This single line of additional code functions to enable additional content processing on each page load delivered through
+			the overlay provider's servers,  prior to delivery to the end user. While this routing paradigm is by no means unique to accessibility applications, it does introduce accessibility opportunities and
+			challenges.</p>
+
+			<p>In this document we explore the specific capabilities that are, or could be,  applied for accessibility purposes whether by overlay technologies, browser extensions, plugins installed on user's devices or by other methods and tools. Some of the capabilities explored here are already available and used in web content delivery systems today. Others suggest best practices guidance. Still others strike us as highly desirable, but will require the creation of a normative W3C specification, especially in the case of cross-platform functionality. As with any web technology, poor design or implementation will predictably yield unsatisfactory user experiences, while well-architected and well-implemented solutions will significantly enhance the user's experience.</p>
+
+			        </section>
+
+				  <section id="sotd" class="introductory"><h2>Status of This Document</h2><p>
+      This specification was published by the
+      <a href="https://www.w3.org/groups/cg/a11yedge">Accessibility at the Edge Community Group</a>. It is not a W3C Standard nor is it
+      on the W3C Standards Track.
+      
+            Please note that under the
+            <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>
+            there is a limited opt-out and other conditions apply.
+          
+      Learn more about
+      <a href="https://www.w3.org/community/">W3C Community and Business Groups</a>.
+    </p>
+					  <section id="status-of-this-document"><div class="header-wrapper"><h3 id="status-of-this-document-0">Status of this Document</h3><a class="self-link" href="#status-of-this-document" aria-label="Permalink for this Section"></a></div>
+				  </section></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#status-of-this-document">Status of this Document</a></li></ol></li><li class="tocline"><a class="tocxref" href="#introduction"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#edgedef"><bdi class="secno">1.1 </bdi>What is Meant By <q>Edge?</q></a></li><li class="tocline"><a class="tocxref" href="#AutonomousAutomation"><bdi class="secno">1.2 </bdi>Automatability</a></li><li class="tocline"><a class="tocxref" href="#contentsource"><bdi class="secno">1.3 </bdi>Web Content Today is Dynamic</a></li><li class="tocline"><a class="tocxref" href="#docorg"><bdi class="secno">1.4 </bdi>About This Document</a></li></ol></li><li class="tocline"><a class="tocxref" href="#gloss"><bdi class="secno">2. </bdi>Glossary</a></li><li class="tocline"><a class="tocxref" href="#contentmanage"><bdi class="secno">3. </bdi>Content—Usually HTML</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#contedit"><bdi class="secno">3.1 </bdi>Content Editing</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#imgalt"><bdi class="secno">3.1.1 </bdi>Image Alternative Text Provisioning</a></li><li class="tocline"><a class="tocxref" href="#tooltip"><bdi class="secno">3.1.2 </bdi>Tooltip Provisioning</a></li><li class="tocline"><a class="tocxref" href="#lang"><bdi class="secno">3.1.3 </bdi>Site Language Indication</a></li><li class="tocline"><a class="tocxref" href="#titling"><bdi class="secno">3.1.4 </bdi>Title Provisioning</a></li></ol></li><li class="tocline"><a class="tocxref" href="#feedback"><bdi class="secno">3.2 </bdi>User Feedback</a></li><li class="tocline"><a class="tocxref" href="#contentmod"><bdi class="secno">3.3 </bdi>Content Moderation</a></li><li class="tocline"><a class="tocxref" href="#videocaption"><bdi class="secno">3.4 </bdi>Video Captioning</a></li><li class="tocline"><a class="tocxref" href="#pdf"><bdi class="secno">3.5 </bdi>PDF Remediation</a></li><li class="tocline"><a class="tocxref" href="#semiotics"><bdi class="secno">3.6 </bdi>Text Services (Semiotics)</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#dictionary"><bdi class="secno">3.6.1 </bdi>Dictionary On Demand</a></li><li class="tocline"><a class="tocxref" href="#translate"><bdi class="secno">3.6.2 </bdi>Live Site Translations</a></li><li class="tocline"><a class="tocxref" href="#qualitytts"><bdi class="secno">3.6.3 </bdi>Read Content Aloud</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#present"><bdi class="secno">4. </bdi>Presentation—Usually CSS</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#curfoc"><bdi class="secno">4.1 </bdi>Cursor &amp; Focus</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#cursorsize"><bdi class="secno">4.1.1 </bdi>Optimize Cursor Size</a></li><li class="tocline"><a class="tocxref" href="#readingguide"><bdi class="secno">4.1.2 </bdi>Supply a Reading Guide</a></li><li class="tocline"><a class="tocxref" href="#linkviz"><bdi class="secno">4.1.3 </bdi>Optimize Hyperlink Visibility</a></li></ol></li><li class="tocline"><a class="tocxref" href="#txtrans"><bdi class="secno">4.2 </bdi>Text Styling</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#a11yfonts"><bdi class="secno">4.2.1 </bdi>Provide Accessible Fonts</a></li><li class="tocline"><a class="tocxref" href="#dyslexiafont"><bdi class="secno">4.2.2 </bdi>Provide Dyslexia Friendly Fonts</a></li><li class="tocline"><a class="tocxref" href="#textsize"><bdi class="secno">4.2.3 </bdi>Optimize Text Size</a></li><li class="tocline"><a class="tocxref" href="#textspace"><bdi class="secno">4.2.4 </bdi>Optimize Text Spacing (Whitespacing)</a></li><li class="tocline"><a class="tocxref" href="#lineheight"><bdi class="secno">4.2.5 </bdi>Optimize Line Height</a></li><li class="tocline"><a class="tocxref" href="#margins"><bdi class="secno">4.2.6 </bdi>Margin Management
+</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#usrgrx"><bdi class="secno">4.2.7 </bdi>Images &amp; Graphics</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#color"><bdi class="secno">4.2.8 </bdi>Color</a></li><li class="tocline"><a class="tocxref" href="#pricing"><bdi class="secno">4.2.9 </bdi>Accessible Pricing (Strikethroughs)</a></li><li class="tocline"><a class="tocxref" href="#resetall"><bdi class="secno">4.2.10 </bdi>Reset All Personalizations</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#interact"><bdi class="secno">5. </bdi>Functionality—Usually Javascript</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#semstruct"><bdi class="secno">5.1 </bdi>Structural Semantics Remediation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#structure"><bdi class="secno">5.1.1 </bdi>Expose Structural Semantics</a></li><li class="tocline"><a class="tocxref" href="#structnorm"><bdi class="secno">5.1.2 </bdi>Normalize the Structural Composite</a></li></ol></li><li class="tocline"><a class="tocxref" href="#nav"><bdi class="secno">5.2 </bdi>Navigation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#structnav"><bdi class="secno">5.2.1 </bdi>Semantic Navigation</a></li><li class="tocline"><a class="tocxref" href="#keybdnav"><bdi class="secno">5.2.2 </bdi>Keyboard Navigation Enhancements</a></li></ol></li><li class="tocline"><a class="tocxref" href="#forms"><bdi class="secno">5.3 </bdi>Forms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#FormLabel"><bdi class="secno">5.3.1 </bdi>Form Labels</a></li><li class="tocline"><a class="tocxref" href="#formvalid"><bdi class="secno">5.3.2 </bdi>Form Validation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#hyperlink"><bdi class="secno">5.4 </bdi>Interactive Text Elements
+</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#interactivelements"><bdi class="secno">5.4.1 </bdi>Interactive Elements Status Clarification</a></li></ol></li><li class="tocline"><a class="tocxref" href="#butlink"><bdi class="secno">5.5 </bdi>Hyperlinks &amp; Buttons</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#externallinks"><bdi class="secno">5.5.1 </bdi>External Link Target Notification</a></li><li class="tocline"><a class="tocxref" href="#ambiglink"><bdi class="secno">5.5.2 </bdi>Ambiguous Link Notification</a></li></ol></li><li class="tocline"><a class="tocxref" href="#clientinteract"><bdi class="secno">5.6 </bdi>Client-Side Interactions</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#timeout"><bdi class="secno">5.6.1 </bdi>Managing Time Outs</a></li><li class="tocline"><a class="tocxref" href="#axvalid"><bdi class="secno">5.6.2 </bdi>Accessible Validation</a></li><li class="tocline"><a class="tocxref" href="#ClientInteractivity"><bdi class="secno">5.6.3 </bdi>Client-Side Interactions</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#customcomponents"><bdi class="secno">5.6.4 </bdi>Custom components</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#txteffects"><bdi class="secno">5.6.5 </bdi>Textual Affectations</a><ol class="toc"></ol></li><li class="tocline"><a class="tocxref" href="#textinteract"><bdi class="secno">5.6.6 </bdi>Interactive Text Elements
+</a></li><li class="tocline"><a class="tocxref" href="#notify"><bdi class="secno">5.6.7 </bdi>Notifications</a></li><li class="tocline"><a class="tocxref" href="#auth-n"><bdi class="secno">5.6.8 </bdi>Authentication</a></li><li class="tocline"><a class="tocxref" href="#richmedia"><bdi class="secno">5.6.9 </bdi>Rich Media</a></li><li class="tocline"><a class="tocxref" href="#voxcom"><bdi class="secno">5.6.10 </bdi>Voice Command</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#manage"><bdi class="secno">6. </bdi>Management</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#autoai"><bdi class="secno">6.1 </bdi>Leveraging Automation</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#knowledge"><bdi class="secno">6.1.1 </bdi>Having Sufficient Knowledge &amp; Skills</a></li><li class="tocline"><a class="tocxref" href="#3rd-party"><bdi class="secno">6.1.2 </bdi>My Site, Their Service</a></li><li class="tocline"><a class="tocxref" href="#onlyedgeknows"><bdi class="secno">6.1.3 </bdi>Only The Edge Knows For Sure</a></li><li class="tocline"><a class="tocxref" href="#autobgproc"><bdi class="secno">6.1.4 </bdi>Fully Automated Transformations</a></li><li class="tocline"><a class="tocxref" href="#autoWCAG"><bdi class="secno">6.1.5 </bdi>Automated Detection and Remediation of WCAG Violations</a></li><li class="tocline"><a class="tocxref" href="#HIT"><bdi class="secno">6.1.6 </bdi>Human Mediated Automated Remediation</a></li><li class="tocline"><a class="tocxref" href="#a11yedit"><bdi class="secno">6.1.7 </bdi>Accessibility Editing, By Site Owner</a></li><li class="tocline"><a class="tocxref" href="#a11yedit3rd"><bdi class="secno">6.1.8 </bdi>Accessibility Editing, By 3rd Party</a></li></ol></li><li class="tocline"><a class="tocxref" href="#cntresp"><bdi class="secno">6.2 </bdi>Content Provider Checks</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#profile-userint"><bdi class="secno">6.2.1 </bdi>Feature-Bundling Profiles</a></li><li class="tocline"><a class="tocxref" href="#a11ystmnt"><bdi class="secno">6.2.2 </bdi>Accessibility Statement Availability</a></li><li class="tocline"><a class="tocxref" href="#a11yprov"><bdi class="secno">6.2.3 </bdi>Accessibility Provider Identification</a></li><li class="tocline"><a class="tocxref" href="#reporting"><bdi class="secno">6.2.4 </bdi>Accessibility Issue Reporting</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#aspire"><bdi class="secno">7. </bdi>Aspirational</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#personconfig"><bdi class="secno">7.1 </bdi>Personalized &amp; Portable Configuration Profiles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#portable"><bdi class="secno">7.1.1 </bdi>Configure Once, Use Everywhere</a></li></ol></li><li class="tocline"><a class="tocxref" href="#surrogacy"><bdi class="secno">7.2 </bdi>Surrogacy Support</a></li><li class="tocline"><a class="tocxref" href="#normalize"><bdi class="secno">7.3 </bdi>Normalize Control &amp; Content Layout</a></li><li class="tocline"><a class="tocxref" href="#formatrans"><bdi class="secno">7.4 </bdi>File Format Translation</a></li><li class="tocline"><a class="tocxref" href="#caltrans"><bdi class="secno">7.5 </bdi>Calendar Format Translation</a></li><li class="tocline"><a class="tocxref" href="#commandconversion"><bdi class="secno">7.6 </bdi>Support Command Normalization</a></li><li class="tocline"><a class="tocxref" href="#skim"><bdi class="secno">7.7 </bdi>Mediate Content Skimming</a></li><li class="tocline"><a class="tocxref" href="#mediate-skimming-sign-language-content"><bdi class="secno">7.8 </bdi>Mediate Skimming Sign-Language Content</a></li></ol></li><li class="tocline"><a class="tocxref" href="#Appendices"><bdi class="secno">A. </bdi>Appendices</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#Appendix-A"><bdi class="secno">A.1 </bdi>Design Principles</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#user-triggered-transformations"><bdi class="secno">A.1.1 </bdi>User-triggered Transformations</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#Appendix-D"><bdi class="secno">B. </bdi>Acknowledgments</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#participants-of-the-a11yedge-community-group-who-contributed-to-the-development-of-this-document"><bdi class="secno">B.1 </bdi>Participants of the A11yEdge Community Group who contributed to the development of this document:</a></li></ol></li></ol></nav>
+
+		<section id="introduction"><div class="header-wrapper"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#introduction" aria-label="Permalink for Section 1."></a></div>
+	     
+
+	<section id="edgedef"><div class="header-wrapper"><h3 id="x1-1-what-is-meant-by-edge"><bdi class="secno">1.1 </bdi>What is Meant By <q>Edge?</q></h3><a class="self-link" href="#edgedef" aria-label="Permalink for Section 1.1"></a></div>
+		
+
+		<p>In this document the term <q>edge technology</q> refers to those web technologies most proximate to the web user that canstill affect the accessibility of assembled (mashed-up) web content. Typically it is:</p>
+
+		<ol>
+			<li>The user agent (with its user chosen plugins and extensions) together with the host and physical device the user uses to read and interact with web content;</li>
+			<li>But more powerfully (as we shall soon see), it is the last compositor of content delivered to the user. It is of course cloud-based. And, while it might not be geographically proximate to the user, it functions most powerfully when it functions as the user's proxy agent for organizing web content in the manner the user is best able to use.</li>
+		</ol>
+
+		<p>Both of these are privileged positions providing access to much information about the user and how the user functions. While we note the need to preserve the web user's privacy here, the remainder of this document focusses on providing accessibility support and assumes privacy is preserved through mechanisms detailed in other W3C technologies.
+	</p></section>
+
+	     <section id="AutonomousAutomation"><div class="header-wrapper"><h3 id="x1-2-automatability"><bdi class="secno">1.2 </bdi>Automatability</h3><a class="self-link" href="#AutonomousAutomation" aria-label="Permalink for Section 1.2"></a></div>
+	        
+
+		<p>For each capability, in the subsections titled <q>Automatability</q>, we pragmatically evaluate the extent to which automation, supported through AI and Machine Learning, can operate autonomously to detect, remediate, and verify satisfactory results, i.e. achieve <q>autonomous automation</q> for the capability.</p>
+
+<p>It’s crucial to understand the distinction between autonomous automation involving AI or Machine Learning that is identified here and the broader application of AI and automation as tools that assist humans in the Accessibility process, which in itself can influence the quality of any team addressing these capabilities. This subsection aims to solely focus on giving an indication of the likely potential using the following comments in that subsection.</p>
+
+<ul>
+	<li><q>In many cases</q> — indicating automation could yield satisfactory results with this capability.</li>
+	<li><q>In some cases</q> — indicating automation could yield satisfactory results with this capability in some cases, depending on the way the capability has been implemented.</li>
+	<li><q>In no significant way</q> — indicating that there are currently no cases where automation could yield satisfactory results with this capability.</li>
+</ul>
+
+<p>By grounding our discussion in this practical approach, we align with the abstract’s themes of opportunities and challenges presented by new technologies in enhancing web accessibility.</p>
+
+	     </section>
+
+	     <section id="contentsource"><div class="header-wrapper"><h3 id="x1-3-web-content-today-is-dynamic"><bdi class="secno">1.3 </bdi>Web Content Today is Dynamic</h3><a class="self-link" href="#contentsource" aria-label="Permalink for Section 1.3"></a></div>
+	        
+
+		  <p>In the main the classic paradigm of a web domain owner serving content directly to end users across the Internet has long ago become a historical artifact.
+		    Today's typical web page is often a dizzying composite of multiple content streams injected from various sources, including content unique to the user's locale and even to the specific user herself. Content
+		    delivered to a user today may be a unique <q>one-off</q> composite that may well change when the page is refreshed. The <a href="https://almanac.httparchive.org/en/2021/third-parties">2021 Web Almanac</a> notes more
+		    than 20 third party injection streams for today's typical web site, with 10% containing over 90 separate content injections.</p>
+
+		    <p>The source of the typical website
+		    today is actually many sources.
+
+		    Even bespoke web applications aren't always created by a single
+		    source. Few developers exclusively use their own code. They rely on
+		    libraries, components and frameworks to build their web content.</p>
+		    
+		    <p> Edge technologies may actually be best placed to help overcome the problem
+		    of substandard accessibility in composite content delivered to end users by identifying precisely the accessibility challenges that end users may experience and helping remediate them where it matters most—at the user
+		    level, for the simple reason that technology based tracking and reporting can examine far more end user payload deliveries than human testing will ever cover. In particular we consider the role played by various edge-based players beginning with the Content Delivery Network (CDN), the operating system on the user's devices, user-agent, browser extensions, assistive technologies, and/or JavaScript overlays.  Whether the resulting remediation is an in-process transformation,
+		    or an upstream recoding, gathering and reporting many samples to upstream end points is arguably the most efficient way to spot anomalous patterns (and a great application for A-I analysis).</p>
+		     
+		</section>
+		<section id="docorg"><div class="header-wrapper"><h3 id="x1-4-about-this-document"><bdi class="secno">1.4 </bdi>About This Document</h3><a class="self-link" href="#docorg" aria-label="Permalink for Section 1.4"></a></div>
+			
+
+	     <p>This document describes some capabilities important to web content accessibility that can be provided <q>at the edge</q>, and attempts to answer several questions about them. The questions are:</p>
+
+<ul>
+<li>Source: What is the role of the author (or content source code developer) in providing this capability and ensuring that it is accessible?</li>
+
+<li>Trade-offs: When this capability is enabled on the edge, does it duplicate functionality elsewhere in the stack? When we find  redundancies, we ask whether they can and should be avoided?</li>
+
+<li>Benefit: What is the potential benefit of performing this capability at the edge?</li>
+
+<li>Related topics: Draw attention to capabilities that are related in some way, e.g. perhaps they're mutually enhancing, or perhaps they are the prospective benefit of a normative cross-platform behavior specification.</li>
+</ul>
+
+	<p>The capabilities discussed are organized under two primary categories with several subcategories under each primary section. This two-poled approach conforms with client-server architecture, the backbone of all digital transactions and interactions that take place over the Internet. The primary categories are:</p>
+
+	<ul>
+		<li>Capabilities the end user can (or should) be able to control fully.</li>
+		<li>Capabilities which are necessarily controlled by the content provider even though they can profoundly affect the accessibility experience.</li>
+	</ul>
+
+<p>The Content Provider, analogous to the server, plays the pivotal role of specifying and delivering diverse forms of digital content ranging from text, images, audio, video, to interactive elements. They curate the experiences that users consume and engage with, thereby shaping the digital landscape.
+
+A selection of some primary Content Provider roles:
+</p><table>
+  <tbody><tr>
+    <th>Role</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Author</td>
+    <td>Responsible for generating the primary content, be it text, script for audio/video, or conceptual outlines for interactive elements.</td>
+  </tr>
+  <tr>
+    <td>Designer</td>
+    <td>Work on the aesthetic aspects of the content including the layout, color scheme, typography, and visual elements. They also handle the user interface and user experience design for interactive content.</td>
+  </tr>
+  <tr>
+    <td>Product Owner</td>
+    <td>Oversee the overall content creation and distribution project, make key decisions and coordinate between different teams to ensure the final product meets its intended objectives.</td>
+  </tr>
+  <tr>
+    <td>Developer</td>
+    <td>Implement the designs into functional code. They work on the website or application where the content will be hosted, ensuring its responsive, functional, and accessible. Some write proprietary algorithms, but most call and configure frameworks and libraries written by communities of coders.</td>
+  </tr>
+  <tr>
+    <td>Marketer</td>
+    <td>Oversee and implement the marketing strategy for the content. They coordinate marketing campaigns and work closely with other teams to ensure the content reaches the desired audience. Growth marketers utilize data-driven marketing techniques to help the business expand its customer base. They use various strategies and tools to attract, engage, and retain users driving critical website requirements.</td>
+  </tr>
+</tbody></table>
+
+
+<p>On the other end of the spectrum is the End User, or the client, who experiences this digital content. End users span a wide range, varying in their demographic, cognitive, and physical attributes. They also bring to the table their unique needs, preferences, and accessibility requirements. It is for these users that content providers shape their digital content and experiences, with or without the knowledge that the user'
+s own hardware and software may render it in ways the Content Provider never imagined. </p>
+
+<p>Content sites are inherently dynamic; they are assembled for the end-user in a mashup, a unique blend of content that can vary significantly from user to user. A selection of some of the hardware, software, tools and technologies that participate in this edge activity include:</p>
+
+<table>
+  <tbody><tr>
+    <th>Technology</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>User-Agent (Browser)</td>
+    <td>Interprets and presents web content to the end user. Different browsers may render web content in slightly different ways due to their different rendering engines.</td>
+  </tr>
+  <tr>
+    <td>Assistive Technology</td>
+    <td>Devices or software applications that assist individuals with disabilities or impairments. This could include screen readers, alternative input devices, and voice recognition software.</td>
+  </tr>
+  <tr>
+    <td>Browser Extension</td>
+    <td>An add-on or plugin that extends the functionality of a web browser. Could alter the appearance of web content, block advertisements, or add additional features to a webpage. Includes mashup tools or web services that combine content from more than one source into a single integrated experience. These can greatly modify the original content and how it is presented to the user.</td>
+  </tr>
+  <tr>
+    <td>OS or Software Application</td>
+    <td>A program or group of programs running on the local operating system. Applications can vary drastically in purpose, from productivity apps to entertainment apps, and can influence how digital content is accessed and interacted with.</td>
+  </tr>
+  <tr>
+    <td>Video/Audio System</td>
+    <td>Hardware and software components that control the output of video and sound.</td>
+  </tr>
+  <tr>
+    <td>Content Delivery Network</td>
+    <td>Store copies of web content in various locations around the world to reduce the physical distance between the server and the user, improving site performance. This intermediary, typically invisible to the end user, plays a critical role in delivery and updating of digital content, as well as authenticating users.</td>
+  </tr>
+</tbody></table>
+
+
+<p>This two-poled digital communication model is not a one-way broadcast, but a dynamic conversation. Feedback from end users can influence and improve the content generated by providers, while content providers continuously adapt their strategies based on user behavior and needs. The feedback loops become more complex as edge technologies come into play.
+
+		</p></section>
+</section>
+
+<section id="gloss"><div class="header-wrapper"><h2 id="x2-glossary"><bdi class="secno">2. </bdi>Glossary</h2><a class="self-link" href="#gloss" aria-label="Permalink for Section 2."></a></div>
+
+
+<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+</section>
+
+<section id="contentmanage"><div class="header-wrapper"><h2 id="x3-content-usually-html"><bdi class="secno">3. </bdi>Content—Usually HTML</h2><a class="self-link" href="#contentmanage" aria-label="Permalink for Section 3."></a></div>
+	
+
+	<p>This layer of delivered content consists of words, graphics, and rich media objects. In the main it is created using  html, both static and dynamic.</p>
+
+<section id="contedit"><div class="header-wrapper"><h3 id="x3-1-content-editing"><bdi class="secno">3.1 </bdi>Content Editing</h3><a class="self-link" href="#contedit" aria-label="Permalink for Section 3.1"></a></div>
+	
+
+<section id="imgalt"><div class="header-wrapper"><h4 id="x3-1-1-image-alternative-text-provisioning"><bdi class="secno">3.1.1 </bdi>Image Alternative Text Provisioning</h4><a class="self-link" href="#imgalt" aria-label="Permalink for Section 3.1.1"></a></div>
+	
+
+<p>Supply missing alternative text for content images.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Clearly, alternative text should be supplied by source content. This capability serves as a fundamental accessibility remediation when immediate remediations to the source content are infeasible for some reason.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+Some browser extensions support A-I based alternative text remediation. However, A-I remediation is still considered less accurate, and therefore less desirable than human provided text alternatives.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Good alternative text is often essential for comprehending site content for users who cannot see, but also for users on highly restricted bandwidth as continues to exist in many regions of the world.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Many cases
+</dd>
+
+</dl>
+
+</section>
+
+<section id="tooltip"><div class="header-wrapper"><h4 id="x3-1-2-tooltip-provisioning"><bdi class="secno">3.1.2 </bdi>Tooltip Provisioning</h4><a class="self-link" href="#tooltip" aria-label="Permalink for Section 3.1.2"></a></div>
+
+
+<p>This capability supplies a small pop-up window that appears
+on hover to display additional information about an element on the page for users who benefit from enhanced
+contextualization or clarification.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Source content can, and sometimes does  provide this functionality.
+</dd>
+<dt>Trade-offs</dt>
+<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where the enhanced content is not intended for all page visitors, but for certain audiences only, such as additional contextualization or clarification for some users living with cognitive or learning disabilities.</dd>
+<dt>Benefit</dt>
+<dd>
+	Supports comprehension for users who require the enhanced support in a manner that does not interfere with the fundamental functionality of the content.
+</dd>
+
+<dt>Automatability</dt>
+<dd>Many cases
+</dd>
+
+</dl>
+
+</section>
+
+<section id="lang"><div class="header-wrapper"><h4 id="x3-1-3-site-language-indication"><bdi class="secno">3.1.3 </bdi>Site Language Indication</h4><a class="self-link" href="#lang" aria-label="Permalink for Section 3.1.3"></a></div>
+
+
+<p>This capability correctly specifies the primary language of a
+web page when the declaration is incorrect or missing entirely.</p>
+
+<dl>
+	<dt>Source</dt>
+	<dd>
+	</dd>
+	<dt>Tradeoffs</dt>
+	<dd>
+	</dd>
+	<dt>Benefit</dt>
+	<dd>
+	</dd>
+	<dt>Automatability</dt>
+	<dd>Many cases
+	</dd>
+</dl>
+ 
+</section>
+
+<section id="titling"><div class="header-wrapper"><h4 id="x3-1-4-title-provisioning"><bdi class="secno">3.1.4 </bdi>Title Provisioning</h4><a class="self-link" href="#titling" aria-label="Permalink for Section 3.1.4"></a></div>
+	Title Provisioning
+
+<p>This capability provides for meaningful titles, for pages and/or
+iFrames within pages, and provides screen reader users a more efficient and meaningful browsing experience.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+</dd>
+<dt>Benefit</dt>
+<dd>
+</dd>
+<dt>Automatability</dt>
+<dd>Many cases
+</dd>
+</dl>
+ 
+</section>
+
+</section>
+
+<section id="feedback"><div class="header-wrapper"><h3 id="x3-2-user-feedback"><bdi class="secno">3.2 </bdi>User Feedback</h3><a class="self-link" href="#feedback" aria-label="Permalink for Section 3.2"></a></div>
+	
+
+<dl>
+<dt>Source</dt>
+<dd>
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+</dd>
+<dt>Benefit</dt>
+<dd>
+</dd>
+<dt>Automatability</dt>
+<dd>Many cases
+</dd>
+</dl>
+ 
+</section>
+
+<section id="contentmod"><div class="header-wrapper"><h3 id="x3-3-content-moderation"><bdi class="secno">3.3 </bdi>Content Moderation</h3><a class="self-link" href="#contentmod" aria-label="Permalink for Section 3.3"></a></div>
+
+
+<p>This capability helps assure that site content meets the publisher's content policies. Typical policies will include everyday phrases with
+racist origins, and gendered or exclusive expressions and terms that are deemed
+to exclude audiences.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+</dd>
+<dt>Benefit</dt>
+<dd>
+</dd>
+<dt>Automatability</dt>
+<dd>Some cases
+</dd>
+</dl>
+ 
+</section>
+
+<section id="videocaption"><div class="header-wrapper"><h3 id="x3-4-video-captioning"><bdi class="secno">3.4 </bdi>Video Captioning</h3><a class="self-link" href="#videocaption" aria-label="Permalink for Section 3.4"></a></div>
+
+
+<p>This capability provides caption text displaying along with
+video and synchronized with it.</p>
+	
+<dl>
+<dt>Source</dt>
+<dd>
+	Source generally provides captions, as they are most knowledgeable about the content.
+</dd>
+<dt>Trade-offs</dt>
+<dd>The cost of generating captions is prohibitive, promoting the use of automated captions. However, automation often makes mistakes. 
+</dd>
+<dt>Benefit</dt>
+<dd>
+	The cost of generating captions is prohibitive, and automation with human editing is almost universally relied upon. 
+</dd>
+
+<dt>Automatability</dt>
+<dd>Many cases
+</dd>
+
+</dl>
+
+</section>
+
+<section id="pdf"><div class="header-wrapper"><h3 id="x3-5-pdf-remediation"><bdi class="secno">3.5 </bdi>PDF Remediation</h3><a class="self-link" href="#pdf" aria-label="Permalink for Section 3.5"></a></div>
+
+
+<p>This capability helps assure that a published PDF document is correctly tagged and
+marked up sufficiently in order that it can be accessed and more readily understood by people with
+disabilities, including those who use assistive technology such as a screen
+reader.</p>
+
+</section>
+
+<section id="semiotics"><div class="header-wrapper"><h3 id="x3-6-text-services-semiotics"><bdi class="secno">3.6 </bdi>Text Services (Semiotics)</h3><a class="self-link" href="#semiotics" aria-label="Permalink for Section 3.6"></a></div>
+	
+
+<section id="dictionary"><div class="header-wrapper"><h4 id="x3-6-1-dictionary-on-demand"><bdi class="secno">3.6.1 </bdi>Dictionary On Demand</h4><a class="self-link" href="#dictionary" aria-label="Permalink for Section 3.6.1"></a></div>
+
+
+<p>This capability provides definitions of words or
+phrases that may be unfamiliar to some users; provides pronunciation guidance;
+and provides synonyms which can all especially help users living with cognitive and learning disabilities
+better comprehend content.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While this functionality could be made available through source content, it would be limited to the site that chose to provide the capability.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	The benefit of providing this capability in edge technology is that it can be applied across all sites a user access, and for all devices the user may use. When browsers provide this capability, its functionality is limited to the browser being used (though a particular browser may be able to remember a user's preference for this functionality across multiple devices). Only edge technology can provide this capability across browser and operating environments as well as across sites.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Supports comprehension for users who require the enhanced support in a manner that does not interfere with the fundamental functionality of the content. This is yet another instance supporting <q>Configure Once, Use Everywhere</q>.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+ 
+</section>
+
+<section id="translate"><div class="header-wrapper"><h4 id="x3-6-2-live-site-translations"><bdi class="secno">3.6.2 </bdi>Live Site Translations</h4><a class="self-link" href="#translate" aria-label="Permalink for Section 3.6.2"></a></div>
+
+
+<p>Offer a user-triggered method to
+This capability changes the language of a web page in real time, by translating the current page
+into a language selected by the user.</p>
+
+</section>
+
+<section id="qualitytts"><div class="header-wrapper"><h4 id="x3-6-3-read-content-aloud"><bdi class="secno">3.6.3 </bdi>Read Content Aloud</h4><a class="self-link" href="#qualitytts" aria-label="Permalink for Section 3.6.3"></a></div>
+
+
+<p>This capability allows a user to hear content spoken aloud by using a cloud (or browser) hosted Text to Speech (TTS) engine. There are now high quality TTS engines and listening while reading on screen is often beneficial for users in general, including especially users living with certain cognitive and learning disabilities.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+
+</section>
+</section>
+</section>
+
+<section id="present"><div class="header-wrapper"><h2 id="x4-presentation-usually-css"><bdi class="secno">4. </bdi>Presentation—Usually CSS</h2><a class="self-link" href="#present" aria-label="Permalink for Section 4."></a></div>
+
+
+<p>
+
+The capabilities discussed in this section are afforded users to facilitate content rerendering utilizing presentational characteristics each individual user finds most accomodative. These are accommodations that allow users to <a href="https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility">perceive and understand</a> <a href="#manage">published content and services</a>look and feel a content provider may have chosen and published, the user's adaptations must necessarily take precedence for reasons of accessibility. To put it in other words: <q>The author proposes, but the user disposes.</q></p>
+<p>In the main presentation is achieved with css. We have a strong preference for css in presentation rendering because css is most fungible. Rendering the presentation layer through technologies other than css is highly likely to prove inaccessible and require remediation into css in order to support accessibility requirements as defined by W3C.</p>
+
+<section id="curfoc"><div class="header-wrapper"><h3 id="x4-1-cursor-focus"><bdi class="secno">4.1 </bdi>Cursor &amp; Focus</h3><a class="self-link" href="#curfoc" aria-label="Permalink for Section 4.1"></a></div>
+	
+
+	<p>Capabilities related to enhanced focus visibility
+	Isolating Specific Semantic or Interactive Components for Efficient Browsing and Access:
+	methods and technologies used to enhance user experience by isolating specific elements within a digital interface. It enables users to navigate efficiently through content by focusing on particular types of elements, such
+	as headings or buttons.</p>
+
+<section id="cursorsize"><div class="header-wrapper"><h4 id="x4-1-1-optimize-cursor-size"><bdi class="secno">4.1.1 </bdi>Optimize Cursor Size</h4><a class="self-link" href="#cursorsize" aria-label="Permalink for Section 4.1.1"></a></div>
+
+
+<p>Some users require a more visible cursor and appreciate the capability that can increase the standard cursor size
+by up to 400% to ensure the pointer always remains visible to them. This facilitates faster and
+more accessible navigation through hyperlinks, tabs. and form elements.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	It is possible to support this feature in source content directly.
+
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	As with other presentational behaviors described in this document, users who require this capability likely require it across all sites they may use. Thus overlay edge technologies afford the best prospect to meet the need globally.
+</dd>
+<dt>Benefit</dt>
+<dd>
+An accessible overlay can provide this functionality across all sites the user accesses. And, when provided via the login-based cloud service, it can do so across the full portfolio of the user's devices.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+
+<section id="readingguide"><div class="header-wrapper"><h4 id="x4-1-2-supply-a-reading-guide"><bdi class="secno">4.1.2 </bdi>Supply a Reading Guide</h4><a class="self-link" href="#readingguide" aria-label="Permalink for Section 4.1.2"></a></div>
+
+
+<p>Some users benefit from a  horizontal line that appears
+below the text they're reading in order to help them keep their place as they read. This facilitates  staying focused. </p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+
+</section>
+
+<section id="linkviz"><div class="header-wrapper"><h4 id="x4-1-3-optimize-hyperlink-visibility"><bdi class="secno">4.1.3 </bdi>Optimize Hyperlink Visibility</h4><a class="self-link" href="#linkviz" aria-label="Permalink for Section 4.1.3"></a></div>
+
+
+<p>Some people require greater clarity regarding which spans of text or graphics in web content are functioning as hyperlinks. This capability facilitates Selecting the text or image that serves
+as a hyperlink and causing it to be displayed in a different, more perceivable way,
+to help users identify the hyperlinks on a page more easily. </p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+By definition this capability is needed because source (as rendered by the browser) isn't sufficiently clear about its hyperlinks, 
+at least for significant user segments.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit. While configuring a browser for greater clarity helps, users shouldn't have to configure the same capability across their multiple devices.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses and with all a user's several devices.
+</dd>
+
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+
+</section>
+</section>
+
+<section id="txtrans"><div class="header-wrapper"><h3 id="x4-2-text-styling"><bdi class="secno">4.2 </bdi>Text Styling</h3><a class="self-link" href="#txtrans" aria-label="Permalink for Section 4.2"></a></div>
+	
+
+	<p>Some users require different fonts or different font characteristics in order to comprehend and interact effectively with web content. This section groups those capabilities.</p>
+
+<section id="a11yfonts"><div class="header-wrapper"><h4 id="x4-2-1-provide-accessible-fonts"><bdi class="secno">4.2.1 </bdi>Provide Accessible Fonts</h4><a class="self-link" href="#a11yfonts" aria-label="Permalink for Section 4.2.1"></a></div>
+
+
+<p>Not all users are able to read any font a web content publisher may choose. This capability allows the publisher'
+s content to be reformatted in a user chosen font the user is comfortable using</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+
+</section>
+
+<section id="dyslexiafont"><div class="header-wrapper"><h4 id="x4-2-2-provide-dyslexia-friendly-fonts"><bdi class="secno">4.2.2 </bdi>Provide Dyslexia Friendly Fonts</h4><a class="self-link" href="#dyslexiafont" aria-label="Permalink for Section 4.2.2"></a></div>
+
+
+<p>This capability differs from <a href="a11yfonts">Fonts</a> section above only in that the proffered fonts are understood to be particularly usable by people living with
+dyslexia. Typically, they have more distinctive symbols in order to  avoid confusion,
+increased baselines and thinner tops, and a larger x-height. </p>
+
+</section>
+
+<section id="textsize"><div class="header-wrapper"><h4 id="x4-2-3-optimize-text-size"><bdi class="secno">4.2.3 </bdi>Optimize Text Size</h4><a class="self-link" href="#textsize" aria-label="Permalink for Section 4.2.3"></a></div>
+
+
+<p>Some users need enlarged, or perhaps diminished fonts in order to read content comfortably. This capability allows increased or decrease font size, by
+supporting clicking an interactive widget in order to make appropriate adjustments.</p>
+
+<dl>
+	<dt>Source</dt>
+	<dd>Source code specifies text
+	size as per the original target audience and design, but only for content
+	coming from that particular source.</dd>
+<dt>Trade-offs</dt>
+<dd> Text size is typically configurable in
+the operating system. However, not all applications consistently honor the setting and can defeat the user's intent.
+</dd>
+
+<dt>Benefit:</dt>
+<dd> Learning how to make such
+changes in browser and/or operating system configurations is challenging for
+many, and particularly challenging for the communities that most need it.
+Offering overlay access raises awareness that such capabilities are present and
+does not prevent users from learning how to configure it in other places.
+Overlays are site-specific, making such accommodations on the sites where they
+are requested. An overlay can propagate such preferences across sites,
+browsers, operating systems and/or devices, to manage the complete experience
+including injected and/or dynamic content.</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+
+</section>
+
+<section id="textspace"><div class="header-wrapper"><h4 id="x4-2-4-optimize-text-spacing-whitespacing"><bdi class="secno">4.2.4 </bdi>Optimize Text Spacing (Whitespacing)</h4><a class="self-link" href="#textspace" aria-label="Permalink for Section 4.2.4"></a></div>
+
+
+<p>Some users require additional white-space between lines of text content in order to read comfortably. Others require adjustment between individual characters in and between words. This capability supports these adjustments by facilitating the modification of text and line spacing to support
+personalized readability enhancement. As typically provided today, the capability offers three
+degrees of adjustments for a personalized and more accessible reading
+experience.</p>
+<dl>
+<dt>Source</dt>	
+<dd>Like all aspects of text design, the source determines the experience they think is best for the content. </dd>	
+<dt>Trade-offs</dt>
+<dd> May be configurable in the operating system to provide Defaults across all applications on the device—to the extent third party applications honor those settings.</dd>
+
+<dt>Benefit:</dt>
+<dd> Learning how to make such
+changes in browser and/or operating system configurations is challenging for
+many, and particularly challenging for the communities that most need it.
+Offering overlay access raises awareness that such capabilities are present and
+does not prevent users from learning how to configure it in other places.
+Overlays are site-specific, making such accommodations on the sites where they
+are requested. An overlay can propagate such preferences across sites,
+browsers, operating systems and/or devices, to manage the complete experience
+including injected and/or dynamic content.</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+
+</dl>
+
+</section>
+
+<section id="lineheight"><div class="header-wrapper"><h4 id="x4-2-5-optimize-line-height"><bdi class="secno">4.2.5 </bdi>Optimize Line Height</h4><a class="self-link" href="#lineheight" aria-label="Permalink for Section 4.2.5"></a></div>
+
+
+<p>Some users benefit greatly by simply increasing white space in between lines of text.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+
+</section>
+
+<section id="margins"><div class="header-wrapper"><h4 id="x4-2-6-margin-management"><bdi class="secno">4.2.6 </bdi>Margin Management
+</h4><a class="self-link" href="#margins" aria-label="Permalink for Section 4.2.6"></a></div>
+
+ 
+<section id="indent"><div class="header-wrapper"><h5 id="x4-2-6-1-paragraph-indentation"><bdi class="secno">4.2.6.1 </bdi>
+Paragraph Indentation
+</h5><a class="self-link" href="#indent" aria-label="Permalink for Section 4.2.6.1"></a></div>
+
+
+<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+</section>
+
+<section id="textalign"><div class="header-wrapper"><h5 id="x4-2-6-2-text-alignment-justification-personalization"><bdi class="secno">4.2.6.2 </bdi>Text Alignment (Justification) Personalization</h5><a class="self-link" href="#textalign" aria-label="Permalink for Section 4.2.6.2"></a></div>
+
+
+<p>Fully justified text blocks have long been standard in publishing, including in web content publishing. It is achieved by using variable width fonts and adjusting spacing between characters and words in the block of text. r this practice is not beneficial to all users. This capability allows individual users to determine for themselves the alignment characteristics that best accomodate their reading needs.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+ 
+</section>
+</section>
+
+<section id="usrgrx"><div class="header-wrapper"><h4 id="x4-2-7-images-graphics"><bdi class="secno">4.2.7 </bdi>Images &amp; Graphics</h4><a class="self-link" href="#usrgrx" aria-label="Permalink for Section 4.2.7"></a></div>
+	
+
+	<p>Some users require pixel-level RGB transformations to comprehend and interact effectively with web content. This section groups those capabilities.</p>
+
+<section id="contrast"><div class="header-wrapper"><h5 id="x4-2-7-1-optimize-color-contrast"><bdi class="secno">4.2.7.1 </bdi>Optimize Color Contrast</h5><a class="self-link" href="#contrast" aria-label="Permalink for Section 4.2.7.1"></a></div>
+
+
+<p>Color and contrast modifications such as <q>light mode</q>, <q>Dark mode</q>, Inverted Colors, Color Desaturation, and related contrast pigmentation adaptations have proven highly useful
+to many people with a wide range of visual impairments, and frankly for most users in various distinct situations. They modify the difference between the
+lightest and darkest parts of a web page, reverse colors, or reduce their
+intensity.</p>
+<dl>
+<dt>Trade-offs</dt>
+<dd>This capability is commonly configurable in
+the operating system itself. Thus edge support needs a compelling reason to diverge from OS defaults. On the other hand, if the user chooses adaptations that could have been set in the OS, it is likely the user is unfamiliar with making these adjustments in their device and should be assisted in doing so—across all their devices.</dd>
+<dt>Benefit</dt>
+<dd>
+	Because most users have similar needs across all their devices and because they tend nowadays to use multiple devices, edge based configuration of this capabilities strongly supports our <q>Configure Once, Use Everywhere</q> principle.
+</dd>
+
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+
+<section id="animation"><div class="header-wrapper"><h5 id="x4-2-7-2-animation-control"><bdi class="secno">4.2.7.2 </bdi>Animation Control</h5><a class="self-link" href="#animation" aria-label="Permalink for Section 4.2.7.2"></a></div>
+
+
+<p>Some users require the ability to stop animations or
+other moving elements on a web page from playing entirely. Others may wish to see them under direct user control, i.e. as a series of steps. </p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	It is possible to support this feature in source, e.g. using CSS Media Queries 5.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	As with other presentational behaviors described in this document, users who require this capability likely require it across all sites they may use. Thus overlay edge technologies afford the best prospect to meet the need globally.
+</dd>
+<dt>Benefit</dt>
+<dd>
+An accessible overlay can provide this functionality across all sites the user accesses. And, when provided via the login-based cloud service, it can do so across the full portfolio of the user's devices.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+	This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through accessible edge technologies.
+</dd>
+
+</dl>
+ 
+</section>
+
+<section id="autoplay"><div class="header-wrapper"><h5 id="x4-2-7-3-auto-play-videos"><bdi class="secno">4.2.7.3 </bdi>Auto-play Videos </h5><a class="self-link" href="#autoplay" aria-label="Permalink for Section 4.2.7.3"></a></div>
+
+<p>Some users are impeded when media begins playing on page load. Screen reader users may need playback paused until they've assured themselves they've heard all the information their TTS can provide on any given page. Others will seek to enable captions (and possibly even automated language translation) before playback begins. It is also necessary to support a mute function which can be invoked by touch, mouse, keyboard, or other control mapped for such purposes.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	It is possible to support this feature in source using native HTML.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	As with other presentational behaviors described in this document, users who require this capability likely require it across all sites they may use. Thus overlay edge technologies afford the best prospect to meet the need globally.
+</dd>
+<dt>Benefit</dt>
+<dd>
+An accessible overlay can provide this functionality across all sites the user accesses. And, when provided via the login-based cloud service, it can do so across the full portfolio of the user's devices.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+	This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through accessible edge technologies.
+</dd>
+</dl>
+
+</section>
+</section>
+
+<section id="color"><div class="header-wrapper"><h4 id="x4-2-8-color"><bdi class="secno">4.2.8 </bdi>Color</h4><a class="self-link" href="#color" aria-label="Permalink for Section 4.2.8"></a></div>
+	
+
+<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+ 
+</section>
+
+<section id="pricing"><div class="header-wrapper"><h4 id="x4-2-9-accessible-pricing-strikethroughs"><bdi class="secno">4.2.9 </bdi>Accessible Pricing (Strikethroughs)</h4><a class="self-link" href="#pricing" aria-label="Permalink for Section 4.2.9"></a></div>
+
+
+<p>This capability insures that screen reader users can understand the prior price of an item. Displaying the prior price using strike-through or crossed-out fonts, and then providing the new price immediately next to these does not work for screen reader users. These users will have no idea which is the prior and which the current price without additional content and tagging.
+</p>
+</section>
+
+<section id="resetall"><div class="header-wrapper"><h4 id="x4-2-10-reset-all-personalizations"><bdi class="secno">4.2.10 </bdi>Reset All Personalizations</h4><a class="self-link" href="#resetall" aria-label="Permalink for Section 4.2.10"></a></div>
+
+
+<p>It is only smart business practice and simple courtesy to support a <q>one button click</q> feature to reset any user
+triggered enhancement and restore the page to its default state. It should be as easy as possible for users to try different settings and undo them readily. Similarly, it should be just as easy to undo any auto-applied transformations and return a page to the settings provided directly by source. Users should be empowered to adjudge for themselves whether any applied overlay transformation actually enhances their ability to interact—and to return the overlay enhancements should they discover they're actually enhancing their experience, contrary to initial doubt!</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+This applies to source provided transformations just as much as it applies to edge provided overlay transformations.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	As previously noted some content publishers offer accessibility related page transformation overlays in their source. As also previously noted, the drawback with source provided transformations is that they must be applied over and over, site by site. If indeed a user discovers different settings are needed for different sites, this may appear to argue for not interfering with user chosen settings on a site by site basis. On the other hand, an edge technology—especially one that is associated with a user login—can recognize the distinctions and apply heuristics to learn the nuances a user prefers, possibly enabling it to predict better what might be valuable on a newly visited site.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	The benefit available only from edge-based transformations is that they can be applied to every site the user visits to achieve consistent results.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+</dl>
+ 
+</section>
+</section>
+</section>
+
+<section id="interact"><div class="header-wrapper"><h2 id="x5-functionality-usually-javascript"><bdi class="secno">5. </bdi>Functionality—Usually Javascript</h2><a class="self-link" href="#interact" aria-label="Permalink for Section 5."></a></div>
+
+
+<p>
+
+The capabilities discussed in this section are those content publishers must provide users in order to facilitate accessible user interaction with <a href="manage">published content and web services</a>. These are described by the fundamentalWCAG principle: <a href="https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility"><q>operable</q></a>. In the main they are achieved using javascript.
+</p>
+
+<section id="semstruct"><div class="header-wrapper"><h3 id="x5-1-structural-semantics-remediation"><bdi class="secno">5.1 </bdi>Structural Semantics Remediation</h3><a class="self-link" href="#semstruct" aria-label="Permalink for Section 5.1"></a></div>
+	
+
+	<p>WCAG explains in painstaking detail the critical importance to accessibility of structural markup. It is a fundamental requirement and any means to remediate or improve missing structural markup provides an immediate functional enhancement to users whose accessibility accommodations rely on explicit structural semantics.</p>
+
+<section id="structure"><div class="header-wrapper"><h4 id="x5-1-1-expose-structural-semantics"><bdi class="secno">5.1.1 </bdi>Expose Structural Semantics</h4><a class="self-link" href="#structure" aria-label="Permalink for Section 5.1.1"></a></div>
+	
+
+<dl>
+<dt>Source</dt>
+<dd>
+It has long been agreed that published content should contain structural markup as provided by HTML and explained by WCAG. Not only is this critical for accessibility, additional processing to further tailor content presentation to particular user needs will rely on proper structural markup, preferably provided by source content.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	There is no inherent value to creating structural markup in edge technology. Doing so is clearly a remedial action to close a critical gap. On the other hand and as previously noted content delivered to end users today is most frequently a composite mashup of multiple input streams and not the simple delivery of content from a single source repository. The very act of mashing together multiple streams introduces a likelihood of semantic incoherency. The very word itself, <q>mashup,</q> strongly suggests a lack of concern for the coherency of the ultimate composite as delivered to the end user. Thus, anything that can be done to introduce greater semantic coherency is of benefit to all users, and especially those users relying on accessibility supporting features such as coherent and explicit structure. Lastly, as also previously noted, emerging strategies to further tailor content interaction to particular user's interaction preferences will rely on good structural markup, and these adaptations will, necessarily, be produced in edge technologies.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Whether as a temporary remedial expedient or the advanced personalization adaptation now emerging from W3C accessibility standards, or somewhere in between, users simply deserve the best structural semantics that can be provided them in the moment when they seek to interact with web content. Any and all philosophical <q>should</q> arguments must give way to this simple rubric.
+</dd>
+</dl>
+
+</section>
+
+<section id="structnorm"><div class="header-wrapper"><h4 id="x5-1-2-normalize-the-structural-composite"><bdi class="secno">5.1.2 </bdi>Normalize the Structural Composite</h4><a class="self-link" href="#structnorm" aria-label="Permalink for Section 5.1.2"></a></div>
+	
+
+	<p>
+	Many users with accessibility needs rely heavily on consistency in the user interface. Yet no standard exists, nor is likely ever to require certain common controls be located consistently across sites. This is very much in the design prerogative of the individual content publisher. And, while individual sites may be fully consistent in where they locate controls on the pages they publish, the user who comparison shops will encounter a different site consistently locating the same controls differently. The publisher has done nothing wrong, but the user is forced to rely on a perfect memory or put up with time-consuming strategies for locating these controls. Consider this example:</p>
+	<ul>
+		<li>The user needs to make a reservation on a travel site and will shop several sites to compare offers.</li>
+		<li>Necessarily this involves picking (or specifying) dates.</li>
+		<li>Typically a starting date is specified first.</li>
+		<li>At this point the user needs to locate the control for switching to the specification of the end date.</li>
+		<li>Where is it on this site? Is it at the upper right? The lower left? Some other location on screen on this particular site which is different from other sites the user has searched?</li>
+		<li>Note that that swiping on a touch-screen may easily miss encountering these controls, especially when swiping forward into future dates. Swiping focus will remain in the date-picker widget</li>
+		<li>Searching for these controls risks activating a control irrelevant to the current task such as a notification screen. This further complicates the user's predicament and wastes yet more of the user's time.</li>
+	</ul>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	By definition this conundrum cannot be resolved by a source content publisher.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	None. Only an edge technology can hope to ameliorate the situation.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	An edge technology can bring consistency and predictability to the user experience across whatever sites the user may access by locating similar controls similarly.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+</section>
+
+<section id="nav"><div class="header-wrapper"><h3 id="x5-2-navigation"><bdi class="secno">5.2 </bdi>Navigation</h3><a class="self-link" href="#nav" aria-label="Permalink for Section 5.2"></a></div>
+	
+
+<section id="structnav"><div class="header-wrapper"><h4 id="x5-2-1-semantic-navigation"><bdi class="secno">5.2.1 </bdi>Semantic Navigation</h4><a class="self-link" href="#structnav" aria-label="Permalink for Section 5.2.1"></a></div>
+	
+
+	<p>The ability to navigate pages by semantics alone such as headings, buttons, links. Screen readers, primarily used by blind users, offer this feature.
+
+</p><dl>
+<dt>Source</dt>
+<dd>
+	The means of navigation is not offered by source. 
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	This additional navigation aide would not block or hinder other types of access; the only trade-off could be confusion of having an excessive number of choices. Having a sheer volume of options can be mentally exhausting to some. 
+</dd>
+<dt>Benefit</dt>
+<dd>The "curb cut effect" is used to describe a situation where accommodations made to assist people with disabilities end up benefiting everyone. The ability to browse pages by structural semantic features such as headings, links, or buttons promises to allow users to quickly move between different sections or elements of a web page without the need to visually scan the entire page. This can save time, especially on long and complex pages with lots of content. By using semantic navigation options like headings or links, sighted users can easily jump to specific sections or pieces of content they are interested in. This can be particularly helpful when users are looking for specific information or trying to locate a particular topic on a page. 
+	<p>Some users rely on keyboard navigation alone, such as those with motor disabilities or certain types of visual impairments. Semantic navigation options provide a convenient way for keyboard users to move through the content without having to rely on mouse-based interactions, making the website more accessible and usable for them.
+</p></dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+
+<section id="keybdnav"><div class="header-wrapper"><h4 id="x5-2-2-keyboard-navigation-enhancements"><bdi class="secno">5.2.2 </bdi>Keyboard Navigation Enhancements</h4><a class="self-link" href="#keybdnav" aria-label="Permalink for Section 5.2.2"></a></div>
+
+
+<p>Enhance visual indicators that
+support keyboard navigation such as underlines or color changes; optionally
+provide other assistance such as mapping interactive elements to keyboard
+shortcuts. </p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+Some content publishers offer such transformations. Also, some operating systems provide such features which should not be overwritten by browser technology, generally speaking. 
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	As noted some content publishers offer accessibility related page transformation overlays in their source. As also noted, the drawback with source provided transformations is that they must be applied over and over, site by site except when they'
+re the result of functioning transformations enabled in the operating system of the device itself. However, when a user discovers different settings are useful for different sites, whether these are grossly distinct or highly nuanced distinctions, this may appear to argue for not interfering with user chosen settings on a site by site basis. On the other hand, an edge technology—especially one that is associated with a user login—can recognize the distinctions and apply heuristics to learn the nuances a user prefers, possibly enabling it to predict better what might be valuable on a newly visited site.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	The benefit available only from edge-based transformations is that they can be applied to every site the user visits to achieve consistent results when nuanced results are required.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+</section>
+
+<section id="forms"><div class="header-wrapper"><h3 id="x5-3-forms"><bdi class="secno">5.3 </bdi>Forms</h3><a class="self-link" href="#forms" aria-label="Permalink for Section 5.3"></a></div>
+	
+
+<section id="FormLabel"><div class="header-wrapper"><h4 id="x5-3-1-form-labels"><bdi class="secno">5.3.1 </bdi>Form Labels</h4><a class="self-link" href="#FormLabel" aria-label="Permalink for Section 5.3.1"></a></div>
+
+
+		<p>Forms are the fundamental interface of the interactive web. Programmatic labels for each data entry field or option selecting widget  on any form are critical for many users requiring accessibility support. Furthermore, consistent grouping and form controls on screen location is also critical.</p>
+
+		<dl>
+		<dt>Source</dt>
+		<dd>
+		Far too many sites fail to use available markup to associate date entry fields and status selection control widgets with the labels the print to screen. These sites expect non-disabled users will simply understand what label applies to what field and widget by virtue of how the two are printed to screen. The user who relies on programmatic association is thus disadvantaged. The problem is amplified by the use and re-use of frameworks and low code forms that lack this support.
+		</dd>
+		<dt>Trade-offs</dt>
+		<dd>
+			Clearly source should be performing this function. That fact that it is missing from so many sites cries out for remediation technology on the edge. 
+		</dd>
+		<dt>Benefit</dt>
+		<dd>
+		Well built edge technologies can introduce missing programmatic associations. Advanced strategies to sequence completion of complex forms for persons who are easily overwhelmed by on screen complexity are frustrated when these programmatic associations are missing. Furthermore, they are the only technologies that can bring consistent organization to a form. 
+		</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+		<dt class="rt">Related Topics</dt>
+		<dd class="rt">
+			This pervasive problem in interactive content today is also related to <a href="#structnorm">Normalize the Structural Composite</a> overlay edge capability described above.
+		</dd>
+
+		</dl>
+
+</section>
+
+<section id="formvalid"><div class="header-wrapper"><h4 id="x5-3-2-form-validation"><bdi class="secno">5.3.2 </bdi>Form Validation</h4><a class="self-link" href="#formvalid" aria-label="Permalink for Section 5.3.2"></a></div>
+
+
+
+<p>This capability ensures that screen reader users
+and other users requiring enhanced status support receive clear feedback on the status of a form being completed 
+along with concise error messages. This includes the colors used, the proximity
+to the form field, and the time-sensitive nature of the screen reader
+announcement. </p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Source content can, and sometimes does  adequately provide this functionality.
+</dd>
+<dt>Trade-offs</dt>
+<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where the enhanced content is not intended for all page visitors, but for certain audiences only, such as screen reader users  for some users living with cognitive or learning disabilities.</dd>
+<dt>Benefit</dt>
+<dd>
+	Supports more efficient interaction with forms for users who require the enhanced support. Makes completing forms much easier to accomplish.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+
+</section>
+
+<section id="hyperlink"><div class="header-wrapper"><h3 id="x5-4-interactive-text-elements"><bdi class="secno">5.4 </bdi>Interactive Text Elements
+</h3><a class="self-link" href="#hyperlink" aria-label="Permalink for Section 5.4"></a></div>
+
+
+<section id="interactivelements"><div class="header-wrapper"><h4 id="x5-4-1-interactive-elements-status-clarification"><bdi class="secno">5.4.1 </bdi>Interactive Elements Status Clarification</h4><a class="self-link" href="#interactivelements" aria-label="Permalink for Section 5.4.1"></a></div>
+
+
+<p>This capability ensures concise
+instructions and labels that are clear to sighted, low vision, and non sighted
+users alike, and that the elements can be controlled through keyboard navigation.
+It also provides feedback on the status of the element and on any status changes that may occur. </p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+While source content is expected to provide the same clarity, remediating it to do so isn't always immediately feasible.
+</dd>
+<dt>Trade-offs</dt>
+<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where source is demonstrably less informative than needed for functional accessibility support.</dd>
+<dt>Benefit</dt>
+<dd>
+	Supports more efficient interaction with content for users who require the enhanced support.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+
+</section>
+
+<section id="butlink"><div class="header-wrapper"><h3 id="x5-5-hyperlinks-buttons"><bdi class="secno">5.5 </bdi>Hyperlinks &amp; Buttons</h3><a class="self-link" href="#butlink" aria-label="Permalink for Section 5.5"></a></div>
+	
+
+<section id="externallinks"><div class="header-wrapper"><h4 id="x5-5-1-external-link-target-notification"><bdi class="secno">5.5.1 </bdi>External Link Target Notification</h4><a class="self-link" href="#externallinks" aria-label="Permalink for Section 5.5.1"></a></div>
+
+
+<p>This capability:</p>
+
+<ul>
+	<li>Assures users relying on TTS (or braille) that hyperlinks are correctly announced as links;</li>
+	<li>Informs them whether the linked content will open in a new tab or window;</li>
+	<li>Verifies that links resolve correctly and any broken links are so labeled.</li>
+	</ul>
+
+<dl>
+<dt>Source</dt>
+<dd>
+While source content is expected to maintain viable hyperlinks and provide the same clarity about their status, remediating it to do so isn't always immediately feasible.
+</dd>
+<dt>Trade-offs</dt>
+<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where source is demonstrably less informative than needed for functional accessibility support.</dd>
+<dt>Benefit</dt>
+<dd>
+	Supports more efficient interaction with content for users who require the enhanced support.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+<section id="ambiglink"><div class="header-wrapper"><h4 id="x5-5-2-ambiguous-link-notification"><bdi class="secno">5.5.2 </bdi>Ambiguous Link Notification</h4><a class="self-link" href="#ambiglink" aria-label="Permalink for Section 5.5.2"></a></div>
+
+
+<p>This capability Provides descriptive and meaningful
+link text that accurately reflects the purpose or destination of the link when the source content fails to do so.
+This is particularly needed for link text such as <q>click here</q> or
+<q>more.</q> </p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While source content is expected to maintain viable hyperlinks and provide the same clarity about their status, remediating it to do so isn't always immediately feasible. <q>Click here</q> and <q>more</q> link text is far too common and rarely sufficiently unambiguous.
+</dd>
+<dt>Trade-offs</dt>
+<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where source is demonstrably less informative than needed for functional accessibility support.</dd>
+<dt>Benefit</dt>
+<dd>
+	Supports more efficient interaction with content for users who require the enhanced support.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+
+</section>
+
+<section id="clientinteract"><div class="header-wrapper"><h3 id="x5-6-client-side-interactions"><bdi class="secno">5.6 </bdi>Client-Side Interactions</h3><a class="self-link" href="#clientinteract" aria-label="Permalink for Section 5.6"></a></div>
+	
+
+	<section id="timeout"><div class="header-wrapper"><h4 id="x5-6-1-managing-time-outs"><bdi class="secno">5.6.1 </bdi>Managing Time Outs</h4><a class="self-link" href="#timeout" aria-label="Permalink for Section 5.6.1"></a></div>
+		
+
+	</section>
+
+		<section id="axvalid"><div class="header-wrapper"><h4 id="x5-6-2-accessible-validation"><bdi class="secno">5.6.2 </bdi>Accessible Validation</h4><a class="self-link" href="#axvalid" aria-label="Permalink for Section 5.6.2"></a></div>
+			
+
+</section>
+
+<section id="ClientInteractivity"><div class="header-wrapper"><h4 id="x5-6-3-client-side-interactions"><bdi class="secno">5.6.3 </bdi>Client-Side Interactions</h4><a class="self-link" href="#ClientInteractivity" aria-label="Permalink for Section 5.6.3"></a></div>
+	
+
+	<section id="keyboordaccessinteractive"><div class="header-wrapper"><h5 id="x5-6-3-1-ensure-keyboard-access-to-interactive-elements"><bdi class="secno">5.6.3.1 </bdi>ensure keyboard access to interactive elements </h5><a class="self-link" href="#keyboordaccessinteractive" aria-label="Permalink for Section 5.6.3.1"></a></div>
+		
+
+	</section>
+
+		<section id="maninteractivefocus"><div class="header-wrapper"><h5 id="x5-6-3-2-mmanage-focus-through-interactive-processes"><bdi class="secno">5.6.3.2 </bdi>Mmanage focus through interactive processes</h5><a class="self-link" href="#maninteractivefocus" aria-label="Permalink for Section 5.6.3.2"></a></div>
+		
+
+		</section>
+
+		<section id="dynamicpages"><div class="header-wrapper"><h5 id="x5-6-3-3-handle-dynamic-pages"><bdi class="secno">5.6.3.3 </bdi>handle dynamic pages</h5><a class="self-link" href="#dynamicpages" aria-label="Permalink for Section 5.6.3.3"></a></div>
+		
+
+		</section>
+
+		<section id="timeout2"><div class="header-wrapper"><h5 id="x5-6-3-4-managing-time-outs"><bdi class="secno">5.6.3.4 </bdi>Managing Time Outs</h5><a class="self-link" href="#timeout2" aria-label="Permalink for Section 5.6.3.4"></a></div>
+		
+
+		</section>
+
+		<section id="axvalid2"><div class="header-wrapper"><h5 id="x5-6-3-5-accessible-validation"><bdi class="secno">5.6.3.5 </bdi>Accessible Validation</h5><a class="self-link" href="#axvalid2" aria-label="Permalink for Section 5.6.3.5"></a></div>
+			
+
+</section>
+
+</section>
+
+<section id="customcomponents"><div class="header-wrapper"><h4 id="x5-6-4-custom-components"><bdi class="secno">5.6.4 </bdi>Custom components</h4><a class="self-link" href="#customcomponents" aria-label="Permalink for Section 5.6.4"></a></div>
+	
+
+	<section id="correctsemanticbehavior"><div class="header-wrapper"><h5 id="x5-6-4-1-correct-semantic-behavior"><bdi class="secno">5.6.4.1 </bdi>correct semantic behavior</h5><a class="self-link" href="#correctsemanticbehavior" aria-label="Permalink for Section 5.6.4.1"></a></div>
+		
+
+	</section>
+
+		<section id="applyoradjustariaelements"><div class="header-wrapper"><h5 id="x5-6-4-2-apply-or-adjust-aria-elements"><bdi class="secno">5.6.4.2 </bdi>apply or adjust ARIA elements</h5><a class="self-link" href="#applyoradjustariaelements" aria-label="Permalink for Section 5.6.4.2"></a></div>
+		
+
+		</section>
+
+		<section id="replacecomponent"><div class="header-wrapper"><h5 id="x5-6-4-3-replace-component-when-needed-with-an-accessible-version"><bdi class="secno">5.6.4.3 </bdi>replace component when needed with an accessible version</h5><a class="self-link" href="#replacecomponent" aria-label="Permalink for Section 5.6.4.3"></a></div>
+		
+
+		
+
+</section>
+</section>
+
+<section id="txteffects"><div class="header-wrapper"><h4 id="x5-6-5-textual-affectations"><bdi class="secno">5.6.5 </bdi>Textual Affectations</h4><a class="self-link" href="#txteffects" aria-label="Permalink for Section 5.6.5"></a></div>
+	
+
+<section id="dropcap"><div class="header-wrapper"><h5 id="x5-6-5-1-drop-cap-implementation"><bdi class="secno">5.6.5.1 </bdi>Drop Cap Implementation
+</h5><a class="self-link" href="#dropcap" aria-label="Permalink for Section 5.6.5.1"></a></div>
+
+
+<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+</section>
+ 
+<section id="ulol"><div class="header-wrapper"><h5 id="x5-6-5-2-bulleted-and-numbered-lists"><bdi class="secno">5.6.5.2 </bdi>Bulleted and Numbered Lists
+</h5><a class="self-link" href="#ulol" aria-label="Permalink for Section 5.6.5.2"></a></div>
+
+
+<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+</section>
+
+<section id="textbox"><div class="header-wrapper"><h5 id="x5-6-5-3-text-box-framing"><bdi class="secno">5.6.5.3 </bdi>Text Box Framing
+</h5><a class="self-link" href="#textbox" aria-label="Permalink for Section 5.6.5.3"></a></div>
+
+
+<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+</section>
+ 
+<section id="shadowout"><div class="header-wrapper"><h5 id="x5-6-5-4-shadow-and-outline-effects"><bdi class="secno">5.6.5.4 </bdi>Shadow and Outline Effects
+</h5><a class="self-link" href="#shadowout" aria-label="Permalink for Section 5.6.5.4"></a></div>
+
+
+<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+</section>
+ 
+<section id="transpcont"><div class="header-wrapper"><h5 id="x5-6-5-5-text-transparency-control"><bdi class="secno">5.6.5.5 </bdi>Text Transparency Control</h5><a class="self-link" href="#transpcont" aria-label="Permalink for Section 5.6.5.5"></a></div>
+
+
+<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+</section>
+
+</section>
+
+<section id="textinteract"><div class="header-wrapper"><h4 id="x5-6-6-interactive-text-elements"><bdi class="secno">5.6.6 </bdi>Interactive Text Elements
+</h4><a class="self-link" href="#textinteract" aria-label="Permalink for Section 5.6.6"></a></div>
+
+
+<p><strong>EDITOR'S NOTE</strong><br>Section content yet to be written.</p>
+
+</section>
+
+<section id="notify"><div class="header-wrapper"><h4 id="x5-6-7-notifications"><bdi class="secno">5.6.7 </bdi>Notifications</h4><a class="self-link" href="#notify" aria-label="Permalink for Section 5.6.7"></a></div>
+	
+
+<p>Messages shown to the end-user to
+alert them to an event, some specific data-point, or to some state. </p>
+<dl>
+<dt>Source</dt>
+<dd>It seems unlikely source could fully take on this responsibility. 
+On the other hand it seems equally unlikely that edge technology alone can fully meet this need effectively without API-based data interchange with source content.
+	There is particularly cogent needs in <q>augmented reality</q> which are potentially very exciting.
+</dd>
+<dt>Trade-offs</dt>
+<dd>What a user may want or need to know in any given situation or moment is a complex calculation at best. 
+	It'
+s far too easy to overdo notifications, though failing to notify judiciously and appropriately would constitute a major technological opportunity missed. 
+	We need better models and privacy-preserving context awareness to realize all the benefits conceivable in this application of automated opportunities.</dd>
+<dt>Benefit</dt>
+<dd>Controlling the fire hose of notifications is best filtered and managed at the edge because that's the most data rich locus for technology mediated adaptation and minimal data round-trips to servers.
+	The right information at just the right time can serve as a tremendous quality of life enhancement and it's best performed locally, not centrally.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+
+<section id="auth-n"><div class="header-wrapper"><h4 id="x5-6-8-authentication"><bdi class="secno">5.6.8 </bdi>Authentication</h4><a class="self-link" href="#auth-n" aria-label="Permalink for Section 5.6.8"></a></div>
+	
+
+</section>
+
+<section id="richmedia"><div class="header-wrapper"><h4 id="x5-6-9-rich-media"><bdi class="secno">5.6.9 </bdi>Rich Media</h4><a class="self-link" href="#richmedia" aria-label="Permalink for Section 5.6.9"></a></div>
+	
+
+	<p>Include hyperlink to MAUR</p>
+
+</section>
+
+<section id="voxcom"><div class="header-wrapper"><h4 id="x5-6-10-voice-command"><bdi class="secno">5.6.10 </bdi>Voice Command</h4><a class="self-link" href="#voxcom" aria-label="Permalink for Section 5.6.10"></a></div>
+	
+
+<p><strong>EDITOR'S NOTE</strong><br>Section content yet to be written.</p>
+ 
+</section>
+
+</section>
+
+</section>
+
+<section id="manage"><div class="header-wrapper"><h2 id="x6-management"><bdi class="secno">6. </bdi>Management</h2><a class="self-link" href="#manage" aria-label="Permalink for Section 6."></a></div>
+
+
+<p>
+The capabilities discussed in this section are primarily of interest to the content provider
+who shape the key elements or features of their digital content in order to support an intended user persona and journey. 
+As stated above this typically results in a highly interactive experience presented to the user, packed with services supplied by third parties, many of which are added in their efforts to further accommodate, 
+engage and please the end user while meeting regulatory requirements. 
+</p>
+
+<section id="autoai"><div class="header-wrapper"><h3 id="x6-1-leveraging-automation"><bdi class="secno">6.1 </bdi>Leveraging Automation</h3><a class="self-link" href="#autoai" aria-label="Permalink for Section 6.1"></a></div>
+	
+
+
+	<section id="knowledge"><div class="header-wrapper"><h4 id="x6-1-1-having-sufficient-knowledge-skills"><bdi class="secno">6.1.1 </bdi>Having Sufficient Knowledge &amp; Skills</h4><a class="self-link" href="#knowledge" aria-label="Permalink for Section 6.1.1"></a></div>
+		
+
+		  <p>Accessibility is a complex subject, and approaches differ per role. Suitably trained designers, brand owners, marketing managers, software developers and quality assurance are difficult to hire and retain. </p> 
+			<dl>
+				<dt>Source</dt>
+				<dd>The most accessible organizations are those with a deep and robust culture around accessibility. Every role is aware and trained in the topic. In addition, persons with disabilities are involved as well. </dd>
+
+				<dt>Trade-offs</dt>
+				<dd>Offloading accessibility knowledge may mean the organization will never reach the attitude and approach expected as a low bar of accessibility: including people with disabilities.  </dd>
+
+				<dt>Benefit</dt>
+				<dd>Like any complex topic, organizations are wide to hire experts and give them the latitude to fix things. Since providing access to digital assets at source is a security risk, allowing the accessibility provider to fix things at the edge is a sound decision. </dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+				<dt>Related Topics</dt>
+				<dd class="rt">
+					Knowledge and skills are a primary driver behind <a href="#3rd-party"><q>My Site, Their Service</q></a>.</dd>
+			</dl>
+	</section>
+
+	<section id="3rd-party"><div class="header-wrapper"><h4 id="x6-1-2-my-site-their-service"><bdi class="secno">6.1.2 </bdi>My Site, Their Service</h4><a class="self-link" href="#3rd-party" aria-label="Permalink for Section 6.1.2"></a></div>
+		
+
+		  <p>Third party services not hosted by the Content Provider, providing services in support of the Content Provider's value proposition. Typically invoked by JavaScript or the Content Delivery Network, they meet the planned needs of end users. </p> 
+			<dl>
+				<dt>Source</dt>
+				<dd>They typical website today is a platform for interaction, a space where an organization meets its customers. End users expect a broad range of services that are likely outside the core competency of the site owner. A company cannot become jack-of-all-trades and master of none. Build or buy decisions, when executed well, can mean the difference between success of failure for a business. Just as most companies don't build the buildings they inhabit or the elevators that operate within, they do not program the intricate digital services required on their websites such as GDPR cookie handling, chatbots, or shopping carts. Procurement can request accessibility conformance statements from services as a gating decision point to include them on the page or not. </dd>
+
+				<dt>Trade-offs</dt>
+				<dd>Companies relinquish some control when they host functions via third parties. But their responsibility is to verify the accessibility of these services. </dd>
+
+				<dt>Benefit</dt>
+				<dd>Given the bewildering range of possible experiences with all these third party plugins operating, the edge becomes the only place where a proper validation can occur.</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+				<dt>Related Topics</dt>
+				<dd class="rt">
+					This is closely related to <q>Having Knowledge and Skills</q> and <q>Only The Edge Knows For Sure</q>.</dd>
+			</dl>
+	</section>
+
+<section id="onlyedgeknows"><div class="header-wrapper"><h4 id="x6-1-3-only-the-edge-knows-for-sure"><bdi class="secno">6.1.3 </bdi>Only The Edge Knows For Sure</h4><a class="self-link" href="#onlyedgeknows" aria-label="Permalink for Section 6.1.3"></a></div>
+
+
+  <p>While some rare web pages serve up a single experience like a short order cook handing over a burger, most are like the food court at a shopping mall with many independent services rallying to the end user's needs. Content providers pack their pages with services such as cookie permissions, chat, payment gateways, user-generated reviews, and most prolifically advertisements. 
+	</p><dl>
+		<dt>Source</dt>
+		<dd>Content providers can only guess at an end user's experience by testing well chosen scenarios. Large organizations may arrange focus groups that give a glimpse of a few users, at one moment in time. But in the end, almost by definition, the source cannot know. </dd>
+
+		<dt>Trade-offs</dt>
+		<dd>Persons with disabilities tend to be concerned about content
+			providers discovering and monetizing user data. 
+			Their lived reality has made
+			them highly desirous to preserve their privacy 
+			because of perceived and actual
+			experience of discrimination over many years. Privacy assurances, along with steep privacy violation fines, can build trust over time, such as that supporting the nearly ubiquitous use of Google Analytics at the edge.</dd>
+
+		<dt>Benefit</dt>
+		<dd>Sampling and monitoring the accessibility of the user experience can only occur at the moment of user access because only the edge knows for sure. Much as a thermostat should be positioned far from the heat source, to measure the temperature of the room, monitoring at the edge is the only way to determine what is happening there. </dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+		<dt>Related Topics</dt>
+		<dd class="rt">
+		The uniqueness of the Edge experience is driven primarily by Only The Edge Knows For Sure (3.1.3). 
+		Any listening in on the Edge will have to Preserve User Agency (2.1.1).
+		</dd>
+
+	</dl>
+	</section>
+
+	<section id="autobgproc"><div class="header-wrapper"><h4 id="x6-1-4-fully-automated-transformations"><bdi class="secno">6.1.4 </bdi>Fully Automated Transformations</h4><a class="self-link" href="#autobgproc" aria-label="Permalink for Section 6.1.4"></a></div>
+		
+
+		  <p>Automated transformations applied based on conditions edge technology discovers in the user's technology.
+			</p>
+
+			<dl>
+				<dt>Source</dt>
+				<dd>Content providers have long sought to tailor UX behavior based on what capabilities could be discovered about the user's operating environment. What browser is in use? Desktop, mobile or smart watch? Is a screen reader in use? Indeed, <a href="https://www.w3.org/TR/turingtest/#recap3">Google's automated Recaptcha 3 is deeply dependent on just such data gathering</a>.
+				</dd>
+
+				<dt>Trade-offs</dt>
+				<dd>While a well-crafted remediation
+					  technology may be invisible to users, it is both
+						risky and presumptuous to presume there will be no users who will not
+						experience some kind of accessibility challenge even among the best crafted remediation technologies. Matters are made worse when the user is left uninformed and feels a loss of agency. 
+		        </dd>
+
+							<dt>Benefit</dt>
+							<dd>Users do indeed expect their technologies will operate automatically and seamlessly to provide an accessible and functional experience. This is an accepted technological expectation. Content providers do not err in
+								attempting to meet this expectation. 
+								An automated UX transformation approach can provide clear benefits. One example is real-time applications such as <a href="https://www.w3.org/TR/raur/">Real Time Communications (RTC)</a>.
+			        Immediacy matters. Automated captions may not provide the desired quality, but the alternative may too often be no captions whatsoever.
+				        Similarly missing image descriptions generated by A-I may prove more helpful to the user coping with a substandard page than no alternative text at all.
+					        Pages whose content remains unremediated can also tend to encourage users to seek alternative providers.
+						</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+							<dt>Related Topics</dt>
+							<dd class="rt">
+							Keep in mind that <a href="onlyedgeknows">Only The Edge Knows For Sure</a>. We emphasize the critical importance of <a href="usrctrl">Preserving User Agency</a> in fully automated transformations.
+							</dd>
+
+			</dl>
+	</section>
+	 
+	<section id="autoWCAG"><div class="header-wrapper"><h4 id="x6-1-5-automated-detection-and-remediation-of-wcag-violations"><bdi class="secno">6.1.5 </bdi>Automated Detection and Remediation of WCAG Violations</h4><a class="self-link" href="#autoWCAG" aria-label="Permalink for Section 6.1.5"></a></div>
+	
+
+			<p>Algorithmic detection of violations of WCAG 2.x success criteria is considered here as a vector for providing the user a more conformant experience. 
+				There is, of course, the other application, where violation detection serves as a step in a source remediation process. We address the former here.</p>
+			<dl>
+			<dt>Source</dt>
+			<dd>
+			If source got this right (as WCAG 2.x seems to expect), we wouldn't have a need for this capability.
+			</dd>
+			<dt>Trade-offs</dt>
+			<dd>In-browser scanners and online scanners are used to detect WCAG violations. 
+				This is the business model for many companies. 
+				False positives, false negatives, certainty and confidence scores are well-known factors affecting the success and usefulness of this approach. 
+				It is unfortunate when such violations remain unremediated in source content, but sometimes this can't be helped. 
+				An indication of violations at the edge, however rough, is better than none.
+			</dd>
+			<dt>Benefit</dt>
+			<dd>
+				Large, complex and highly dynamic source sites are literally unable to reproduce every user experience permutation in their test beds. Automated detection and 
+				reporting can help bridge this gap. 
+				Something is most often better than nothing, especially in the moment. 
+				It looms ever larger as it stacks, and automated detection is often the first step in a chain of capabilities.
+			</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+					<dt>Related Topics</dt>
+					<dd class="rt">
+					Keep in mind that <a href="knowledge">Having Knowledge and Skills</a>, as well as <a href="#onlyedgeknows">Only The Edge Knows For Sure</a> and . </dd>
+
+</dl>
+
+</section>
+
+<section id="HIT"><div class="header-wrapper"><h4 id="x6-1-6-human-mediated-automated-remediation"><bdi class="secno">6.1.6 </bdi>Human Mediated Automated Remediation</h4><a class="self-link" href="#HIT" aria-label="Permalink for Section 6.1.6"></a></div>
+
+
+		<p>While not the glamorous <q>holy grail</q> of technology deployment today, human mediation of A-I identified checkpoints, together with the site owner's active participation to clarify meaning and intent, describes an effective approach to accomplish accessibility remediations where they're needed. No other approach delivers equally effective remediations at such scale.
+		</p>
+
+		<dl>
+		<dt>Source</dt>
+		<dd>
+			This is a process approach just as meaningful for remediating accessibility violations in source as it is for remediating at the edge. Though to argue any remediation <strong>not</strong> done at source or <strong>not</strong> performed by a human, may describe a theology of accessibility, not a technological solution delivering real benefits to users.
+		</dd>
+		<dt>Trade-offs</dt>
+		<dd>
+			It is clearly preferable to remediate violations in source content whenever doing so is feasible. An in-process corrective overlay remediations only make sense when there are good reasons why the source cannot be remediated. 
+		</dd>
+		<dt>Benefit</dt>
+		<dd>
+			The user always benefits when best available remediation approaches are employed. Nor will the user ever care where and how the remediation is accomplished as long as it facilitates the user' s ability to function.
+		</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+		</dl>
+
+</section>
+
+<section id="a11yedit"><div class="header-wrapper"><h4 id="x6-1-7-accessibility-editing-by-site-owner"><bdi class="secno">6.1.7 </bdi>Accessibility Editing, By Site Owner</h4><a class="self-link" href="#a11yedit" aria-label="Permalink for Section 6.1.7"></a></div>
+
+
+		<p>This capability describes an interface in the overlay,
+		available to authorized users, facilitating manual editing of source code that affects
+		accessibility, e.g. alt tags for images, or ARIA labels, often with the assistance of linting, wizards and supplemental materials.</p>
+
+		<dl>
+		<dt>Source</dt>
+		<dd>
+			Where the source lacks sufficient accessibility supporting markup, this capability provides both analytics and remediation access to properly authenticated 
+		persons empowered to perform remediation. Note the assumption is that, for whatever reason, the content technology provided by the hosting environment lacks adequate accessibility supporting technology.
+		</dd>
+		<dt>Trade-offs</dt>
+		<dd>
+		A properly configured content hosting environment should be able to accomplish accessible content publication. Such editing performed at the edge depends on robust IDs, and can be more brittle than changes at source.
+		</dd>
+		<dt>Benefit</dt>
+		<dd>
+			This capability facilitates adding missing accessibility supporting markup to source content. It is unique to overlays of this type, providing an alternative to standard methods of
+			coding the site, either via source code, web platform templates/CSS
+			adjustments, etc. This capability exists to assist sites who fail accessibility, usually for a complex set of reasons where source remediation is expensive or otherwise not readily achievable.
+			This is not  a redundant capability. Rather, it is an innovation only available from edge technology. Equivalent technology in source would require the site publisher to establish a complete panoply of content management tooling. While this is certainly feasible, not everyone wishing to make content available on line desires to spend time gaining proficiency with content management systems. 
+		</dd>
+		<dt class="rt">Related Topics</dt>
+		<dd class="rt">
+		This editing typically requires
+		accessibility expertise, but the content publisher's expertise, and the site's content may actually represent an entirely different area of content expertise.
+		</dd>
+		</dl>
+
+</section>
+<section id="a11yedit3rd"><div class="header-wrapper"><h4 id="x6-1-8-accessibility-editing-by-3rd-party"><bdi class="secno">6.1.8 </bdi>Accessibility Editing, By 3rd Party</h4><a class="self-link" href="#a11yedit3rd" aria-label="Permalink for Section 6.1.8"></a></div>
+
+
+<p>This capability functions very much like the <a href="#a11yedit">Accessibility editing, by site owner</a> immediately above, except that a third party accessibility coding expert is granted access to perform needed remediations.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	The only alternative in source is write access for the third party to the source content. On some sites this may require full administrative access.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	This is not  a redundant capability. It is an innovation only available from edge technology.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Accessibility edits are provided to the content publisher much like pull requests in version control systems.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+</section>
+
+<section id="cntresp"><div class="header-wrapper"><h3 id="x6-2-content-provider-checks"><bdi class="secno">6.2 </bdi>Content Provider Checks</h3><a class="self-link" href="#cntresp" aria-label="Permalink for Section 6.2"></a></div>
+	
+
+<section id="profile-userint"><div class="header-wrapper"><h4 id="x6-2-1-feature-bundling-profiles"><bdi class="secno">6.2.1 </bdi>Feature-Bundling Profiles</h4><a class="self-link" href="#profile-userint" aria-label="Permalink for Section 6.2.1"></a></div>
+
+
+
+<p>Site publishers need to support the full spectrum of accessibility features. On the other hand individual users need certain features and will ignore those they do not need. The types of features individual users need are  often group-able
+into bundles, making it easier to turn on groups
+of features, e.g. high contrast and larger text size.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+As previously noted, users will need the same (or very similar) feature support across all their various devices. This makes supporting even grouped feature profiles in source (and even in the OS) less effective than an edge solution could be, because it requires the user to make the same selections time and again.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Grouping related features together into named profiles enables users to find and focus on the ones they need to configure and ignore the rest. The emerging approach aimed at propagating user profile configurations across all of a user's devices makes edge technology the only logical locus for this capability.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	This is yet another instance supporting <q>Configure Once, Use Everywhere</q>.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+</section>
+
+<section id="a11ystmnt"><div class="header-wrapper"><h4 id="x6-2-2-accessibility-statement-availability"><bdi class="secno">6.2.2 </bdi>Accessibility Statement Availability</h4><a class="self-link" href="#a11ystmnt" aria-label="Permalink for Section 6.2.2"></a></div>
+
+
+<p>Providing an easily located Accessibility Statement has become a widely accepted best practice in the industry. While there is no consensus on what all should be included, it is generally agreed that the formal Statement should define the site's commitment to accessibility of its content and services. Additional content, such as accessibility specific contact data, and accessibility specific help resources are also frequently included.
+</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	It is currently a best practice to link to the Accessibility Statement (and related resources) from the site's footer.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	An Accessibility Statement introduced by edge technologies doesn't add value, though adding locale specific content might be useful.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	To the extent that locale specific data may be helpful to users, edge technology may be the best means of providing the most timely locale-specific accessibility information.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+<section id="a11yprov"><div class="header-wrapper"><h4 id="x6-2-3-accessibility-provider-identification"><bdi class="secno">6.2.3 </bdi>Accessibility Provider Identification</h4><a class="self-link" href="#a11yprov" aria-label="Permalink for Section 6.2.3"></a></div>
+
+
+<p>This capability displays to website users the name
+(and perhaps the logo) of the primary accessibility provider, who stands behind the accessibility of
+the site. This may be part of the accessibility
+statement.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Identifying the provider of accessibility to site source is a matter of transparency and will likely be gladly accomplished by any provider taking pride in the quality of their output.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Providing accessibility to content, whether at the source or with in-process transformations, should never be opaque. Users deserve to know who is responsible for their experience of web content.
+</dd>
+<dt>Benefit</dt>
+<dd>
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+
+<section id="reporting"><div class="header-wrapper"><h4 id="x6-2-4-accessibility-issue-reporting"><bdi class="secno">6.2.4 </bdi>Accessibility Issue Reporting</h4><a class="self-link" href="#reporting" aria-label="Permalink for Section 6.2.4"></a></div>
+
+
+<p>This capability provides a form, or an email link, enabling
+end-users the ability to report barriers they've experienced on a site. Accessibility-specific reporting is an industry best practice.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+Clearly, such a form-based reporting mechanism can be in source content. It is another feature that would likely be best provided along with the Accessibility Statement and related resources.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	While not obviating source based issue reporting, edge technologies are uniquely positioned to attach possibly relevant metadata to such reports.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Such a form requires the source provider to think through who should receive and process these reports. Most particularly, they will need to consider what accessibility expertise is available to evaluate and follow-up on such reports.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+ 
+</section>
+</section>
+</section>
+
+<section id="aspire"><div class="header-wrapper"><h2 id="x7-aspirational"><bdi class="secno">7. </bdi>Aspirational</h2><a class="self-link" href="#aspire" aria-label="Permalink for Section 7."></a></div>
+
+
+<p>
+
+The capabilities discussed in this section are aspirational because they describe development directions we believe edge technologies will take in the coming decade. They will rely on various specifications from the W3C around authentication, security, and privacy in addition to developments in W3C accessibility technologies.
+</p>
+
+	<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Note</span><span class="issue-label">: Editor's note</span></div><aside class="" role="region" aria-label="Editor's note">
+	<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3">
+		<span>Editor's note</span>
+		</div>
+		<div>Consider citing relevant W3C specifications in authentication, security, and privacy, perhaps as another Appendix. The reason for citing them is to point to various third party hosted services that may need to be mashed together in order for the capabilities enumerated here to function successfully and accessibly.
+		</div>
+	</aside></div>
+
+	<section id="personconfig"><div class="header-wrapper"><h3 id="x7-1-personalized-portable-configuration-profiles"><bdi class="secno">7.1 </bdi>Personalized &amp; Portable Configuration Profiles</h3><a class="self-link" href="#personconfig" aria-label="Permalink for Section 7.1"></a></div>
+		
+
+<section id="portable"><div class="header-wrapper"><h4 id="x7-1-1-configure-once-use-everywhere"><bdi class="secno">7.1.1 </bdi>Configure Once, Use Everywhere</h4><a class="self-link" href="#portable" aria-label="Permalink for Section 7.1.1"></a></div>
+
+
+<p>Users now frequently use several devices. Furthermore, users tend to have the same or very similar accessibility requirements regardless of the device they may be using in the moment. 
+	It is therefore an emerging goal in web accommodations to support the user in configuring once and having their configured preference propagate across all their devices. Such a cross-Device preference profile should ideally function across all vendors and operating environments.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>While technically feasible in source, this is not being done by content source today, and we are not aware of any proposals to add such functionality in content source—likely for a multiplicity of reasons.
+	People, regardless of ability or disability, may often want to withhold this information from a source provider, and would certainly not want it to propagate to 
+	source providers outside of their knowledge or control.</dd>
+
+<dt>Trade-offs</dt>
+<dd>
+	A privacy-preserving, cross-platform U-I configuring capability is now a <a href="https://www.w3.org/2017/vc/WG/Meetings/Minutes/2022-09-15-vcwg#section8">long-term goal in the W3C Accessible Platform Architectures (APA) Working Group.</a> 
+	Such a capability has long been desired and is arguably now more achievable than ever before. 
+	It would  clearly be valuable to users. 
+	For example, blind users and people on slow internet connections will benefit from setting their browsers to not download images. 
+	It will nevertheless require nuanced implementation, e.g.  screen size and consequent decisions over preferred fonts, spacing, and contrasts  will likely vary by screen size and environmental conditions. 
+	Another example of a nuanced consideration is the likely desire of a screen reader user to operate sometimes with TTS, but other times with braille (or both braille and TTS).
+</dd>
+
+<dt>Benefit</dt>
+<dd>Configure once and deploy everywhere, with the setting propagating to other contexts would constitute a profound efficiency enhancement for users. We note this is already being realized by technology vendors within their own operating environments, but we believe users should be supported even when they mix and match devices across operating environments.</dd>
+<dt>Related Topics</dt>
+<dd class="rt">
+While this capability remains aspirational in the main as of this writing, it is nevertheless an achievable goal for which edge technology is optimally suited. Many other capabilities enumerated in this document will point to this capability as an optimal implementation objective.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+	</section>
+
+	<section id="surrogacy"><div class="header-wrapper"><h3 id="x7-2-surrogacy-support"><bdi class="secno">7.2 </bdi>Surrogacy Support</h3><a class="self-link" href="#surrogacy" aria-label="Permalink for Section 7.2"></a></div>
+		
+
+		<p>A compelling largely unmet need exists for legal surrogacy services, whether fiduciary, medical, or probate. Whether to access data stored in the account of someone recently deceased, or in the account of a minor child, or of a parent or social agency client, only a very few major web content service providers have begun addressing this need as of this writing and only for their own systems. This need is particularly acute where print disabilities are to be factored. Most legal jurisdictions today accept such instruments executed only on paper, thus discriminating against persons incapable of managing paper on their own. When provided for persons with disabilities this capability is today increasingly known as <q><a href="https://en.wikipedia.org/wiki/Supported_decision_making">Supported Decision Making (SDM)</a></q>, and has historically also been known as <q>Guardianship</q>.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+
+	</section>
+
+	<section id="normalize"><div class="header-wrapper"><h3 id="x7-3-normalize-control-content-layout"><bdi class="secno">7.3 </bdi>Normalize Control &amp; Content Layout</h3><a class="self-link" href="#normalize" aria-label="Permalink for Section 7.3"></a></div>
+		
+
+	</section>
+
+	<section id="formatrans"><div class="header-wrapper"><h3 id="x7-4-file-format-translation"><bdi class="secno">7.4 </bdi>File Format Translation</h3><a class="self-link" href="#formatrans" aria-label="Permalink for Section 7.4"></a></div>
+		
+
+
+
+	<p>     Document format translation is important for most serious users of software, but arguably more so for the user relying on assistive technologies.</p>
+
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section>
+
+	<section id="caltrans"><div class="header-wrapper"><h3 id="x7-5-calendar-format-translation"><bdi class="secno">7.5 </bdi>Calendar Format Translation</h3><a class="self-link" href="#caltrans" aria-label="Permalink for Section 7.5"></a></div>
+		
+
+	<p>Calendar format translation is important for most any user of software, but arguably more so for the user relying on assistive technologies. While industry could long ago have solved this persistent incompatibility across operating environments, they have rather chosen to seek to impose vendor lock-in. This does not serve users who should be free to maintain calendars in the environment of their choice, or even different calendars in multiple environments with full transparency. This is not a technical challenge. Rather, it is a business choice.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source, and then only in third party applications seeking to support all common calendaring formats. In fact this capability illustrates source intransigence where user needs should predominate.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most certainly require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+
+	</section>
+
+<section id="commandconversion"><div class="header-wrapper"><h3 id="x7-6-support-command-normalization"><bdi class="secno">7.6 </bdi>Support Command Normalization</h3><a class="self-link" href="#commandconversion" aria-label="Permalink for Section 7.6"></a></div>
+	
+ 
+<p>Sometimes vendors support accessibility by mapping a series of keystrokes for screen reader users (and others who prefer keyboard commands to mouse clicks) to their own proprietary definitions. Often these duplicate standard command sequences used for similar purposes in widely used software. This capability proposes that overlay technology can remap proprietary command mappings to more commonly known command mappings, thus greatly reducing or even eliminating an unnecessary learning challenge for the end user.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+
+</section>
+
+	<section id="skim"><div class="header-wrapper"><h3 id="x7-7-mediate-content-skimming"><bdi class="secno">7.7 </bdi>Mediate Content Skimming</h3><a class="self-link" href="#skim" aria-label="Permalink for Section 7.7"></a></div>
+		
+
+	<p>It is often useful to skim through content to determine what, if any of it, might benefit the user by a more careful reading. Good user agent support for such a feature would not only support sequential summarization, but the marking of particular sections to return to for greater study.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+</section>
+
+<section class="summarize-sl" id="mediate-skimming-sign-language-content"><div class="header-wrapper"><h3 id="x7-8-mediate-skimming-sign-language-content"><bdi class="secno">7.8 </bdi>Mediate Skimming Sign-Language Content</h3><a class="self-link" href="#mediate-skimming-sign-language-content" aria-label="Permalink for Section 7.8"></a></div>
+	
+
+	<p>Skimming through content to determine what, if any of it, might benefit the user by a more careful reading is just as valuable to users who depend on sign-language, or who utilize Augmentative and Alternative Communication (AAC) symbolic languages, as it for those who read text. As with summation services with text, good user agent support for such a feature would not only support sequential summarization, but the marking of particular sections to return to for greater study.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+
+</section>
+
+	</section>
+
+        <section class="appendix" id="Appendices"><div class="header-wrapper"><h2 id="a-appendices"><bdi class="secno">A. </bdi>Appendices</h2><a class="self-link" href="#Appendices" aria-label="Permalink for Appendix A."></a></div>
+		
+
+        <section class="appendix" id="Appendix-A"><div class="header-wrapper"><h3 id="a-1-design-principles"><bdi class="secno">A.1 </bdi>Design Principles</h3><a class="self-link" href="#Appendix-A" aria-label="Permalink for Appendix A.1"></a></div>
+		
+
+<p>Our approach to the design and analysis in this document is rooted in the principles often called: <q>Human-Centered
+Design (HCD).</q> As an outlook that places people at its core, we believe HCD  aligns perfectly with the goals of accessibility. This method of design prioritizes empathy, collaboration, and user empowerment, which aligns with
+our mission to generate accessibility solutions that meet the diverse needs of various human individuals. Our understanding of HCG requires us to minimize technological configuration tasks and maximize each individual's ability to read and interact with actual content—not the application (or browser) <q>chrome.</q></p>
+
+		<p>Among various design terminologies linked with accessibility such as
+		<q>universal design</q> and <q>inclusive design,</q> HCD sets itself apart due to some
+		specific distinct attributes, such as:</p>
+
+		<ul>
+			<li><strong>A focus on Individual Needs:</strong> HCD underscores the importance of comprehending
+		the unique needs, preferences, and behaviors of individual users. It
+		acknowledges that effective design solutions must address the broad
+		spectrum of the human experience, catering to the specific requirements of
+		different individuals. At the same time our goal is to allow individual users to focus on the features that assist them without needing to endlessly scroll through features that are the needs of other individuals.</li>
+
+			<li><strong>User Empowerment:</strong> Central to the HCD approach is the active involvement of
+		users throughout the design process. This approach appreciates their
+		expertise, insights, and encourages co-creation, thereby fostering a sense
+		of ownership and agency over the final outcome. As an example, in developing this document we actively solicit the input of individuals on whose behalf we endeavor to quantify and describe useful accessibility features. As with all W3C documents, transparency and wide public review are core values.</li>
+		</ul>
+
+<p>Our design philosophy does not merely aim for inclusivity; instead, it
+		strives to create meaningful experiences that significantly enhance the
+		lives of the people we serve. A successful application of HCD manifests not
+		just in broad-reaching accessibility, but in generating rich, meaningful,
+		and transformative experiences for the user.</p>
+
+<p>Furthermore, HCD endeavors to build a comprehensive understanding of the
+end user, transcending the confines of mere accessibility. It delves into
+the emotional, cognitive, and social dimensions of the human experience,
+with a commitment to design solutions that resonate on a profoundly
+personal level.</p>
+
+<p>Our commitment to HCD is woven throughout our efforts to ensure
+accessibility. In prioritizing a user's individual needs and emphasizing
+their active involvement in the design process, we believe we can create a
+more accessible and inclusive digital environment. By employing HCD, we
+hope to deliver a seamless, enjoyable experience for all users, that is
+more than just accessible - it is truly human-centered.</p>
+
+<section id="user-triggered-transformations"><div class="header-wrapper"><h4 id="a-1-1-user-triggered-transformations"><bdi class="secno">A.1.1 </bdi>User-triggered Transformations</h4><a class="self-link" href="#user-triggered-transformations" aria-label="Permalink for Appendix A.1.1"></a></div>
+
+<p>User can be afforded  the opportunity to opt-in to various transformations via interactive personalization menus: The end-user can access a list of available enhancements and enable those they require. </p>
+
+<dl>
+<dt>Source</dt>
+<dd>Users tend to require the same types of accommodations across all sites and all content sources. Therefore, facilitating this capability in the source is likely the least useful place to locate it, because that would require the user to select the same enhancements time and again across the succession of sites visited and likely with different menu organization site to site. </dd>
+
+<dt>Trade-offs</dt>
+<dd>Many of the capabilities made available by user-triggered opt-ins are often also found in multiple places at the edge. For example, contrast adjustment is generally found  in operating system display settings, in browser and app user-agents (e.g. dark mode/light mode), and in browser extensions, and in JavaScripted (CDN hosted) overlays. Such redundancy can easily lead to confusion. This confusion may be further exacerbated because certain settings the user finds helpful may be available only in one of these locations, and not in all of them. Furthermore, users are frequently not particularly knowledgeable about their operating system settings menus, especially as these tend to move with each OS revision (to take one example). This can make it difficult to locate these features, especially when we recognize that once satisfactorily configured they are generally not reset (meaning that the user doesn't need to revisit that menu location and soon forgets where it is). On the other hand, locating the accommodation consistently proximate to the user offers the highest likelihood of maximal benefit provided  the accommodation  can be easily identified and invoked. This also provides the best opportunity for easing the burden of invoking the same accommodation across a user's multiple devices.</dd>
+
+<dt>Benefit</dt>
+<dd>Users can select and optimally tune the types of accommodations that they require. Any device on the edge may also have knowledge of other devices on the edge, that may need the same adjustments, and edge technology could propagate these settings to those other devices. MacOS Ventura (MacOS 13.2) is already doing this for Wi-Fi passwords when an IOS device configured for the same network is proximate.</dd>
+
+<dt>Automatability</dt>
+<dd>
+Placeholder pending content
+</dd>
+
+</dl>
+
+</section></section>
+
+	</section>
+
+        <section class="appendix" id="Appendix-D"><div class="header-wrapper"><h2 id="b-acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</h2><a class="self-link" href="#Appendix-D" aria-label="Permalink for Appendix B."></a></div>
+            
+        	<section id="participants-of-the-a11yedge-community-group-who-contributed-to-the-development-of-this-document"><div class="header-wrapper"><h3 id="b-1-participants-of-the-a11yedge-community-group-who-contributed-to-the-development-of-this-document"><bdi class="secno">B.1 </bdi>Participants of the A11yEdge Community Group who contributed to the development of this document:</h3><a class="self-link" href="#participants-of-the-a11yedge-community-group-who-contributed-to-the-development-of-this-document" aria-label="Permalink for Appendix B.1"></a></div>
+        		
+        		<ul>
+<li>Murathan Biliktu</li>
+<li>Bev Corwin</li>
+<li>Derek Chaves</li>
+<li>Charles Nevile</li>
+<li>Janina Sajka (Invited Expert)</li>
+<li>Jason Taylor, UsableNet.com</li>
+<li>Shari Thurow</li>
+<li>Kate Whilhelm</li>
+<li>Lionel Wolberger (Userway)</li>
+        		</ul>
+        	</section>
+        	</section>
+
+
+<p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respec) {
+  document.respec.ready.then(setupPanel);
+} else {
+  setupPanel();
+}
+
+function setupPanel() {
+  const listener = panelListener();
+  document.body.addEventListener("keydown", listener);
+  document.body.addEventListener("click", listener);
+}
+
+function panelListener() {
+  /** @type {HTMLElement} */
+  let panel = null;
+  return event => {
+    const { target, type } = event;
+
+    if (!(target instanceof HTMLElement)) return;
+
+    // For keys, we only care about Enter key to activate the panel
+    // otherwise it's activated via a click.
+    if (type === "keydown" && event.key !== "Enter") return;
+
+    const action = deriveAction(event);
+
+    switch (action) {
+      case "show": {
+        hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = target.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        const coords = deriveCoordinates(event);
+        displayPanel(dfn, panel, coords);
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        panel = null;
+        break;
+      }
+    }
+  };
+}
+
+/**
+ * @param {MouseEvent|KeyboardEvent} event
+ */
+function deriveCoordinates(event) {
+  const target = /** @type HTMLElement */ (event.target);
+
+  // We prevent synthetic AT clicks from putting
+  // the dialog in a weird place. The AT events sometimes
+  // lack coordinates, so they have clientX/Y = 0
+  const rect = target.getBoundingClientRect();
+  if (
+    event instanceof MouseEvent &&
+    event.clientX >= rect.left &&
+    event.clientY >= rect.top
+  ) {
+    // The event probably happened inside the bounding rect...
+    return { x: event.clientX, y: event.clientY };
+  }
+
+  // Offset to the middle of the element
+  const x = rect.x + rect.width / 2;
+  // Placed at the bottom of the element
+  const y = rect.y + rect.height;
+  return { x, y };
+}
+
+/**
+ * @param {Event} event
+ */
+function deriveAction(event) {
+  const target = /** @type {HTMLElement} */ (event.target);
+  const hitALink = !!target.closest("a");
+  if (target.closest("dfn:not([data-cite]), .index-term")) {
+    return hitALink ? "none" : "show";
+  }
+  if (target.closest(".dfn-panel")) {
+    if (hitALink) {
+      return target.classList.contains("self-link") ? "hide" : "dock";
+    }
+    const panel = target.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : "none";
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return "none";
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+
+  // As it's a dialog, we trap focus.
+  // TODO: when <dialog> becomes a implemented, we should really
+  // use that.
+  trapFocus(panel, dfn);
+}
+
+/**
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function trapFocus(panel, dfn) {
+  /** @type NodeListOf<HTMLAnchorElement> elements */
+  const anchors = panel.querySelectorAll("a[href]");
+  // No need to trap focus
+  if (!anchors.length) return;
+
+  // Move focus to first anchor element
+  const first = anchors.item(0);
+  first.focus();
+
+  const trapListener = createTrapListener(anchors, panel, dfn);
+  panel.addEventListener("keydown", trapListener);
+
+  // Hiding the panel releases the trap
+  const mo = new MutationObserver(records => {
+    const [record] = records;
+    const target = /** @type HTMLElement */ (record.target);
+    if (target.hidden) {
+      panel.removeEventListener("keydown", trapListener);
+      mo.disconnect();
+    }
+  });
+  mo.observe(panel, { attributes: true, attributeFilter: ["hidden"] });
+}
+
+/**
+ *
+ * @param {NodeListOf<HTMLAnchorElement>} anchors
+ * @param {HTMLElement} panel
+ * @param {HTMLElement} dfn
+ * @returns
+ */
+function createTrapListener(anchors, panel, dfn) {
+  const lastIndex = anchors.length - 1;
+  let currentIndex = 0;
+  return event => {
+    switch (event.key) {
+      // Hitting "Tab" traps us in a nice loop around elements.
+      case "Tab": {
+        event.preventDefault();
+        currentIndex += event.shiftKey ? -1 : +1;
+        if (currentIndex < 0) {
+          currentIndex = lastIndex;
+        } else if (currentIndex > lastIndex) {
+          currentIndex = 0;
+        }
+        anchors.item(currentIndex).focus();
+        break;
+      }
+
+      // Hitting "Enter" on an anchor releases the trap.
+      case "Enter":
+        hidePanel(panel);
+        break;
+
+      // Hitting "Escape" returns focus to dfn.
+      case "Escape":
+        hidePanel(panel);
+        dfn.focus();
+        return;
+    }
+  };
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  if (!panel) return;
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2021/fixup.js"></script></body></html>
