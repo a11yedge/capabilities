@@ -1,5 +1,6 @@
 var respecConfig = {
 	// embed RDFa data in the output
+        latestVersion: null,
 	trace:  true,
 	useExperimentalStyles: true,
 	doRDFa: '1.1',
