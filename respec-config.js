@@ -1,4 +1,8 @@
 var respecConfig = {
+        github: {
+	  repoURL: "https://github.com/a11yedge/capabilities/",
+	  branch: "main"
+        },
 	// embed RDFa data in the output
         latestVersion: null,
 	trace:  true,
