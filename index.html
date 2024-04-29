@@ -1290,11 +1290,55 @@ Placeholder pending content
 	<section id="timeout">
 		<h3>Managing Time Outs</h3>
 
+<dl>
+<dt>Source</dt>
+<dd>
+	Client-side scripts often control session time-outs to manage server load and security. However, not all scripts are designed with accessibility in mind, which can inadvertently lock out users who need more time to
+	+interact with web content.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	While time-outs are necessary for security and efficient resource use, they can disproportionately affect users with disabilities who require more time to read and interact with content. Extending time limits or
+	+allowing users to request more time can mitigate these issues but might slightly increase the risk of attacks like session hijacking.
+</dd>
+<dt>Benefit</dt>
+<dd>
+Implementing adjustable time-outs on the client side enhances accessibility by allowing users to extend sessions as needed. This flexibility ensures that all users, regardless of their ability to interact quickly,
+can fully engage with web content without disruption.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In no significant way&mdash;While detecting user activity and adjusting timeouts might seem automatable, verifying that these adjustments do not affect user experience negatively or interfere with other scripts
+	+without human oversight is challenging. Autonomous systems might struggle with context-specific nuances that require human judgment.
+</dd>
+</dl>
+ 
 	</section>
 
 		<section id="axvalid">
 			<h3>Accessible Validation</h3>
 
+<dl>
+<dt>Source</dt>
+<dd>
+	Validation of user input on client-side forms is typically handled via JavaScript. This immediate feedback can be made accessible by ensuring that error messages are communicated through assistive technologies.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+Client-side validation improves user experience by providing instant feedback; however, it must be designed to ensure that error messages and corrective prompts are accessible to all users, including those using
+screen readers or other assistive technologies.
+</dd>
+<dt>Benefit</dt>
+<dd>
+Accessible client-side validation enhances the form-filling experience for users with disabilities by providing immediate, understandable feedback that assists in error correction without the need for server-side
+interaction.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In some cases&mdash;The automation of client-side validation can often autonomously detect errors, remediate them by providing feedback, and verify the corrections with high reliability. Frameworks and scripts can+be designed to handle a wide range of common input errors, making this capability highly automatable.
+</dd>
+</dl>
+ 
 </section>
 
 <section id="ClientInteractivity">
@@ -1303,29 +1347,76 @@ Placeholder pending content
 	<section id="keyboordaccessinteractive">
 		<h3>ensure keyboard access to interactive elements </h3>
 
+<dl>
+<dt>Source</dt>
+<dd>
+	Many web applications rely on mouse-driven events, which can exclude users who depend on keyboard navigation due to physical limitations or personal preference.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Providing comprehensive keyboard support may require significant restructuring of event handlers in web applications, potentially increasing development time and complexity.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Ensuring keyboard accessibility for all interactive elements significantly improves the usability of web applications for users with motor disabilities and those who prefer keyboard navigation.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In no significant way&mdash;Automatically ensuring keyboard access involves modifying event handlers and potentially the DOM structure, which can affect existing page scripts and styles. Autonomous verification of /
+these changes without impacting user experience or other functionalities is not currently feasible.
+</dd>
+</dl>
+ 
 	</section>
 
 		<section id="maninteractivefocus">
 		<h3>Mmanage focus through interactive processes</h3>
 
+<dl>
+<dt>Source</dt>
+<dd>
+	Focus management is critical in dynamic web applications where elements are constantly updated. Poor focus control can disorient users, particularly those who rely on screen readers.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Implementing robust focus management involves complex event handling and state tracking, which can complicate application code.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Proper focus management ensures a smoother navigation experience for all users, allowing them to maintain context and control through dynamic changes.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;While focus management can be scripted, verifying that automated focus adjustments do not disrupt user experience or interfere with other interactive elements typically exceeds the capabilities of current autonomous systems.
+</dd>
+</dl>
+ 
 		</section>
 
 		<section id="dynamicpages">
 		<h3>handle dynamic pages</h3>
 
+<dl>
+<dt>Source</dt>
+<dd>
+	Dynamic pages that update without full reloads (using AJAX and similar technologies) pose challenges for users who rely on screen readers, as these users may not be aware of changes on the page.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	While dynamic updates provide a smoother user experience, they require careful management to ensure that all users are informed of changes in content or state.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Properly managed dynamic pages can offer a seamless experience for all users, including those with disabilities, by providing necessary alerts and updates through assistive technologies.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;Handling updates on dynamic pages using standard technologies like AJAX and implementing ARIA-live regions can be automated. However, ensuring these updates do not affect other aspects of the
+	 page???s functionality often requires human verification.
+</dd>
+</dl>
+ 
 		</section>
-
-		<section id="timeout2">
-		<h3>Managing Time Outs</h3>
-
-		</section>
-
-		<section id="axvalid2">
-			<h3>Accessible Validation</h3>
-
-</section>
-
-</section>
 
 <section id="customcomponents">
 	<h2>Custom components</h2>
@@ -1333,18 +1424,77 @@ Placeholder pending content
 	<section id="correctsemanticbehavior">
 		<h3>correct semantic behavior</h3>
 
+<dl>
+<dt>Source</dt>
+<dd>
+	Custom components often deviate from standard HTML elements in terms of functionality and accessibility. Ensuring that these components reflect correct semantic behavior is crucial for accessibility tools like screen
+readers.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Aligning custom components with standard semantic behaviors often requires additional development effort and rigorous testing, especially when components are highly interactive or complex.
+</dd>
+<dt>Benefit</dt>
+<dd>
+When custom components adhere to proper semantics, they enhance the user experience for individuals relying on assistive technologies, making web interactions more intuitive and predictable.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In no significant way&mdash;Custom components vary widely in functionality and integration, making it difficult for autonomous systems to apply correct semantics without potential conflicts or errors that could
+disrupt user experience or other page elements.
+</dd>
+</dl>
+ 
 	</section>
 
 		<section id="applyoradjustariaelements">
 		<h3>apply or adjust ARIA elements</h3>
 
+<dl>
+<dt>Source</dt>
+<dd>
+	Accessible Rich Internet Applications (ARIA) roles and attributes enhance accessibility when native HTML elements cannot fully describe the widget???s function.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Incorporating ARIA roles and attributes requires a detailed understanding of ARIA specifications and how assistive technologies interpret these roles. Overuse or incorrect use can lead to more harm than good.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Correct application of ARIA roles enhances the accessibility of web applications by providing users with disabilities the necessary information to interact with various components effectively.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;While applying standard ARIA roles and attributes can be automated, verifying that these roles do not interact negatively with other attributes or scripts on the page often requires manual
+oversight.
+</dd>
+</dl>
+ 
 		</section>
 
 		<section id="replacecomponent">
 		<h3>replace component when needed with an accessible version</h3>
 
-		
-
+<dl>
+<dt>Source</dt>
+<dd>
+	Sometimes, the best solution for accessibility issues in custom components is to replace them with more accessible versions that conform better to standard practices.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Replacing components can be costly and time-consuming, particularly if the replacements need to be custom-developed to fit into the existing ecosystem without degrading performance or altering functionality.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Providing an accessible alternative ensures all users have equal access to functionalities, adhering to legal and moral obligations towards inclusivity.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In no significant way&mdash;The decision to replace a component involves understanding context, user needs, and the potential impacts on other page elements, which cannot be fully automated without risking
+significant errors.
+</dd>
+</dl>
+ 
 </section>
 </section>
 
@@ -1355,34 +1505,123 @@ Placeholder pending content
 <h3>Drop Cap Implementation
 </h3>
 
-<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
-</section>
+<dl>
+<dt>Source</dt>
+<dd>
+	Drop caps are used to enhance the visual start of a paragraph and can be problematic for screen readers if not implemented correctly.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	The decorative nature of drop caps might conflict with text clarity and readability for users utilizing text-to-speech technologies unless additional descriptive tags or styles are used.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Properly implemented drop caps can provide both aesthetic value and maintain readability, enhancing the user???s visual and cognitive experience.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In no significant way&mdash;Automating the implementation of drop caps that do not disrupt reading devices or other design elements involves nuanced design decisions that currently require human artistic and
+technical evaluation.
+</dd>
+</dl>
  
 <section id="ulol">
 <h3>Bulleted and Numbered Lists
 </h3>
 
-<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+<dl>
+<dt>Source</dt>
+<dd>
+	Lists are fundamental for structuring content but can be problematic if list markers are not recognized by assistive technologies.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Ensuring that custom-styled lists are accessible may require overriding default styles, which can complicate design consistency across platforms.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Accessible lists ensure that all users can understand content structure and order, critical for instructions, key points, and navigation cues.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;Standard list implementations are highly automatable; however, custom styles and interactions with other text or elements may not be autonomously verified for non-interference and accessibility without human input.
+</dd>
+</dl>
 </section>
 
 <section id="textbox">
 <h3>Text Box Framing
 </h3>
 
-<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+<dl>
+<dt>Source</dt>
+<dd>
+	Text box framing involves visually distinguishing text boxes from other elements on the page, which can aid in navigation and readability.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Custom frames and borders may need specific management to ensure they do not interfere with text readability or screen reader performance.
+</dd>
+<dt>Benefit</dt>
+<dd>
+Well-implemented text box frames can guide users??? attention effectively and improve the aesthetic and functional usability of the site.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;While framing can be automatically applied, ensuring that these styles do not clash with other page elements or affect readability requires manual checks, especially with complex layouts.
+</dd>
+</dl>
+ 
 </section>
  
 <section id="shadowout">
 <h3>Shadow and Outline Effects
 </h3>
 
-<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
-</section>
+<dl>
+<dt>Source</dt>
+<dd>
+Shadows and outlines are used to enhance text visibility and separateness from the background, crucial for users with visual impairments.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Incorrectly implemented shadows or outlines might blur text or create distracting visuals, reducing accessibility.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Properly used shadow and outline effects can significantly improve text legibility, benefiting users with low vision and enhancing overall user experience.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;Shadows and outlines can be applied autonomously, but verifying their impact on usability and interaction with other visual components typically exceeds the capabilities of current automated
+systems.
+</dd>
+</dl>
  
+</section>
+
 <section id="transpcont">
 <h3>Text Transparency Control</h3>
 
-<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+<dl>
+<dt>Source</dt>
+<dd>
+Text transparency often serves design aesthetics, such as background text interaction. However, it can render text unreadable for those with visual impairments or in less-than-ideal viewing conditions.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Balancing text transparency with legibility can challenge designers aiming to maintain a particular visual style while ensuring content is accessible to users with poor vision.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Proper management of text transparency ensures that all users can read text comfortably, regardless of their visual capabilities, thus enhancing usability and accessibility.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In some cases&mdash;Adjusting text transparency can be automated based on background contrast ratios; however, ensuring that these changes do not affect other visual elements or the overall visual integrity of the site often requires human verification.
+</dd>
+</dl>
+ 
 </section>
 
 </section>
