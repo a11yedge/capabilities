@@ -221,7 +221,7 @@ s own hardware and software may render it in ways the Content Provider never ima
 	<p>This layer of delivered content consists of words, graphics, and rich media objects. In the main it is created using  html, both static and dynamic.</p>
 
 <section id="contedit">
-	<h2>Content Editing</h2>
+	<h2>Missing Content Detail Provisioning</h2>
 
 <section id="imgalt">
 	<h3>Image Alternative Text Provisioning</h3>
@@ -326,50 +326,6 @@ iFrames within pages, and provides screen reader users a more efficient and mean
 
 </section>
 
-<section id="feedback">
-	<h2>User Feedback</h2>
-
-<dl>
-<dt>Source</dt>
-<dd>
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-</dd>
-<dt>Benefit</dt>
-<dd>
-</dd>
-<dt>Automatability</dt>
-<dd>Many cases
-</dd>
-</dl>
- 
-</section>
-
-<section id="contentmod">
-<h2>Content Moderation</h2>
-
-<p>This capability helps assure that site content meets the publisher&apos;s content policies. Typical policies will include everyday phrases with
-racist origins, and gendered or exclusive expressions and terms that are deemed
-to exclude audiences.</p>
-
-<dl>
-<dt>Source</dt>
-<dd>
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-</dd>
-<dt>Benefit</dt>
-<dd>
-</dd>
-<dt>Automatability</dt>
-<dd>Some cases
-</dd>
-</dl>
- 
-</section>
-
 <section id="videocaption">
 <h2>Video Captioning</h2>
 
@@ -379,14 +335,14 @@ video and synchronized with it.</p>
 <dl>
 <dt>Source</dt>
 <dd>
-	Source generally provides captions, as they are most knowledgeable about the content.
+	It has long been expected that source will provide human edited captions, as the content provider is presumed most knowledgeable about the content, and human editors best able to assure caption accuracy.
 </dd>
 <dt>Trade-offs</dt>
 <dd>The cost of generating captions is prohibitive, promoting the use of automated captions. However, automation often makes mistakes. 
 </dd>
 <dt>Benefit</dt>
 <dd>
-	The cost of generating captions is prohibitive, and automation with human editing is almost universally relied upon. 
+	The cost of generating captions is prohibitive, and automation with human editing is almost universally relied upon.  Most significantly, captions can always be provided post source.
 </dd>
 
 <dt>Automatability</dt>
@@ -396,95 +352,32 @@ video and synchronized with it.</p>
 </dl>
 
 </section>
+</section>
 
 <section id="pdf">
-<h3>PDF Remediation</h3>
+<h2>PDF Remediation</h2>
 
 <p>This capability helps assure that a published PDF document is correctly tagged and
 marked up sufficiently in order that it can be accessed and more readily understood by people with
 disabilities, including those who use assistive technology such as a screen
 reader.</p>
 
-</section>
-
-<section id="semiotics">
-	<h2>Text Services (Semiotics)</h2>
-
-<section id="dictionary">
-<h3>Dictionary On Demand</h3>
-
-<p>This capability provides definitions of words or
-phrases that may be unfamiliar to some users; provides pronunciation guidance;
-and provides synonyms which can all especially help users living with cognitive and learning disabilities
-better comprehend content.</p>
-
 <dl>
 <dt>Source</dt>
 <dd>
-	While this functionality could be made available through source content, it would be limited to the site that chose to provide the capability.
 </dd>
-<dt>Trade-offs</dt>
+<dt>Tradeoffs</dt>
 <dd>
-	The benefit of providing this capability in edge technology is that it can be applied across all sites a user access, and for all devices the user may use. When browsers provide this capability, its functionality is limited to the browser being used (though a particular browser may be able to remember a user&apos;s preference for this functionality across multiple devices). Only edge technology can provide this capability across browser and operating environments as well as across sites.
 </dd>
 <dt>Benefit</dt>
 <dd>
-	Supports comprehension for users who require the enhanced support in a manner that does not interfere with the fundamental functionality of the content. This is yet another instance supporting <q>Configure Once, Use Everywhere</q>.
 </dd>
-
 <dt>Automatability</dt>
 <dd>
-No significant way
+	In Some Cases
 </dd>
-
 </dl>
  
-</section>
-
-<section id="translate">
-<h3>Live Site Translations</h3>
-
-<p>Offer a user-triggered method to
-This capability changes the language of a web page in real time, by translating the current page
-into a language selected by the user.</p>
-
-</section>
-
-<section id="qualitytts">
-<h3>Read Content Aloud</h3>
-
-<p>This capability allows a user to hear content spoken aloud by using a cloud (or browser) hosted Text to Speech (TTS) engine. There are now high quality TTS engines and listening while reading on screen is often beneficial for users in general, including especially users living with certain cognitive and learning disabilities.</p>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	While it could be supported in source content, this capability is rarely (if ever) available in source.
-</dd>
-<dt>Trade-offs</dt>
-<dd>
-	Users requiring this accommodation will most likely require it across all sites they visit.
-</dd>
-
-<dt>Benefit</dt>
-<dd>
-	Only edge technology is capable of performing this accommodation across all sites a user accesses.
-</dd>
-
-<dt>Automatability</dt>
-<dd>
-In many cases
-</dd>
-
-<dt class="rt">Related Topics</dt>
-<dd class="rt">
-        This capability is yet another example of <a
-href="#portable">configure once, use everywhere</a> only available through
-accessible edge technologies.
-</dd>
- 
-</dl>
-
-</section>
 </section>
 </section>
 
@@ -534,6 +427,55 @@ In many cases
 </dl>
 
 </section>
+
+	<section id="keyboordaccessinteractive">
+		<h3>ensure keyboard access to interactive elements </h3>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Many web applications rely on mouse-driven events, which can exclude users who depend on keyboard navigation due to physical limitations or personal preference.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Providing comprehensive keyboard support may require significant restructuring of event handlers in web applications, potentially increasing development time and complexity.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Ensuring keyboard accessibility for all interactive elements significantly improves the usability of web applications for users with motor disabilities and those who prefer keyboard navigation.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In no significant way&mdash;Automatically ensuring keyboard access involves modifying event handlers and potentially the DOM structure, which can affect existing page scripts and styles. Autonomous verification of /
+these changes without impacting user experience or other functionalities is not currently feasible.
+</dd>
+</dl>
+ 
+	</section>
+
+		<section id="maninteractivefocus">
+		<h3>manage focus through interactive processes</h3>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Focus management is critical in dynamic web applications where elements are constantly updated. Poor focus control can disorient users, particularly those who rely on screen readers.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Implementing robust focus management involves complex event handling and state tracking, which can complicate application code.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Proper focus management ensures a smoother navigation experience for all users, allowing them to maintain context and control through dynamic changes.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;While focus management can be scripted, verifying that automated focus adjustments do not disrupt user experience or interfere with other interactive elements typically exceeds the capabilities of current autonomous systems.
+</dd>
+</dl>
+ 
+		</section>
 
 <section id="readingguide">
 <h3>Supply a Reading Guide</h3>
@@ -844,6 +786,7 @@ accessible edge technologies.
  
 </dl>
  
+</section>
 </section>
 </section>
 
@@ -1365,55 +1308,6 @@ interaction. Accessible notifications ensure that all users, including those wit
  
 </section>
 
-	<section id="keyboordaccessinteractive">
-		<h3>ensure keyboard access to interactive elements </h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Many web applications rely on mouse-driven events, which can exclude users who depend on keyboard navigation due to physical limitations or personal preference.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-	Providing comprehensive keyboard support may require significant restructuring of event handlers in web applications, potentially increasing development time and complexity.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	Ensuring keyboard accessibility for all interactive elements significantly improves the usability of web applications for users with motor disabilities and those who prefer keyboard navigation.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In no significant way&mdash;Automatically ensuring keyboard access involves modifying event handlers and potentially the DOM structure, which can affect existing page scripts and styles. Autonomous verification of /
-these changes without impacting user experience or other functionalities is not currently feasible.
-</dd>
-</dl>
- 
-	</section>
-
-		<section id="maninteractivefocus">
-		<h3>Mmanage focus through interactive processes</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Focus management is critical in dynamic web applications where elements are constantly updated. Poor focus control can disorient users, particularly those who rely on screen readers.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-	Implementing robust focus management involves complex event handling and state tracking, which can complicate application code.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	Proper focus management ensures a smoother navigation experience for all users, allowing them to maintain context and control through dynamic changes.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In some cases&mdash;While focus management can be scripted, verifying that automated focus adjustments do not disrupt user experience or interfere with other interactive elements typically exceeds the capabilities of current autonomous systems.
-</dd>
-</dl>
- 
-		</section>
-
 		<section id="dynamicpages">
 		<h3>handle dynamic pages</h3>
 
@@ -1736,6 +1630,86 @@ other site functionalities or user security is currently beyond the scope of aut
  
 </section>
 
+<section id="semiotics">
+	<h2>Text Services (Semiotics)</h2>
+
+<section id="dictionary">
+<h3>Dictionary On Demand</h3>
+
+<p>This capability provides definitions of words or
+phrases that may be unfamiliar to some users; provides pronunciation guidance;
+and provides synonyms which can all especially help users living with cognitive and learning disabilities
+better comprehend content.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While this functionality could be made available through source content, it would be limited to the site that chose to provide the capability.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	The benefit of providing this capability in edge technology is that it can be applied across all sites a user access, and for all devices the user may use. When browsers provide this capability, its functionality is limited to the browser being used (though a particular browser may be able to remember a user&apos;s preference for this functionality across multiple devices). Only edge technology can provide this capability across browser and operating environments as well as across sites.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Supports comprehension for users who require the enhanced support in a manner that does not interfere with the fundamental functionality of the content. This is yet another instance supporting <q>Configure Once, Use Everywhere</q>.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+No significant way
+</dd>
+
+</dl>
+ 
+</section>
+
+<section id="translate">
+<h3>Live Site Translations</h3>
+
+<p>Offer a user-triggered method to
+This capability changes the language of a web page in real time, by translating the current page
+into a language selected by the user.</p>
+
+</section>
+
+<section id="qualitytts">
+<h3>Read Content Aloud</h3>
+
+<p>This capability allows a user to hear content spoken aloud by using a cloud (or browser) hosted Text to Speech (TTS) engine. There are now high quality TTS engines and listening while reading on screen is often beneficial for users in general, including especially users living with certain cognitive and learning disabilities.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+In many cases
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a
+href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+
+</section>
+</section>
+
 <section id="richmedia">
 	<h2>Rich Media</h2>
 
@@ -1799,6 +1773,30 @@ As stated above this typically results in a highly interactive experience presen
 engage and please the end user while meeting regulatory requirements. 
 </p>
 
+
+<section id="contentmod">
+<h2>Content Moderation</h2>
+
+<p>This capability helps assure that site content meets the publisher&apos;s content policies. Typical policies will include everyday phrases with
+racist origins, and gendered or exclusive expressions and terms that are deemed
+to exclude audiences.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+</dd>
+<dt>Benefit</dt>
+<dd>
+</dd>
+<dt>Automatability</dt>
+<dd>In Some cases
+</dd>
+</dl>
+ 
+</section>
 <section id="autoai">
 	<h2>Leveraging Automation</h2>
 
