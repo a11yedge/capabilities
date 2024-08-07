@@ -1137,6 +1137,33 @@ In some cases&mdash;Were a [example pending]
 
 </section>
 
+		<section id="axvalid">
+			<h3>Accessible Validation</h3>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Validation of user input on client-side forms is typically handled via JavaScript. This immediate feedback can be made accessible by ensuring that error messages are communicated through assistive technologies.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+Client-side validation improves user experience by providing instant feedback; however, it must be designed to ensure that error messages and corrective prompts are accessible to all users, including those using
+screen readers or other assistive technologies. Designing notifications that are both timely and accessible may require additional considerations, such as user control over timing and the method of dismissal.
+</dd>
+<dt>Benefit</dt>
+<dd>
+Accessible client-side validation enhances the form-filling experience for users with disabilities by providing immediate, understandable feedback that assists in error correction without the need for server-side
+interaction. Accessible notifications ensure that all users, including those with visual or cognitive disabilities, are aware of important updates and can interact with them appropriately.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In some cases&mdash;The automation of client-side validation can often autonomously detect errors, remediate them by providing feedback, and verify the corrections with high reliability. Frameworks and scripts can+be designed to handle a wide range of common input errors, making this capability highly automatable.
+	tifications are crucial for real-time information but can be inaccessible if they disappear too quickly or are not announced by screen readers.
+</dd>
+</dl>
+ 
+</section>
+
 </section>
 
 <section id="hyperlink">
@@ -1269,33 +1296,6 @@ can fully engage with web content without disruption.
 </dl>
  
 	</section>
-
-		<section id="axvalid">
-			<h3>Accessible Validation</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Validation of user input on client-side forms is typically handled via JavaScript. This immediate feedback can be made accessible by ensuring that error messages are communicated through assistive technologies.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-Client-side validation improves user experience by providing instant feedback; however, it must be designed to ensure that error messages and corrective prompts are accessible to all users, including those using
-screen readers or other assistive technologies. Designing notifications that are both timely and accessible may require additional considerations, such as user control over timing and the method of dismissal.
-</dd>
-<dt>Benefit</dt>
-<dd>
-Accessible client-side validation enhances the form-filling experience for users with disabilities by providing immediate, understandable feedback that assists in error correction without the need for server-side
-interaction. Accessible notifications ensure that all users, including those with visual or cognitive disabilities, are aware of important updates and can interact with them appropriately.
-</dd>
-<dt>Automatability</dt>
-<dd>
-	In some cases&mdash;The automation of client-side validation can often autonomously detect errors, remediate them by providing feedback, and verify the corrections with high reliability. Frameworks and scripts can+be designed to handle a wide range of common input errors, making this capability highly automatable.
-	tifications are crucial for real-time information but can be inaccessible if they disappear too quickly or are not announced by screen readers.
-</dd>
-</dl>
- 
-</section>
 
 		<section id="dynamicpages">
 		<h3>handle dynamic pages</h3>
