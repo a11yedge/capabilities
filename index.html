@@ -770,54 +770,33 @@ accessible edge technologies.
 
 </section>
 
-<section id="margins">
-<h2>Margin Management
-</h2>
- 
-<section id="indent">
-<h3>
-Paragraph Indentation
+<section id="dropcap">
+<h3>Drop Cap Implementation
 </h3>
-
-<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
-</section>
-
-<section id="textalign">
-<h3>Text Alignment (Justification) Personalization</h3>
-
-<p>Fully justified text blocks have long been standard in publishing, including in web content publishing. It is achieved by using variable width fonts and adjusting spacing between characters and words in the block of text. r this practice is not beneficial to all users. This capability allows individual users to determine for themselves the alignment characteristics that best accomodate their reading needs.</p>
 
 <dl>
 <dt>Source</dt>
 <dd>
-	While it could be supported in source content, this capability is rarely (if ever) available in source.
+	Drop caps are used to enhance the visual start of a paragraph and can be problematic for screen readers if not implemented correctly.
 </dd>
-<dt>Trade-offs</dt>
+<dt>Tradeoffs</dt>
 <dd>
-	Users requiring this accommodation will most likely require it across all sites they visit.
+	The decorative nature of drop caps might conflict with text clarity and readability for users utilizing text-to-speech technologies unless additional descriptive tags or styles are used.
 </dd>
-
 <dt>Benefit</dt>
 <dd>
-	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+	Properly implemented drop caps can provide both aesthetic value and maintain readability, enhancing the user???s visual and cognitive experience.
 </dd>
-
 <dt>Automatability</dt>
 <dd>
-In many cases&mdash;Provided a user-specified justification preference is known.
+In no significant way&mdash;Automating the implementation of drop caps that do not disrupt reading devices or other design elements involves nuanced design decisions that currently require human artistic and
+technical evaluation.
 </dd>
-
-<dt class="rt">Related Topics</dt>
-<dd class="rt">
-        This capability is yet another example of <a
-href="#portable">configure once, use everywhere</a> only available through
-accessible edge technologies.
-</dd>
- 
 </dl>
  
 </section>
 </section>
+
 </section>
 
 <section id="usrgrx">
@@ -932,6 +911,153 @@ In some cases
 </section>
 
 </section>
+
+<section id="pagestyling">
+	<h2>Page Styling</h2>
+
+<section id="ulol">
+<h3>Bulleted and Numbered Lists
+</h3>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Lists are fundamental for structuring content but can be problematic if list markers are not recognized by assistive technologies.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Ensuring that custom-styled lists are accessible may require overriding default styles, which can complicate design consistency across platforms.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Accessible lists ensure that all users can understand content structure and order, critical for instructions, key points, and navigation cues.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;Standard list implementations are highly automatable; however, custom styles and interactions with other text or elements may not be autonomously verified for non-interference and accessibility without human input.
+</dd>
+</dl>
+</section>
+
+<section id="textbox">
+<h3>Text Box Framing
+</h3>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Text box framing involves visually distinguishing text boxes from other elements on the page, which can aid in navigation and readability.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Custom frames and borders may need specific management to ensure they do not interfere with text readability or screen reader performance.
+</dd>
+<dt>Benefit</dt>
+<dd>
+Well-implemented text box frames can guide users??? attention effectively and improve the aesthetic and functional usability of the site.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;While framing can be automatically applied, ensuring that these styles do not clash with other page elements or affect readability requires manual checks, especially with complex layouts.
+</dd>
+</dl>
+ 
+</section>
+ 
+<section id="shadowout">
+<h3>Shadow and Outline Effects
+</h3>
+
+<dl>
+<dt>Source</dt>
+<dd>
+Shadows and outlines are used to enhance text visibility and separateness from the background, crucial for users with visual impairments.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Incorrectly implemented shadows or outlines might blur text or create distracting visuals, reducing accessibility.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Properly used shadow and outline effects can significantly improve text legibility, benefiting users with low vision and enhancing overall user experience.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;Shadows and outlines can be applied autonomously, but verifying their impact on usability and interaction with other visual components typically exceeds the capabilities of current automated
+systems.
+</dd>
+</dl>
+ 
+</section>
+
+<section id="transpcont">
+<h3>Text Transparency Control</h3>
+
+<dl>
+<dt>Source</dt>
+<dd>
+Text transparency often serves design aesthetics, such as background text interaction. However, it can render text unreadable for those with visual impairments or in less-than-ideal viewing conditions.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Balancing text transparency with legibility can challenge designers aiming to maintain a particular visual style while ensuring content is accessible to users with poor vision.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Proper management of text transparency ensures that all users can read text comfortably, regardless of their visual capabilities, thus enhancing usability and accessibility.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In some cases&mdash;Adjusting text transparency can be automated based on background contrast ratios; however, ensuring that these changes do not affect other visual elements or the overall visual integrity of the site often requires human verification.
+</dd>
+</dl>
+ 
+</section>
+
+<section id="indent">
+<h3>
+Paragraph Indentation
+</h3>
+
+<p><strong>EDITOR'S NOTE</strong><br> Section content yet to be written.</p>
+</section>
+
+<section id="textalign">
+<h3>Text Alignment (Justification) Personalization</h3>
+
+<p>Fully justified text blocks have long been standard in publishing, including in web content publishing. It is achieved by using variable width fonts and adjusting spacing between characters and words in the block of text. r this practice is not beneficial to all users. This capability allows individual users to determine for themselves the alignment characteristics that best accomodate their reading needs.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	While it could be supported in source content, this capability is rarely (if ever) available in source.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+In many cases&mdash;Provided a user-specified justification preference is known.
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a
+href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
+</dl>
+ 
+</section>
+
 </section>
 
 <section id="interact">
@@ -1183,7 +1309,7 @@ significant errors.
 </section>
 
 <section id="nav">
-	<h2>Navigation</h2>
+	<h2>Navigation &amp; Hyper Elements</h2>
 
 <section id="structnav">
 	<h3>Semantic Navigation</h3>
@@ -1246,10 +1372,6 @@ In many cases
 </section>
 </section>
 
-<section id="hyperlink">
-<h2>Interactive Text Elements
-</h2>
-
 <section id="interactivelements">
 <h3>Interactive Elements Status Clarification</h3>
 
@@ -1278,11 +1400,6 @@ In no significant way
 </dl>
 
 </section>
-
-</section>
-
-<section id="butlink">
-	<h2>Hyperlinks &amp; Buttons</h2>
 
 <section id="externallinks">
 <h3>External Link Target Notification</h3>
@@ -1344,17 +1461,8 @@ This is particularly needed for link text such as <q>click here</q> or
 
 </section>
 
-</section>
-
-<section id="clientinteract">
-	<h2>Client-Side Interactions</h2>
-		</section>
-
-<section id="customcomponents">
-	<h2>Custom components</h2>
-
-		<section id="applyoradjustariaelements">
-		<h3>apply or adjust ARIA elements</h3>
+<section id="aria">
+		<h3>ARIA Roles and Attributes</h3>
 
 <dl>
 <dt>Source</dt>
@@ -1379,135 +1487,6 @@ oversight.
 		</section>
 
 </section>
-
-<section id="txteffects">
-	<h2>Textual Affectations</h2>
-
-<section id="dropcap">
-<h3>Drop Cap Implementation
-</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Drop caps are used to enhance the visual start of a paragraph and can be problematic for screen readers if not implemented correctly.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-	The decorative nature of drop caps might conflict with text clarity and readability for users utilizing text-to-speech technologies unless additional descriptive tags or styles are used.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	Properly implemented drop caps can provide both aesthetic value and maintain readability, enhancing the user???s visual and cognitive experience.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In no significant way&mdash;Automating the implementation of drop caps that do not disrupt reading devices or other design elements involves nuanced design decisions that currently require human artistic and
-technical evaluation.
-</dd>
-</dl>
- 
-<section id="ulol">
-<h3>Bulleted and Numbered Lists
-</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Lists are fundamental for structuring content but can be problematic if list markers are not recognized by assistive technologies.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-	Ensuring that custom-styled lists are accessible may require overriding default styles, which can complicate design consistency across platforms.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	Accessible lists ensure that all users can understand content structure and order, critical for instructions, key points, and navigation cues.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In some cases&mdash;Standard list implementations are highly automatable; however, custom styles and interactions with other text or elements may not be autonomously verified for non-interference and accessibility without human input.
-</dd>
-</dl>
-</section>
-
-<section id="textbox">
-<h3>Text Box Framing
-</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Text box framing involves visually distinguishing text boxes from other elements on the page, which can aid in navigation and readability.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-	Custom frames and borders may need specific management to ensure they do not interfere with text readability or screen reader performance.
-</dd>
-<dt>Benefit</dt>
-<dd>
-Well-implemented text box frames can guide users??? attention effectively and improve the aesthetic and functional usability of the site.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In some cases&mdash;While framing can be automatically applied, ensuring that these styles do not clash with other page elements or affect readability requires manual checks, especially with complex layouts.
-</dd>
-</dl>
- 
-</section>
- 
-<section id="shadowout">
-<h3>Shadow and Outline Effects
-</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-Shadows and outlines are used to enhance text visibility and separateness from the background, crucial for users with visual impairments.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-	Incorrectly implemented shadows or outlines might blur text or create distracting visuals, reducing accessibility.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	Properly used shadow and outline effects can significantly improve text legibility, benefiting users with low vision and enhancing overall user experience.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In some cases&mdash;Shadows and outlines can be applied autonomously, but verifying their impact on usability and interaction with other visual components typically exceeds the capabilities of current automated
-systems.
-</dd>
-</dl>
- 
-</section>
-
-<section id="transpcont">
-<h3>Text Transparency Control</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-Text transparency often serves design aesthetics, such as background text interaction. However, it can render text unreadable for those with visual impairments or in less-than-ideal viewing conditions.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-	Balancing text transparency with legibility can challenge designers aiming to maintain a particular visual style while ensuring content is accessible to users with poor vision.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	Proper management of text transparency ensures that all users can read text comfortably, regardless of their visual capabilities, thus enhancing usability and accessibility.
-</dd>
-<dt>Automatability</dt>
-<dd>
-	In some cases&mdash;Adjusting text transparency can be automated based on background contrast ratios; however, ensuring that these changes do not affect other visual elements or the overall visual integrity of the site often requires human verification.
-</dd>
-</dl>
- 
-</section>
-
-</section>
-
 <section id="textinteract">
 <h2>Interactive Text Elements
 </h2>
