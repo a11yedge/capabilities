@@ -947,6 +947,134 @@ The capabilities discussed in this section are those content publishers must pro
 
 	<p>WCAG explains in painstaking detail the critical importance to accessibility of structural markup. It is a fundamental requirement and any means to remediate or improve missing structural markup provides an immediate functional enhancement to users whose accessibility accommodations rely on explicit structural semantics.</p>
 
+<section id="forms">
+	<h2>Forms</h2>
+
+<section id="FormLabel">
+<h3>Form Labels</h3>
+
+		<p>Forms are the fundamental interface of the interactive web. Programmatic labels for each data entry field or option selecting widget  on any form are critical for many users requiring accessibility support. Furthermore, consistent grouping and form controls on screen location is also critical.</p>
+
+		<dl>
+		<dt>Source</dt>
+		<dd>
+		Far too many sites fail to use available markup to associate date entry fields and status selection control widgets with the labels the print to screen. These sites expect non-disabled users will simply understand what label applies to what field and widget by virtue of how the two are printed to screen. The user who relies on programmatic association is thus disadvantaged. The problem is amplified by the use and re-use of frameworks and low code forms that lack this support.
+		</dd>
+		<dt>Trade-offs</dt>
+		<dd>
+			Clearly source should be performing this function. That fact that it is missing from so many sites cries out for remediation technology on the edge. 
+		</dd>
+		<dt>Benefit</dt>
+		<dd>
+		Well built edge technologies can introduce missing programmatic associations. Advanced strategies to sequence completion of complex forms for persons who are easily overwhelmed by on screen complexity are frustrated when these programmatic associations are missing. Furthermore, they are the only technologies that can bring consistent organization to a form. 
+		</dd>
+
+<dt>Automatability</dt>
+<dd>
+In many cases
+</dd>
+
+		<dt class="rt">Related Topics</dt>
+		<dd class="rt">
+			This pervasive problem in interactive content today is also related to <a href="#structnorm">Normalize the Structural Composite</a> overlay edge capability described above.
+		</dd>
+
+		</dl>
+
+</section>
+
+<section id="formvalid">
+
+<h3>Form Interaction Validation</h3>
+
+<p>This capability ensures that screen reader users
+and other users requiring enhanced status support receive clear feedback on the status of a form being completed 
+along with concise error messages. This includes the colors used, the proximity
+to the form field, and the time-sensitive nature of the screen reader
+announcement. </p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Source content can, and sometimes does  adequately provide this functionality.
+</dd>
+<dt>Trade-offs</dt>
+<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where the enhanced content is not intended for all page visitors, but for certain audiences only, such as screen reader users  for some users living with cognitive or learning disabilities.</dd>
+<dt>Benefit</dt>
+<dd>
+	Supports more efficient interaction with forms for users who require the enhanced support. Makes completing forms much easier to accomplish.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;Were a [example pending]
+</dd>
+
+</dl>
+
+</section>
+
+	<section id="timeout">
+		<h3>Managing Time Outs</h3>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Client-side scripts often control session time-outs to manage server load and security. However, not all scripts are designed with accessibility in mind, which can inadvertently lock out users who need more time to
+	+interact with web content.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	While time-outs are necessary for security and efficient resource use, they can disproportionately affect users with disabilities who require more time to read and interact with content. Extending time limits or
+	+allowing users to request more time can mitigate these issues but might slightly increase the risk of attacks like session hijacking.
+</dd>
+<dt>Benefit</dt>
+<dd>
+Implementing adjustable time-outs on the client side enhances accessibility by allowing users to extend sessions as needed. This flexibility ensures that all users, regardless of their ability to interact quickly,
+can fully engage with web content without disruption.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In no significant way&mdash;While detecting user activity and adjusting timeouts might seem automatable, verifying that these adjustments do not affect user experience negatively or interfere with other scripts
+	+without human oversight is challenging. Autonomous systems might struggle with context-specific nuances that require human judgment.
+</dd>
+</dl>
+ 
+	</section>
+		<section id="axvalid">
+			<h3>Form Content Validation</h3>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Validation of user input on client-side forms is typically handled via JavaScript. This immediate feedback can be made accessible by ensuring that error messages are communicated through assistive technologies.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+Client-side validation improves user experience by providing instant feedback; however, it must be designed to ensure that error messages and corrective prompts are accessible to all users, including those using
+screen readers or other assistive technologies. Designing notifications that are both timely and accessible may require additional considerations, such as user control over timing and the method of dismissal.
+</dd>
+<dt>Benefit</dt>
+<dd>
+Accessible client-side validation enhances the form-filling experience for users with disabilities by providing immediate, understandable feedback that assists in error correction without the need for server-side
+interaction. Accessible notifications ensure that all users, including those with visual or cognitive disabilities, are aware of important updates and can interact with them appropriately.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In some cases&mdash;The automation of client-side validation can often autonomously detect errors, remediate them by providing feedback, and verify the corrections with high reliability. Frameworks and scripts can+be designed to handle a wide range of common input errors, making this capability highly automatable.
+	tifications are crucial for real-time information but can be inaccessible if they disappear too quickly or are not announced by screen readers.
+</dd>
+</dl>
+ 
+</section>
+
+</section>
+
+</section>
+
+<section id="nav">
+	<h2>Navigation</h2>
+
 <section id="structure">
 	<h3>Expose Structural Semantics</h3>
 
@@ -971,12 +1099,6 @@ In most cases
 </dl>
 
 </section>
-
-</section>
-
-<section id="nav">
-	<h2>Navigation</h2>
-
 <section id="structnav">
 	<h3>Semantic Navigation</h3>
 
@@ -1036,102 +1158,6 @@ In many cases
 </dl>
 
 </section>
-</section>
-
-<section id="forms">
-	<h2>Forms</h2>
-
-<section id="FormLabel">
-<h3>Form Labels</h3>
-
-		<p>Forms are the fundamental interface of the interactive web. Programmatic labels for each data entry field or option selecting widget  on any form are critical for many users requiring accessibility support. Furthermore, consistent grouping and form controls on screen location is also critical.</p>
-
-		<dl>
-		<dt>Source</dt>
-		<dd>
-		Far too many sites fail to use available markup to associate date entry fields and status selection control widgets with the labels the print to screen. These sites expect non-disabled users will simply understand what label applies to what field and widget by virtue of how the two are printed to screen. The user who relies on programmatic association is thus disadvantaged. The problem is amplified by the use and re-use of frameworks and low code forms that lack this support.
-		</dd>
-		<dt>Trade-offs</dt>
-		<dd>
-			Clearly source should be performing this function. That fact that it is missing from so many sites cries out for remediation technology on the edge. 
-		</dd>
-		<dt>Benefit</dt>
-		<dd>
-		Well built edge technologies can introduce missing programmatic associations. Advanced strategies to sequence completion of complex forms for persons who are easily overwhelmed by on screen complexity are frustrated when these programmatic associations are missing. Furthermore, they are the only technologies that can bring consistent organization to a form. 
-		</dd>
-
-<dt>Automatability</dt>
-<dd>
-In many cases
-</dd>
-
-		<dt class="rt">Related Topics</dt>
-		<dd class="rt">
-			This pervasive problem in interactive content today is also related to <a href="#structnorm">Normalize the Structural Composite</a> overlay edge capability described above.
-		</dd>
-
-		</dl>
-
-</section>
-
-<section id="formvalid">
-
-<h3>Form Validation</h3>
-
-<p>This capability ensures that screen reader users
-and other users requiring enhanced status support receive clear feedback on the status of a form being completed 
-along with concise error messages. This includes the colors used, the proximity
-to the form field, and the time-sensitive nature of the screen reader
-announcement. </p>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Source content can, and sometimes does  adequately provide this functionality.
-</dd>
-<dt>Trade-offs</dt>
-<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where the enhanced content is not intended for all page visitors, but for certain audiences only, such as screen reader users  for some users living with cognitive or learning disabilities.</dd>
-<dt>Benefit</dt>
-<dd>
-	Supports more efficient interaction with forms for users who require the enhanced support. Makes completing forms much easier to accomplish.
-</dd>
-
-<dt>Automatability</dt>
-<dd>
-In some cases&mdash;Were a [example pending]
-</dd>
-
-</dl>
-
-</section>
-
-		<section id="axvalid">
-			<h3>Accessible Validation</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Validation of user input on client-side forms is typically handled via JavaScript. This immediate feedback can be made accessible by ensuring that error messages are communicated through assistive technologies.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-Client-side validation improves user experience by providing instant feedback; however, it must be designed to ensure that error messages and corrective prompts are accessible to all users, including those using
-screen readers or other assistive technologies. Designing notifications that are both timely and accessible may require additional considerations, such as user control over timing and the method of dismissal.
-</dd>
-<dt>Benefit</dt>
-<dd>
-Accessible client-side validation enhances the form-filling experience for users with disabilities by providing immediate, understandable feedback that assists in error correction without the need for server-side
-interaction. Accessible notifications ensure that all users, including those with visual or cognitive disabilities, are aware of important updates and can interact with them appropriately.
-</dd>
-<dt>Automatability</dt>
-<dd>
-	In some cases&mdash;The automation of client-side validation can often autonomously detect errors, remediate them by providing feedback, and verify the corrections with high reliability. Frameworks and scripts can+be designed to handle a wide range of common input errors, making this capability highly automatable.
-	tifications are crucial for real-time information but can be inaccessible if they disappear too quickly or are not announced by screen readers.
-</dd>
-</dl>
- 
-</section>
-
 </section>
 
 <section id="hyperlink">
@@ -1236,34 +1262,6 @@ This is particularly needed for link text such as <q>click here</q> or
 
 <section id="clientinteract">
 	<h2>Client-Side Interactions</h2>
-
-	<section id="timeout">
-		<h3>Managing Time Outs</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Client-side scripts often control session time-outs to manage server load and security. However, not all scripts are designed with accessibility in mind, which can inadvertently lock out users who need more time to
-	+interact with web content.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-	While time-outs are necessary for security and efficient resource use, they can disproportionately affect users with disabilities who require more time to read and interact with content. Extending time limits or
-	+allowing users to request more time can mitigate these issues but might slightly increase the risk of attacks like session hijacking.
-</dd>
-<dt>Benefit</dt>
-<dd>
-Implementing adjustable time-outs on the client side enhances accessibility by allowing users to extend sessions as needed. This flexibility ensures that all users, regardless of their ability to interact quickly,
-can fully engage with web content without disruption.
-</dd>
-<dt>Automatability</dt>
-<dd>
-	In no significant way&mdash;While detecting user activity and adjusting timeouts might seem automatable, verifying that these adjustments do not affect user experience negatively or interfere with other scripts
-	+without human oversight is challenging. Autonomous systems might struggle with context-specific nuances that require human judgment.
-</dd>
-</dl>
- 
-	</section>
 
 		<section id="dynamicpages">
 		<h3>handle dynamic pages</h3>
