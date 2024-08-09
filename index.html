@@ -1095,6 +1095,32 @@ In some cases&mdash;Handling updates on dynamic pages using standard technologie
 </dl>
  
 		</section>
+
+	<section id="correctsemanticbehavior">
+		<h3>correct semantic behavior</h3>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Custom components often deviate from standard HTML elements in terms of functionality and accessibility. Ensuring that these components reflect correct semantic behavior is crucial for accessibility tools like screen
+readers.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Aligning custom components with standard semantic behaviors often requires additional development effort and rigorous testing, especially when components are highly interactive or complex.
+</dd>
+<dt>Benefit</dt>
+<dd>
+When custom components adhere to proper semantics, they enhance the user experience for individuals relying on assistive technologies, making web interactions more intuitive and predictable.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In no significant way&mdash;Custom components vary widely in functionality and integration, making it difficult for autonomous systems to apply correct semantics without potential conflicts or errors that could
+disrupt user experience or other page elements.
+</dd>
+</dl>
+ 
+	</section>
 		
 </section>
 
@@ -1293,39 +1319,13 @@ This is particularly needed for link text such as <q>click here</q> or
 <section id="customcomponents">
 	<h2>Custom components</h2>
 
-	<section id="correctsemanticbehavior">
-		<h3>correct semantic behavior</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Custom components often deviate from standard HTML elements in terms of functionality and accessibility. Ensuring that these components reflect correct semantic behavior is crucial for accessibility tools like screen
-readers.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-	Aligning custom components with standard semantic behaviors often requires additional development effort and rigorous testing, especially when components are highly interactive or complex.
-</dd>
-<dt>Benefit</dt>
-<dd>
-When custom components adhere to proper semantics, they enhance the user experience for individuals relying on assistive technologies, making web interactions more intuitive and predictable.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In no significant way&mdash;Custom components vary widely in functionality and integration, making it difficult for autonomous systems to apply correct semantics without potential conflicts or errors that could
-disrupt user experience or other page elements.
-</dd>
-</dl>
- 
-	</section>
-
 		<section id="applyoradjustariaelements">
 		<h3>apply or adjust ARIA elements</h3>
 
 <dl>
 <dt>Source</dt>
 <dd>
-	Accessible Rich Internet Applications (ARIA) roles and attributes enhance accessibility when native HTML elements cannot fully describe the widget???s function.
+	Accessible Rich Internet Applications (ARIA) roles and attributes enhance accessibility when native HTML elements cannot fully describe their own function without the additional markup.
 </dd>
 <dt>Tradeoffs</dt>
 <dd>
