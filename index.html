@@ -942,11 +942,6 @@ In some cases
 The capabilities discussed in this section are those content publishers must provide users in order to facilitate accessible user interaction with <a href="manage">published content and web services</a>. These are described by the fundamentalWCAG principle: <a href="https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility"><q>operable</q></a>. In the main they are achieved using javascript.
 </p>
 
-<section id="semstruct">
-	<h2>Structural Semantics Remediation</h2>
-
-	<p>WCAG explains in painstaking detail the critical importance to accessibility of structural markup. It is a fundamental requirement and any means to remediate or improve missing structural markup provides an immediate functional enhancement to users whose accessibility accommodations rely on explicit structural semantics.</p>
-
 <section id="forms">
 	<h2>Forms</h2>
 
@@ -1070,6 +1065,37 @@ interaction. Accessible notifications ensure that all users, including those wit
 
 </section>
 
+
+<section id="semstruct">
+	<h2>Structural Semantics Remediation</h2>
+
+	<p>WCAG explains in painstaking detail the critical importance to accessibility of structural markup. It is a fundamental requirement and any means to remediate or improve missing structural markup provides an immediate functional enhancement to users whose accessibility accommodations rely on explicit structural semantics.</p>
+
+		<section id="dynamicpages">
+		<h3>handle dynamic pages</h3>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Dynamic pages that update without full reloads (using AJAX and similar technologies) pose challenges for users who rely on screen readers, as these users may not be aware of changes on the page.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	While dynamic updates provide a smoother user experience, they require careful management to ensure that all users are informed of changes in content or state.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Properly managed dynamic pages can offer a seamless experience for all users, including those with disabilities, by providing necessary alerts and updates through assistive technologies.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;Handling updates on dynamic pages using standard technologies like AJAX and implementing ARIA-live regions can be automated. However, ensuring these updates do not affect other aspects of the
+	 page???s functionality often requires human verification.
+</dd>
+</dl>
+ 
+		</section>
+		
 </section>
 
 <section id="nav">
@@ -1262,31 +1288,6 @@ This is particularly needed for link text such as <q>click here</q> or
 
 <section id="clientinteract">
 	<h2>Client-Side Interactions</h2>
-
-		<section id="dynamicpages">
-		<h3>handle dynamic pages</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Dynamic pages that update without full reloads (using AJAX and similar technologies) pose challenges for users who rely on screen readers, as these users may not be aware of changes on the page.
-</dd>
-<dt>Tradeoffs</dt>
-<dd>
-	While dynamic updates provide a smoother user experience, they require careful management to ensure that all users are informed of changes in content or state.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	Properly managed dynamic pages can offer a seamless experience for all users, including those with disabilities, by providing necessary alerts and updates through assistive technologies.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In some cases&mdash;Handling updates on dynamic pages using standard technologies like AJAX and implementing ARIA-live regions can be automated. However, ensuring these updates do not affect other aspects of the
-	 page???s functionality often requires human verification.
-</dd>
-</dl>
- 
-		</section>
 		</section>
 
 <section id="customcomponents">
