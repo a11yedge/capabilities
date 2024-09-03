@@ -527,10 +527,13 @@ The capabilities discussed in this section are afforded users to facilitate cont
 <section id="curfoc">
 	<h2>Cursor &amp; Focus</h2>
 
-	<p>Capabilities related to enhanced focus visibility
+	<p>This section addresses capabilities related to enhanced focus visibility
 	Isolating Specific Semantic or Interactive Components for Efficient Browsing and Access:
 	methods and technologies used to enhance user experience by isolating specific elements within a digital interface. It enables users to navigate efficiently through content by focusing on particular types of elements, such
 	as headings or buttons.</p>
+
+	<p>Note that we group these features here because the use of W3C standard CSS provides builtin accessibility support, whereas creating similar functionality with javascript requires the content publisher to meet all accessibility use cases with their code. Frankly, relying on CSS is less work and less costly. It's also far more likely to succeed at supporting accessibility well.
+	</p>
 
 <section id="cursorsize">
 <h3>Optimize Cursor Size</h3>
@@ -559,6 +562,46 @@ An accessible overlay can provide this functionality across all sites the user a
 In many cases
 </dd>
 
+</dl>
+
+</section>
+
+<section id="linkviz">
+<h3>Optimize Hyperlink Visibility</h3>
+
+<p>Some people require greater clarity regarding which spans of text or graphics in web content are functioning as hyperlinks. This capability facilitates Selecting the text or image that serves
+as a hyperlink and causing it to be displayed in a different, more perceivable way,
+to help users identify the hyperlinks on a page more easily. </p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+By definition this capability is needed because source (as rendered by the browser) isn&apos;t sufficiently clear about its hyperlinks, 
+at least for significant user segments.
+</dd>
+<dt>Trade-offs</dt>
+<dd>
+	Users requiring this accommodation will most likely require it across all sites they visit. While configuring a browser for greater clarity helps, users shouldn&apos;t have to configure the same capability across their multiple devices.
+</dd>
+
+<dt>Benefit</dt>
+<dd>
+	Only edge technology is capable of performing this accommodation across all sites a user accesses and with all a user&apos;s several devices.
+</dd>
+
+
+<dt>Automatability</dt>
+<dd>
+In many cases
+</dd>
+
+<dt class="rt">Related Topics</dt>
+<dd class="rt">
+        This capability is yet another example of <a
+href="#portable">configure once, use everywhere</a> only available through
+accessible edge technologies.
+</dd>
+ 
 </dl>
 
 </section>
@@ -649,45 +692,6 @@ accessible edge technologies.
 
 </section>
 
-<section id="linkviz">
-<h3>Optimize Hyperlink Visibility</h3>
-
-<p>Some people require greater clarity regarding which spans of text or graphics in web content are functioning as hyperlinks. This capability facilitates Selecting the text or image that serves
-as a hyperlink and causing it to be displayed in a different, more perceivable way,
-to help users identify the hyperlinks on a page more easily. </p>
-
-<dl>
-<dt>Source</dt>
-<dd>
-By definition this capability is needed because source (as rendered by the browser) isn&apos;t sufficiently clear about its hyperlinks, 
-at least for significant user segments.
-</dd>
-<dt>Trade-offs</dt>
-<dd>
-	Users requiring this accommodation will most likely require it across all sites they visit. While configuring a browser for greater clarity helps, users shouldn&apos;t have to configure the same capability across their multiple devices.
-</dd>
-
-<dt>Benefit</dt>
-<dd>
-	Only edge technology is capable of performing this accommodation across all sites a user accesses and with all a user&apos;s several devices.
-</dd>
-
-
-<dt>Automatability</dt>
-<dd>
-In many cases
-</dd>
-
-<dt class="rt">Related Topics</dt>
-<dd class="rt">
-        This capability is yet another example of <a
-href="#portable">configure once, use everywhere</a> only available through
-accessible edge technologies.
-</dd>
- 
-</dl>
-
-</section>
 </section>
 
 <section id="txtrans">
@@ -1765,6 +1769,21 @@ No significant way
 This capability changes the language of a web page in real time, by translating the current page
 into a language selected by the user.</p>
 
+<dl>
+<dt>Source</dt>
+<dd>
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+</dd>
+<dt>Benefit</dt>
+<dd>
+</dd>
+<dt>Automatability</dt>
+<dd>
+</dd>
+</dl>
+ 
 </section>
 
 <section id="qualitytts">
@@ -1818,6 +1837,7 @@ accessible edge technologies.
 </dd>
 <dt>Automatability</dt>
 <dd>
+
 </dd>
 </dl>
  
@@ -1886,17 +1906,19 @@ accessible edge technologies.
 <h1>Management</h1>
 
 <p>
-The capabilities discussed in this section are primarily of interest to the content provider
-who shape the key elements or features of their digital content in order to support an intended user persona and journey. 
-As stated above this typically results in a highly interactive experience presented to the user, packed with services supplied by third parties, many of which are added in their efforts to further accommodate, 
-engage and please the end user while meeting regulatory requirements. 
+The capabilities discussed in this section describe additional actionsthe
+content providers may take in order to shape the key elements or features of
+their digital content in order to support an intended user persona and journey.
+As stated above this typically results in a highly interactive experience
+presented to the user, packed with services supplied by third parties, many of
+which are added in their efforts to further accommodate, engage and please the
+end user while meeting regulatory requirements. 
 </p>
-
 
 <section id="contentmod">
 <h2>Content Moderation</h2>
 
-<p>This capability helps assure that site content meets the publisher&apos;s content policies. Typical policies will include everyday phrases with
+<p>This capability helps assure that site content meets user needs as well as the the publisher&apos;s content policies. Typical policies will include everyday phrases with
 racist origins, and gendered or exclusive expressions and terms that are deemed
 to exclude audiences.</p>
 
