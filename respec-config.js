@@ -9,7 +9,7 @@ var respecConfig = {
 	noRecTrack: true,
 	tocIntroductory: true,
 	// specification status (e.g., WD, LC, NOTE, etc.). If in doubt use CG-DRAFT.
-	subtitle: "Inventory of edge capabilities",
+
 	specStatus:           "CG-DRAFT",
 	//crEnd:                "",
 	//perEnd:               "",
