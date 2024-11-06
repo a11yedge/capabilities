@@ -44,8 +44,23 @@ By leveraging these edge technologies, web content can become more accessible fo
 	     <h1>Introduction</h1>
 
 	     <section id="overview">
-		     <h2>Problem Overview</h2>
+		     <h2>Scope of the Document</h2>
 
+<p>The internet is a complex blend of multiple original sources, integrated through server-side code to deliver a cohesive user experience to an end user?s device. However, this design and development process can lead to manyexperiences that work well for certain users but fail for others, especially if W3C best practices are not observed. As a result, many websites and online applications remain inaccessible to people with disabilities using
+assistive technology.</p>
+
+<p>The current approach to addressing this critical issue involves updating the original server-side code to meet standards that will generate accessible client-side experiences. However, modifying the original code is often
+viewed by business owners as time-consuming, costly, and in some cases, infeasible. This document explores how post-source adaptation?modifying the user experience rendering the client-side code?can allow accessibility
+without requiring changes to the original code.</p>
+
+
+<p>The diagram below illustrates where these documented code adaptations fit within a typical server and client-side data flow. It outlines that the final web experience starts with the original (A) server-side content and
+code.+Then, (B) code adaptations can be applied to update the original code, addressing specific accessibility needs. Finally, (C) the completed mashup is rendered and interacts with the end user?s device tools, such as a
+browser
+or assistive technology, to create a more accessible experience.</p>
+
+<img src="intro1.png" alte="Fundamental Diagram of Data Flow">
+ 
 	<section id="edgedef">
 		<h3>What is Meant By <q>Edge?</q></h3>
 
