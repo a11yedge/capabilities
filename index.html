@@ -24,8 +24,8 @@
         <section id="abstract">
 		        <h2>Abstract</h2>
 			<p>
-This document explores accessibility capabilities that can be applied post-source code, focusing on enhancing web accessibility through edge technologies.
-It examines approaches such as CSS, browser extensions, content delivery networks (CDNs), and software automation services that facilitate user interaction without modifying the original source code.
+This document explores remediations approaches that can be applied post-source code to deliver more accessible web experiences to end users through the application of edge technologies.
+Approaches considered include realtime HTML and CSS rewrites on content delivery networks (CDNs) as well as in browser extensions&mdash;all without rewriting the original source code.
 The capabilities addressed range from improving visual presentation to ensuring dynamic content accessibility and automated remediation of common issues.
 By leveraging these edge technologies, web content can become more accessible for users with diverse needs, particularly those relying on assistive technologies.</p>
 
@@ -46,23 +46,20 @@ By leveraging these edge technologies, web content can become more accessible fo
 	     <section id="overview">
 		     <h2>Scope</h2>
 
-		     <p>Today's world wide web is a complex blend of multiple original sources, mediated by server-side code to deliver a cohesive user experience to an end user's device. It is the result of a design and development process yielding+experiences that work well for certain users but fail for others, especially if W3C best practices are not observed. As a result, many websites and online applications remain inaccessible to people with disabilities using
-		     assistive technology.</p>
-
-		     <p>
-		     The current approach to addressing this critical issue requires that developers update the server-side code to more closely conform with accessibility standards. However, modifying the original code is often viewed by
-business owners as time-consuming, costly, and in some cases, infeasible. This document explores how post-source adaptation modifying the user experience rendering the client-side code can allow accessibility without
-requiring changes to the original code.
+<p>Today's world wide web is a complex blend of multiple original sources, mediated by server-side code to deliver a cohesive user experience to an end user. It is the result of a design and development process yielding experiences that work well for certain users but fail for others, especially when W3C best practices are not observed. This leaves many websites and online applications inaccessible to people with disabilities.
+The current remedial approach for addressing this critical failure requires that developers update the server-side code to more closely conform with accessibility standards. However, modifying the original code is often viewed as too time-consuming and costly by business owners. In some cases it&apos;s frankly infeasible without a complete rewrite.
+This document explores how various realtime post-source adaptations can deliver more accessible user experiences without
+requiring changes to the original source code.
 		     </p>
 
                      <p>The diagram below illustrates where these documented code adaptations fit within a typical server and client data flow. It outlines that the final web experience starts with the original</p>
 <ol type="a">
-        <li>Server-side content and code. Then,</li>
-        <li>code adaptations can be applied to update the original code, addressing specific accessibility needs. Finally,</li>
+        <li>Server-side content and code is sourced. Then,</li>
+        <li>code adaptations may be applied to update the source code, addressing specific accessibility needs. Finally,</li>
                         <li>the completed mashup is rendered and interacts with the end user?s device tools, such as</li>
                                 <p>a
 browser
-or assistive technology, to create a more accessible experience.</p>
+and perhaps also some assistive technology, to create a more accessible experience.</p>
  
 <img src="intro1.png" alt="Fundamental Diagram of Data Flow">
  
