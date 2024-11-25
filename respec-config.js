@@ -53,9 +53,8 @@ var respecConfig = {
 		    },
 		    {
 			        name: "Lionel Wolberger",
-				        company: "Userway",
-				        companyURL: "https://userway.org/",
-				        mailto: "lionel@userway.org",
+				        company: "Level Access",
+				        companyURL: "https://www.w3.org/organizations/69854/",
 				        w3cid: 106386
 			    },
 			    		{
