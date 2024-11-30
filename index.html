@@ -52,15 +52,17 @@ This document explores how various realtime post-source adaptations can deliver 
 requiring changes to the original source code.
 		     </p>
 
-                     <p>The diagram below illustrates where these documented code adaptations fit within a typical server and client data flow. It outlines that the final web experience starts with the original</p>
-<ol type="a">
-        <li>Server-side content and code is sourced. Then,</li>
-        <li>code adaptations may be applied to update the source code, addressing specific accessibility needs. Finally,</li>
-                        <li>the completed mashup is rendered and interacts with the end user?s device tools, such as</li>
-                                <p>a
-browser
-and perhaps also some assistive technology, to create a more accessible experience.</p>
- 
+		     <p>The diagram below illustrates where our adaptations fit within a typical server and client data flow. It illustrates the flow as follows:</p>
+<ol type="A">
+	<li>The content to be rendered to the user, together  with HTML, CSS, and Javascript code is sourced. This is the <q>source</q> layer, though as noted below it's generally many sources, and not a single source.</li>
+        <li>code adaptations may be applied to update the source code, addressing specific accessibility needs for the content user&mdash;the first layer of post-source adaptation.</li>
+			<li>Finally, the completed mashup is rendered and
+				interacts with the end user?s device tools,
+				such as a browser and perhaps also some
+			assistive technology to create a more accessible
+			experience for the user&mdash;the last layer of post-source adaptation.</li>
+</ol>
+
 				<div>
 					<img src="intro1.png" style="max-width: 100%; max-height: 100vh; width: auto; height: auto;">
 				</div>
@@ -69,7 +71,7 @@ and perhaps also some assistive technology, to create a more accessible experien
 	<section id="edgedef">
 		<h3>What is Meant By <q>Edge?</q></h3>
 
-		<p>In this document the term <q>edge technology</q> refers to technologies closest to the user. Often it&apos;s the technology directly in the user&apos;s hands, though some may be on a content delivery network (CDN) server that is actively personalizing content for the user.</p>
+		<p>In this document the term <q>edge technology</q> refers to technologies closest to the user. Often it&apos;s the technology directly in the user&apos;s hands, though some may be on a content delivery network (CDN) server that is actively personalizing content for the user. We use this term to emphasize the user&apos;s experience is what matters when considering accessibility.</p>
 	<aside class="note" role="region" title="Editor's note" aria-label="Editor's note" id="issue-container-generatedID">
 	<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3">
 		<span>Editor's note</span>
