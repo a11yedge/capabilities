@@ -69,32 +69,15 @@ requiring changes to the original source code.
 					<figcaption>Fundamental Diagram of Data Flow</figcaption>
 				</div>
 
-	     </section>
-
-		<section id="relpatt">
-			<h2>Our Rationale: Multiple Sources &amp; Individual Users</h2>
-
 	<section id="edgedef">
 		<h3>What is Meant By <q>Edge?</q></h3>
 
 		<p>In this document the term <q>edge technology</q> refers to technologies closest to the user. Often it&apos;s the technology directly in the user&apos;s hands, though sometimes it may be located on a content delivery network (CDN) server that is actively personalizing content for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is effected.</p>
-
-	<aside class="note" role="region" title="Editor's note" aria-label="Editor's note" id="issue-container-generatedID">
-	<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3">
-		<span>Editor's note</span>
-		</div>
-	<div>
-		<p>It&apos;s important to acknowledge that personalizing content for individual users opens the door to disclosing personal information about the user. Often this will be personal information about the user and how the user functions that the user would prefer not to disclose to just any web site. While we note this critical need to preserve the web user&apos;s privacy, the remainder of this document focusses primarily on providing accessibility support and always assumes privacy is protected according to <a href="https://www.w3.org/TR/privacy-principles/">W3C Privacy Principles</a> and related privacy-preserving technologies such as ,a href="https://solidproject.org/">Solid</a>.</p>
-		<p>Persons with disabilities tend to be concerned about content
-		                        providers discovering and monetizing user data.
-					                        Their lived reality has made
-								                        them highly desirous to preserve their privacy
-											                        because of perceived and actual
-														experience of discrimination over many years. Privacy assurances, along with steep privacy violation fines, can build trust over time, such as that supporting the nearly ubiquitous use of <a href="https://marketingplatform.google.com/about/analytics/">Google
-															Analytics</a> at the edge.</p>
-		</div>
-	</aside>
 	</section>
+	     </section>
+
+		<section id="relpatt">
+			<h2>Our Rationale: Multiple Sources &amp; Individual Users</h2>
 
 	     <section id="contentsource">
 	        <h3>Web Content Today is Dynamic</h3>
@@ -122,21 +105,27 @@ requiring changes to the original source code.
 <h3>Only The Edge Knows For Sure</h3>
 
   <p>While some rare web pages serve up a single experience like a short order cook handing over a burger, most are like the food court at a shopping mall with many independent services rallying to the end user&apos;s needs. Content providers pack their pages with services such as cookie permissions, chat, payment gateways, user-generated reviews, and most prolifically advertisements. 
-	<dl>
-		<dt>Source</dt>
-		<dd>Content providers can only guess at an end user&apos;s experience by testing well chosen scenarios. Large organizations may arrange focus groups that give a glimpse of a few users, at one moment in time. But in the end, almost by definition, the source cannot know. </dd>
-
-		<dt>Trade-offs</dt>
-		<dd>Persons with disabilities tend to be concerned about content
-			providers discovering and monetizing user data. 
-			Their lived reality has made
-			them highly desirous to preserve their privacy 
-			because of perceived and actual
-			experience of discrimination over many years. Privacy assurances, along with steep privacy violation fines, can build trust over time, such as that supporting the nearly ubiquitous use of Google Analytics at the edge.</dd>
+	
+		<p>Content providers can only guess at an end user&apos;s experience by testing well chosen scenarios. Large organizations may arrange focus groups that give a glimpse of a few users, at one moment in time. But in the end, almost by definition, the source cannot know. </p>
 
 	</section>
 	</section>
 
+	<aside class="note" role="region" title="Editor's note" aria-label="Editor's note" id="issue-container-generatedID">
+	<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3">
+		<span>Editor's note</span>
+		</div>
+	<div>
+		<p>It&apos;s important to acknowledge that personalizing content for individual users opens the door to disclosing personal information about the user. Often this will be personal information about the user and how the user functions that the user would prefer not to disclose to just any web site. While we note this critical need to preserve the web user&apos;s privacy, the remainder of this document focusses primarily on providing accessibility support and always assumes privacy is protected according to <a href="https://www.w3.org/TR/privacy-principles/">W3C Privacy Principles</a> and related privacy-preserving technologies such as ,a href="https://solidproject.org/">Solid</a>.</p>
+		<p>Persons with disabilities tend to be concerned about content
+		                        providers discovering and monetizing user data.
+					                        Their lived reality has made
+								                        them highly desirous to preserve their privacy
+											                        because of perceived and actual
+														experience of discrimination over many years. Privacy assurances, along with steep privacy violation fines, can build trust over time, such as that supporting the nearly ubiquitous use of <a href="https://marketingplatform.google.com/about/analytics/">Google
+															Analytics</a> at the edge.</p>
+		</div>
+	</aside>
 		<section id="docorg">
 			<h2>About This Document</h2>
 
