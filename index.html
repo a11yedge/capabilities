@@ -47,27 +47,29 @@ We conclude that integrating such capabilities at the edge provides an efficient
 	     <section id="scope">
 		     <h2>Scope</h2>
 
-<p>Today's world wide web is a complex blend of multiple original sources, mediated by server-side code to deliver a cohesive user experience to an end user. It is the result of a design and development process yielding experiences that work well for some users but fail for others, especially when W3C standards and best practices are indifferently engineered or inconsistently applied. This leaves many websites and online applications inaccessible to people with disabilities.
+<p>While most users are likely only dimly aware of the complex process that sources multiple services and content publishers to deliver what seems to be a single web page to the user, today's world wide web is a complex blend of multiple original sources, mediated by server-side code to deliver a cohesive user experience. It is the result of a design and development process yielding experiences that work well for some users but fail for others, especially when W3C standards and best practices are indifferently engineered or inconsistently applied. This leaves many websites and online applications inaccessible to people with disabilities.
 The current remedial approach for addressing this critical failure requires that developers update the source code to more closely conform with accessibility standards. While we certainly support optimizing accessibility at the source layer, modifying the original code may not always be feasible. It&apos;s also often the least efficient way to deliver different personalized experiences to different individual users. Furthermore, it can be viewed as too time-consuming and costly by business owners. 
 This document explores how various realtime post-source adaptations can deliver more accessible user experiences&mdash;and more varied accessible experiences&mdash;all without
 requiring changes to the original source code.
 		     </p>
 
-		     <p>The diagram below illustrates where our adaptations fit within a typical server and client data flow. It illustrates the flow as follows:</p>
+		     <p>The diagram below illustrates where the adaptations discussed in this publication fit within a typical server and client data flow:</p>
 <ol type="A">
 	<li>The content to be rendered to the user, together  with HTML, CSS, and Javascript code is sourced. This is the <q>source</q> layer, though as noted above it&apos;s generally many sources, and not a single source.</li>
-        <li>code adaptations may be applied to update the source code, addressing specific accessibility needs for the content user&mdash;the first layer of post-source adaptation.</li>
-			<li>Finally, the completed mashup is rendered and
-				interacts with the end user?s device tools,
-				such as a browser and perhaps also some
-			assistive technology to create a more accessible
-			experience for the user&mdash;the last layer of post-source adaptation.</li>
+        <li>Various adaptations may be applied in the cloud to address specific accessibility needs for the content user&mdash;the first layer of post-source adaptation.</li>
+			<li>Finally, the completed mashup is delivered to the end user for rendering and
+				interaction with the end user&apos;s device tools
+				such as the browser and perhaps also some
+			assistive technology
+&mdash;the last layer of post-source adaptation.</li>
 </ol>
 
 				<div>
 					<img src="intro1.png" style="max-width: 100%; max-height: 100vh; width: auto; height: auto;" alt="Diagram Graphic">
 					<figcaption>Fundamental Diagram of Data Flow</figcaption>
 				</div>
+
+	     </section>
 
 	<section id="edgedef">
 		<h3>What is Meant By <q>Edge?</q></h3>
@@ -80,7 +82,7 @@ requiring changes to the original source code.
 			<h2>Our Rationale: Multiple Sources &amp; Individual Users</h2>
 
 	     <section id="contentsource">
-	        <h3>Web Content Today is Dynamic</h3>
+	        <h3>The Dynamic Web</h3>
 
 		  <p>In the main the classic paradigm of a web domain owner serving content directly to end users across the Internet has long ago become a historical artifact.
 		    Today&apos;s typical web page is often a dizzying composite of multiple content streams injected from various sources, including content unique to the user&apos;s locale and even to the specific user herself. Content
@@ -94,12 +96,13 @@ requiring changes to the original source code.
 		    source. Few developers exclusively use their own code. They rely on
 		    libraries, components and frameworks to build their web content.</p>
 		    
+		    <p>None of this should surprise us. The fundamental nature of hypertext almost demands the behavior. It illustrates how appropriate the term <q>web</q> actually is for describing the environment.</p>
+
 		    <p> Edge technologies may actually be best placed to help overcome the problem
 		    of substandard accessibility in composite content delivered to end users by identifying precisely the accessibility challenges that end users may experience and helping remediate them where it matters most&mdash;at the user
 		    level, for the simple reason that technology based tracking and reporting can examine far more end user payload deliveries than human testing will ever cover. In particular we consider the role played by various edge-based players beginning with the Content Delivery Network (CDN), the operating system on the user&apos;s devices, user-agent, browser extensions, assistive technologies, and/or JavaScript overlays.  Whether the resulting remediation is an in-process transformation,
 		    or an upstream recoding, gathering and reporting many samples to upstream end points is arguably the most efficient way to spot anomalous patterns (and a great application for A-I analysis).</p>
 		     
-		</SECTION>
 
 <section id="onlyedgeknows">
 <h3>Only The Edge Knows For Sure</h3>
@@ -108,24 +111,25 @@ requiring changes to the original source code.
 	
 		<p>Content providers can only guess at an end user&apos;s experience by testing well chosen scenarios. Large organizations may arrange focus groups that give a glimpse of a few users, at one moment in time. But in the end, almost by definition, the source cannot know. </p>
 
-	</section>
-	</section>
-
 	<aside class="note" role="region" title="Editor's note" aria-label="Editor's note" id="issue-container-generatedID">
 	<div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3">
 		<span>Editor's note</span>
 		</div>
 	<div>
-		<p>It&apos;s important to acknowledge that personalizing content for individual users opens the door to disclosing personal information about the user. Often this will be personal information about the user and how the user functions that the user would prefer not to disclose to just any web site. While we note this critical need to preserve the web user&apos;s privacy, the remainder of this document focusses primarily on providing accessibility support and always assumes privacy is protected according to <a href="https://www.w3.org/TR/privacy-principles/">W3C Privacy Principles</a> and related privacy-preserving technologies such as ,a href="https://solidproject.org/">Solid</a>.</p>
+		<p>It&apos;s important to acknowledge that personalizing content for individual users opens the door to disclosing personal information about the user. Often this will be personal information about the user and how the user functions that the user would prefer not to disclose to just any web site. While we note this critical need to preserve the web user&apos;s privacy, the remainder of this document focuses primarily on providing accessibility support and always assumes privacy is protected according to <a href="https://www.w3.org/TR/privacy-principles/">W3C Privacy Principles</a> and related privacy-preserving technologies such as ,a href="https://solidproject.org/">Solid</a>.</p>
 		<p>Persons with disabilities tend to be concerned about content
-		                        providers discovering and monetizing user data.
+		                        providers discovering and monetizing user data with edge services such as the nearly ubiquitous <a href="https://marketingplatform.google.com/about/analytics/">Google
+															Analytics</a>..
 					                        Their lived reality has made
 								                        them highly desirous to preserve their privacy
 											                        because of perceived and actual
-														experience of discrimination over many years. Privacy assurances, along with steep privacy violation fines, can build trust over time, such as that supporting the nearly ubiquitous use of <a href="https://marketingplatform.google.com/about/analytics/">Google
-															Analytics</a> at the edge.</p>
+														experience of discrimination over many years. Meaningful privacy assurances backed by regulatory protections could build trust over time.</p>
 		</div>
 	</aside>
+
+	</section>
+	</section>
+
 		<section id="docorg">
 			<h2>About This Document</h2>
 
