@@ -25,7 +25,7 @@
 		        <h2>Abstract</h2>
 			<p>
 In this document we explore remediation approaches that can be applied after the source layer to deliver more accessible web experiences to end users.
-Approaches considered include realtime HTML and CSS rewrites on content delivery networks (CDNs) as well as in browser extensions&mdash;all without writing any of these modifications into the original source.
+Approaches considered include JavaScripted modifications, and realtime HTML and CSS rewrites on content delivery networks (CDNs) as well as in browser extensions&mdash;all without writing any of these modifications into the original source.
 The capabilities addressed range from improving visual presentation to ensuring dynamic content accessibility and automated remediation of common issues.
 We also discuss the challenges and benefits of automating these adaptations, highlighting the balance between human oversight and machine-driven solutions.</p>
 
@@ -47,13 +47,17 @@ We conclude that integrating such capabilities at the edge provides an efficient
 	     <section id="scope">
 		     <h2>Scope</h2>
 
-<p>While most users are likely only dimly aware of the complex process that sources multiple services and content publishers to deliver what seems to be a single web page to the user, today's world wide web is a complex blend of multiple original sources, mediated by server-side code to deliver a cohesive user experience. It is the result of a design and development process yielding experiences that work well for some users but fail for others, especially when W3C standards and best practices are indifferently engineered or inconsistently applied. This leaves many websites and online applications inaccessible to people with disabilities.
-The current remedial approach for addressing this critical failure requires that developers update the source code to more closely conform with accessibility standards. While we certainly support optimizing accessibility at the source layer, modifying the original code may not always be feasible. It&apos;s also often the least efficient way to deliver different personalized experiences to different individual users. Furthermore, it can be viewed as too time-consuming and costly by business owners. 
+<p>
+What seems to be a single web page to most users today is actually anything but that.
+Today&apos;s world wide web is a complex blend of multiple original sources, mediated by server-side code to deliver a cohesive user experience. It is the result of a design and development process yielding experiences that work well for some users but fail for others, especially when W3C standards and best practices are indifferently engineered or inconsistently applied. This leaves many websites and online applications inaccessible to people with disabilities.</p>
+
+<p>
+The current remedial approach for addressing this accessibility failure requires that developers update the source code to more closely conform with accessibility standards. While we certainly support optimizing accessibility at the source layer, modifying the original code may not always be feasible. It&apos;s also often the least efficient way to deliver different personalized experiences to different individual users. Furthermore, it can be viewed as too time-consuming and costly by business owners.</p>
+
+<p>
 This document explores how various realtime post-source adaptations can deliver more accessible user experiences&mdash;and more varied accessible experiences&mdash;all without
 requiring changes to the original source.
-		     </p>
-
-		     <p>The diagram below illustrates where the adaptations discussed in this publication fit within a typical server and client data flow:</p>
+		     The diagram below illustrates where the adaptations discussed in this publication fit within a typical server and client data flow:</p>
 <ol type="A">
 	<li>The content to be rendered to the user, together  with HTML, CSS, and Javascript code is sourced. This is the <q>source</q> layer, though as noted above it&apos;s generally many sources, and not a single source.</li>
         <li>Various adaptations may be applied in the cloud to address specific accessibility needs for the content user&mdash;the first layer of post-source adaptation.</li>
