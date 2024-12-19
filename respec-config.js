@@ -62,6 +62,12 @@ var respecConfig = {
 			company: "UsableNet",
 			companyURL: "http://usablenet.com/",
 			w3cid: 151178
+				                },
+		     {
+			name: "Michael Paciello",
+			company: "AudioEye, Inc",
+			companyURL: "https://www.audioeye.com/",
+			w3cid: 155663
 				                }
 	],
 
