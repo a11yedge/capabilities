@@ -669,15 +669,27 @@ dyslexia. Typically, they have more distinctive symbols in order to  avoid confu
 <dl>
 <dt>Source</dt>
 <dd>
+Websites typically rely on standard system or decorative fonts that are rarely
+optimized for persons living with dyslexia, prioritizing aesthetics over readability. 
 </dd>
 <dt>Tradeoffs</dt>
 <dd>
+	Switching to dyslexia-friendly fonts may slightly alter the visual
+	appeal or branding of the site. Designers and stakeholders may need to
+	approve font changes.
 </dd>
 <dt>Benefit</dt>
 <dd>
+	Using dyslexia-friendly fonts reduces cognitive load and improves the
+	reading experience for users with dyslexia, making the site more
+	inclusive.
 </dd>
 <dt>Automatability</dt>
 <dd>
+In no significant way : Automated tools can suggest dyslexia-friendly
+fonts and flag instances of inaccessible typefaces. However, full
+integration with existing styles and design systems requires manual
+adjustments.
 </dd>
 </dl>
  
@@ -688,6 +700,35 @@ dyslexia. Typically, they have more distinctive symbols in order to  avoid confu
 
 <p>This capability insures that screen reader users can understand the prior price of an item. Displaying the prior price using strike-through or crossed-out fonts, and then providing the new price immediately next to these does not work for screen reader users. These users will have no idea which is the prior and which the current price without additional content and tagging.
 </p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Pricing details are often designed with an emphasis on visual appeal,
+	such as small text or complex layouts, making them inaccessible to
+	screen readers and users with visual impairments.
+	 
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Simplifying pricing layouts may require adjustments to existing design
+	templates, which could impact aesthetic preferences or marketing
+	strategies.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Accessible pricing ensures all users can clearly understand product
+	costs and options, improving transparency and trust.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In some cases: Automated tools can identify issues such as insufficient
+	text contrast or missing semantic elements in pricing sections. However,
+	optimizing the presentation of pricing information requires developer
+	intervention.
+</dd>
+</dl>
+ 
 </section>
 
 <section id="textsize">
@@ -943,6 +984,33 @@ the operating system itself. Thus, edge support needs a compelling reason to div
 
 </dl>
 
+<dl>
+<dt>Source</dt>
+<dd>
+	Color contrast issues typically arise during the design phase, where
+	aesthetic priorities may overshadow accessibility considerations. These
+	issues are often embedded in CSS or dynamic styling applied at runtime.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+Adjusting color contrast may slightly alter the original branding or
+design intent. Designers may need to approve changes to ensure
+consistency with visual identity.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Optimized contrast improves readability and usability for all users,
+	including those with low vision or color blindness, while maintaining
+	compliance with accessibility standards.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In some cases: Automated tools can flag insufficient contrast ratios and
+	define alternative colors. However, fine-tuning these adjustments to
+	balance accessibility with branding often requires developer input.
+</dd>
+</dl>
+ 
 </section>
 
 <section id="personalcolor">
@@ -951,15 +1019,28 @@ the operating system itself. Thus, edge support needs a compelling reason to div
 <dl>
 <dt>Source</dt>
 <dd>
+	Color palettes are often defined during the branding phase and may not
+	account for accessibility requirements. Dynamic sites may also use
+	inconsistent palettes across different components or pages.
 </dd>
 <dt>Tradeoffs</dt>
 <dd>
+	Refining a color palette can require significant collaboration with
+	branding and design teams. Post-source updates may introduce
+	inconsistencies if not carefully managed.
 </dd>
 <dt>Benefit</dt>
 <dd>
+	A standardized, accessible color palette ensures visual consistency
+	across the site while improving usability and readability for all users.
+	 
 </dd>
 <dt>Automatability</dt>
 <dd>Does not apply
+	Jason writes--In many cases: Automated tools can analyze existing palettes and
+	identify inaccessible combinations. Some implementation and
+	standardization, however, require manual adjustments and testing.
+	 
 </dd>
 </dl>
  
