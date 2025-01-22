@@ -1417,6 +1417,50 @@ disrupt user experience or other page elements.
 		</div>
 	</aside>
 
+	<section id=comprebuild">
+		<h4>Rebuild Component Retaining Original UI/UX</h4>
+
+		<p>
+			Reconstruct components to maintain their original appearance and
+			functionality while ensuring accessibility.
+		</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Many components, such as navigation menus or sliders, are created using
+	frameworks or libraries that lack full accessibility support. These
+	components often require significant rework to meet accessibility
+	standards.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Rebuilding components while retaining their original design requires
+	detailed technical effort and close alignment with design teams to avoid
+	deviations from the intended user experience.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	This approach preserves the site\'s original look and feel while
+	ensuring that components are fully accessible, improving usability for
+	all users.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In no significant way : Automation can assist in identifying
+	accessibility issues within components but cannot rebuild them.
+	Developers must rewrite or refactor the code to meet accessibility
+	requirements.
+</dd>
+</dl>
+ 
+	</section>
+
+	<section id="comprepl">
+		<h4>Replace Component Providing New UI/UX</h4>
+		<p>Replace inaccessible components with redesigned alternatives that
+		improve both accessibility and usability.</p>
+
 <dl>
 <dt>Source</dt>
 <dd>
@@ -1437,8 +1481,37 @@ significant errors.
 </dd>
 </dl>
  
+<dl>
+<dt>Source</dt>
+<dd>
+	Legacy components or third-party libraries often fail to support
+	accessibility requirements, necessitating the use of entirely new
+	components.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Replacing components may require stakeholders to approve updated
+	designs, which could differ significantly from the original UI/UX.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	New components provide an opportunity to enhance both accessibility and
+	user experience, offering improved functionality and compliance with
+	modern standards.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In no significant way|  - Automation can highlight issues in legacy
+components but cannot design or implement replacements. Developers must
+create new components that align with both accessibility and branding
+requirements.
+</dd>
+</dl>
+ 
 </section>
 		
+</section>
+
 </section>
 
 <section id="nav">
