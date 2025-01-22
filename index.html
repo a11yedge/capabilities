@@ -217,25 +217,29 @@ algorithms across multiple environments predictably.</p>
 <section id="imgalt">
 	<h3>Image Alternative Text Provisioning</h3>
 
-<p>Supply missing alternative text for content images.</p>
+	<p>Alternative text is a fundamental and well established accessibility accomodation (dating to the era of HTML 3.2). No good reason for missing alt text remains, yet far too many sites are missing alt text today.</p>
 
 <dl>
 <dt>Source</dt>
 <dd>
-	Clearly, alternative text should be supplied by source content. This capability serves as a fundamental accessibility remediation when immediate remediations to the source content are infeasible for some reason.
+WCAG has always expected sites would supply alternative text for all images&mdash;yet missing alt text is still pervasive in web content.
+Images and other graphical elements within many modern web pages are set as editable elements that can be added to templates and web pages by different team members, such as Marketing, after the core website structures have
+been coded. This often leads to situations where images are added by non-technical people who are not required to enter alternative text or are unfamiliar with authoring appropriate alternative text. So, while there&apos;s every reason to expect alternative text in source, it remains missing far too often.
 </dd>
 <dt>Trade-offs</dt>
 <dd>
-Some browser extensions support A-I based alternative text remediation. However, A-I remediation is still considered less accurate, and therefore less desirable than human provided text alternatives.
+	It is reasonable to expect source provided alternative text will be superior. Post-source provided alt likely will not engage the content authors and therefore may fail to fully communicate the import of graphical objects.
 </dd>
 <dt>Benefit</dt>
 <dd>
-	Good alternative text is often essential for comprehending site content for users who cannot see, but also for users on highly restricted bandwidth as continues to exist in many regions of the world.
+Post-source methods can engage the services of experts in proper alternative text authoring. But however the alternative texst is provided there's no longer any excuse for missing alt text.
 </dd>
 
 <dt>Automatability</dt>
 <dd>
-Many cases
+	In many cases : alts, as they are static and do not require the <q>state</q> property to be set and checked in the accessibility tree, are among the most likely nodes on the accessibility tree to benefit from post-source
+	automation. This includes identifying decorative images missing a <q>null</q> attribute.
+ 
 </dd>
 
 </dl>
