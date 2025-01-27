@@ -30,7 +30,7 @@ The capabilities addressed range from improving visual presentation to ensuring 
 We also discuss the challenges and benefits of automating these adaptations, highlighting the balance between human oversight and machine-driven solutions.</p>
 
 			<p>
-We show that web content can be made more accessible for users with diverse needs, particularly those relying on assistive technologies
+We show that web content can often be made more accessible for users with diverse needs, particularly those relying on assistive technologies
 by leveraging <q>edge technologies.</q> 
 We conclude that integrating such capabilities at the edge provides an efficient way to address accessibility gaps and promote a more inclusive web experience.</p>
 
@@ -59,7 +59,7 @@ requiring changes to the original source.
 		     The diagram below illustrates where the adaptations discussed in this publication fit within a typical server and client data flow:</p>
 <ol type="A">
 	<li>The content to be rendered to the user, together  with HTML, CSS, and JavaScript code is sourced. This is the <q>source</q> layer, though as noted above it&apos;s generally many sources, and not a single source.</li>
-        <li>Various adaptations may be applied in the cloud to address specific accessibility needs for the content user&mdash;the first layer of post-source adaptation.</li>
+        <li>Various adaptations may be applied to address specific accessibility needs for the content user&mdash;the first layer of post-source adaptation.</li>
 			<li>Finally, the completed mashup is delivered to the end user for rendering and
 				interaction with the end user&apos;s device tools
 				such as the browser and perhaps also some
@@ -78,13 +78,13 @@ requiring changes to the original source.
 		<h3>What is Meant By <q>Edge?</q></h3>
 
 		<p>In this document the term <q>edge technology</q> refers to technologies closest to the user. Often it&apos;s the technology directly in the user&apos;s hands, though sometimes it may be located on a content delivery network (CDN) server that is actively personalizing content for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is effected.</p>
-		<p>In recent years post-source accessibility remediation is frequently referred to by the informal term <q>Overlays</q>. 
+		<p>In recent years post-source accessibility remediation has frequently been referred to by the informal term <q>Overlays</q>. 
 Indeed, accessibility overlays have twice factored in major U.S. governmental actions in recent months, first as a reference to an earlier version of this publication by the <a href="https://www.w3.org/community/a11yedge/2024/12/06/u-s-attorney-general-on-overlays-cites-community-group-work/">U.S. Attorney-General</a>, and more recently in a consent decree from the <a href="https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-order-requires-online-marketer-pay-1-million-deceptive-claims-its-ai-product-could-make-websites">U.S. Federal Trade Commission (<abbr title="Federal Trade Commission">FTC</abbr>)</a>.
 		</p>
 		<p>
 We assert that the accessibility capabilities discussed in this document can be accomplished through the application of appropriate post-source methods. 
 However it is essential that vendors marketing products and services based on these techniques clearly communicate
-the scope and limitations of their approach. Transparency regarding the extent and manner in which post-source techniques are applied is critical to ensure clarity and alignment with intended outcomes. Forthright representations are also essential for building
+the scope and limitations of their approach. Transparency regarding the extent and manner in which post-source techniques are applied is critical to ensure clarity and alignment with intended outcomes. Forthright representation is also essential for building
 trust. Vendors marketing approaches such as those discussed in this document should carefully and
 transparently articulate what their technologies and approaches can genuinely deliver.
 		</p>
@@ -123,8 +123,8 @@ users risks disclosing personal information that the user might prefer not to
 			href="https://marketingplatform.google.com/about/analytics/">Google
 			Analytics</a>.</p>
 
-<p>While we strongly support preserving user privacy, this document focuses primarily on accessibility and
-	always assumes privacy is protected according to <a
+<p>While we strongly support preserving user privacy, this document focuses on accessibility and
+	assumes privacy is protected according to <a
 		href="https://www.w3.org/TR/privacy-principles/">W3C Privacy
 		Principles</a> and related privacy-preserving technologies such
 as <a href="https://solidproject.org/">Solid</a>.</p>
@@ -227,7 +227,7 @@ been coded. This often leads to situations where images are added by non-technic
 </dd>
 <dt>Trade-offs</dt>
 <dd>
-	It is reasonable to expect source provided alternative text will be superior. Post-source provided alt likely will not engage the content authors and therefore may fail to fully communicate the import of graphical objects.
+	It is reasonable to expect source provided alternative text will be superior in quality. Post-source provided alt likely will not engage the content authors and therefore may fail to properly communicate the functional import of graphical objects.
 </dd>
 <dt>Benefit</dt>
 <dd>
