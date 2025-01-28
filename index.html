@@ -1765,7 +1765,7 @@ other site functionalities or user security is currently beyond the scope of aut
 <section id="dictionary">
 <h3>Dictionary On Demand</h3>
 
-<p>This capability provides definitions of words or phrases that may be unfamiliar to some users, provides pronunciation guidance, and provides synonyms, which can all especially help users living with cognitive and learning disabilities better comprehend content.</p>
+<p>This capability provides access to definitions of words or phrases that may be unfamiliar to some users, provides pronunciation guidance, and provides synonyms, which can all especially help users living with cognitive and learning disabilities better comprehend content.</p>
 
 <dl>
 <dt>Source</dt>
@@ -2156,7 +2156,7 @@ of features, e.g. high contrast and larger text size.</p>
 <dl>
 <dt>Source</dt>
 <dd>
-As previously noted, users will need the same (or very similar) feature support across all their various devices. This makes supporting even grouped feature profiles in source (and even in the OS) less effective than an edge solution could be, because it requires the user to make the same selections time and again.
+As previously noted, users will need the same (or very similar) feature support across all their various devices. This makes supporting even grouped feature profiles in source (and even in the OS) less effective than an edge solution can be, because it requires the user to make the same selections time and again.
 </dd>
 <dt>Trade-offs</dt>
 <dd>
@@ -2347,6 +2347,35 @@ In some cases
 
 </dl>
 
+</section>
+
+<section id="advertctrl">
+	<h2>Managing Distractions From Advertising</h2>
+	<p>
+	Injected advertising has become a fact of life on the web. Content injections are sold in real-time to the highest bidder. This  has become the dominent revenue source for most on line content. Nevertheless users should not be forced to tolerate advertising content injections that impair page accessibility and functionality.</p>
+
+	<p>
+	This capability proposes that candidate injections are first evaluated to ascertain whether or not they impair accessibility as defined by <a href="https://www.w3.org/TR/WCAG/">current WCAG standards</a> before they&apos;re displayed to the user. Those that impair accessibility are rejected and replaced by another candidate advertisement until one is obtained which does not impair accessibility. It is that WCAG conformant content that is then actually displayed to the user.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	This capability is available to source.
+</dd>
+<dt>Tradeoffs</dt>
+<dd>
+	Source hosted evaluations are necessarily limited to those injections of which source is aware. Edge processing, on the other hand, can evaluate all candidate content injections.
+</dd>
+<dt>Benefit</dt>
+<dd>
+Users deserve content which supports their accessibility requirements on all content they access. Only edge injection evaluation can consistently and ubiquitously serve this user requirement.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In many cases&mdash;By definition, actually, inasmuch as questionable and failing injections are rejected until a conformant injection is obtained.
+</dd>
+</dl>
+ 
 </section>
 
 <section id="structnorm">
