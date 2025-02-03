@@ -389,24 +389,33 @@ ensure relevance.
 <section id="pdf">
 <h2>PDF Remediation</h2>
 
-<p>This capability helps assure that a published PDF document is correctly tagged and
-marked up sufficiently in order that it can be accessed and more readily understood by people with
+<p>This capability ensures that a published PDF document is sufficiently and correctly tagged and
+marked up in order that it can be accessed and more readily understood by people with
 disabilities, including those who use assistive technology such as a screen
 reader.</p>
 
 <dl>
 <dt>Source</dt>
 <dd>
+	Ideally, PDFs are created with accessibility in mind; however, this is not always the case due to lack of awareness, time constraints, or software limitations. Additionally, website or application owners frequently publish
+PDFs that they did not create themselves, sourced from third parties or legacy archives. As a result, they inherit accessibility issues that were introduced earlier in the document?s lifecycle, making remediation necessary
+after publication.
 </dd>
 <dt>Tradeoffs</dt>
 <dd>
+	The original PDF creator has the best understanding of the document?s structure and intent, and should make it accessible at source. The publisher can also provide its contents in an alternative format, such as an HTML
+version. Remediating a PDF post-publication is time-consuming and often requires expert intervention. Automated tools can help, but they are not always reliable in producing fully compliant results since complex issues?such
+as correcting reading order?often require manual review and adjustment.
 </dd>
 <dt>Benefit</dt>
 <dd>
+	At a minimum, Edge technology can warn users before opening an inaccessible PDF so they can take alternative steps, such as requesting an accessible version or using assistive tools to attempt interpretation. At best,  Edge
+remediation can enhance accessibility by removing barriers to access.
 </dd>
 <dt>Automatability</dt>
 <dd>
-	In Some Cases
+	In Some Cases&mdash;Automated tools for detecting accessibility issues in PDFs are increasingly effective, identifying a wide range of problems such as missing tags, incorrect reading order, and lack of alternative text. However,
+full remediation remains a challenge, as automation struggles with nuanced tasks like ensuring logical document structure and interpreting complex visual elements.
 </dd>
 </dl>
  
