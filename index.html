@@ -1115,6 +1115,112 @@ Text transparency often serves design aesthetics, such as background text intera
 The capabilities discussed in this section are those content publishers must provide users in order to facilitate accessible user interaction with <a href="manage">published content and web services</a>. These are described by the fundamentalWCAG principle: <a href="https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility"><q>operable</q></a>. In the main, they are achieved using JavaScript.
 </p>
 
+		<section id="custcomponent">
+			<h2>Interactive  Components</h2>
+
+	<aside class="note" role="region" title="Editor's note" aria-label="Editor's note">
+	<div role="heading" class="ednote-title marker" aria-level="3">
+		<span>Editor's note</span>
+		</div>
+	<div>Pending group approval.
+		</div>
+	</aside>
+
+	<section id="comprebuild">
+		<h3>Rebuild an Interactive Component</h3>
+
+		<p>
+			Reconstruct components retaining the original UI/UX to maintain their original appearance and
+			functionality while ensuring accessibility.
+		</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Many components, such as navigation menus or sliders, are created using
+	frameworks or libraries that lack full accessibility support. These
+	components often require significant rework to meet accessibility
+	standards.
+</dd>
+<dt>Trade-Offs</dt>
+<dd>
+	Rebuilding components while retaining their original design requires
+	detailed technical effort and close alignment with design teams to avoid
+	deviations from the intended user experience.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	This approach preserves the site&apos;s original look and feel while
+	ensuring that components are fully accessible, improving usability for
+	all users.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In no significant way&mdash;Automation can assist in identifying
+	accessibility issues within components but cannot rebuild them.
+	Developers must rewrite or refactor the code to meet accessibility
+	requirements.
+</dd>
+</dl>
+ 
+	</section>
+
+	<section id="comprepl">
+		<h3>Replace an Interactive Component</h3>
+		<p>Replace inaccessible components with redesigned alternatives that
+		improve both accessibility and usability providing new UI/UX.</p>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Sometimes, the best solution for accessibility issues in custom components is to replace them with more accessible versions that conform better to standard practices.
+</dd>
+<dt>Trade-Offs</dt>
+<dd>
+	Replacing components can be costly and time-consuming, particularly if the replacements need to be custom-developed to fit into the existing ecosystem without degrading performance or altering functionality.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	Providing an accessible alternative ensures all users have equal access to functionalities, adhering to legal and moral obligations towards inclusivity.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In no significant way&mdash;The decision to replace a component involves understanding context, user needs, and the potential impacts on other page elements, which cannot be fully automated without risking
+significant errors.
+</dd>
+</dl>
+ 
+<dl>
+<dt>Source</dt>
+<dd>
+	Legacy components or third-party libraries often fail to support
+	accessibility requirements, necessitating the use of entirely new
+	components.
+</dd>
+<dt>Trade-Offs</dt>
+<dd>
+	Replacing components may require stakeholders to approve updated
+	designs, which could differ significantly from the original UI/UX.
+</dd>
+<dt>Benefit</dt>
+<dd>
+	New components provide an opportunity to enhance both accessibility and
+	user experience, offering improved functionality and compliance with
+	modern standards.
+</dd>
+<dt>Automatability</dt>
+<dd>
+In no significant way&mdash;Automation can highlight issues in legacy
+components but cannot design or implement replacements. Developers must
+create new components that align with both accessibility and branding
+requirements.
+</dd>
+</dl>
+ 
+</section>
+		
+</section>
+
 <section id="forms">
 	<h2>Optimize Forms</h2>
 
@@ -1231,200 +1337,10 @@ interaction. Accessible notifications ensure that all users, including those wit
 
 </section>
 
-<<<<<<< HEAD
-
 <section id="semstruct">
 	<h2>Structural Semantics Remediation</h2>
 
-	<p>WCAG explains in painstaking detail the critical importance to accessibility of structural markup. It is a fundamental requirement and any means to remediate or improve missing structural markup provides an immediate functional enhancement to users whose accessibility accommodations rely on explicit structural semantics.</p>
-
-<section id="structure">
-	<h3>Expose Structural Semantics</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-It has long been agreed that published content should contain structural markup as provided by HTML and explained by WCAG. Not only is this critical for accessibility, additional processing to further tailor content presentation to particular user needs will rely on proper structural markup, preferably provided by source content.
-</dd>
-<dt>Trade-Offs</dt>
-<dd>
-	There is no inherent value to creating structural markup in edge technology. Doing so is clearly a remedial action to close a critical gap. On the other hand, and as previously noted, content delivered to end users today is most frequently a composite mashup of multiple input streams and not the simple delivery of content from a single source repository. The very act of mashing together multiple streams introduces a likelihood of semantic incoherency. The very word itself, <q>mashup</q>, strongly suggests a lack of concern for the coherency of the ultimate composite as delivered to the end user. Thus, anything that can be done to introduce greater semantic coherency is of benefit to all users, and especially those users relying on accessibility supporting features such as coherent and explicit structure. Lastly, as also previously noted, emerging strategies to further tailor content interaction to particular users&apos; interaction preferences will rely on good structural markup, and these adaptations will, necessarily, be produced in edge technologies.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	Whether as a temporary remedial expedient or the advanced personalization adaptation now emerging from W3C accessibility standards, or somewhere in between, users simply deserve the best structural semantics that can be provided them in the moment when they seek to interact with web content. Any and all philosophical <q>should</q> arguments must give way to this simple rubric.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In most cases
-</dd>
-
-</dl>
-
-</section>
-
-		<section id="dynamicpages">
-		<h3>Handle Dynamic Pages Accessibly</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Dynamic pages that update without full reloads (using AJAX and similar technologies) pose challenges for users who rely on screen readers, as these users may not be aware of changes on the page.
-</dd>
-<dt>Trade-Offs</dt>
-<dd>
-	While dynamic updates provide a smoother user experience, they require careful management to ensure that all users are informed of changes in content or state.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	Properly managed dynamic pages can offer a seamless experience for all users, including those with disabilities, by providing necessary alerts and updates through assistive technologies.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In some cases&mdash;Handling updates on dynamic pages using standard technologies like AJAX and implementing ARIA-live regions can be automated. However, ensuring these updates do not affect other aspects of the
-	 page&apos;s functionality often requires human verification.
-</dd>
-</dl>
- 
-		</section>
-
-	<section id="correctsemanticbehavior">
-		<h3>Correct Semantic Behavior</h3>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Custom components often deviate from standard HTML elements in terms of functionality and accessibility. Ensuring that these components reflect correct semantic behavior is crucial for accessibility tools like screen
-readers.
-</dd>
-<dt>Trade-Offs</dt>
-<dd>
-	Aligning custom components with standard semantic behaviors often requires additional development effort and rigorous testing, especially when components are highly interactive or complex.
-</dd>
-<dt>Benefit</dt>
-<dd>
-When custom components adhere to proper semantics, they enhance the user experience for individuals relying on assistive technologies, making web interactions more intuitive and predictable.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In no significant way&mdash;Custom components vary widely in functionality and integration, making it difficult for autonomous systems to apply correct semantics without potential conflicts or errors that could
-disrupt user experience or other page elements.
-</dd>
-</dl>
- 
-	</section>
-	</section>
-
-		<section id="custcomponent">
-			<h2>Interactive  Components</h2>
-
-	<aside class="note" role="region" title="Editor's note" aria-label="Editor's note">
-	<div role="heading" class="ednote-title marker" aria-level="3">
-		<span>Editor's note</span>
-		</div>
-	<div>Pending group approval.
-		</div>
-	</aside>
-
-	<section id="comprebuild">
-		<h3>Rebuild an Interactive Component</h3>
-
-		<p>
-			Reconstruct components retaining the original UI/UX to maintain their original appearance and
-			functionality while ensuring accessibility.
-		</p>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Many components, such as navigation menus or sliders, are created using
-	frameworks or libraries that lack full accessibility support. These
-	components often require significant rework to meet accessibility
-	standards.
-</dd>
-<dt>Trade-Offs</dt>
-<dd>
-	Rebuilding components while retaining their original design requires
-	detailed technical effort and close alignment with design teams to avoid
-	deviations from the intended user experience.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	This approach preserves the site&apos;s original look and feel while
-	ensuring that components are fully accessible, improving usability for
-	all users.
-</dd>
-<dt>Automatability</dt>
-<dd>
-	In no significant way&mdash;Automation can assist in identifying
-	accessibility issues within components but cannot rebuild them.
-	Developers must rewrite or refactor the code to meet accessibility
-	requirements.
-</dd>
-</dl>
- 
-	</section>
-
-	<section id="comprepl">
-		<h3>Replace an Interactive Component</h3>
-		<p>Replace inaccessible components with redesigned alternatives that
-		improve both accessibility and usability providing new UI/UX.</p>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Sometimes, the best solution for accessibility issues in custom components is to replace them with more accessible versions that conform better to standard practices.
-</dd>
-<dt>Trade-Offs</dt>
-<dd>
-	Replacing components can be costly and time-consuming, particularly if the replacements need to be custom-developed to fit into the existing ecosystem without degrading performance or altering functionality.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	Providing an accessible alternative ensures all users have equal access to functionalities, adhering to legal and moral obligations towards inclusivity.
-</dd>
-<dt>Automatability</dt>
-<dd>
-	In no significant way&mdash;The decision to replace a component involves understanding context, user needs, and the potential impacts on other page elements, which cannot be fully automated without risking
-significant errors.
-</dd>
-</dl>
- 
-<dl>
-<dt>Source</dt>
-<dd>
-	Legacy components or third-party libraries often fail to support
-	accessibility requirements, necessitating the use of entirely new
-	components.
-</dd>
-<dt>Trade-Offs</dt>
-<dd>
-	Replacing components may require stakeholders to approve updated
-	designs, which could differ significantly from the original UI/UX.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	New components provide an opportunity to enhance both accessibility and
-	user experience, offering improved functionality and compliance with
-	modern standards.
-</dd>
-<dt>Automatability</dt>
-<dd>
-In no significant way&mdash;Automation can highlight issues in legacy
-components but cannot design or implement replacements. Developers must
-create new components that align with both accessibility and branding
-requirements.
-</dd>
-</dl>
- 
-</section>
-		
-</section>
-
-<section id="semstruct">
-	<h2>Structural Semantics Remediation</h2>
-
-	<p>WCAG explains in painstaking detail the critical importance to accessibility of structural markup. It is a fundamental requirement and any means to remediate or improve missing structural markup provides an immediate functional enhancement to users whose accessibility accommodations rely on explicit structural semantics.</p>
+	<p>Comprehensive structural markup is critically important to content accessibility. It is a fundamental requirement and any means to remediate or improve missing structural markup provides an immediate functional enhancement to users whose accessibility accommodations rely on explicit structural semantics.</p>
 
 <section id="structure">
 	<h3>Expose Structural Semantics</h3>
