@@ -1105,7 +1105,7 @@ The capabilities discussed in this section are those content publishers must pro
 <dd>
 	Many components, such as navigation menus or sliders, are created using
 	frameworks or libraries that lack full accessibility support. These
-	components often require significant rework to meet accessibility
+	components often require significant work to meet accessibility
 	standards.
 </dd>
 <dt>Trade-Offs</dt>
@@ -1135,26 +1135,6 @@ The capabilities discussed in this section are those content publishers must pro
 		<h3>Replace an Interactive Component</h3>
 		<p>Replace inaccessible components with redesigned alternatives that
 		improve both accessibility and usability providing new UI/UX.</p>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Sometimes, the best solution for accessibility issues in custom components is to replace them with more accessible versions that conform better to standard practices.
-</dd>
-<dt>Trade-Offs</dt>
-<dd>
-	Replacing components can be costly and time-consuming, particularly if the replacements need to be custom-developed to fit into the existing ecosystem without degrading performance or altering functionality.
-</dd>
-<dt>Benefit</dt>
-<dd>
-	Providing an accessible alternative ensures all users have equal access to functionalities, adhering to legal and moral obligations towards inclusivity.
-</dd>
-<dt>Automatability</dt>
-<dd>
-	In no significant way&mdash;The decision to replace a component involves understanding context, user needs, and the potential impacts on other page elements, which cannot be fully automated without risking
-significant errors.
-</dd>
-</dl>
  
 <dl>
 <dt>Source</dt>
@@ -1242,7 +1222,7 @@ announcement. </p>
 
 <dt>Automatability</dt>
 <dd>
-In some cases&mdash;Were a [example pending]
+In some cases
 </dd>
 
 </dl>
@@ -1259,8 +1239,8 @@ In some cases&mdash;Were a [example pending]
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	While time-outs are necessary for security and efficient resource use, they can disproportionately affect users with disabilities who require more time to read and interact with content. Extending time limits, or
-	allowing users to request more time, can mitigate these issues but might slightly increase the risk of attacks like session hijacking.
+	While time-outs are necessary for security and efficient resource use, they can disproportionately affect users with disabilities who may require more time to read and interact with content. Extending time limits, or
+	supporting users in requesting more time, can mitigate these issues but might slightly increase the risk of attacks like session hijacking.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -1431,11 +1411,13 @@ Some content publishers offer such transformations. Also, some operating systems
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	As noted, some content publishers offer accessibility related page transformation overlays in their source. As also noted, the drawback with source provided transformations is that they must be applied over and over, site by site except when they&apos;re the result of functioning transformations enabled in the operating system of the device itself. However, when a user discovers different settings are useful for different sites, whether these are grossly distinct or highly nuanced distinctions, this may appear to argue for not interfering with user chosen settings on a site by site basis. On the other hand, an edge technology&mdash;especially one that is associated with a user login&mdash;can recognize the distinctions and apply heuristics to learn the nuances a user prefers, possibly enabling it to predict better what might be valuable on a newly visited site.
+
+There is no particular benefit to performing this mediation at the edge.
 </dd>
 <dt>Benefit</dt>
 <dd>
-	The benefit available only from edge-based transformations is that they can be applied to every site the user visits to achieve consistent results when nuanced results are required.
+
+This capability is critical to the users who require it.
 </dd>
 
 <dt>Automatability</dt>
