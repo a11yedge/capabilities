@@ -31,9 +31,9 @@ adaptations, and realtime HTML and CSS rewrites on content delivery networks
 (CDNs) as well as in browser extensions&mdash;all without writing any of these
 adaptations into the original source.</p>
 
-<p>The capabilities discussed include missing alternative text, visual
-presentation personalization, and dynamic content accessibility.  We also
-discuss whether these capabilities can be automated based on the presence of
+<p>The capabilities discussed include supplying missing alternative text, personalizing the visual
+presentation, and rebuilding interactive components.  We also
+discuss whether the capability remediations discussed can be automated based on the presence of
 programmatically recognizable patterns conducive to automated adaptation.
 </p>
 
@@ -461,7 +461,7 @@ full remediation remains a challenge, as automation struggles with nuanced tasks
 <p>
 
 The capabilities discussed in this section are afforded users to facilitate content rerendering utilizing presentational characteristics each individual user finds most accomodative. These are accommodations that allow users to <a href="https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility">perceive and understand</a> <a href="#manage">published content and services</a>. For persons with print disabilities, these capabilities starkly illustrate the superior accessibility of web content over printed media, because printed media cannot be similarly accomodating. Whatever <q>look and feel</q> a content provider may have chosen and published, the user&apos;s adaptations must necessarily take precedence for reasons of accessibility. To put it in other words: <q>The author proposes, but the user disposes.</q></p>
-<p>In the main, presentation is achieved with CSS. We have a strong preference for CSS in presentation rendering because CSS is most fungible. Rendering the presentation layer through technologies other than CSS is highly likely to prove inaccessible and require remediation into CSS in order to support accessibility requirements as defined by W3C.</p>
+<p>We have a strong preference for CSS in presentation rendering because CSS is most fungible. Also, accessibility is natively addressed by W3C&apos;s CSS specifications. Achieving similar results through other technologies leaves the developer directly responsible for all aspects of accessibility in their code. Thus rendering the presentation layer through technologies other than CSS is highly likely to prove inaccessible and require remediation.</p>
 
 <section id="curfoc">
 	<h2>Manage Cursor &amp; Focus</h2>
@@ -470,17 +470,6 @@ The capabilities discussed in this section are afforded users to facilitate cont
 	Isolating Specific Semantic or Interactive Components for Efficient Browsing and Access:
 	methods and technologies used to enhance user experience by isolating specific elements within a digital interface. It enables users to navigate efficiently through content by focusing on particular types of elements, such
 	as headings or buttons.</p>
-
-
-	<aside class="note" role="region" title="Editor's note" aria-label="Editor's note">
-	<div role="heading" class="ednote-title marker" aria-level="3">
-		<span>Editor's note</span>
-		</div>
-	<div>
-	<p>Note that we group these features here because the use of W3C standard CSS provides builtin accessibility support, whereas creating similar functionality with JavaScript requires the content publisher to meet all accessibility use cases with their code. Frankly, relying on CSS is less work and less costly. It's also far more likely to succeed at supporting accessibility well.
-	</p>
-		</div>
-	</aside>
 
 <section id="cursorsize">
 <h3>Optimize Cursor Size</h3>
@@ -517,13 +506,13 @@ In many cases
 <h3>Optimize Hyperlink Visibility</h3>
 
 <p>Some people require greater clarity regarding which spans of text or graphics in web content are functioning as hyperlinks. This capability facilitates selecting the text or image that serves
-as a hyperlink and causes it to be displayed in a different, more perceivable way
-to help users identify the hyperlinks on a page more easily. </p>
+as a hyperlink and causing it to be displayed in a different, more perceivable way
+to help users more easily identify the hyperlinks on a page. </p>
 
 <dl>
 <dt>Source</dt>
 <dd>
-By definition this capability is needed because source (as rendered by the browser) isn&apos;t sufficiently clear about its hyperlinks, 
+By definition this capability is needed because source  is  too frequently unclear about its hyperlinks, 
 at least for significant user segments.
 </dd>
 <dt>Trade-Offs</dt>
@@ -726,7 +715,7 @@ fonts and flag instances of inaccessible typefaces. However, proper invocation m
 <dd>
 	Pricing details are often designed with an emphasis on visual appeal,
 	such as small text or complex layouts, making them inaccessible to
-	screen readers and users with visual impairments.
+	screen reader users and users with visual impairments.
 	 
 </dd>
 <dt>Trade-Offs</dt>
@@ -1034,7 +1023,7 @@ consistency with visual identity.
 </section>
 
 <section id="personalcolor">
-	<h3>Personalize Color Palatte</h3>
+	<h3>Personalize Color Palette</h3>
 
 <dl>
 <dt>Source</dt>
