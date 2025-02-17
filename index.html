@@ -33,7 +33,7 @@ adaptations into the original source.</p>
 
 <p>The capabilities discussed include supplying missing alternative text, personalizing the visual
 presentation, and rebuilding interactive components.  We also
-discuss whether the capability remediations discussed can be automated based on the presence of
+discuss whether the capabilities discussed can be automated based on the presence of
 programmatically recognizable patterns conducive to automated adaptation.
 </p>
 
@@ -476,11 +476,11 @@ more accessible navigation through hyperlinks, tabs, and form elements.</p>
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	As with other presentational behaviors described in this document, users who require this capability likely require it across all sites they may use. Thus, overlay edge technologies afford the best prospect to meet the need globally.
+There is no particular benefit to performing this mediation at the edge.
 </dd>
 <dt>Benefit</dt>
 <dd>
-An accessible overlay can provide this functionality across all sites the user accesses. And, when provided via the login-based cloud service, it can do so across the full portfolio of the user&apos;s devices.
+This capability is critical to the users who require it.
 </dd>
 
 <dt>Automatability</dt>
@@ -507,12 +507,12 @@ at least for significant user segments.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	Users requiring this accommodation will most likely require it across all sites they visit. While configuring a browser for greater clarity helps, users shouldn&apos;t have to configure the same capability across their multiple devices.
+There is no particular benefit to performing this mediation at the edge.
 </dd>
 
 <dt>Benefit</dt>
 <dd>
-	Only edge technology is capable of performing this accommodation across all sites a user accesses and with all a user&apos;s several devices.
+This capability is critical to the users who require it.
 </dd>
 
 <dt>Automatability</dt>
@@ -538,7 +538,7 @@ In many cases
 </dd>
 <dt>Benefit</dt>
 <dd>
-	Ensuring keyboard accessibility for all interactive elements significantly improves the usability of web applications for users with motor disabilities and those who prefer keyboard navigation.
+	Ensuring keyboard accessibility for all interactive elements significantly improves the usability of web applications for users with motor disabilities and those who require or prefer keyboard navigation.
 </dd>
 <dt>Automatability</dt>
 <dd>
@@ -586,12 +586,12 @@ below the text they&apos;re reading in order to help them keep their place as th
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	Users requiring this accommodation will most likely require it across all sites they visit.
+There is no particular benefit to performing this mediation at the edge.
 </dd>
 
 <dt>Benefit</dt>
 <dd>
-	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+This capability is critical to the users who require it.
 </dd>
 
 <dt>Automatability</dt>
@@ -622,12 +622,12 @@ In many cases
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	Users requiring this accommodation will most likely require it across all sites they visit.
+There is no particular benefit to performing this mediation at the edge.
 </dd>
 
 <dt>Benefit</dt>
 <dd>
-	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+This capability is critical to the users who require it.
 </dd>
 
 <dt>Automatability</dt>
@@ -660,7 +660,7 @@ optimized for persons living with dyslexia.
 <dt>Benefit</dt>
 <dd>
 	Using dyslexia-friendly fonts reduces cognitive load and improves the
-	reading experience for users with dyslexia, making the site more
+	reading experience for users living with with dyslexia, making the site more
 	inclusive.
 </dd>
 <dt>Automatability</dt>
@@ -711,14 +711,14 @@ fonts and flag instances of inaccessible typefaces. However, proper invocation m
 <section id="textsize">
 <h3>Optimize Text Size</h3>
 
-<p>Some users need enlarged, or perhaps diminished fonts in order to read content comfortably. This capability allows increased or decreased font size by
-supporting clicking an interactive widget in order to make appropriate adjustments.</p>
+<p>Some users need enlarged, or perhaps diminished fonts in order to read content comfortably. This capability allows increased or decreased font size 
+adjustments through an interactive widget.</p>
 
 <dl>
 	<dt>Source</dt>
-	<dd>Source code specifies text
-	size as per the original target audience and design, but only for content
-	coming from that particular source.</dd>
+	<dd>
+		This capability is sometimes provided by source.
+	</dd>
 <dt>Trade-Offs</dt>
 <dd> Text size is typically configurable in
 the operating system. However, not all applications consistently honor the setting and can defeat the user&apos;s intent.
@@ -747,15 +747,13 @@ In many cases&mdash;Provided a valid, user-selected font size is known.
 <section id="textspace">
 <h3>Optimize Text Spacing (Whitespacing)</h3>
 
-<p>Some users require additional white-space between lines of text content in order to read comfortably. Others require adjustment between individual characters in and between words. This capability supports these adjustments by facilitating the modification of text and line spacing to support
-personalized readability enhancement. As typically provided today, the capability offers three
-degrees of adjustments for a personalized and more accessible reading
-experience.</p>
+<p>Some users require additional white-space between lines of text content in order to read comfortably. Some require adjustment between individual characters in and between words. This capability supports personalizing these adjustments to individual user&apos;s needs.
+</p>
 <dl>
 <dt>Source</dt>	
 <dd>Like all aspects of text design, the source determines the experience they think is best for the content. </dd>	
 <dt>Trade-Offs</dt>
-<dd> May be configurable in the operating system to provide defaults across all applications on the device&mdash;to the extent third party applications honor those settings.</dd>
+<dd> This capability may be configurable in the operating system to provide defaults across all applications on the device&mdash;to the extent third party applications honor those settings.</dd>
 
 <dt>Benefit:</dt>
 <dd> Learning how to make such
@@ -789,12 +787,13 @@ In many cases&mdash;Provided a valid, user-selected spacing is known.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	Users requiring this accommodation will most likely require it across all sites they visit.
+
+There is no particular benefit to performing this mediation at the edge.
 </dd>
 
 <dt>Benefit</dt>
 <dd>
-	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+This capability is critical to the users who require it.
 </dd>
 
 <dt>Automatability</dt>
@@ -817,7 +816,7 @@ In many cases&mdash;Provided a valid, user-selected line height spacing is known
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	The decorative nature of drop caps might conflict with text clarity and readability for users utilizing text-to-speech technologies unless additional descriptive tags or styles are used.
+	The decorative nature of drop caps may conflict with text clarity and readability for users utilizing text-to-speech technologies unless additional descriptive tags or styles are used.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -851,11 +850,13 @@ other moving elements on a web page from playing entirely. Others may wish to se
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	As with other presentational behaviors described in this document, users who require this capability likely require it across all sites they may use. Thus, overlay edge technologies afford the best prospect to meet the need globally.
+
+There is no particular benefit to performing this mediation at the edge.
 </dd>
 <dt>Benefit</dt>
 <dd>
-An accessible overlay can provide this functionality across all sites the user accesses. And, when provided via the login-based cloud service, it can do so across the full portfolio of the user&apos;s devices.
+
+This capability is critical to the users who require it.
 </dd>
 
 <dt>Automatability</dt>
@@ -885,11 +886,12 @@ In some cases&mdash;Because we&apos;re uncertain we have all relevant use cases 
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	As with other presentational behaviors described in this document, users who require this capability likely require it across all sites they may use. Thus, overlay edge technologies afford the best prospect to meet the need globally.
+
+There is no particular benefit to performing this mediation at the edge.
 </dd>
 <dt>Benefit</dt>
 <dd>
-An accessible overlay can provide this functionality across all sites the user accesses. And, when provided via the login-based cloud service, it can do so across the full portfolio of the user&apos;s devices.
+This capability is critical to the users who require it.
 </dd>
 
 <dt>Automatability</dt>
@@ -909,32 +911,16 @@ In some cases
 <h3>Optimize Color Contrast</h3>
 
 <p>Color and contrast adaptations such as <q>Light Mode</q>, <q>Dark Mode</q>, Inverted Colors, Color Desaturation, and related contrast pigmentation adaptations have proven highly useful
-to many people with a wide range of visual impairments, and frankly for most users in various distinct situations. They modify the difference between the
+to many people with a wide range of visual disabilities, and frankly to most users of the web in various distinct situations. They modify the difference between the
 lightest and darkest parts of a web page, reverse colors, or reduce their
 intensity.</p>
-<dl>
-<dt>Trade-Offs</dt>
-<dd>This capability is commonly configurable in
-the operating system itself. Thus, edge support needs a compelling reason to diverge from OS defaults. On the other hand, if the user chooses adaptations that could have been set in the OS, it is likely the user is unfamiliar with making these adjustments in their device and should be assisted in doing so across all their devices.</dd>
-<dt>Benefit</dt>
-<dd>
-	Because most users have similar needs across all their devices, and because they tend nowadays to use multiple devices, edge based configuration of this capabilities strongly supports our <q>Configure Once, Use Everywhere</q> principle.
-</dd>
-
-
-<dt>Automatability</dt>
-<dd>
-	In some cases&mdash;Because we're defaulting to all manner of graphics. Were we to restrict the question to text contrast, we would be able to say <q>In many cases.</q>
-</dd>
-
-</dl>
 
 <dl>
 <dt>Source</dt>
 <dd>
-	Color contrast issues typically arise during the design phase, where
-	aesthetic priorities may overshadow accessibility considerations. These
-	issues are often embedded in CSS or dynamic styling applied at runtime.
+	Color contrast decisions typically arise during the design phase, where
+other priorities may overshadow accessibility considerations. The
+	implementations are often embedded in CSS or dynamic styling applied at runtime.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
@@ -945,7 +931,7 @@ consistency with visual identity.
 <dt>Benefit</dt>
 <dd>
 	Optimized contrast improves readability and usability for all users,
-	including those with low vision or color blindness, while maintaining
+	including especially those with low vision or color blindness, while maintaining
 	compliance with accessibility standards.
 </dd>
 <dt>Automatability</dt>
@@ -978,14 +964,13 @@ consistency with visual identity.
 <dd>
 	A standardized, accessible color palette ensures visual consistency
 	across the site while improving usability and readability for all users.
-	 
 </dd>
+
 <dt>Automatability</dt>
-<dd>Does not apply
-	Jason writes--In many cases&mdash;Automated tools can analyze existing palettes and
+<dd>
+In many cases&mdash;Automated tools can analyze existing palettes and
 	identify inaccessible combinations. Some implementation and
 	standardization, however, require manual adjustments and testing.
-	 
 </dd>
 </dl>
  
@@ -1051,7 +1036,7 @@ In some cases&mdash;While framing can be automatically applied, ensuring that th
 <dl>
 <dt>Source</dt>
 <dd>
-Shadows and outlines are used to enhance text visibility and separateness from the background, crucial for users with visual impairments.
+Shadows and outlines effects are used to enhance text visibility and distinguish foreground content from the background, Proper considerations are crucial for users with visual impairments.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
@@ -1076,11 +1061,11 @@ systems.
 <dl>
 <dt>Source</dt>
 <dd>
-Text transparency often serves design aesthetics, such as background text interaction. However, it can render text unreadable for those with visual impairments or for most anyone in less-than-ideal viewing conditions. These effects frequently violate WCAG color contrast minimums.
+Text transparency often serves design aesthetics. However, it can leave text unreadable to those with visual disabilities or to most anyone under less than ideal viewing conditions. These effects frequently violate WCAG color contrast minimums.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	Balancing text transparency with legibility can challenge designers aiming to maintain a particular visual style while ensuring content is accessible to users with poor vision.
+	Balancing text transparency with legibility can challenge designers aiming to maintain a particular visual style while also ensuring content remains accessible.
 </dd>
 <dt>Benefit</dt>
 <dd>
