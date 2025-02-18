@@ -1089,6 +1089,65 @@ Text transparency often serves design aesthetics. However, it can leave text unr
 The capabilities discussed in this section are those content publishers must provide users in order to facilitate accessible user interaction with <a href="manage">published content and web services</a>. These are described by the fundamentalWCAG principle: <a href="https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility"><q>operable</q></a>. In the main, they are achieved using JavaScript.
 </p>
 
+<section id="notify">
+	<h2>Notifications</h2>
+
+<p>Notifications are messages shown to the end-user to
+alert them to an event, some specific data-point, or to some state.
+They are crucial for real-time functionality but can create accessibility problems if they disappear on their own (while the user may be otherwise engaged in the moment) or are not announced by screen readers.
+Designing effective notifications that are both timely and accessible often requires considerations such as user control over timing and the method of dismissal.
+</p>
+
+<dl>
+<dt>Source</dt>
+<dd>It seems unlikely source could fully take on this responsibility. 
+On the other hand, it seems equally unlikely that edge technology alone can fully meet this need effectively without API-based data interchange with source content.
+	There are particularly cogent use cases in <q>augmented reality</q> applications which appear very promising.
+</dd>
+<dt>Trade-Offs</dt>
+<dd>What a user may want or need to know in any given situation or moment is a complex calculation at best. 
+	It&apos;s far too easy to overdo notifications, though failing to notify judiciously and appropriately would constitute a major technological opportunity missed. 
+	We need better models and privacy-preserving context awareness to realize all the benefits conceivable in this application of automated opportunities.</dd>
+<dt>Benefit</dt>
+<dd>Controlling the fire hose of notifications is best filtered and managed at the edge because that&apos;s the most data rich locus for technology mediated adaptation and minimal data round-trips to servers.
+	The right information at just the right time can serve as a tremendous quality of life enhancement, and it&apos;s best performed locally, not centrally.
+</dd>
+
+<dt>Automatability</dt>
+<dd>
+In some cases&mdash;Notifications can autonomously adjust timings and include accessibility features. However, confirming that these notifications are harmoniously integrated into the overall site design and do
+not obscure other interactive elements requires human intervention.
+</dd>
+
+</dl>
+
+</section>
+
+<section id="auth-n">
+	<h2>User Authentication</h2>
+
+<dl>
+<dt>Source</dt>
+<dd>
+	Authentication processes often rely on visual cues and inputs that can be barriers to users with visual impairments or motor disabilities.
+</dd>
+<dt>Trade-Offs</dt>
+<dd>
+	Creating fully accessible authentication mechanisms can complicate the design process, potentially increasing development time and costs.
+</dd>
+<dt>Benefit</dt>
+<dd>
+An accessible authentication process ensures that all users can securely access services without undue hardship, aligning with legal standards and ethical practices.
+</dd>
+<dt>Automatability</dt>
+<dd>
+	In no significant way&mdash;Authentication processes involve complex interactions that are highly sensitive to security requirements. Autonomously adjusting these processes while ensuring they do not compromise
+other site functionalities or user security is currently beyond the scope of autonomous systems.
+</dd>
+</dl>
+ 
+</section>
+
 		<section id="custcomponent">
 			<h2>Interactive  Components</h2>
 
@@ -1590,68 +1649,8 @@ In some cases&mdash;Voice command technologies require extensive training to han
 </dd>
 </dl>
  
- 
 </section>
 
-</section>
-
-<section id="notify">
-	<h2>Notifications</h2>
-
-<p>Notifications are messages shown to the end-user to
-alert them to an event, some specific data-point, or to some state.
-They are crucial for real-time functionality but can create accessibility problems if they disappear on their own (while the user may be otherwise engaged in the moment) or are not announced by screen readers.
-Designing effective notifications that are both timely and accessible often requires considerations such as user control over timing and the method of dismissal.
-</p>
-
-<dl>
-<dt>Source</dt>
-<dd>It seems unlikely source could fully take on this responsibility. 
-On the other hand, it seems equally unlikely that edge technology alone can fully meet this need effectively without API-based data interchange with source content.
-	There is particularly cogent needs in <q>augmented reality</q> which are potentially very exciting.
-</dd>
-<dt>Trade-Offs</dt>
-<dd>What a user may want or need to know in any given situation or moment is a complex calculation at best. 
-	It&apos;s far too easy to overdo notifications, though failing to notify judiciously and appropriately would constitute a major technological opportunity missed. 
-	We need better models and privacy-preserving context awareness to realize all the benefits conceivable in this application of automated opportunities.</dd>
-<dt>Benefit</dt>
-<dd>Controlling the fire hose of notifications is best filtered and managed at the edge because that&apos;s the most data rich locus for technology mediated adaptation and minimal data round-trips to servers.
-	The right information at just the right time can serve as a tremendous quality of life enhancement, and it&apos;s best performed locally, not centrally.
-</dd>
-
-<dt>Automatability</dt>
-<dd>
-In some cases&mdash;Notifications can autonomously adjust timings and include accessibility features. However, confirming that these notifications are harmoniously integrated into the overall site design and do
-not obscure other interactive elements requires human intervention.
-</dd>
-
-</dl>
-
-</section>
-
-<section id="auth-n">
-	<h2>User Authentication</h2>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	Authentication processes often rely on visual cues and inputs that can be barriers to users with visual impairments or motor disabilities.
-</dd>
-<dt>Trade-Offs</dt>
-<dd>
-	Creating fully accessible authentication mechanisms can complicate the design process, potentially increasing development time and costs.
-</dd>
-<dt>Benefit</dt>
-<dd>
-An accessible authentication process ensures that all users can securely access services without undue hardship, aligning with legal standards and ethical practices.
-</dd>
-<dt>Automatability</dt>
-<dd>
-	In no significant way&mdash;Authentication processes involve complex interactions that are highly sensitive to security requirements. Autonomously adjusting these processes while ensuring they do not compromise
-other site functionalities or user security is currently beyond the scope of autonomous systems.
-</dd>
-</dl>
- 
 </section>
 
 <section id="semiotics">
