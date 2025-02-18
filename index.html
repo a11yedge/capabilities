@@ -1740,21 +1740,28 @@ In many cases
 </section>
 
 <section id="numberdigit">
-	<h2>Disambiguate Numbers vs Digits for TTS</h2>
+	<h2>Disambiguate Numbers and Strings of Digits for TTS</h2>
+
+	<p>
+	Not all strings of digits are numbers. Nor should all strings of digits be pronounced as though they were actual numbers. The classic example (which all screen readers and read-aloud services continue to get wrong) is the aural presentation of a telephone <q>number</q>, which is not actually a number, of course, but rather a numeric address. Consider this example of a telephone <q>number</q> as would typically be auralized by TTS: <q>Plus one, 
+		two hundred twelve, five hundred fifty-five, onethousand two hundred and thirty-four.</q></p>
 
 <dl>
 <dt>Source</dt>
 <dd>
+	Source has not heretofore had the markup resources needed to correctly disambiguate numeric strings from numbers. Ongoing work at W3C in the Accessible Platform Architectures (APA) Working Group&apos;s <a href="https://www.w3.org/WAI/about/groups/task-forces/pronunciation/">Spoken Presentation Task Force</a> may soon provide the required markup tools.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
+	While no mechanism currently exists to guide screen readers in appropriate pronunciation, read-aloud tools can be heuristically assisted today by edge technologies.
 </dd>
 <dt>Benefit</dt>
 <dd>
+Anyone&apos;s comprehension is aided by correct pronunciation.
 </dd>
 <dt>Automatability</dt>
 <dd>
-
+In many cases
 </dd>
 </dl>
  
@@ -1766,18 +1773,21 @@ In many cases
 <dl>
 <dt>Source</dt>
 <dd>
+HTML has long provided markup to specify the correct expansion of acronyms.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
+	While no mechanism currently exists to guide screen readers in appropriate pronunciation, read-aloud tools can be heuristically assisted today by edge technologies whether or not the content has been properly tagged.
 </dd>
 <dt>Benefit</dt>
 <dd>
+Anyone&apos;s comprehension is aided by correct pronunciation.
 </dd>
 <dt>Automatability</dt>
 <dd>
+In many cases
 </dd>
 </dl>
- 
 	</section>
 
 </section>
@@ -1791,15 +1801,15 @@ triggered enhancement and restore the page to its default state. It should be as
 <dl>
 <dt>Source</dt>
 <dd>
-This applies to source provided transformations just as much as it applies to edge provided overlay transformations.
+This applies to source authorized transformations just as much as it applies to user authorized overlay transformations.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	As previously noted, some content publishers offer accessibility related page transformation overlays in their source. As also previously noted, the drawback with source provided transformations is that they must be applied over and over, site by site. If indeed a user discovers different settings are needed for different sites, this may appear to argue for not interfering with user chosen settings on a site by site basis. On the other hand, an edge technology&mdash;especially one that is associated with a user login&mdash;can recognize the distinctions and apply heuristics to learn the nuances a user prefers, possibly enabling it to predict better what might be valuable on a newly visited site.
+Users will typically need to expiriment before landing on the transformations they find most assistive.
 </dd>
 <dt>Benefit</dt>
 <dd>
-	The benefit available only from edge-based transformations is that they can be applied to every site the user visits to achieve consistent results.
+Trust is built when users are empowered to decide for themselves what accomodations best meet their needs.
 </dd>
 
 <dt>Automatability</dt>
