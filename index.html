@@ -2509,6 +2509,46 @@ In some cases
 </dl>
 
 </section>
+ 
+<section id="signingsupport">
+	<h2>Support Sign Language Alternatives in Media</h2>
+
+	<p>This capability envisions provision of <a href="https://www.w3.org/TR/media-accessibility-reqs/#sign-translation">Sign Translation</a> displaying along with
+	video and synchronized with it (as provided in HTML).</p>
+	
+	<aside class="wcag2x" role="region" title="WCAG Note" aria-label="WCAG Note">
+	<div role="heading" class="wcag2x-title marker" aria-level="3">
+		<span>WCAG Note</span>
+		</div>
+		<div>
+<p>Related WCAG 2.2 Success Criteria:</p>
+<ul>
+	<li><a href="https://www.w3.org/TR/WCAG22/#sign-language-prerecorded">SC 1.2.6: Sign Language (Prerecorded)</a></li>
+	<li><a href="https://www.w3.org/TR/WCAG22/#media-alternative-prerecorded">SC 1.2.8: Media Alternative (Prerecorded)</a></li>
+</ul>
+		</div>
+	</aside>
+<dl>
+<dt>Source</dt>
+<dd>
+This capability is rarely provided.
+</dd>
+<dt>Trade-Offs</dt>
+<dd>
+There is no particular benefit to performing this mediation at the edge. However HTML was designed to support this capability in edge technologies.
+</dd>
+<dt>Benefit</dt>
+<dd>
+The cost of generating human-mediated sign language translation is prohibitive, but automation is not yet available for this capability. It is a goal because far too many individuals who rely on sign language as their primary language do not possess reliable textual language skills. For these individuals reading captions is accessing content in a second language.
+</dd>
+
+<dt>Automatability</dt>
+<dd>In no significant way
+</dd>
+
+</dl>
+
+</section>
 
 	<section id="skim">
 		<h2>Mediate Content Skimming</h2>
@@ -2522,12 +2562,13 @@ In some cases
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	Users requiring this accommodation will most likely require it across all sites they visit.
+
+There is no particular benefit to performing this mediation at the edge.
 </dd>
 
 <dt>Benefit</dt>
 <dd>
-	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+Effective content skimming is well understood to be an effective approach for accessing content in order to obtain a sense of what the content can provide, and in order to identify content to be more closely and carefully accessed.
 </dd>
 
 <dt>Automatability</dt>
@@ -2539,7 +2580,7 @@ In many cases
 </section>
 
 <section class="summarize-sl">
-	<h3>Mediate Skimming Sign-Language Content</h3>
+	<h2>Mediate Skimming Sign-Language Content</h2>
 
 	<p>Skimming through content to determine what, if any of it, might benefit the user by a more careful reading is just as valuable to users who depend on sign-language, or who utilize Augmentative and Alternative Communication (AAC) symbolic languages, as it is for those who read text. As with summation services with text, good user agent support for such a feature would not only support sequential summarization, but the marking of particular sections to return to for greater study.</p>
 
@@ -2550,24 +2591,24 @@ In many cases
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	Users requiring this accommodation will most likely require it across all sites they visit.
+There is no particular benefit to performing this mediation at the edge.
 </dd>
 
 <dt>Benefit</dt>
 <dd>
-	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+
+This capability is critical to the users who require it.
 </dd>
 
 <dt>Automatability</dt>
 <dd>
-In many cases
+In no significant way
 </dd>
  
 </dl>
 
 </section>
 	</section>
-
 
         <section class="appendix" id="Appendix-A">
 		<h1>Our Design Principles</h1>
