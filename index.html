@@ -26,7 +26,7 @@
 		        <h2>Abstract</h2>
 
 			<p>In this document we discuss trade offs and benefits of accessibility
-remediations applied after the source layer to deliver more accessible web
+remediations applied after the source code layer to deliver accessible web
 experiences to end users.  Post-source approaches identified include JavaScripted
 adaptations, and realtime HTML and CSS rewrites on content delivery networks
 (CDNs) as well as in browser extensions&mdash;all without necessarily writing any of these
@@ -39,9 +39,8 @@ programmatically recognizable patterns conducive to automated adaptation.
 </p>
 
 			<p>
-We show that web content can often be made more accessible for users with diverse needs, particularly those relying on assistive technologies
-by leveraging <q>edge technologies.</q> 
-We conclude that integrating post-source remediations provides an effective way to address accessibility gaps and promote a more inclusive web experience.</p>
+By leveraging <q>edge technologies</q> we show that web content can be made accessible for users with diverse needs including the elderly, inexperienced users, and those relying on assistive technologies.  
+By way of this document, we believe that integrating post-source remediations can be an effective way to address accessibility gaps and promote a more inclusive web experience.</p>
 
 			        </section>
 
@@ -62,7 +61,7 @@ Today&apos;s world wide web is a complex blend of multiple original sources, med
 The current remedial approach for addressing this accessibility failure requires that developers update the source code to more closely conform with accessibility standards. While we certainly support optimizing accessibility at the source layer, modifying the original code may not always be feasible. It&apos;s also often the least efficient way to deliver different personalized experiences to different individual users. Furthermore, it can be viewed as too time-consuming and costly by business owners.</p>
 
 <p>
-This document explores how various realtime post-source adaptations can deliver more accessible user experiences&mdash;and more varied accessible experiences&mdash;all without
+This document explores how various realtime post-source adaptations can deliver accessible user experiences&mdash;and more varied accessible experiences&mdash;all without
 requiring changes to the original source.
 		     The diagram below illustrates where the adaptations discussed in this publication fit within a typical server and client data flow:</p>
 <ol type="I">
@@ -116,7 +115,7 @@ requiring changes to the original source.
 Indeed, accessibility overlays have twice factored in major U.S. governmental actions in recent months, first as a reference to an earlier version of this publication by the <a href="https://www.w3.org/community/a11yedge/2024/12/06/u-s-attorney-general-on-overlays-cites-community-group-work/">U.S. Attorney-General</a>, and more recently in a consent decree from the <a href="https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-order-requires-online-marketer-pay-1-million-deceptive-claims-its-ai-product-could-make-websites">U.S. Federal Trade Commission (<abbr title="Federal Trade Commission">FTC</abbr>)</a>.
 		</p>
 		<p>
-We assert that the accessibility capabilities discussed in this document can be accomplished through the application of appropriate post-source methods. 
+We believe that the accessibility capabilities discussed in this document can be accomplished through the application of appropriate post-source methods. 
 However it is essential that vendors marketing products and services based on these techniques clearly communicate
 the scope and limitations of their approach. Transparency regarding the extent and manner in which post-source techniques are applied is critical to ensure clarity and alignment with intended outcomes. Forthright representation is also essential for building
 trust. Vendors marketing approaches such as those discussed in this document should carefully and
@@ -138,7 +137,7 @@ transparently articulate what their technologies and approaches can genuinely de
 			<h2>Our Rationale: Multiple Sources &amp; Individual Users</h2>
 
 		  <p>In the main, the classic paradigm of a web domain serving content directly to end users across the Internet has long ago become a historical artifact.
-		    Today&apos;s typical web page is often a dizzying composite of multiple content streams injected from various sources, including content unique to the user&apos;s locale and even to the specific user herself. Content
+		    Today&apos;s typical web page is often a dizzying composite of multiple content streams injected from various sources, including content unique to the user&apos;s locale and even to the specific user. Content
 		    delivered to a user today may be a unique <q>one-off</q> composite that may well change when the page is refreshed. The <a href="https://almanac.httparchive.org/en/2021/third-parties">2021 Web Almanac</a> notes more
 		    than 20 third party injection streams for today&apos;s typical web site, with 10% containing over 90 separate content injections.</p>
 
@@ -323,7 +322,7 @@ contextualization or clarification.</p>
 </dd>
 
 <dt>Automatability</dt>
-<dd>In Many cases&mdash;Automation can generate tooltips for certain elements by leveraging metadata and contextual cues. However, ensuring that tooltips provide meaningful, non-redundant, and contextually relevant
+<dd>In many cases&mdash;Automation can generate tooltips for certain elements by leveraging metadata and contextual cues. However, ensuring that tooltips provide meaningful, non-redundant, and contextually relevant
 	information requires human oversight, especially in complex interfaces.
 </dd>
 
@@ -362,7 +361,7 @@ web page when the declaration is incorrect or missing entirely.</p>
 		Content lacking a correct programmatic language declaration will often be incorrectly rendered by <abbr title="Text To Speech">TTS</abbr> for screen reader and read-aloud users. It will inevitably fail for braille users.
 	</dd>
 	<dt>Automatability</dt>
-	<dd>In Many cases&mdash;Automated detection can infer the primary language of a webpage using existing metadata or linguistic models. However, in multilingual content or cases where code-level declarations conflict
+	<dd>In many cases&mdash;Automated detection can infer the primary language of a webpage using existing metadata or linguistic models. However, in multilingual content or cases where code-level declarations conflict
 		with actual text, human verification is required to ensure proper tagging.
 	</dd>
 </dl>
@@ -450,7 +449,7 @@ ensure relevance.
 </dd>
 
 <dt>Automatability</dt>
-<dd>In Many cases&mdash;Automated captions can be generated using AI-based speech recognition tools, but these often introduce inaccuracies, especially for domain-specific terminology, multiple speakers, or background noise. Human review is necessary to ensure proper synchronization and contextual correctness.
+<dd>In many cases&mdash;Automated captions can be generated using AI-based speech recognition tools, but these often introduce inaccuracies, especially for domain-specific terminology, multiple speakers, or background noise. Human review is necessary to ensure proper synchronization and contextual correctness.
 </dd>
 
 </dl>
@@ -460,7 +459,7 @@ ensure relevance.
 <section id="videodescript">
 	<h3>Provide Descriptions of Video</h3>
 
-	<p>This capability provides <a href="https://www.w3.org/TR/media-accessibility-reqs/#described-video">descriptive narration of key visual elements</a> designed to make visual media accessible to people who are blind or visually impaired. Most commonly descriptions are provided as an additional audio track timed not to interfere with spoken dialog. Creating descriptions that both enhance the audio experience and do not obscure dialog requires skill. Both a <a href="https://www.w3.org/TR/media-accessibility-reqs/#text-video-description">text based mechanism</a> and an <a href="https://www.w3.org/TR/media-accessibility-reqs/#extended-video-descriptions">extended mechanism</a> are supported by HTML specifically to make it easier for third parties to provide helpful descriptions post-source.</p>
+	<p>This capability provides <a href="https://www.w3.org/TR/media-accessibility-reqs/#described-video">descriptive narration of key visual elements</a> designed to make visual media accessible to people who are blind or visually impaired. Most common descriptions are provided as an additional audio track timed not to interfere with spoken dialog. Creating descriptions that both enhance the audio experience and do not obscure dialog requires skill. Both a <a href="https://www.w3.org/TR/media-accessibility-reqs/#text-video-description">text based mechanism</a> and an <a href="https://www.w3.org/TR/media-accessibility-reqs/#extended-video-descriptions">extended mechanism</a> are supported by HTML specifically to make it easier for third parties to provide helpful descriptions post-source.</p>
 
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
@@ -535,7 +534,7 @@ remediation can enhance accessibility by removing barriers to access.
 </dd>
 <dt>Automatability</dt>
 <dd>
-	In Some Cases&mdash;Automated tools for detecting accessibility issues in PDFs are increasingly effective, identifying a wide range of problems such as missing tags and lack of alternative text. However,
+	In some Cases&mdash;Automated tools for detecting accessibility issues in PDFs are increasingly effective, identifying a wide range of problems such as missing tags and lack of alternative text. However,
 full remediation remains a challenge, as automation struggles with nuanced tasks like ensuring logical document structure and interpreting complex visual elements.
 </dd>
 </dl>
@@ -622,12 +621,12 @@ There is no particular benefit to performing this mediation at the edge.
 
 <dt>Benefit</dt>
 <dd>
-allows users to better distinguish links without relying on the vagaries of site design. More control over link appearance improves navigation and reduces frustration.
+Allows users to better distinguish links without relying on the vagaries of site design. More control over link appearance improves navigation and reduces frustration.
 </dd>
 
 <dt>Automatability</dt>
 <dd>
-In many cases&mdash;Automated tools can modify the styling of hyperlinks to increase visibility, but ensuring that these changes align with the website???s design and usability principles requires human
+In many cases&mdash;Automated tools can modify the styling of hyperlinks to increase visibility, but ensuring that these changes align with the website's design and usability principles requires human
 evaluation. Edge cases, such as images serving as links without clear indicators, often require manual adjustments.
 </dd>
  
@@ -651,7 +650,7 @@ evaluation. Edge cases, such as images serving as links without clear indicators
 <dl>
 <dt>Source</dt>
 <dd>
-	Many web applications rely on mouse-driven events, which can exclude users who depend on keyboard navigation due to physical limitations or personal preference.
+	Many web applications rely on mouse-driven and touch events, which can exclude users who depend on keyboard navigation due to physical limitations or personal preference.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
@@ -793,7 +792,7 @@ optimized for persons living with dyslexia.
 <dt>Benefit</dt>
 <dd>
 	Using dyslexia-friendly fonts reduces cognitive load and improves the
-	reading experience for users living with with dyslexia, making the site more
+	reading experience for users living with dyslexia, making the site more
 	inclusive.
 </dd>
 <dt>Automatability</dt>
@@ -1072,7 +1071,7 @@ Controlling Auto-play prevents media from disrupting users who need to process c
 
 <dt>Automatability</dt>
 <dd>
-In some cases&mdash;Automated detection can identify auto-playing media elements and attempt to pause them, but some implementations???such as dynamically loaded video players or embedded content???may not be
+In some cases&mdash;Automated detection can identify auto-playing media elements and attempt to pause them, but some implementations such as dynamically loaded video players or embedded content may not be
 intercepted reliably without human adjustments.
 </dd>
 
@@ -1265,7 +1264,7 @@ In some cases&mdash;While framing can be automatically applied, ensuring that th
 <dl>
 <dt>Source</dt>
 <dd>
-Shadows and outlines effects are used to enhance text visibility and distinguish foreground content from the background, Proper considerations are crucial for users with visual impairments.
+Shadows and outlines effects are used to enhance text visibility and distinguish foreground content from the background. Proper considerations are crucial for users with visual impairments.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
@@ -1706,7 +1705,7 @@ It has long been agreed that published content should contain structural markup 
 </dd>
 <dt>Automatability</dt>
 <dd>
-In Many Cases&mdash;Automated tools can infer structural semantics based on patterns in HTML elements, but resolving ambiguous cases???such as distinguishing between layout tables and data tables???requires human
+In many cases&mdash;Automated tools can infer structural semantics based on patterns in HTML elements, but resolving ambiguous cases such as distinguishing between layout tables and data tables requires human
 validation to ensure correct interpretation.
 </dd>
 
@@ -1755,7 +1754,7 @@ In some cases&mdash;Handling updates on dynamic pages using standard technologie
 		</section>
 
 	<section id="correctsemanticbehavior">
-		<h3>correct semantic behavior</h3>
+		<h3>Correct Semantic Behavior</h3>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -1824,7 +1823,7 @@ disrupt user experience or other page elements.
 </dd>
 <dt>Benefit</dt>
 <dd>The "curb cut effect" is used to describe a situation where accommodations made to assist people with disabilities end up benefiting everyone. The ability to browse pages by structural semantic features such as headings, links, or buttons promises to allow users to quickly move between different sections or elements of a web page without the need to visually scan the entire page. This can save time, especially on long and complex pages with lots of content. By using semantic navigation options like headings or links, sighted users can easily jump to specific sections or pieces of content they are interested in. This can be particularly helpful when users are looking for specific information or trying to locate a particular topic on a page. 
-	<p>Some users rely on keyboard navigation alone, such as those with motor disabilities or certain types of visual impairments. Semantic navigation options provide a convenient way for keyboard users to move through the content without having to rely on mouse-based interactions, making the website more accessible and usable for them.
+	<p>Some users rely on keyboard navigation alone, such as those with motor disabilities or certain types of visual impairments. Semantic navigation options provide a convenient way for keyboard users to move through the content without having to rely on mouse or touch-based interactions, making the website more accessible and usable for them.
 </dd>
 
 <dt>Automatability</dt>
@@ -1917,7 +1916,7 @@ While source content is expected to provide the same clarity, remediating it to 
 
 <dt>Automatability</dt>
 <dd>
-In no significant way&mdash;Automation can identify interactive elements, but ensuring clarity in all contexts???such as differentiating between disabled and active buttons???requires manual input to avoid
+In no significant way&mdash;Automation can identify interactive elements, but ensuring clarity in all contexts such as differentiating between disabled and active buttons requires manual input to avoid
 misinterpretation.
 </dd>
 
@@ -1999,7 +1998,7 @@ This is particularly needed for link text such as <q>click here</q> or
 
 <dt>Automatability</dt>
 <dd>
-In many cases&mdash;Automated tools can replace generic link text (e.g., ???click here???) with inferred descriptions, but ensuring that the new text is both accurate and meaningful within the page???s context
+In many cases&mdash;Automated tools can replace generic link text (e.g., click here) with inferred descriptions, but ensuring that the new text is both accurate and meaningful within the page's context
 still requires manual oversight.
 </dd>
 
@@ -2139,7 +2138,7 @@ There is no particular benefit to providing this service in source.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	When browsers provide this capability, its functionality is limited to the browser being used though a particular vendor&apos;s browser may provide consistent service across multiple devices).
+	When browsers provide this capability, its functionality is limited to the browser being used (though a particular vendor&apos;s browser may provide consistent service across multiple devices).
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -2348,7 +2347,7 @@ to exclude audiences.</p>
 <dd>
 </dd>
 <dt>Automatability</dt>
-<dd>In Some cases
+<dd>In some cases
 </dd>
 </dl>
  
@@ -2440,7 +2439,7 @@ In some cases
 		</dd>
 		<dt>Trade-Offs</dt>
 		<dd>
-			It is clearly preferable to remediate violations in source content whenever doing so is feasible. An in-process corrective overlay remediations only make sense when there are good reasons why the source cannot be remediated. 
+			It is clearly preferable to remediate violations in source content whenever doing so is feasible. And in-process corrective overlay remediations only make sense when there are good reasons why the source cannot be remediated. 
 		</dd>
 		<dt>Benefit</dt>
 		<dd>
@@ -2775,9 +2774,9 @@ In no significant way
 </section>
 
 <section id="a11ystmntdiscovery">
-<h3>Accessibility Statement Discover ability</h3>
+<h3>Accessibility Statement Discover Ability</h3>
 
-<p>Standardizing the location of widely deployed, common components of a web site is now being addressed in the <abbr title="Internet Engineering Task Force">IETF</abbr> and the W3C.  An easily located Accessibility Statement is one expected outcome. While time will be needed for most sites to adopt the newly canonized web address locations once a standard is available, powerful benefits will help drive adoption and end users will benefit..
+<p>Standardizing the location of widely deployed, common components of a web site is now being addressed in the <abbr title="Internet Engineering Task Force">IETF</abbr> and the W3C.  An easily located Accessibility Statement is one expected outcome. While time will be needed for most sites to adopt the newly canonized web address locations once a standard is available, powerful benefits will help drive adoption and end users will benefit.
 </p>
 
 <dl>
@@ -3169,7 +3168,7 @@ Does Not Apply
 				<dd>The most accessible organizations are those with a deep and robust culture around accessibility. Every role is aware and trained in the topic. In addition, persons with disabilities are involved as well. </dd>
 
 				<dt>Trade-Offs</dt>
-				<dd>Offloading accessibility knowledge may mean the organization will never reach the attitude and approach expected as a low bar of accessibility: including people with disabilities.  </dd>
+				<dd>Offloading accessibility knowledge may mean the organization will never reach the attitude and approach expected as a low bar of accessibility, including people with disabilities.  </dd>
 
 				<dt>Benefit</dt>
 				<dd>Like any complex topic, organizations are wide to hire experts and give them the latitude to fix things. Since providing access to digital assets at source is a security risk, allowing the accessibility provider to fix things at the edge is a sound decision. </dd>
