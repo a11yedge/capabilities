@@ -60,7 +60,7 @@ Today&apos;s world wide web is a complex blend of multiple original sources, med
 <p>
 The current remedial approach for addressing this accessibility failure requires that developers update the source code to more closely conform with accessibility standards. While we certainly support optimizing accessibility at the source layer, modifying the original code may not always be feasible. It&apos;s also often the least efficient way to deliver different personalized experiences to different individual users. Furthermore, it can be viewed as too time-consuming and costly by business owners.</p>
 
-<p>
+<p id="diagram">
 This document explores how various realtime post-source adaptations can deliver accessible user experiences&mdash;and more varied accessible experiences&mdash;all without
 requiring changes to the original source.
 		     The diagram below illustrates where the adaptations discussed in this publication fit within a typical server and client data flow:</p>
@@ -105,6 +105,16 @@ requiring changes to the original source.
 						</ol>
 						<li><strong>User Additions: </strong>At the bottom the user receives and interacts with the final <a href="https://www.merriam-webster.com/dictionary/mash-up">mashed-up</a> digital content on their own devices and affordances. Examples include the browser, user agent, assistive technologies (AT) on a laptop or desktop computer, and also on a smart phone, and perhaps also on a tablet, perhaps also cast to a wall-mounted video display and perhaps also several surround-sound speakers.</li>
 						</ul>
+
+		<aside class="Note" title="Note" aria-label="Note">
+					                <span>Note</span>
+									<div>
+<p>
+For further discussion of our source-authorized and user-authorized client-server model see <a href="#Appendix-B">Appendix B: Who&apos;s Responsible for What?</a>
+</p>
+									</div>
+	</aside>
+
 	     </section>
 
 	<section id="edgedef">
@@ -3075,6 +3085,15 @@ more than just accessible - it is truly human-centered.</p>
 		<li>Capabilities the end user can (or should) be able to control fully.</li>
 		<li>Capabilities which are necessarily controlled by the content provider even though they can profoundly affect the accessibility experience.</li>
 	</ul>
+
+		<aside class="Note" title="Note" aria-label="Note">
+					                <span>Note</span>
+									<div>
+<p>
+For a graphical representation of this model see our <a href="#diagram">Flow Diagram</a> above.
+</p>
+									</div>
+	</aside>
 
 <p>The Content Provider, analogous to the server, plays the pivotal role of specifying and delivering diverse forms of digital content ranging from text, images, audio, video, to interactive elements. They curate the experiences that users consume and engage with, thereby shaping the digital landscape.
 
