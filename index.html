@@ -25,7 +25,7 @@
 		        <h2>Abstract</h2>
 
 			<p>In this document we discuss trade offs and benefits of accessibility
-remediations applied after the source layer to deliver more accessible web
+remediations applied after the source code layer to deliver accessible web
 experiences to end users.  Post-source approaches identified include JavaScripted
 adaptations, and realtime HTML and CSS rewrites on content delivery networks
 (CDNs) as well as in browser extensions&mdash;all without necessarily writing any of these
@@ -38,9 +38,8 @@ programmatically recognizable patterns conducive to automated adaptation.
 </p>
 
 			<p>
-We show that web content can often be made more accessible for users with diverse needs, particularly those relying on assistive technologies
-by leveraging <q>edge technologies.</q> 
-We conclude that integrating post-source remediations provides an effective way to address accessibility gaps and promote a more inclusive web experience.</p>
+By leveraging <q>post-source technologies</q> we show that web content can be made accessible for users with diverse needs including older adults, inexperienced users, and those relying on assistive technologies.  
+By way of this document, we believe that integrating post-source remediations can be an effective way to address accessibility gaps and promote a more inclusive web experience.</p>
 
 			        </section>
 
@@ -60,8 +59,8 @@ Today&apos;s world wide web is a complex blend of multiple original sources, med
 <p>
 The current remedial approach for addressing this accessibility failure requires that developers update the source code to more closely conform with accessibility standards. While we certainly support optimizing accessibility at the source layer, modifying the original code may not always be feasible. It&apos;s also often the least efficient way to deliver different personalized experiences to different individual users. Furthermore, it can be viewed as too time-consuming and costly by business owners.</p>
 
-<p>
-This document explores how various realtime post-source adaptations can deliver more accessible user experiences&mdash;and more varied accessible experiences&mdash;all without
+<p id="diagram">
+This document explores how various realtime post-source adaptations can deliver accessible user experiences&mdash;and more varied accessible experiences&mdash;all without
 requiring changes to the original source.
 		     The diagram below illustrates where the adaptations discussed in this publication fit within a typical server and client data flow:</p>
 <ol type="I">
@@ -104,18 +103,33 @@ requiring changes to the original source.
 						</ol>
 						<li><strong>User Additions: </strong>At the bottom, the user receives and interacts with the final <a href="https://www.merriam-webster.com/dictionary/mash-up">mashed-up</a> digital content on their own devices and affordances. Examples include the browser, user agent, assistive technologies (AT) on a laptop or desktop computer, and also on a smart phone, and perhaps also on a tablet, perhaps also cast to a wall-mounted video display and perhaps also several surround-sound speakers.</li>
 						</ul>
+
+		<aside class="Note" title="Note" aria-label="Note">
+					                <span>Note</span>
+									<div>
+<p>
+For further discussion of our source-authorized and user-authorized client-server model see <a href="#Appendix-B">Appendix B: Who&apos;s Responsible for What?</a>
+</p>
+									</div>
+	</aside>
+
 	     </section>
 
 	<section id="edgedef">
-		<h3>What is Meant by <q>Edge?</q></h3>
+		<h3>What is Meant By <q>Edge?</q> and <q>Post-Source</q></h3>
 
-		<p>In this document the term <q>edge technology</q> refers to technologies closer to the user. Often it&apos;s the technology directly in the user&apos;s hands. Commonly  it resides on a content delivery network (CDN) server--in the <q>Source Authorized</q> domain (as diagrammed above)&mdash;where content is actively being personalized for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is effected.</p>
+		<p>In this document the term <q>edge technology</q> refers to technologies closer to the user. Often it&apos;s the technology directly in the user&apos;s hands. Or, it may reside on a content delivery network (CDN) server--in the <q>Source Authorized</q> domain (as diagrammed above)&mdash;where content is actively being personalized for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> especially to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is effected.</p>
 		<p>In recent years post-source accessibility remediation has frequently been referred to by the informal term <q>Overlays</q>. 
 Indeed, accessibility overlays have twice factored in major U.S. governmental actions in recent months, first as a reference to an earlier version of this publication by the <a href="https://www.w3.org/community/a11yedge/2024/12/06/u-s-attorney-general-on-overlays-cites-community-group-work/">U.S. Attorney-General</a>, and more recently in a consent decree from the <a href="https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-order-requires-online-marketer-pay-1-million-deceptive-claims-its-ai-product-could-make-websites">U.S. Federal Trade Commission (<abbr title="Federal Trade Commission">FTC</abbr>)</a>.
 		</p>
 		<p>
+<<<<<<< HEAD
 We assert that the accessibility capabilities discussed in this document can be accomplished through the application of appropriate post-source methods. 
 However it is essential that vendors' marketing products and services based on these techniques clearly communicate
+=======
+We believe that the accessibility capabilities discussed in this document can be accomplished through the application of appropriate post-source methods. 
+However it is essential that vendors marketing products and services based on these techniques clearly communicate
+>>>>>>> origin/main
 the scope and limitations of their approach. Transparency regarding the extent and manner in which post-source techniques are applied is critical to ensure clarity and alignment with intended outcomes. Forthright representation is also essential for building
 trust. Vendors marketing approaches such as those discussed in this document, should carefully and
 transparently articulate what their technologies and approaches can genuinely deliver. The criteria of the internationally accepted <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG Success Criteria</a> are cross-referenced throughout this document because they remain valid whether applied in source or post-source through dynamic enhancements.
@@ -136,7 +150,7 @@ transparently articulate what their technologies and approaches can genuinely de
 			<h2>Our Rationale: Multiple Sources &amp; Individual Users</h2>
 
 		  <p>In the main, the classic paradigm of a web domain serving content directly to end users across the Internet has long ago become a historical artifact.
-		    Today&apos;s typical web page is often a dizzying composite of multiple content streams injected from various sources, including content unique to the user&apos;s locale and even to the specific user themself. Content
+		    Today&apos;s typical web page is a dizzying composite of multiple content streams injected from various sources, including content unique to the user&apos;s locale and even to the specific user. Content
 		    delivered to a user today may be a unique <q>one-off</q> composite that may well change when the page is refreshed. The <a href="https://almanac.httparchive.org/en/2021/third-parties">2021 Web Almanac</a> notes more
 		    than 20 third party injection streams for today&apos;s typical website, with 10% containing over 90 separate content injections.</p>
 
@@ -184,7 +198,7 @@ as <a href="https://solidproject.org/">Solid</a>.</p>
 				<li>Functionality&mdash;Usually JavaScript</li>
 			</ul>
 
-			<p>We next discuss capabilities related to <a href="#manage">Management</a> of accessible web service delivery that can be accomplished with edge technologies. This is followed by a discussion of <a href="#aspire">capabilities and edge services we consider aspirational</a> because they are yet to be realized in the web world.
+			<p>We next discuss capabilities related to <a href="#manage">Management</a> of accessible web service delivery that can be accomplished with edge and post-source technologies. This is followed by a discussion of <a href="#aspire">capabilities and edge services we consider aspirational</a> because they are yet to be realized in the web world.
 			Lastly, we append a discussion of the value of <a href="#Appendix-A">Human Centered Design</a> to our analysis followed by a review of typical <a href="#Appendix-B">roles and responsibilities</a> that belong to various players in the web world user experience ecosystem.</p>
 
 			</section>
@@ -195,7 +209,7 @@ as <a href="https://solidproject.org/">Solid</a>.</p>
 						<p>Each capability we examine is considered from the following perspectives:</p>
 
 <ol>
-<li>Source&mdash;Identifies how the original source code can introduce accessibility issues that require post-source remediation.
+<li>Source&mdash;Identifies how the original source code can introduce accessibility issues that require remediation.
 </li>
 
 <li>Trade-Offs&mdash;Examines the implications of performing remediation post-source, including potential redundancies or limitations compared to fixing issues at the source.
@@ -314,14 +328,14 @@ contextualization or clarification.</p>
 	Source content can, and sometimes does  provide this functionality.
 </dd>
 <dt>Trade-Offs</dt>
-<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where the enhanced content is not intended for all page visitors, but for certain audiences only, such as additional contextualization or clarification for some users living with cognitive or learning disabilities.</dd>
+<dd>This is an enhancement post-source remediation offers in situations where additional contextualization and status clarification is particularly beneficial for certain users such as screen reader users or for persons living with cognitive or learning disabilities.</dd>
 <dt>Benefit</dt>
 <dd>
 	Supports comprehension for users who require the enhanced support in a manner that does not interfere with the fundamental functionality of the content.
 </dd>
 
 <dt>Automatability</dt>
-<dd>In Many cases&mdash;Automation can generate tooltips for certain elements by leveraging metadata and contextual cues. However, ensuring that tooltips provide meaningful, non-redundant, and contextually relevant
+<dd>In many cases&mdash;Automation can generate tooltips for certain elements by leveraging metadata and contextual cues. However, ensuring that tooltips provide meaningful, non-redundant, and contextually relevant
 	information requires human oversight, especially in complex interfaces.
 </dd>
 
@@ -360,7 +374,7 @@ web page when the declaration is incorrect or missing entirely.</p>
 		Content lacking a correct programmatic language declaration will often be incorrectly rendered by <abbr title="Text To Speech">TTS</abbr> for screen reader and read-aloud users. It will inevitably fail for braille users.
 	</dd>
 	<dt>Automatability</dt>
-	<dd>In Many cases&mdash;Automated detection can infer the primary language of a webpage using existing metadata or linguistic models. However, in multilingual content or cases where code-level declarations conflict
+	<dd>In many cases&mdash;Automated detection can infer the primary language of a webpage using existing metadata or linguistic models. However, in multilingual content or cases where code-level declarations conflict
 		with actual text, human verification is required to ensure proper tagging.
 	</dd>
 </dl>
@@ -398,7 +412,8 @@ While post-source remediation typically lacks the content author&apos;s contextu
 </dd>
 <dt>Benefit</dt>
 <dd>
-Post-source methods can engage the services of experts in proper accessible title authoring. But, however titles are provided, there&apos;s no longer any excuse for missing title content.
+Post-source remediation offers a valuable opportunity to audit and enhance page titles as part of a quality assurance process. By applying accessibility expertise after content is published, it ensures that critical elements
+such as page titles are not only present but appropriate.
 </dd>
 <dt>Automatability</dt>
 <dd>
@@ -444,11 +459,11 @@ ensure relevance.
 </dd>
 <dt>Benefit</dt>
 <dd>
-	Because the cost of generating human-edited captions is prohibitive, automation is almost universally relied upon.  Most significantly, captions can always be provided post source because HTML 5 was designed to support post-source caption provisioning.
+	Because the cost of generating human-edited captions is prohibitive, automation is almost universally relied upon.  Most significantly, captions can always be provided post-source because HTML 5 was designed to support post-source caption provisioning.
 </dd>
 
 <dt>Automatability</dt>
-<dd>In Many cases&mdash;Automated captions can be generated using AI-based speech recognition tools, but these often introduce inaccuracies, especially for domain-specific terminology, multiple speakers, or background noise. Human review is necessary to ensure proper synchronization and contextual correctness.
+<dd>In many cases&mdash;Automated captions can be generated using AI-based speech recognition tools, but these often introduce inaccuracies, especially for domain-specific terminology, multiple speakers, or background noise. Human review is necessary to ensure proper synchronization and contextual correctness.
 </dd>
 
 </dl>
@@ -458,7 +473,7 @@ ensure relevance.
 <section id="videodescript">
 	<h3>Provide Descriptions of Video</h3>
 
-	<p>This capability provides <a href="https://www.w3.org/TR/media-accessibility-reqs/#described-video">descriptive narration of key visual elements</a> designed to make visual media accessible to people who are blind or visually impaired. Most commonly descriptions are provided as an additional audio track timed not to interfere with spoken dialog. Creating descriptions that both enhance the audio experience and do not obscure dialog requires skill. Both a <a href="https://www.w3.org/TR/media-accessibility-reqs/#text-video-description">text based mechanism</a> and an <a href="https://www.w3.org/TR/media-accessibility-reqs/#extended-video-descriptions">extended mechanism</a> are supported by HTML specifically to make it easier for third parties to provide helpful descriptions post-source.</p>
+	<p>This capability provides <a href="https://www.w3.org/TR/media-accessibility-reqs/#described-video">descriptive narration of key visual elements</a> designed to make visual media accessible to people who are blind or visually impaired. Most common descriptions are provided as an additional audio track timed not to interfere with spoken dialog. Creating descriptions that both enhance the audio experience and do not obscure dialog requires skill. Both a <a href="https://www.w3.org/TR/media-accessibility-reqs/#text-video-description">text based mechanism</a> and an <a href="https://www.w3.org/TR/media-accessibility-reqs/#extended-video-descriptions">extended mechanism</a> are supported by HTML specifically to make it easier for third parties to provide helpful descriptions post-source.</p>
 
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
@@ -528,12 +543,12 @@ as correcting reading order &mdash; often require manual review and adjustment.
 </dd>
 <dt>Benefit</dt>
 <dd>
-	At a minimum, Edge technology can warn users before opening an inaccessible PDF so they can take alternative steps, such as requesting an accessible version or using assistive tools to attempt interpretation. At best,  Edge
+	At a minimum, Edge technology can warn users before opening an inaccessible PDF so they can take alternative steps, such as requesting an accessible version or using assistive tools to attempt interpretation. At best,  post-source
 remediation can enhance accessibility by removing barriers to access.
 </dd>
 <dt>Automatability</dt>
 <dd>
-	In Some Cases&mdash;Automated tools for detecting accessibility issues in PDFs are increasingly effective, identifying a wide range of problems such as missing tags and lack of alternative text. However,
+	In some Cases&mdash;Automated tools for detecting accessibility issues in PDFs are increasingly effective, identifying a wide range of problems such as missing tags and lack of alternative text. However,
 full remediation remains a challenge, as automation struggles with nuanced tasks like ensuring logical document structure and interpreting complex visual elements.
 </dd>
 </dl>
@@ -572,7 +587,7 @@ more accessible navigation through hyperlinks, tabs, and form elements.</p>
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-There is no particular benefit to performing this mediation at the edge.
+There is no particular benefit to performing this mediation post-source.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -615,17 +630,17 @@ at least for significant user segments.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-There is no particular benefit to performing this mediation at the edge.
+There is no particular benefit to performing this mediation post-source.
 </dd>
 
 <dt>Benefit</dt>
 <dd>
-allows users to better distinguish links without relying on the vagaries of site design. More control over link appearance improves navigation and reduces frustration.
+Allows users to better distinguish links without relying on the vagaries of site design. More control over link appearance improves navigation and reduces frustration.
 </dd>
 
 <dt>Automatability</dt>
 <dd>
-In many cases&mdash;Automated tools can modify the styling of hyperlinks to increase visibility, but ensuring that these changes align with the website???s design and usability principles requires human
+In many cases&mdash;Automated tools can modify the styling of hyperlinks to increase visibility, but ensuring that these changes align with the website&apos;s design and usability principles requires human
 evaluation. Edge cases, such as images serving as links without clear indicators, often require manual adjustments.
 </dd>
  
@@ -649,7 +664,7 @@ evaluation. Edge cases, such as images serving as links without clear indicators
 <dl>
 <dt>Source</dt>
 <dd>
-	Many web applications rely on mouse-driven events, which can exclude users who depend on keyboard navigation due to physical limitations or personal preference.
+	Many web applications rely on mouse-driven and touch events, which can exclude users who depend on keyboard navigation due to physical limitations or personal preference.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
@@ -717,7 +732,7 @@ below the text they&apos;re reading in order to help them keep their place as th
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-There is no particular benefit to performing this mediation at the edge.
+There is no particular benefit to performing this mediation post-source.
 </dd>
 
 <dt>Benefit</dt>
@@ -753,7 +768,7 @@ In many cases&mdash;Automated solutions can generate visual reading guides, but 
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-There is no particular benefit to performing this mediation at the edge.
+There is no particular benefit to performing this mediation post-source.
 </dd>
 
 <dt>Benefit</dt>
@@ -785,19 +800,19 @@ optimized for persons living with dyslexia.
 <dt>Trade-Offs</dt>
 <dd>
 	Switching to dyslexia-friendly fonts may slightly alter the visual
-	appeal or branding of the site. Designers and stakeholders may need to
-	approve font changes.
+	appeal or branding of the site. Designers and stakeholders may wish to
+	approve font changes. However, most application of this feature will be user, and not source authorized.
 </dd>
 <dt>Benefit</dt>
 <dd>
 	Using dyslexia-friendly fonts reduces cognitive load and improves the
-	reading experience for users living with with dyslexia, making the site more
+	reading experience for some, possibly even many users living with dyslexia, making the site more
 	inclusive.
 </dd>
 <dt>Automatability</dt>
 <dd>
-In no significant way&mdash;Automated tools can suggest dyslexia-friendly
-fonts and flag instances of inaccessible typefaces. However, proper invocation may require human expertise.
+In some cases&mdash;Automated tools can interchange instances of inaccessible typefaces for  dyslexia-friendly
+equivilants.
 </dd>
 </dl>
  
@@ -939,7 +954,7 @@ In many cases&mdash;Provided a valid, user-selected spacing is known.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-There is no particular benefit to performing this mediation at the edge.
+There is no particular benefit to performing this mediation post-source.
 </dd>
 
 <dt>Benefit</dt>
@@ -1012,7 +1027,7 @@ other moving elements on a web page from playing entirely. Others may wish to se
 <dt>Trade-Offs</dt>
 <dd>
 
-There is no particular benefit to performing this mediation at the edge.
+There is no particular benefit to performing this mediation post-source.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -1061,7 +1076,7 @@ intervention to ensure they do not disrupt user experience.
 <dt>Trade-Offs</dt>
 <dd>
 
-There is no particular benefit to performing this mediation at the edge.
+There is no particular benefit to performing this mediation post-source.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -1070,7 +1085,7 @@ Controlling Auto-play prevents media from disrupting users who need to process c
 
 <dt>Automatability</dt>
 <dd>
-In some cases&mdash;Automated detection can identify auto-playing media elements and attempt to pause them, but some implementations???such as dynamically loaded video players or embedded content???may not be
+In some cases&mdash;Automated detection can identify auto-playing media elements and attempt to pause them, but some implementations such as dynamically loaded video players or embedded content may not be
 intercepted reliably without human adjustments.
 </dd>
 
@@ -1263,20 +1278,20 @@ In some cases&mdash;While framing can be automatically applied, ensuring that th
 <dl>
 <dt>Source</dt>
 <dd>
-Shadows and outlines effects are used to enhance text visibility and distinguish foreground content from the background, Proper considerations are crucial for users with visual impairments.
+Shadows and outlines effects are used to enhance text visibility and distinguish foreground content from the background. Proper considerations are crucial for users with visual impairments.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	Incorrectly implemented shadows or outlines might blur text or create distracting visuals, reducing accessibility.
+Improperly implemented shadow or outline effects may impede text readability, creating blurred content or distracting artifacts. 
+These effects need careful tuning to enhance, not hinder, accessibility.
 </dd>
 <dt>Benefit</dt>
 <dd>
-	Properly used shadow and outline effects can significantly improve text legibility, benefiting users with low vision and enhancing overall user experience.
+	Properly used shadow and outline effects can significantly improve text legibility, benefiting users with low vision and enhancing the overall user experience.
 </dd>
 <dt>Automatability</dt>
 <dd>
-In some cases&mdash;Shadows and outlines can be applied autonomously, but verifying their impact on usability and interaction with other visual components typically exceeds the capabilities of current automated
-systems.
+In some cases&mdash;Shadows and outlines can be applied autonomously, but verifying their impact on usability and interaction with other visual components typically exceeds the capabilities of current automated systems.
 </dd>
 </dl>
  
@@ -1349,7 +1364,7 @@ Designing effective notifications that are both timely and accessible often requ
 <dl>
 <dt>Source</dt>
 <dd>It seems unlikely source could fully take on this responsibility. 
-On the other hand, it seems equally unlikely that edge technology alone can fully meet this need effectively without API-based data interchange with source content.
+On the other hand, it seems equally unlikely that post-source technologies alone can fully meet this need effectively without API-based data interchange with source content.
 	There are particularly cogent use cases in <q>augmented reality</q> applications which appear very promising.
 </dd>
 <dt>Trade-Offs</dt>
@@ -1535,11 +1550,11 @@ requirements.
 		</dd>
 		<dt>Trade-Offs</dt>
 		<dd>
-			Clearly source should be performing this function. The fact that it is missing from so many sites cries out for remediation technology on the edge. 
+			Clearly source should be performing this function. The very fact that it remains missing from so many sites cries out for remediation technology post-source. 
 		</dd>
 		<dt>Benefit</dt>
 		<dd>
-		Well built edge technologies can introduce missing programmatic associations. Advanced strategies to sequence completion of complex forms for persons who are easily overwhelmed by on screen complexity are frustrated when these programmatic associations are missing. Furthermore, they are the only technologies that can bring consistent organization to a form. 
+		Well built post-source technologies can introduce missing programmatic associations. Advanced strategies to sequence completion of complex forms for persons who are easily overwhelmed by on screen complexity are frustrated when these programmatic associations are missing. Furthermore, they are the only technologies that can bring consistent organization to a form. 
 		</dd>
 
 <dt>Automatability</dt>
@@ -1575,13 +1590,17 @@ announcement. </p>
 <dl>
 <dt>Source</dt>
 <dd>
-	Source content can, and sometimes does  adequately provide this functionality.
+Too often forms are not fully tested for accessibility support such as input timing, focus management, programmatically associated field and form control labeling, and clear visual and screen reader friendly error notification. Also, frequently forms originate from third-party service providers and provide the web site owner little or no ability to remedy such failures at source.
 </dd>
 <dt>Trade-Offs</dt>
-<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where the enhanced content is not intended for all page visitors, but for certain audiences only, such as screen reader users  for some users living with cognitive or learning disabilities.</dd>
+<dd>
+post-source remediation may be the only viable option, especially with inprocess third party forms. 
+</dd>
 <dt>Benefit</dt>
 <dd>
-	Supports more efficient interaction with forms for users who require the enhanced support. Makes completing forms much easier to accomplish.
+Post-source accessibility Support can make forms interaction more efficient, especially for users who require enhanced support
+particularly in situations 	where the enhanced content is not intended for all page visitors, but for certain audiences only, such as screen reader users  for certain users living with cognitive or learning disabilities.</dd>
+
 </dd>
 
 <dt>Automatability</dt>
@@ -1696,7 +1715,7 @@ It has long been agreed that published content should contain structural markup 
 </dd>
 <dt>Trade-offs</dt>
 <dd>
-	There is no inherent value to creating structural markup in edge technology. Doing so is clearly a remedial action to close a critical gap. On the other hand, and as previously noted, content delivered to end users today is most frequently a composite mashup of multiple input streams and not the simple delivery of content from a single source repository. The very act of mashing together multiple streams introduces a likelihood of semantic incoherency. The very word itself, <q>mashup</q>, strongly suggests a lack of concern for the coherency of the ultimate composite as delivered to the end user. Thus, anything that can be done to introduce greater semantic coherency is of benefit to all users, and especially those users relying on accessibility supporting features such as coherent and explicit structure. Lastly, as also previously noted, emerging strategies to further tailor content interaction to particular users&apos; interaction preferences will rely on good structural markup, and these adaptations will, necessarily, be produced in edge technologies.
+	There is no inherent value to creating structural markup in post-source technologies. Doing so is clearly a remedial action to close a critical gap. On the other hand, and as previously noted, content delivered to end users today is most frequently a composite mashup of multiple input streams and not the simple delivery of content from a single source repository. The very act of mashing together multiple streams introduces a likelihood of semantic incoherency. The very word itself, <q>mashup</q>, strongly suggests a lack of concern for the coherency of the ultimate composite as delivered to the end user. Thus, anything that can be done to introduce greater semantic coherency is of benefit to all users, and especially those users relying on accessibility supporting features such as coherent and explicit structure. Lastly, as also previously noted, emerging strategies to further tailor content interaction to particular users&apos; interaction preferences will rely on good structural markup, and these adaptations will, necessarily, be produced in post-source technologies.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -1704,7 +1723,7 @@ It has long been agreed that published content should contain structural markup 
 </dd>
 <dt>Automatability</dt>
 <dd>
-In Many Cases&mdash;Automated tools can infer structural semantics based on patterns in HTML elements, but resolving ambiguous cases???such as distinguishing between layout tables and data tables???requires human
+In many cases&mdash;Automated tools can infer structural semantics based on patterns in HTML elements, but resolving ambiguous cases such as distinguishing between layout tables and data tables requires human
 validation to ensure correct interpretation.
 </dd>
 
@@ -1753,7 +1772,7 @@ In some cases&mdash;Handling updates on dynamic pages using standard technologie
 		</section>
 
 	<section id="correctsemanticbehavior">
-		<h3>correct semantic behavior</h3>
+		<h3>Correct Semantic Behavior</h3>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -1821,8 +1840,8 @@ disrupt user experience or other page elements.
 	This additional navigation aide would not block or hinder other types of access. The only trade-off could be confusion of having an excessive number of choices. Having a sheer volume of options can be mentally exhausting to some. 
 </dd>
 <dt>Benefit</dt>
-<dd>The "curb cut effect" is used to describe a situation where accommodations made to assist people with disabilities end up benefiting everyone. The ability to browse pages by structural semantic features such as headings, links, or buttons promises to allow users to quickly move between different sections or elements of a web page without the need to visually scan the entire page. This can save time, especially on long and complex pages with lots of content. By using semantic navigation options like headings or links, sighted users can easily jump to specific sections or pieces of content they are interested in. This can be particularly helpful when users are looking for specific information or trying to locate a particular topic on a page. 
-	<p>Some users rely on keyboard navigation alone, such as those with motor disabilities or certain types of visual impairments. Semantic navigation options provide a convenient way for keyboard users to move through the content without having to rely on mouse-based interactions, making the website more accessible and usable for them.
+<dd>The <a href="https://en.wikipedia.org/wiki/Curb_cut_effect"><q>curb cut effect</q></a> is used to describe a situation where accommodations made to assist people with disabilities end up benefiting everyone. The ability to browse pages by structural semantic features such as headings, links, or buttons promises to allow users to quickly move between different sections or elements of a web page without the need to visually scan the entire page. This can save time, especially on long and complex pages with lots of content. By using semantic navigation options like headings or links, sighted users can easily jump to specific sections or pieces of content they are interested in. This can be particularly helpful when users are looking for specific information or trying to locate a particular topic on a page. 
+	<p>Some users rely on keyboard navigation alone, such as those with motor disabilities or certain types of visual impairments. Semantic navigation options provide a convenient way for keyboard users to move through the content without having to rely on mouse or touch-based interactions, making the website more accessible and usable for them.
 </dd>
 
 <dt>Automatability</dt>
@@ -1863,7 +1882,7 @@ Some content publishers offer such transformations. Also, some operating systems
 <dt>Trade-Offs</dt>
 <dd>
 
-There is no particular benefit to performing this mediation at the edge.
+There is no particular benefit to performing this mediation post-source.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -1907,7 +1926,7 @@ It also provides feedback on the status of the element and on any status changes
 While source content is expected to provide the same clarity, remediating it to do so isn&apos;t always immediately feasible.
 </dd>
 <dt>Trade-Offs</dt>
-<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where source is demonstrably less informative than needed for functional accessibility support.</dd>
+<dd>This is an enhancement post-source remediation offers in situations where source is demonstrably less informative than needed for functional accessibility support.</dd>
 <dt>Benefit</dt>
 <dd>
 	Supports more efficient interaction with content for users who require the enhanced support.
@@ -1915,7 +1934,7 @@ While source content is expected to provide the same clarity, remediating it to 
 
 <dt>Automatability</dt>
 <dd>
-In no significant way&mdash;Automation can identify interactive elements, but ensuring clarity in all contexts???such as differentiating between disabled and active buttons???requires manual input to avoid
+In no significant way&mdash;Automation can identify interactive elements, but ensuring clarity in all contexts such as differentiating between disabled and active buttons requires manual input to avoid
 misinterpretation.
 </dd>
 
@@ -1950,7 +1969,7 @@ misinterpretation.
 While source content is expected to maintain viable hyperlinks and provide the same clarity about their status, remediating it to do so isn&apos;t always immediately feasible.
 </dd>
 <dt>Trade-Offs</dt>
-<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where source is demonstrably less informative than needed for functional accessibility support.</dd>
+<dd>This is an enhancement post-source remediation offers in situations where source is demonstrably less informative than needed for functional accessibility support.</dd>
 <dt>Benefit</dt>
 <dd>
 	Supports more efficient interaction with content for users who require the enhanced support.
@@ -1989,7 +2008,7 @@ This is particularly needed for link text such as <q>click here</q> or
 	While source content is expected to maintain viable hyperlinks and provide the same clarity about their status, remediating it to do so isn&apos;t always immediately feasible. <q>Click here</q> and <q>more</q> link text is far too common and rarely sufficiently unambiguous.
 </dd>
 <dt>Trade-Offs</dt>
-<dd>This is not  a redundant capability. It is an innovation only available from edge technology in situations where source is demonstrably less informative than needed for functional accessibility support.</dd>
+<dd>This is an enhancement post-source remediation offers in situations where source is demonstrably less informative than needed for functional accessibility support.</dd>
 <dt>Benefit</dt>
 <dd>
 	Supports more efficient interaction with content for users who require the enhanced support.
@@ -1997,7 +2016,7 @@ This is particularly needed for link text such as <q>click here</q> or
 
 <dt>Automatability</dt>
 <dd>
-In many cases&mdash;Automated tools can replace generic link text (e.g., ???click here???) with inferred descriptions, but ensuring that the new text is both accurate and meaningful within the page???s context
+In many cases&mdash;Automated tools can replace generic link text (e.g., click here) with inferred descriptions, but ensuring that the new text is both accurate and meaningful within the page&apos;s context
 still requires manual oversight.
 </dd>
 
@@ -2137,7 +2156,7 @@ There is no particular benefit to providing this service in source.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	When browsers provide this capability, its functionality is limited to the browser being used though a particular vendor&apos;s browser may provide consistent service across multiple devices).
+	When browsers provide this capability, its functionality is limited to the browser being used (though a particular vendor&apos;s browser may provide consistent service across multiple devices).
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -2346,7 +2365,7 @@ to exclude audiences.</p>
 <dd>
 </dd>
 <dt>Automatability</dt>
-<dd>In Some cases
+<dd>In some cases
 </dd>
 </dl>
  
@@ -2406,7 +2425,7 @@ In some cases
 				This is the business model for many companies. 
 				False positives, false negatives, certainty and confidence scores are well-known factors affecting the success and usefulness of this approach. 
 				It is unfortunate when such violations remain unremediated in source content, but sometimes this can&apos;t be helped. 
-				An indication of violations at the edge, however rough, is better than none.
+				An indication of violations discovered post-source, however rough, is better than none.
 			</dd>
 			<dt>Benefit</dt>
 			<dd>
@@ -2434,11 +2453,11 @@ In some cases
 		<dl>
 		<dt>Source</dt>
 		<dd>
-			This is a process approach just as meaningful for remediating accessibility violations in source as it is for remediating at the edge. Though to argue any remediation <strong>not</strong> done at source or <strong>not</strong> performed by a human, may describe a theology of accessibility, not a technological solution delivering real benefits to users.
+			This is a process approach just as meaningful for remediating accessibility violations in source as it is for remediating post-source. Though to argue any remediation <strong>not</strong> done at source or <strong>not</strong> performed by a human, may describe a theology of accessibility, not a technological solution delivering real benefits to users.
 		</dd>
 		<dt>Trade-Offs</dt>
 		<dd>
-			It is clearly preferable to remediate violations in source content whenever doing so is feasible. An in-process corrective overlay remediations only make sense when there are good reasons why the source cannot be remediated. 
+			It is clearly preferable to remediate violations in source content whenever doing so is feasible. And in-process corrective overlay remediations only make sense when there are good reasons why the source cannot be remediated. 
 		</dd>
 		<dt>Benefit</dt>
 		<dd>
@@ -2469,13 +2488,13 @@ Does Not Apply
 		</dd>
 		<dt>Trade-Offs</dt>
 		<dd>
-		A properly configured content hosting environment should be able to accomplish accessible content publication. Such editing performed at the edge depends on robust IDs and can be more brittle than changes at source.
+		A properly configured content hosting environment should be able to accomplish accessible content publication. Such editing performed post-source depends on robust IDs and can be more brittle than changes at source.
 		</dd>
 		<dt>Benefit</dt>
 		<dd>
 			This capability facilitates adding missing accessibility supporting markup to source content. It is unique to overlays of this type, providing an alternative to standard methods of
 			coding the site, either via source code, web platform templates/CSS
-			adjustments, etc. This capability exists to assist sites who fail accessibility, usually for a complex set of reasons where source remediation is expensive or otherwise not readily achievable. This is not  a redundant capability. Rather, it is an innovation only available from edge technology. Equivalent technology in source would require the site publisher to establish a complete panoply of content management tooling. While this is certainly feasible, not everyone wishing to make content available online desires to spend time gaining proficiency with content management systems. 
+			adjustments, etc. This capability exists to assist sites who fail accessibility, usually for a complex set of reasons where source remediation is expensive or otherwise not readily achievable. Equivalent technology in source would require the site publisher to establish a complete panoply of content management tooling. While this is certainly feasible, not everyone wishing to make content available online desires to spend time gaining proficiency with content management systems. 
 		</dd>
 
 <dt>Automatability</dt>
@@ -2498,7 +2517,7 @@ Does Not Apply
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	This is not  a redundant capability. It is an innovation only available from edge technology.
+While it could certainly be made fully available in source, it is a service enhancement post-source can make particularly attractive by off-loading aspects such as authentication or invoicing to third-p[arty service providers.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -2560,7 +2579,7 @@ Does Not Apply
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	An Accessibility Statement introduced by edge technologies doesn&apos;t add value, though adding locale specific content might be useful.
+	An Accessibility Statement introduced by post-source technologies doesn&apos;t add value, though adding locale specific content might be useful.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -2728,7 +2747,7 @@ Users deserve content which supports their accessibility requirements on all con
 </dd>
 <dt>Automatability</dt>
 <dd>
-	In many cases&mdash;By definition, actually, inasmuch as questionable and failing injections are rejected until a conformance injection is obtained.
+	In many cases&mdash;By definition, actually, inasmuch as questionable and failing injections are rejected until a conformant injection is obtained.
 </dd>
 </dl>
  
@@ -2773,9 +2792,13 @@ In no significant way
 </section>
 
 <section id="a11ystmntdiscovery">
-<h3>Accessibility Statement Discover ability</h3>
+<h3>Accessibility Statement Discover Ability</h3>
 
+<<<<<<< HEAD
 <p>Standardizing the location of widely deployed, common components of a website is now being addressed in the <abbr title="Internet Engineering Task Force">IETF</abbr> and the W3C.  An easily located Accessibility Statement is one expected outcome. While time will be needed for most sites to adopt the newly canonized web address locations once a standard is available, powerful benefits will help drive adoption and end users will benefit..
+=======
+<p>Standardizing the location of widely deployed, common components of a web site is now being addressed in the <abbr title="Internet Engineering Task Force">IETF</abbr> and the W3C.  An easily located Accessibility Statement is one expected outcome. While time will be needed for most sites to adopt the newly canonized web address locations once a standard is available, powerful benefits will help drive adoption and end users will benefit.
+>>>>>>> origin/main
 </p>
 
 <dl>
@@ -2938,7 +2961,7 @@ This capability is rarely provided.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-There is no particular benefit to performing this mediation at the edge. However HTML was designed to support this capability in edge technologies.
+There is no particular benefit to performing this mediation post-source. However HTML was designed to support this capability in edge technologies.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -2966,7 +2989,7 @@ The cost of generating human-mediated sign language translation is prohibitive, 
 <dt>Trade-Offs</dt>
 <dd>
 
-There is no particular benefit to performing this mediation at the edge.
+There is no particular benefit to performing this mediation post-source.
 </dd>
 
 <dt>Benefit</dt>
@@ -2994,7 +3017,7 @@ In many cases
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-There is no particular benefit to performing this mediation at the edge.
+There is no particular benefit to performing this mediation post-source.
 </dd>
 
 <dt>Benefit</dt>
@@ -3016,7 +3039,7 @@ In no significant way
         <section class="appendix" id="Appendix-A">
 		<h1>Our Design Principles</h1>
 
-<p>Our approach to the design and analysis in this document is rooted in the principles often called: <q>Human-Centered
+<p>Our approach to design and analysis in this document is rooted in the principles often called: <q>Human-Centered
 Design (HCD).</q> As an outlook that places people at its core, we believe HCD  aligns perfectly with the goals of accessibility. This method of design prioritizes empathy, collaboration, and user empowerment, which aligns with
 our mission to generate accessibility solutions that meet the diverse needs of various human individuals. Our understanding of HCD requires us to minimize technological configuration tasks and maximize each individual&apos;s ability to read and interact with actual content&mdash;not the application (or browser) <q>chrome.</q></p>
 
@@ -3068,6 +3091,15 @@ more than just accessible - it is truly human-centered.</p>
 		<li>Capabilities which are necessarily controlled by the content provider even though they can profoundly affect the accessibility experience.</li>
 	</ul>
 
+		<aside class="Note" title="Note" aria-label="Note">
+					                <span>Note</span>
+									<div>
+<p>
+For a graphical representation of this model see our <a href="#diagram">Flow Diagram</a> above.
+</p>
+									</div>
+	</aside>
+
 <p>The Content Provider, analogous to the server, plays the pivotal role of specifying and delivering diverse forms of digital content ranging from text, images, audio, video, to interactive elements. They curate the experiences that users consume and engage with, thereby shaping the digital landscape.
 
 A selection of some primary Content Provider roles:
@@ -3111,7 +3143,7 @@ s own hardware and software may render it in ways the Content Provider never ima
   </tr>
   <tr>
     <td>User-Agent (Browser)</td>
-    <td>Interprets and presents web content to the end user. Different browsers may render web content in slightly different ways due to their different rendering engines.</td>
+    <td>Interprets and presents web content to the end user. Different browsers may render web content in different ways due to their different rendering engines.</td>
   </tr>
   <tr>
     <td>Assistive Technology</td>
@@ -3143,10 +3175,10 @@ s own hardware and software may render it in ways the Content Provider never ima
 		  <p>Third party services not hosted by the Content Provider, providing services in support of the Content Provider&apos;s value proposition. Typically invoked by JavaScript or the Content Delivery Network, they meet the planned needs of end users. </p> 
 			<dl>
 				<dt>Source</dt>
-				<dd>They typical website today is a platform for interaction, a space where an organization meets its customers. End users expect a broad range of services that are likely outside the core competency of the site owner. A company cannot become jack-of-all-trades and master of none. Build or buy decisions, when executed well, can mean the difference between success of failure for a business. Just as most companies don&apos;t build the buildings they inhabit or the elevators that operate within, they do not program the intricate digital services required on their websites such as <abbr title="General Data Protection Regulation">GDPR</abbr> cookie handling, chatbots, or shopping carts. Procurement can request accessibility conformance statements from services as a gating decision point to include them on the page or not. </dd>
+				<dd>They typical website today is a platform for interaction, a space where an organization meets its customers. End users expect a broad range of services that are likely outside the core competency of the site owner. A company cannot become jack-of-all-trades and master of none. Well executed <q>build or buy</q> decisions can mean the difference between success of failure for a business. Just as most companies don&apos;t build the buildings they inhabit or the elevators that operate within, they do not program the intricate digital services required on their websites such as <abbr title="General Data Protection Regulation">GDPR</abbr> cookie handling, chatbots, or shopping carts. Procurement can request accessibility conformance statements from services as a gating decision point to include them on the page or not. </dd>
 
 				<dt>Trade-Offs</dt>
-				<dd>Companies relinquish some control when they host functions via third parties. But their responsibility is to verify the accessibility of these services. </dd>
+				<dd>Companies relinquish some control when they host functions via third parties. But they cannot relinquish  responsibility for the accessibility of the composite user experience. </dd>
 
 				<dt>Benefit</dt>
 				<dd>Given the bewildering range of possible experiences with all these third party plugins operating, the edge becomes the only place where a proper validation can occur.</dd>
@@ -3167,7 +3199,7 @@ Does Not Apply
 				<dd>The most accessible organizations are those with a deep and robust culture around accessibility. Every role is aware and trained in the topic. In addition, persons with disabilities are involved as well. </dd>
 
 				<dt>Trade-Offs</dt>
-				<dd>Offloading accessibility knowledge may mean the organization will never reach the attitude and approach expected as a low bar of accessibility: including people with disabilities.  </dd>
+				<dd>Offloading accessibility knowledge may mean the organization will never reach the attitude and approach expected as a low bar of accessibility, including people with disabilities.  </dd>
 
 				<dt>Benefit</dt>
 				<dd>Like any complex topic, organizations are wide to hire experts and give them the latitude to fix things. Since providing access to digital assets at source is a security risk, allowing the accessibility provider to fix things at the edge is a sound decision. </dd>
@@ -3178,6 +3210,17 @@ In some cases
 </dd>
 
 			</dl>
+
+
+		<aside class="Note" title="Note" aria-label="Note">
+					                <span>Note</span>
+									<div>
+<p>
+For a structured and systematic approach to managing both the human individuals serving in these myriad roles and the various technology components comprising an organization&apos;s web presence consult the W3C <a href="https://www.w3.org/TR/maturity-model/">Accessibility Maturity Model (AMM).</a>
+</p>
+									</div>
+	</aside>
+
 	</section>
 		     
 <section id="onlyedgeknows">
