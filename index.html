@@ -3,7 +3,6 @@
 
 <head>
 <meta http-equiv=Content-Type content="text/html; charset=utf-8">
-<meta name="color-scheme" content="light dark">
 <title>Accessibility Capabilities: Post-Source Code and Content
 </title>
 
@@ -73,10 +72,9 @@ requiring changes to the original source.
 	</li>
 	</ol>
 			<li>Finally, the completed mashup is delivered to the end user for rendering and
-				interaction with the end user&apos;s device tools
+				interaction with the end user&apos;s device tools,
 				such as the browser and perhaps also some
-			assistive technology
-&mdash;the last layer of post-source adaptation.
+			assistive technology&mdash;the last layer of post-source adaptation.
 			</li>
 </ol>
 
@@ -100,10 +98,10 @@ requiring changes to the original source.
 							<li><strong>Post-Source Additions:</strong> As the content/code travels to the user, post-source modifications can be added. These are categorized into two types:</li>
 
 						<ol>
-							<li><em>Source-Authorized:</em> These modifications are controlled or approved by the web site owner. Examples include third-party scripts and or content delivery network (CDN) assets.</li>
-								<li><em>User-Authorized:</em> These adaptations are added by the user, without web site  involvement or approval. Examples include browser extensions, antivirus filters, and custom scripts.</li>
+							<li><em>Source-Authorized:</em> These modifications are controlled or approved by the website owner. Examples include third-party scripts and or content delivery network (CDN) assets.</li>
+								<li><em>User-Authorized:</em> These adaptations are added by the user, without website  involvement or approval. Examples include browser extensions, antivirus filters, and custom scripts.</li>
 						</ol>
-						<li><strong>User Additions: </strong>At the bottom the user receives and interacts with the final <a href="https://www.merriam-webster.com/dictionary/mash-up">mashed-up</a> digital content on their own devices and affordances. Examples include the browser, user agent, assistive technologies (AT) on a laptop or desktop computer, and also on a smart phone, and perhaps also on a tablet, perhaps also cast to a wall-mounted video display and perhaps also several surround-sound speakers.</li>
+						<li><strong>User Additions: </strong>At the bottom, the user receives and interacts with the final <a href="https://www.merriam-webster.com/dictionary/mash-up">mashed-up</a> digital content on their own devices and affordances. Examples include the browser, user agent, assistive technologies (AT) on a laptop or desktop computer, and also on a smart phone, and perhaps also on a tablet, perhaps also cast to a wall-mounted video display and perhaps also several surround-sound speakers.</li>
 						</ul>
 
 		<aside class="Note" title="Note" aria-label="Note">
@@ -125,10 +123,15 @@ For further discussion of our source-authorized and user-authorized client-serve
 Indeed, accessibility overlays have twice factored in major U.S. governmental actions in recent months, first as a reference to an earlier version of this publication by the <a href="https://www.w3.org/community/a11yedge/2024/12/06/u-s-attorney-general-on-overlays-cites-community-group-work/">U.S. Attorney-General</a>, and more recently in a consent decree from the <a href="https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-order-requires-online-marketer-pay-1-million-deceptive-claims-its-ai-product-could-make-websites">U.S. Federal Trade Commission (<abbr title="Federal Trade Commission">FTC</abbr>)</a>.
 		</p>
 		<p>
+<<<<<<< HEAD
+We assert that the accessibility capabilities discussed in this document can be accomplished through the application of appropriate post-source methods. 
+However it is essential that vendors' marketing products and services based on these techniques clearly communicate
+=======
 We believe that the accessibility capabilities discussed in this document can be accomplished through the application of appropriate post-source methods. 
 However it is essential that vendors marketing products and services based on these techniques clearly communicate
+>>>>>>> origin/main
 the scope and limitations of their approach. Transparency regarding the extent and manner in which post-source techniques are applied is critical to ensure clarity and alignment with intended outcomes. Forthright representation is also essential for building
-trust. Vendors marketing approaches such as those discussed in this document should carefully and
+trust. Vendors marketing approaches such as those discussed in this document, should carefully and
 transparently articulate what their technologies and approaches can genuinely deliver. The criteria of the internationally accepted <a href="https://www.w3.org/WAI/standards-guidelines/wcag/">WCAG Success Criteria</a> are cross-referenced throughout this document because they remain valid whether applied in source or post-source through dynamic enhancements.
 		</p>
 
@@ -147,9 +150,9 @@ transparently articulate what their technologies and approaches can genuinely de
 			<h2>Our Rationale: Multiple Sources &amp; Individual Users</h2>
 
 		  <p>In the main, the classic paradigm of a web domain serving content directly to end users across the Internet has long ago become a historical artifact.
-		    Today&apos;s typical web page is often a dizzying composite of multiple content streams injected from various sources, including content unique to the user&apos;s locale and even to the specific user. Content
+		    Today&apos;s typical web page is a dizzying composite of multiple content streams injected from various sources, including content unique to the user&apos;s locale and even to the specific user. Content
 		    delivered to a user today may be a unique <q>one-off</q> composite that may well change when the page is refreshed. The <a href="https://almanac.httparchive.org/en/2021/third-parties">2021 Web Almanac</a> notes more
-		    than 20 third party injection streams for today&apos;s typical web site, with 10% containing over 90 separate content injections.</p>
+		    than 20 third party injection streams for today&apos;s typical website, with 10% containing over 90 separate content injections.</p>
 
 		    <p>The source of the typical website
 		    today is actually many sources.
@@ -206,7 +209,7 @@ as <a href="https://solidproject.org/">Solid</a>.</p>
 						<p>Each capability we examine is considered from the following perspectives:</p>
 
 <ol>
-<li>Source&mdash;Identifies how the original source code can introduce accessibility issues that require post-source remediation.
+<li>Source&mdash;Identifies how the original source code can introduce accessibility issues that require remediation.
 </li>
 
 <li>Trade-Offs&mdash;Examines the implications of performing remediation post-source, including potential redundancies or limitations compared to fixing issues at the source.
@@ -2791,7 +2794,11 @@ In no significant way
 <section id="a11ystmntdiscovery">
 <h3>Accessibility Statement Discover Ability</h3>
 
+<<<<<<< HEAD
+<p>Standardizing the location of widely deployed, common components of a website is now being addressed in the <abbr title="Internet Engineering Task Force">IETF</abbr> and the W3C.  An easily located Accessibility Statement is one expected outcome. While time will be needed for most sites to adopt the newly canonized web address locations once a standard is available, powerful benefits will help drive adoption and end users will benefit..
+=======
 <p>Standardizing the location of widely deployed, common components of a web site is now being addressed in the <abbr title="Internet Engineering Task Force">IETF</abbr> and the W3C.  An easily located Accessibility Statement is one expected outcome. While time will be needed for most sites to adopt the newly canonized web address locations once a standard is available, powerful benefits will help drive adoption and end users will benefit.
+>>>>>>> origin/main
 </p>
 
 <dl>
