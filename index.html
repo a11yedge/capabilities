@@ -2332,13 +2332,9 @@ In no significant way&mdash;While automation can revert settings to defaults, en
 <h1>Management</h1>
 
 <p>
-The capabilities discussed in this section describe additional actions the
-content providers may take in order to shape the key elements or features of
-their digital content in order to support an intended user persona and journey.
-As stated above, this typically results in a highly interactive experience
-presented to the user, packed with services supplied by third parties, many of
-which are added in their efforts to further accommodate, engage and please the
-end user while meeting regulatory requirements. 
+The capabilities discussed in this section describe various post-source interfaces the
+content providers may employ in order to shape the key elements or features of
+their digital content in order to support accessibility.
 </p>
 
 <section id="contentmod">
@@ -2468,12 +2464,18 @@ Does Not Apply
 </section>
 
 <section id="a11yedit">
-<h3>Post-Source Remediation, By Site Owner</h3>
+<h3>Post-Source Remediation&mdash;By Site Owner</h3>
 
-		<p>This capability describes an interface,
-		available to authorized users, facilitating code editing that affects
-		accessibility, e.g. alt tags for images, or ARIA labels, often with the assistance of AI, linting, wizards and supplemental materials.</p>
-
+		<p> This capability describes an an interface made available to
+		authorized users within the client organization, enabling them
+		to develop and deploy accessibility remediating code . It is
+		typically used when the original development did not adequately
+		support accessibility or when third-party components and
+		content are present. These interfaces may well be limited. Limitations may only allow edits of accessibility attributes--such as alt text or
+		ARIA labels for example. A typical limitation  allows edits to
+		element-level code, but not the modification of interactive
+		components or of CSS.
+ 
 		<dl>
 		<dt>Source</dt>
 		<dd>
@@ -2500,9 +2502,17 @@ Does Not Apply
 
 </section>
 <section id="a11yedit3rd">
-<h3>Post-Source Remediation, By 3rd Party</h3>
+<h3>Post-Source Remediation&mdash;By 3rd Party</h3>
 
-<p>This capability functions very much like the <a href="#a11yedit">Post-Source Remediation, By Site Owner</a> immediately above, except that a third party accessibility coding expert is granted access to perform needed remediations.</p>
+<p>This capability functions very much like the <a href="#a11yedit">Post-Source
+	Remediation&mdash;By Site Owner</a> immediately above. It
+refers to an approach where site owners engage and authorize a third party to
+perform accessibility remediation. Third parties are typically engaged when internal
+resources are unavailable or have insufficient knowledge. Remediation may be limited are expansive. It can span
+multiple layers of the site???mdash;including HTML, CSS, and interactive components.
+The extent and depth of remediation that can be applied depends on many factors including the third
+party&apos;s framework and software tooling, as well as their skill.
+</p>
 
 <dl>
 <dt>Source</dt>
