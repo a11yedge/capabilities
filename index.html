@@ -27,7 +27,7 @@
 			<p>We discuss trade offs and benefits of accessibility
 remediations applied after the source code layer to deliver accessible web
 experiences to end users.  The post-source approaches identified include JavaScripted
-adaptations, and realtime HTML and CSS rewrites on content delivery networks
+adaptations, and real-time HTML and CSS rewrites on content delivery networks
 (CDNs) as well as in browser extensions&mdash;all without necessarily writing any of these
 adaptations into the original source.</p>
 
@@ -60,7 +60,7 @@ Today&apos;s world wide web is a complex blend of multiple original sources, med
 The current remedial approach for addressing this accessibility failure requires that developers update the source code to more closely conform with accessibility standards. While we certainly support optimizing accessibility at the source layer, modifying the original code may not always be feasible. It&apos;s also often the least efficient way to deliver different personalized experiences to different individual users. Furthermore, it can be viewed as too time-consuming and costly by business owners.</p>
 
 <p id="diagram">
-This document explores how various realtime post-source adaptations can deliver accessible user experiences&mdash;and more varied accessible experiences&mdash;all without
+This document explores how various real-time post-source adaptations can deliver accessible user experiences&mdash;and more varied accessible experiences&mdash;all without
 requiring changes to the original source.
 		     The diagram below illustrates where the adaptations discussed in this publication fit within a typical server and client data flow:</p>
 <ol type="I">
@@ -118,7 +118,7 @@ For further discussion of our source-authorized and user-authorized client-serve
 	<section id="edgedef">
 		<h2>What is Meant By <q>Edge?</q> and <q>Post-Source</q></h2>
 
-		<p>In this document the term <q>edge technology</q> refers to technologies closer to the user. Often it&apos;s the technology directly in the user&apos;s hands. Or, it may reside on a content delivery network (CDN) server--in the <q>Source Authorized</q> domain (as diagrammed above)&mdash;where content is actively being personalized for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> especially to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is effected.</p>
+		<p>In this document the term <q>edge technology</q> refers to technologies closer to the user. Often, it&apos;s the technology directly in the user&apos;s hands. Or, it may reside on a content delivery network (CDN) server--in the <q>Source Authorized</q> domain (as diagrammed above)&mdash;where content is actively being personalized for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> especially to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is effected.</p>
 		<p>In recent years post-source accessibility remediation has frequently been referred to by the informal term <q>Overlays</q>. 
 Indeed, accessibility overlays have twice factored in major U.S. governmental actions in recent months, first as a reference to an earlier version of this publication by the <a href="https://www.w3.org/community/a11yedge/2024/12/06/u-s-attorney-general-on-overlays-cites-community-group-work/">U.S. Attorney-General</a>, and more recently in a consent decree from the <a href="https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-order-requires-online-marketer-pay-1-million-deceptive-claims-its-ai-product-could-make-websites">U.S. Federal Trade Commission (<abbr title="Federal Trade Commission">FTC</abbr>)</a>.
 		</p>
@@ -158,7 +158,7 @@ experience would otherwise fail.
 		  <p>In the main, the classic paradigm of a web domain serving content directly to end users across the Internet has long ago become a historical artifact.
 		    Today&apos;s typical web page is a dizzying composite of multiple content streams injected from various sources, including content unique to the user&apos;s locale and even to the specific user. Content
 		    delivered to a user today may be a unique <q>one-off</q> composite that may well change when the page is refreshed. The <a href="https://almanac.httparchive.org/en/2021/third-parties">2021 Web Almanac</a> notes more
-		    than 20 third party injection streams for today&apos;s typical website, with 10% containing over 90 separate content injections.</p>
+		    than 20 third-party injection streams for today&apos;s typical website, with 10% containing over 90 separate content injections.</p>
 
 		    <p>The source of the typical website
 		    today is actually many sources.
@@ -924,7 +924,7 @@ In many cases&mdash;Provided a valid, user-selected font size is known.
 <dt>Source</dt>	
 <dd>Like all aspects of text design, the source determines the experience they think is best for the content. </dd>	
 <dt>Trade-Offs</dt>
-<dd> This capability may be configurable in the operating system to provide defaults across all applications on the device&mdash;to the extent third party applications honor those settings.</dd>
+<dd> This capability may be configurable in the operating system to provide defaults across all applications on the device&mdash;to the extent third-party applications honor those settings.</dd>
 
 <dt>Benefit:</dt>
 <dd>
@@ -983,8 +983,8 @@ In many cases&mdash;Provided a valid, user-selected line height spacing is known
 <h3>Drop Cap Implementation
 </h3>
 
-<p>The drop cap has been popular in publications for centuries, predating the printing press. Their beauty can be compelling. However, Their elaborate graphical style will certainly pose an accessibility barrier requiring careful accomodation.</p>
-Several kinds of users are impacted, including screen reader users relying on braille or TTS, and low-vision users for whome the intrinsic graphical characteristics of a given drop cap may prove challenging.
+<p>The drop cap has been popular in publications for centuries, predating the printing press. Their beauty can be compelling. However, their elaborate graphical style will certainly pose an accessibility barrier requiring careful accommodation.</p>
+Several kinds of users are impacted, including screen reader users relying on braille or TTS, and low-vision users for whom the intrinsic graphical characteristics of a given drop cap may prove challenging.
 <dl>
 <dt>Source</dt>
 <dd>
@@ -1157,7 +1157,7 @@ consistency with visual identity.
 <section id="personalcolor">
 	<h3>Personalize Color Palette</h3>
 
-	<p>Many people live with visual challenges. Many of these people would not self-identify as persons with disabilities. Nevertheless tuning visual display to optimize color contrast, and to otherwise adjust for severe or mild color perception challenges can only enhance the personal web experience. Idealy, these configuration adjustments should be saved as part of that individual's browsing configuration.</p>
+	<p>Many people live with visual challenges and many of these people would not self-identify as persons with disabilities. Nevertheless tuning visual display to optimize color contrast, and to otherwise adjust for severe or mild color perception challenges can only enhance the personal web experience. Ideally, these configuration adjustments should be saved as part of that individual's browsing configuration.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -1208,8 +1208,8 @@ In many cases&mdash;Automated tools can analyze existing palettes and
 </h3>
 
 <p>
-The ability to choose from a list of options is a fundamental function in web content. All manner of accessible lists have long been well supported by HTmL and CSS.
-No good reason for inaccessible lists in web content remains, yet far too many sites continue to publish content utilizing inaccessible lists approaches today.</p>
+The ability to choose from a list of options is a fundamental function in web content. All manner of accessible lists have long been well supported by HTML and CSS.
+No good reason for inaccessible lists in web content remains, yet far too many sites continue to publish content utilizing inaccessible lists today.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -1246,7 +1246,7 @@ In some cases&mdash;Standard list implementations are highly automatable; howeve
 </h3>
 
 <p>
-The ability to annotate primary content with related content in a styled text box has long been supported on the web. All manner of accessible text location and styling have long been well supported by HTmL and CSS.
+The ability to annotate primary content with related content in a styled text box has long been supported on the web. Additionally, all manner of accessible text location and styling have been well supported by HTML and CSS.
 No good reason for annotating content inaccessibly remains, yet far too many sites continue to publish content utilizing inaccessible textbox approaches today.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
@@ -1620,7 +1620,7 @@ Too often forms are not fully tested for accessibility support such as input tim
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-post-source remediation may be the only viable option, especially with inprocess third party forms. 
+post-source remediation may be the only viable option, especially with inprocess third-party forms. 
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -1643,7 +1643,7 @@ requires human testing.
 		<h3>Managing Time Outs</h3>
 
 		<p>
-		Various interactive web functions will time-out in order to protect the user and the service provider&mdash;or both. Time-outs on the web are certainly reasonable, but they should not lock out active users who simply need more time to complete an interaction, e.g. too many sites wait for the submit function to be invoked while a user is struggling to supply data on a possibly not so accessible form. Given the importance of these interactions, the ability to have reasonable and sufficient time to complete the interactive taxk is a critical accessibility requirement on the web today.</p>
+		Various interactive web functions will time-out in order to protect the user and the service provider&mdash;or both. Time-outs on the web are certainly reasonable, but they should not lock out active users who simply need more time to complete an interaction, e.g. too many sites wait for the submit function to be invoked while a user is struggling to supply data on a possibly not so accessible form. Given the importance of these interactions, the ability to have reasonable and sufficient time to complete the interactive task is a critical accessibility requirement on the web today.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -1728,7 +1728,7 @@ interaction. Accessible notifications ensure that all users, including those wit
 
 <section id="structure">
 	<h3>Expose Structural Semantics</h3>
-	<p>The various components of web content can be programatically identified to assistive technologies because users&apos; ability to use content is significantly enhanced by this kind of data. Much work has been put into making
+	<p>The various components of web content can be programmatically identified to assistive technologies because users&apos; ability to use content is significantly enhanced by this kind of data. Much work has been put into making
 	this data flow robust and reliable. It should never be missing from web content today.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
@@ -1809,7 +1809,7 @@ In some cases&mdash;Handling updates on dynamic pages using standard technologie
 	<section id="correctsemanticbehavior">
 		<h3>Correct Semantic Behavior</h3>
 
-		<p>This capability is critical to persons who rely on assistive technologies. Content publishers who choose to build their own custom components (rather than using standard hTML and CSS) also take on the responsibility of making their components behave and interact as expected by AT and the users who rely on AT. the economic cost of creating custom components cannot justifiably exclude the cost of making them accessible.</p>
+		<p>This capability is critical to persons who rely on assistive technologies. Content publishers who choose to build their own custom components (rather than using standard HTML and CSS) also take on the responsibility of making their components behave and interact as expected by AT and the users who rely on AT. The economic cost of creating custom components cannot justifiably exclude the cost of making them accessible.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -2064,7 +2064,9 @@ still requires manual oversight.
 <section id="textinteract">
 <h3>Ensure Nested Text Element Accessibility</h3>
 
-<p>Nested elements exist in order to simplify and expedite site navigation. They exist because too many selectable elements, one upon another in a flattened navigational approach with no option but the next and the previous elements,  on a page serves no one well. However, as with all other web structures, it&apos's critical nested elements are made accessible.</p>
+<p>Nested elements exist in order to simplify and expedite site navigation. 
+	[**COMMENT: This sentence needs to be simplified. It's verbose and hard to follow.**]
+	They exist because too many selectable elements, one upon another in a flattened navigational approach with no option but the next and the previous elements, on a page serves no one well. However, as with all other web structures, its critical nested elements are made accessible.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -2101,7 +2103,9 @@ user experience typically demands manual oversight.
 <section id="aria">
 		<h3>Support ARIA Roles &amp; Attributes Remediation</h3>
 
-		<p>The <a href="https://www.w3.org/WAI/standards-guidelines/aria/">Accessible Rich Internet Applications (ARIA)</a> standard has been a mainstay of web accessibility for several decades now. Few web sites would be accessible today to keyboard-only users, and especially to screen reader users relying on TTS, but for the content overlay markup provided by ARIA. Many of the capabilities detailed in this document are remediated using ARIA at least in part. Yet, there&apos;s much to know, to properly apply ARIA in web content as detailed by the  <a href="https://www.w3.org/WAI/ARIA/apg/">ARIA Authoring Practices Guide."> Unfortunately, too many sites today just don&apos;t get ARIA right. This capability is enumerated because ARIA remediation is critical on today&apos;s web.</p>
+		<p>The <a href="https://www.w3.org/WAI/standards-guidelines/aria/">Accessible Rich Internet Applications (ARIA)</a> standard has been a mainstay of web accessibility for several decades now. Few web sites would be accessible today to keyboard-only users, and especially to screen reader users relying on TTS, but for the content overlay markup provided by ARIA. 
+	[**COMMENT ON THE PREVIOUS: Delete 'overlay' to simplify the sentence and to remove the word "overlay" **]
+	Many of the capabilities detailed in this document are remediated using ARIA at least in part. Yet, there&apos;s much to know, to properly apply ARIA in web content as detailed by the  <a href="https://www.w3.org/WAI/ARIA/apg/">ARIA Authoring Practices Guide."> Unfortunately, too many sites today just don&apos;t get ARIA right. This capability is enumerated because ARIA remediation is critical on today&apos;s web.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -2139,7 +2143,7 @@ oversight.
 <section id="voxcom">
 	<h3>Voice Command</h3>
 
-	<p>Whether hosted through personal data assistants or by a PSTN telephone number, voice interactive systems can provide significant accessible content and interaction access for all users, but particularly for certain users living with various disabilities. Ensuring the functionality and accessibility of voice services is an important and ongoing challenge to content providers implementing this technology.</p>
+	<p>Whether hosted through personal data assistants or by a Public Switched Telephone Network (PSTN) telephone number, voice interactive systems can provide significant accessible content and interaction access for all users, but particularly for certain users living with various disabilities. Ensuring the functionality and accessibility of voice services is an important and ongoing challenge to content providers implementing this technology.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -2313,7 +2317,7 @@ In some cases&mdash;Automated tools can infer number formats, but ensuring corre
 	<section id="acronyms">
 	<h2>Provide Appropriate Acronym Expansion with TTS</h2>
 
-	<p>Acronyms provide a useful short-form for spoken and written communications and will always be widely used in web content. Yet they&apos;re too frequently mispronounced by the TTS engines used by various assistive technologies (such as screen readers), and by <a href="#voxcom">Voice Command</a> systems. Consider the acronym <q>CD</q> Is it a command line computer user7apos;s <q>change directory</q>" Or a music lover&apos;s <q>Compact Disk?</q> Or the computer storage <Q>Compact Disc</q> medium?  Or does it refer to a bank <q>Certificate of Deposit?</q> The correct answer, of course, is, and always will be context dependent. Yet one of the most popular TTS engines of all time, still sought by many users for their phones and computers today insists that <q>CD</q> stands for <q>candelas!</q>
+	<p>Acronyms provide a useful short form for spoken and written communications and will always be widely used in web content. Yet they&apos;re too frequently mispronounced by the TTS engines used by various assistive technologies (such as screen readers), and by <a href="#voxcom">Voice Command</a> systems. Consider the acronym <q>CD</q> Is it a command line computer user&apos;s <q>change directory</q>" Or a music lover&apos;s <q>Compact Disk?</q> Or the computer storage <Q>Compact Disc</q> medium?  Or does it refer to a bank <q>Certificate of Deposit?</q> The correct answer, of course, is, and always will be context dependent. Yet one of the most popular TTS engines of all time, still sought by many users for their phones and computers today insists that <q>CD</q> stands for <q>candelas!</q>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -2422,7 +2426,7 @@ Does Not Apply
 
 		<p> This capability describes an an interface made available to
 		authorized users within a client organization, enabling them
-		to develop and deploy accessibility remediating code . It is
+		to develop and deploy accessibility remediating code. It is
 		typically used when the original development did not adequately
 		support accessibility or when third-party components and
 		content are present. These interfaces may well be limited. Limitations may only allow edits of accessibility attributes--such as alt text or
@@ -2436,7 +2440,7 @@ Does Not Apply
 			Where the source lacks sufficient accessibility supporting markup, this capability provides both analytics and remediation access to properly authenticated 
 		persons empowered to perform remediation. Note the assumption is that, for whatever reason, the content technology provided by the hosting environment lacks adequate accessibility support.
 In many organizations content is contributed by multiple individuals or departments. In educational settings, for example, content is often sourced from numerous contributors, each of whom may be
-following different styling approaches. This describes a fragmented input model, where accessibility may not be consistently implemented because it is is not always a shared responsibility.
+following different styling approaches. This describes a fragmented input model, where accessibility may not be consistently implemented because it is not always a shared responsibility.
 		</dd>
 		<dt>Trade-Offs</dt>
 		<dd>
@@ -2448,7 +2452,7 @@ creators may not be involved, potentially leading to less contextually accurate 
 			This <q>third-party overlay</q> capability facilitates adding missing accessibility supporting markup to source content, providing an alternative to standard methods of
 			coding the site, either via source code, web platform templates/CSS
 			adjustments, etc. This capability exists to assist sites who fail accessibility, usually for a complex set of reasons where source remediation is expensive or otherwise not readily achievable. Equivalent technology in source would require the site publisher to establish a complete panoply of content management tooling. While this is certainly feasible, not everyone wishing to make content available online desires to spend time gaining proficiency with content management systems. 
-A dedicated internal accessibility team can monitor and remediate accessibility issues across all content being published on the site&mdash;egardless of the provenance. This enables proactive accessibility enhancement without requiring the many content contributors to adjust their workflows.
+A dedicated internal accessibility team can monitor and remediate accessibility issues across all content being published on the site&mdash; regardless of the provenance. This enables proactive accessibility enhancement without requiring the many content contributors to adjust their workflows.
 		</dd>
 
 <dt>Automatability</dt>
@@ -2461,14 +2465,14 @@ Does Not Apply
 </section>
 
 <section id="a11yedit3rd">
-<h2>Post-Source Remediation&mdash;By Third Party</h2>
+<h2>Post-Source Remediation&mdash;By third-party</h2>
 
 <p>This capability functions very much like the <a href="#a11yedit">Post-Source
 	Remediation&mdash;By Site Owner</a> immediately above. It
-refers to an approach where site owners engage and authorize a third party to
+refers to an approach where site owners engage and authorize a third-party to
 perform accessibility remediation. Third parties are typically engaged when internal
 resources are unavailable or lack sufficient knowledge. Remediation may be limited are expansive. It can span
-multiple layers of the site???mdash;including HTML, CSS, and interactive components, or be limited to very specific capabilities such as image descriptive alternative text..
+multiple layers of the site&mdash;including HTML, CSS, and interactive components, or be limited to very specific capabilities such as image descriptive alternative text.
 The extent and depth of remediation that can be applied depends on many factors including the third
 party&apos;s framework and software tooling, as well as their skill.
 </p>
@@ -2476,14 +2480,14 @@ party&apos;s framework and software tooling, as well as their skill.
 <dl>
 <dt>Source</dt>
 <dd>
-Too often the only option in source is to provide write access to the third party. On some sites this may require full administrative access&mdash;a level of access that is both unnecessary and generally unacceptable for security reasons.
+Too often the only option in source is to provide write access to the third-party. On some sites this may require full administrative access&mdash;a level of access that is both unnecessary and generally unacceptable for security reasons.
 Organizations that have not fully embedded accessibility-first processes in their web content publishing workflows often operate in fast-paced environments, where new features and content are launched without accessibility as a formal sign-off requirement. This will frequently
 lead to both inaccessible content and core interactions issues that affect both accessibility and the general usability of the entire site.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-While it could certainly be made fully available in source, it is a service enhancement post-source can make particularly attractive by off-loading aspects such as authentication or invoicing to third-p[arty service providers.
-On the other hand third-party remediations will often sustain a dependency on existing source code. Should internal developers update that code without coordination, third-party accessibility enhancements  may unintentionally be broken or overwritten. In such circumstances ongoing monitoring and reactive remediation will be required to maintain accessibility over time.
+While it could certainly be made fully available in source, it is a service enhancement post-source can make particularly attractive by off-loading aspects such as authentication or invoicing to third-party service providers.
+On the other hand, third-party remediations will often sustain a dependency on existing source code. Should internal developers update that code without coordination, third-party accessibility enhancements  may unintentionally be broken or overwritten. In such circumstances ongoing monitoring and reactive remediation will be required to maintain accessibility over time.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -2573,7 +2577,7 @@ to exclude audiences.</p>
 </dd>
 <dt>Benefit</dt>
 <dd>
-	To the extent that locale specific data may be helpful to users, edge technology may be the best means of providing the most timely locale-specific accessibility information.
+	To the extent that locale specific data may be helpful to users, edge technology may be the best means of providing the timeliest locale-specific accessibility information.
 </dd>
 
 <dt>Automatability</dt>
@@ -2628,7 +2632,7 @@ Clearly, such a form-based reporting mechanism can be in source content. It is a
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	While not obviating source based issue reporting, edge technologies are uniquely positioned to attach possibly relevant metadata to such reports.
+	While not obviating source-based issue reporting, edge technologies are uniquely positioned to attach possibly relevant metadata to such reports.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -2651,7 +2655,7 @@ In some cases
 
 <p>
 
-The capabilities and edge services discussed in this section are aspirational because they describe development directions we believe edge technologies will take in the coming decade. They will rely on various specifications from the W3C around authentication, security, and privacy in addition to developments in W3C accessibility technologies.
+The capabilities and edge services discussed in this section are aspirational because they describe development directions, we believe edge technologies will take in the coming decade. They will rely on various specifications from the W3C around authentication, security, and privacy in addition to developments in W3C accessibility technologies.
 </p>
 <p>
 It is important to understand the capabilities and services described here are not necessarily mutually compatible nor mutually exclusive.
@@ -2671,7 +2675,7 @@ It is important to understand the capabilities and services described here are n
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-Rather than a single branded interface users will utilize one of several optional interfaces of their choosing because the one they choose is taylored expressly to their particular needs. Most tellingly these services are not also seeking to serve the particular needs of a different target group whose requirements may complicate or confuse them.
+Rather than a single branded interface users will utilize one of several optional interfaces of their choosing because the one they choose is tailored expressly to their particular needs. Most tellingly these services are not also seeking to serve the particular needs of a different target group whose requirements may complicate or confuse them.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -2782,10 +2786,10 @@ Users deserve content which supports their accessibility requirements on all con
 	<ul>
 		<li>The user needs to make a reservation on a travel site and will shop several sites to compare offers.</li>
 		<li>Necessarily this involves picking (or specifying) dates.</li>
-		<li>Typically a starting date is specified first.</li>
+		<li>Typically, a starting date is specified first.</li>
 		<li>At this point the user needs to locate the control for switching to the specification of the end date.</li>
 		<li>Where is it on this site? Is it at the upper right? The lower left? Some other location on screen on this particular site which is different from other sites the user has searched?</li>
-		<li>Note  that swiping on a touch-screen may easily miss encountering these controls, especially when swiping forward into future dates. Swiping focus will remain in the date-picker widget.</li>
+		<li>Note  that swiping on a touchscreen may easily miss encountering these controls, especially when swiping forward into future dates. Swiping focus will remain in the date-picker widget.</li>
 		<li>Searching for these controls risks activating a control irrelevant to the current task such as a notification screen. This further complicates the user&apos;s predicament and wastes yet more of the user&apos;s time.</li>
 	</ul>
 
@@ -2816,7 +2820,7 @@ In no significant way
 <h3>Accessibility Statement Discover Ability</h3>
 
 <<<<<<< HEAD
-<p>Standardizing the location of widely deployed, common components of a website is now being addressed in the <abbr title="Internet Engineering Task Force">IETF</abbr> and the W3C.  An easily located Accessibility Statement is one expected outcome. While time will be needed for most sites to adopt the newly canonized web address locations once a standard is available, powerful benefits will help drive adoption and end users will benefit..
+<p>Standardizing the location of widely deployed, common components of a website is now being addressed in the <abbr title="Internet Engineering Task Force">IETF</abbr> and the W3C.  An easily located Accessibility Statement is one expected outcome. While time will be needed for most sites to adopt the newly canonized web address locations once a standard is available, powerful benefits will help drive adoption and end users will benefit.
 =======
 <p>Standardizing the location of widely deployed, common components of a web site is now being addressed in the <abbr title="Internet Engineering Task Force">IETF</abbr> and the W3C.  An easily located Accessibility Statement is one expected outcome. While time will be needed for most sites to adopt the newly canonized web address locations once a standard is available, powerful benefits will help drive adoption and end users will benefit.
 >>>>>>> origin/main
@@ -2908,7 +2912,7 @@ In many cases
 <dl>
 <dt>Source</dt>
 <dd>
-	While it could be supported in source content, this capability is rarely (if ever) available in source, and then only in third party applications seeking to support all common calendaring formats. In fact this capability illustrates source intransigence where user needs should predominate.
+	While it could be supported in source content, this capability is rarely (if ever) available in source, and then only in third-party applications seeking to support all common calendaring formats. In fact, this capability illustrates source intransigence where user needs should predominate.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
@@ -2982,7 +2986,7 @@ This capability is rarely provided.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-There is no particular benefit to performing this mediation post-source. However HTML was designed to support this capability in edge technologies.
+There is no particular benefit to performing this mediation post-source. However, HTML was designed to support this capability in edge technologies.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -3193,7 +3197,7 @@ s own hardware and software may render it in ways the Content Provider never ima
 	<section id="3rd-party">
 		<h3>My Site, Their Service</h3>
 
-		  <p>Third party services not hosted by the Content Provider, providing services in support of the Content Provider&apos;s value proposition. Typically invoked by JavaScript or the Content Delivery Network, they meet the planned needs of end users. </p> 
+		  <p>third-party services not hosted by the Content Provider, providing services in support of the Content Provider&apos;s value proposition. Typically invoked by JavaScript or the Content Delivery Network, they meet the planned needs of end users. </p> 
 			<dl>
 				<dt>Source</dt>
 				<dd>They typical website today is a platform for interaction, a space where an organization meets its customers. End users expect a broad range of services that are likely outside the core competency of the site owner. A company cannot become jack-of-all-trades and master of none. Well executed <q>build or buy</q> decisions can mean the difference between success of failure for a business. Just as most companies don&apos;t build the buildings they inhabit or the elevators that operate within, they do not program the intricate digital services required on their websites such as <abbr title="General Data Protection Regulation">GDPR</abbr> cookie handling, chatbots, or shopping carts. Procurement can request accessibility conformance statements from services as a gating decision point to include them on the page or not. </dd>
@@ -3202,7 +3206,7 @@ s own hardware and software may render it in ways the Content Provider never ima
 				<dd>Companies relinquish some control when they host functions via third parties. But they cannot relinquish  responsibility for the accessibility of the composite user experience. </dd>
 
 				<dt>Benefit</dt>
-				<dd>Given the bewildering range of possible experiences with all these third party plugins operating, the edge becomes the only place where a proper validation can occur.</dd>
+				<dd>Given the bewildering range of possible experiences with all these third-party plugins operating, the edge becomes the only place where a proper validation can occur.</dd>
 
 <dt>Automatability</dt>
 <dd>
@@ -3249,7 +3253,7 @@ For a structured and systematic approach to managing both the human individuals 
 
 <p>While some rare web pages may yet serve up a single experience like a short order cook handing over a hamburger, most are like the food court at a shopping mall with many independent services rallying to the end user&apos;s needs. Content providers pack their pages with services such as cookie permissions, chat, payment gateways, user-generated reviews, and most prolifically advertisements. Whether these mashups are accessible can only ever be discovered by evaluating the end user&apos;s experience.</p>
 	
-  <p>Content providers today may guess at an end user&apos;s actual experience by testing a few carefully chosen scenarios. Large organizations may do better and arrange focus groups that give a glimpse of the actual experience of a few users at one moment in time. However the larger a web presence to be tested is, the more impossible it is to test all possible scenarios prospectively.</p>
+  <p>Content providers today may guess at an end user&apos;s actual experience by testing a few carefully chosen scenarios. Large organizations may do better and arrange focus groups that give a glimpse of the actual experience of a few users at one moment in time. However, the larger a web presence to be tested is, the more impossible it is to test all possible scenarios prospectively.</p>
   
 <p>Edge technologies, on the other hand, are actually well positioned to
 identify, quantify, and report on  precisely those accessibility challenges
