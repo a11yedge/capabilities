@@ -235,7 +235,7 @@ as <a href="https://solidproject.org/">Solid</a>.</p>
 <li>Source&mdash;Identifies how the original source code can introduce accessibility issues that require remediation.
 </li>
 
-<li>Trade-Offs&mdash;Examines the implications of performing remediation post-source, including potential redundancies or limitations compared to fixing issues at the source.
+<li>Trade-Offs&mdash;Examines the implications of performing remediation post-source, including potential redundancies or limitations compared to fixing issues in-source.
 </li>
 
 	<li>Benefit&mdash;Highlights the accessibility improvements delivered to end users and any added control they gain from post-source adaptation.
@@ -386,7 +386,7 @@ web page when the declaration is incorrect or missing entirely.</p>
 <dl>
 	<dt>Source</dt>
 	<dd>
-		It is expected source content will correctly specify the page&apos;s language using proper language declaration coding.
+		It is expected source content will correctly specify the page&apos;s language using proper language declaration tagging.
 	</dd>
 	<dt>Trade-Offs</dt>
 	<dd>
@@ -497,7 +497,6 @@ ensure relevance.
 	<h3>Provide Descriptions of Video</h3>
 
 	<p>This capability provides <a href="https://www.w3.org/TR/media-accessibility-reqs/#described-video">descriptive narration of key visual elements</a> designed to make visual media accessible to people who are blind or visually impaired. Most common descriptions are provided as an additional audio track timed not to interfere with spoken dialog. Creating descriptions that both enhance the audio experience and do not obscure dialog requires skill. Both a <a href="https://www.w3.org/TR/media-accessibility-reqs/#text-video-description">text based mechanism</a> and an <a href="https://www.w3.org/TR/media-accessibility-reqs/#extended-video-descriptions">extended mechanism</a> are supported by HTML specifically to make it easier for third parties to provide helpful descriptions post-source.</p>
-
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -811,7 +810,7 @@ In many cases&mdash;Provided a valid, user-selected font choice is known.
 </section>
 
 <section id="dyslexiafont">
-<h3>Provide Dyslexia Friendly Fonts</h3>
+	<h3>Provide <q>Dyslexia Friendly</q> Fonts</h3>
 
 <p>Fundamentally this capability differs from the <a href="a11yfonts">Fonts</a> section above only in that the proffered fonts are understood to be particularly usable by many people living with
 dyslexia. Typically, these fonts provide more distinctive symbols intended to  avoid user confusion through font design approaches such as increased baselines, thinner tops, and a larger x-height. Frequently they are proprietary fonts requiring licensing arrangements.</p>
@@ -824,19 +823,19 @@ optimized for persons living with dyslexia.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	Switching to dyslexia-friendly fonts may slightly alter the visual
+	Switching to <q>dyslexia-friendly</q> fonts may slightly alter the visual
 	appeal or branding of the site. Designers and stakeholders may wish to
 	approve font changes. However, most application of this capabilitgy will be user, and not source authorized.
 </dd>
 <dt>Benefit</dt>
 <dd>
-	Using dyslexia-friendly fonts reduces cognitive load and improves the
+	Using <q>dyslexia-friendly</q> fonts reduces cognitive load and improves the
 	reading experience for some, possibly even many users living with dyslexia, making the site more
 	inclusive.
 </dd>
 <dt>Automatability</dt>
 <dd>
-In some cases&mdash;Automated tools can interchange instances of inaccessible typefaces for  dyslexia-friendly
+	In some cases&mdash;Automated tools can interchange instances of inaccessible typefaces for  <q>dyslexia-friendly</q>
 equivilants.
 </dd>
 </dl>
@@ -2749,7 +2748,7 @@ Does Not Apply
 
 <dl>
 <dt>Source</dt>
-<dd>Users tend to require the same types of accommodations across all sites and all content sources. Therefore, facilitating this capability in the source is likely the least useful place to locate it, because that would require the user to select the same enhancements time and again across the succession of sites visited and likely with different menu organization site to site. </dd>
+<dd>Users tend to require the same types of accommodations across all sites and all content sources. Therefore, facilitating this capability in-source is likely the least useful place to locate it, because that would require the user to select the same enhancements time and again across the succession of sites visited and likely with different menu organization site to site. </dd>
 
 <dt>Trade-Offs</dt>
 <dd>Many of the capabilities made available by user-triggered opt-ins are often also found in multiple places at the edge. For example, contrast adjustment is generally found  in operating system display settings, in browser and app user-agents (e.g. dark mode/light mode), in browser extensions, and in JavaScripted (CDN hosted) overlays. Such redundancy can easily lead to confusion. This confusion may be further exacerbated because certain settings the user finds helpful may be available only in one of these locations, and not in all of them. Furthermore, users are frequently not particularly knowledgeable about their operating system settings menus, especially as these tend to move with each OS revision (to take one example). This can make it difficult to locate these capabilities, especially when we recognize that once satisfactorily configured they are generally not reset&mdash;meaning that the user doesn&apos;t need to revisit that menu location and soon forgets where it is. On the other hand, locating the accommodation consistently proximate to the user offers the highest likelihood of maximal benefit provided  the accommodation  can be easily identified and invoked. This also provides the best opportunity for easing the burden of invoking the same accommodation across a user&apos;s multiple devices.</dd>
@@ -3239,7 +3238,6 @@ Does Not Apply
 			<dl>
 				<dt>Source</dt>
 				<dd>The most accessible organizations are those with a deep and robust culture around accessibility. Every role is aware and trained in the topic. In addition, persons with disabilities are involved as well. </dd>
-
 				<dt>Trade-Offs</dt>
 				<dd>Offloading accessibility knowledge may mean the organization will never reach the attitude and approach expected as a low bar of accessibility, including people with disabilities.  </dd>
 
