@@ -2429,10 +2429,10 @@ Does Not Apply
 		<p> This capability describes an an interface made available to
 		authorized users within a client organization, enabling them
 		to develop and deploy accessibility remediating code. It is
-		typically used when the original development did not adequately
+		typically used when initial content development did not adequately
 		support accessibility or when third-party components and
-		content are present. These interfaces may well be limited. Limitations may only allow edits of accessibility attributes--such as alt text or
-		ARIA labels for example. A typical limitation  allows edits to
+		content are present. These interfaces may well be limited. For example, limitations may only allow edits of accessibility attributes--such as alt text or
+		ARIA labels. A typical limitation  allows edits to
 		element-level code, but not the modification of interactive
 		components or of CSS.
  
@@ -2441,20 +2441,23 @@ Does Not Apply
 		<dd>
 			Where the source lacks sufficient accessibility supporting markup, this capability provides both analytics and remediation access to properly authenticated 
 		persons empowered to perform remediation. Note the assumption is that, for whatever reason, the content technology provided by the hosting environment lacks adequate accessibility support.
-In many organizations content is contributed by multiple individuals or departments. In educational settings, for example, content is often sourced from numerous contributors, each of whom may be
-following different styling approaches. This describes a fragmented input model, where accessibility may not be consistently implemented because it is not always a shared responsibility.
+		Organizations with large content teams or distributed contributor communities often find it difficult to enforce consistent accessibility requirements when new content is added or existing content updated. 
+ In educational settings, for example, content is often sourced from numerous contributors, each of whom may be
+following different styling approaches. Consequently accessibility suffers because it is not a shared responsibility, and the responsibility for ensuring it is fragmented.
 		</dd>
 		<dt>Trade-Offs</dt>
 		<dd>
-The original content creators are the individuals most likely to understand contextual nuances needed  for most useful and accurate accessibility content such as alternative text or semantic structure. When remediation occurs post-source, those
+		Simply relying on post-source remediation may forego an opportunity to further educate (or even require) better accessibility practices at the CMS or web team level. It may also bypass the original
+			content creator (or publisher) who typically has the better understanding of the content itself and how best to express it&apos;s meaning.
+The original content creator is most likely to understand the contextual nuances needed  to most usefully and accurately express those nuances through accessibility capabilities such as alternative text or semantic structure. When remediation occurs post-source, those
 creators may not be involved, potentially leading to less contextually accurate remediations.
 		</dd>	 
 		<dt>Benefit</dt>
 		<dd>
-			This <q>third-party overlay</q> capability facilitates adding missing accessibility supporting markup to source content, providing an alternative to standard methods of
-			coding the site, either via source code, web platform templates/CSS
-			adjustments, etc. This capability exists to assist sites who fail accessibility, usually for a complex set of reasons where source remediation is expensive or otherwise not readily achievable. Equivalent technology in source would require the site publisher to establish a complete panoply of content management tooling. While this is certainly feasible, not everyone wishing to make content available online desires to spend time gaining proficiency with content management systems. 
-A dedicated internal accessibility team can monitor and remediate accessibility issues across all content being published on the site&mdash; regardless of the provenance. This enables proactive accessibility enhancement without requiring the many content contributors to adjust their workflows.
+Post-source interfaces can facilitate the addition of missing accessibility markup to content, offering an alternative to updating the original source code or adjusting CSS templates within the web platform. Equivalent fixes
+applied in-source could significantly delay content publication.
+This capability exists to assist sites who fail accessibility, usually for a complex set of reasons where in-source remediation is expensive or otherwise not readily achievable. Sometimes, achieving equivalent accessibility  in source requires the publisher to deploy a completely new panoply of content management tooling. While this may be feasible, not everyone wishing to make content available online desires to spend time gaining proficiency with content management systems. 
+A dedicated internal accessibility team can monitor and remediate accessibility issues across all content being published on the site&mdash; regardless of its provenance. This enables proactive accessibility enhancement without requiring the many content contributors to adjust their workflows.
 		</dd>
 
 <dt>Automatability</dt>
@@ -2866,7 +2869,7 @@ In many cases
 
 <dt>Benefit</dt>
 <dd>
-	Only edge technology is capable of performing this accommodation across all sites a user accesses.
+	Only an edge technology is capable of performing this accommodation across all sites a user accesses.
 </dd>
 
 <dt>Automatability</dt>
