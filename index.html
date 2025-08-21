@@ -2439,35 +2439,35 @@ Does Not Apply
 <section id="a11yedit">
 <h2>Post-Source Remediation&mdash;By Site Owner</h2>
 
-		<p> This capability describes an an interface made available to
-		authorized users within a client organization, enabling them
+		<p> This capability describes an interface or framework made available to
+		authorized users within an organization, enabling them
 		to develop and deploy accessibility remediating code. It is
 		typically used when initial content development did not adequately
 		support accessibility or when third-party components and
 		content are present. These interfaces may well be limited. For example, limitations may only allow edits of accessibility attributes--such as alt text or
 		ARIA labels. A typical limitation  allows edits to
 		element-level code, but not the modification of interactive
-		components or of CSS.
+		components.
+		</p>
  
 		<dl>
 		<dt>Source</dt>
 		<dd>
 			Where the source lacks sufficient accessibility supporting markup, this capability provides both analytics and remediation access to properly authenticated 
-		persons empowered to perform remediation. Note the assumption is that, for whatever reason, the content technology provided by the hosting environment lacks adequate accessibility support.
-		Organizations with large content teams or distributed contributor communities often find it difficult to enforce consistent accessibility requirements when new content is added or existing content updated. 
+		persons empowered to perform remediation. Organizations with large content teams or distributed contributor communities often find it difficult to enforce consistent accessibility requirements when new content is added or existing content updated. 
  In educational settings, for example, content is often sourced from numerous contributors, each of whom may be
 following different styling approaches. Consequently accessibility suffers because it is not a shared responsibility, and the responsibility for ensuring it is fragmented.
 		</dd>
 		<dt>Trade-Offs</dt>
 		<dd>
 		Simply relying on post-source remediation may forego an opportunity to further educate (or even require) better accessibility practices at the CMS or web team level. It may also bypass the original
-			content creator (or publisher) who typically has the better understanding of the content itself and how best to express it&apos;s meaning.
-The original content creator is most likely to understand the contextual nuances needed  to most usefully and accurately express those nuances through accessibility capabilities such as alternative text or semantic structure. When remediation occurs post-source, those
+			content creator (or publisher) who typically has the better understanding of the content itself and how best to express its meaning.
+When remediation occurs post-source, those
 creators may not be involved, potentially leading to less contextually accurate remediations. This observation also explains why A-I remediations are often inadequate and sometimes simply wrong.
 		</dd>	 
 		<dt>Benefit</dt>
 		<dd>
-Post-source interfaces can facilitate the addition of missing accessibility markup to content, offering an alternative to updating the original source code or adjusting CSS templates within the web platform. Equivalent fixes
+Post-source interfaces can facilitate the addition of missing accessibility markup, providing an alternative to source code updates within the web platform. Equivalent fixes
 applied in-source could significantly delay content publication.
 This capability exists to assist sites who fail accessibility, usually for a complex set of reasons where in-source remediation is expensive or otherwise not readily achievable. Sometimes, achieving equivalent accessibility  in source requires the publisher to deploy a completely new panoply of content management tooling. While this may be feasible, not everyone wishing to make content available online desires to spend time gaining proficiency with content management systems. 
 A dedicated internal accessibility team can monitor and remediate accessibility issues across all content being published on the site&mdash; regardless of its provenance. This enables proactive accessibility enhancement without requiring the many content contributors to adjust their workflows.
@@ -2500,15 +2500,14 @@ Many factors can contribute to inaccessibility in source content including insuf
 <dt>Trade-Offs</dt>
 <dd>
 Too often the only in-source remediation option is granting third-parties write access. On some sites this may require full administrative access&mdash;a level of access that is both unnecessary and generally unacceptable for security reasons.
-Also, organizations that have not fully embedded accessibility-first processes in their web content publishing workflows often operate in fast-paced environments, where new features and content are launched without accessibility as a formal sign-off requirement. This will frequently
-lead to both inaccessible content and core interactions issues that affect both accessibility and the general usability of the entire site.
-On the other hand off-loading selected essential site services such as authentication or invoicing to competent third-parties can provide compelling post-source support enabling the site publisher to focus more on their core competencies.
-Sometimes,, third-party remediations sustain a dependency on existing source code. Should internal developers update that code without coordination, third-party accessibility enhancements  may unintentionally be broken or overwritten. In such circumstances ongoing monitoring and reactive remediation will be required to maintain accessibility.
+Also, organizations that have not fully embedded accessibility-first processes in their web content publishing workflows often operate in fast-paced environments, where new features and content are launched without accessibility as a formal sign-off requirement. This frequently
+leads to inaccessible content.
+We note also that  sites commonly off-load certain essential site functions such as authentication and payment processing to competent third-parties. This enhances functionality and security for users and sites alike, enabling sites to focus rather on their core competencies. Similar benefits can acrue by engaging competent third-party accessibility expertise.
+Sometimes, third-party remediations sustain a dependency on existing source code. Should internal developers update that code without coordination, third-party accessibility enhancements  may unintentionally be broken or overwritten. In such circumstances ongoing monitoring and reactive remediation will be required to maintain accessibility.
 </dd>
 <dt>Benefit</dt>
 <dd>
-Just as post-source authentication and post-source payment processing services help  free a site from ancillary responsibilities, an accessibility specialized third-party remediation service can address both content issues and critical functional barriers. These experts can provide scalable remediation spanning multiple layers of the site, including dynamic components and
-interface behaviors.
+Just as post-source authentication and post-source payment processing services help  free a site from ancillary responsibilities, an accessibility specialized third-party remediation service can address both content issues and critical functional barriers.
 </dd>
 
 <dt>Automatability</dt>
