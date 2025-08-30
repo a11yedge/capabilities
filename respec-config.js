@@ -40,7 +40,7 @@ var respecConfig = {
 	editors: [
 		{
 			name: "Janina Sajka",
-			url: "http://rednote.net/",
+			url: "http://a11ynyc/",
 			w3cid: 33688
 		}
 ],
@@ -48,7 +48,7 @@ var respecConfig = {
 	    authors:[{
 		        name: "Janina Sajka",
 		        URL: "https://linkedin.com/in/jsajka",
-		        mailto: "janina@rednote.net",
+		        mailto: "janina@a11ynyc",
 		        w3cid: 33688
 		    },
 		    {
