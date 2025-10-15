@@ -48,6 +48,23 @@ clarifies responsibilities across the ecosystem.
 		<section id="introduction">
 	     <h1>Introduction</h1>
 
+		<section id="relpatt">
+			<h2>Our Rationale: Multiple Sources &amp; Individual Users</h2>
+
+		  <p>In the main, the classic paradigm of a web domain serving content directly to end users across the Internet has long ago become a historical artifact.
+		    Today&apos;s typical web page is a dizzying composite of multiple content streams injected from various sources, including content unique to the user&apos;s locale and even to the specific user. Content
+		    delivered to a user today may be a unique <q>one-off</q> composite that may well change when the page is refreshed. The <a href="https://almanac.httparchive.org/en/2021/third-parties">2021 Web Almanac</a> notes more
+		    than 20 third-party injection streams for today&apos;s typical website, with 10% containing over 90 separate content injections.</p>
+
+		    <p>The source of the typical website
+		    today is actually many sources.
+		    Even bespoke web applications aren&apos;t always created by a single
+		    source. Few developers exclusively use their own code. They rely on
+		    libraries, components and frameworks to build their web content.</p>
+		    
+		    <p>None of this should surprise us. The fundamental nature of hypertext almost demands the behavior. It illustrates how appropriate the term <q>web</q> actually is for describing the environment.</p>
+		</section>
+
 	     <section id="scope">
 		     <h2>Scope</h2>
 
@@ -69,6 +86,7 @@ requiring changes to the original source.
 	</li>
         <li>Various adaptations may be applied to address specific accessibility needs for the content user&mdash;the first layer of post-source adaptation.
 	</li>
+
 	</ol>
 	</li>
 			<li>Finally, the completed mashup is delivered to the end user for rendering and
@@ -77,6 +95,18 @@ requiring changes to the original source.
 					assistive technology</a>&mdash;the last layer of post-source adaptation.
 			</li>
 </ol>
+
+		<aside class="Note" title="Note" aria-label="Note">
+					                <span>Note</span>
+									<div>
+<p>
+The wide range of specific web accessibility outcomes
+sought in this document can be accomplished through the application of appropriate post-source methods.
+without recourse to additional UI elements such as pop-up control panels or
+<q>accessibility widgets.</q> Indeed the same technologies and methods applied in-source&mdash;HTML, CSS, and JavaScript&mdash;also constitute the post-source toolkit.
+</p>
+									</div>
+	</aside>
 
 <figure>
 					<img src="a11yedge_post-source_diagram.png" style="max-width: 100%; max-height: 100vh; width: auto; height: auto;" alt="Diagram Graphic">
@@ -116,55 +146,51 @@ For further discussion of our source-authorized and user-authorized client-serve
 	     </section>
 
 	<section id="edgedef">
-		<h2>What is Meant By <q>Edge?</q> and <q>Post-Source</q></h2>
+		<h2>Post-Source &amp; <q>Edge?</q> and <q>Post-Source</q></h2>
 
 		<p>In this document the term <q>edge technology</q> refers to technologies closer to the user. Often, it&apos;s the technology directly in the user&apos;s hands. Or, it may reside on a content delivery network (CDN) server--in the <q>Source Authorized</q> domain (as diagrammed above)&mdash;where content is actively being personalized for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> especially to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is effected.</p>
 	</section>
+
 	<section id="overlays">
 		<h2>Post-Source &amp; Overlays</h2>
 
 		<p>
 
 Two recent regulatory rulings from the  U.S. Government have referred to the
-term <q>overlays.</q> While <q>overlay</q> is not a precisely defined term in
-either of these rulings, the approaches referenced by the rulings do utilize some post source techniques  documented in this publication. 
-		</p>
-<ol>
+term <q>overlays.</q>:</p>
 
+<ol>
 	<li>
 		The U.S.
 <a href="https://www.ftc.gov/news-events/news/press-releases/2025/01/ftc-order-requires-online-marketer-pay-1-million-deceptive-claims-its-ai-product-could-make-websites">Federal Trade Commission (<abbr title="Federal Trade Commission">FTC</abbr>)</a>
-imposed a fine and issued a consent decree against a vendor, citing certain advertising claims in the marketing of a product called an <q>overlay.</q></li>
-</ul>
+imposed a fine and issued a consent decree against a vendor, citing certain advertising claims in the marketing of a product called an <q>overlay.</q>
+	</li>
 
-<ul><li>
+<li>
 		In a regulatory ruling relating to provisions of the Americans with Disabilities (<abbr title="Americans with Disabilities Act">ADA</abbr>) the
 <a href="https://www.w3.org/community/a11yedge/2024/12/06/u-s-attorney-general-on-overlays-cites-community-group-work/">
 U.S. Attorney-General 
 declined <q>to address the internal policies or procedures that public entities might implement to conform</q></a> (as requested by multiple commenters), citing
 an earlier version of our publication.
-	</li></ol>
+	</li>
+</ol>
 
-	<p>
-We cross-reference the internationally accepted <a href="https://www.w3.org/WAI/standards-guidelines/wcag/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Success Criteria</a> throughout our publication because they remain valid whether applied in source or post-source.
+<p>
+While <q>overlay</q> is not a precisely defined term in
+either of these rulings, the approaches referenced by the rulings do utilize some post source techniques  documented in this publication. 
 		</p>
 
 	</section>
 
 	<section id="capoutcome">
-		<h2><q>Capabilities</q> &amp; WCAG&apos;s Outcomes</h2>
+		<h2>Post-Source &amp; WCAG Outcomes</h2>
 
 <p>
-Our focus is user-centered and outcome-driven. We refer to each potential remediation as a <q>capability</q> because our topic in this document is the technical, post-source intervention; but, we are mindful that such post-source remediations are performed in order to
+Accessibility is user-centered and outcome-driven. We refer to each potential remediation as a <q>capability</q> because our topic in this document is the technical, post-source intervention; but, we are mindful that such post-source remediations are performed in order to
 serve the user&apos;s success&mdash;which is the true outcome. Wherever a capability is described, it should be understood as a means of delivering a concrete, successful accessibility outcome, especially in cases where the source
 experience would otherwise fail.
+We cross-reference the internationally accepted <a href="https://www.w3.org/WAI/standards-guidelines/wcag/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Success Criteria</a> throughout our publication because they remain valid whether applied in source or post-source.
 </p>
-
-		<p>
-The wide range of specific web accessibility outcomes
-sought in this document can be accomplished through the application of appropriate post-source methods.
-without recourse to additional UI elements such as pop-up control panels or
-<q>accessibility widgets.</q> Indeed the same technologies and methods applied in-source&mdash;HTML, CSS, and JavaScript&mdash;also constitute the post-source toolkit.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -177,25 +203,9 @@ without recourse to additional UI elements such as pop-up control panels or
 	</aside>
 	</section>
 
-		<section id="relpatt">
-			<h2>Our Rationale: Multiple Sources &amp; Individual Users</h2>
+	<section id="privacy">
+		<h2>Post-Source &amp; Privacy</h2>
 
-		  <p>In the main, the classic paradigm of a web domain serving content directly to end users across the Internet has long ago become a historical artifact.
-		    Today&apos;s typical web page is a dizzying composite of multiple content streams injected from various sources, including content unique to the user&apos;s locale and even to the specific user. Content
-		    delivered to a user today may be a unique <q>one-off</q> composite that may well change when the page is refreshed. The <a href="https://almanac.httparchive.org/en/2021/third-parties">2021 Web Almanac</a> notes more
-		    than 20 third-party injection streams for today&apos;s typical website, with 10% containing over 90 separate content injections.</p>
-
-		    <p>The source of the typical website
-		    today is actually many sources.
-		    Even bespoke web applications aren&apos;t always created by a single
-		    source. Few developers exclusively use their own code. They rely on
-		    libraries, components and frameworks to build their web content.</p>
-		    
-		    <p>None of this should surprise us. The fundamental nature of hypertext almost demands the behavior. It illustrates how appropriate the term <q>web</q> actually is for describing the environment.</p>
-
-		<aside class="Note" title="Note" aria-label="Note">
-					                <span>Note</span>
-									<div>
 <p>It&apos;s important to acknowledge that personalizing content for individual
 users risks disclosing personal information that the user might prefer not to
 	disclose.  Persons with disabilities tend to be concerned about content
@@ -208,9 +218,8 @@ users risks disclosing personal information that the user might prefer not to
 	assumes privacy is protected according to <a
 		href="https://www.w3.org/TR/privacy-principles/">W3C Privacy
 		Principles</a> and related privacy-preserving technologies such
-as <a href="https://solidproject.org/">Solid</a>.</p>
-									</div>
-	</aside>
+as <a href="https://solidproject.org/">Solid</a>.
+</p>
 		</section>
 
 		<section id="docorg">
