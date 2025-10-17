@@ -505,7 +505,7 @@ ensure relevance.
 </dd>
 
 <dt>Automatability</dt>
-<dd>In many cases&mdash;Automated captions can be generated using <abbr title="Artificial Intelligence">AI</abbr> based speech recognition tools, but these often introduce inaccuracies, especially for domain-specific terminology, multiple speakers, or in the presence of background noise. Human review is necessary to ensure proper synchronization and contextual correctness.
+<dd>In many cases&mdash;Automated captions can be generated using AI based speech recognition tools, but these often introduce inaccuracies, especially for domain-specific terminology, or in disambiguating multiple speakers, or in the presence of background noise. Human review is necessary to ensure proper synchronization and contextual correctness.
 </dd>
 
 </dl>
@@ -901,7 +901,7 @@ equivalents.
 <h3>Optimize Text Size</h3>
 
 <p>Some users need enlarged, or perhaps diminished fonts in order to read content comfortably. This capability allows increased or decreased font size 
-adjustments through an interactive widget.</p>
+adjustments.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -1539,7 +1539,7 @@ other site functionalities or user security is currently beyond the scope of aut
 	<section id="comprepl">
 		<h3>Replace an Interactive Component</h3>
 		<p>Replace inaccessible components with redesigned alternatives that
-		improve both accessibility and usability providing new UI/UX.</p>
+		improve both accessibility and usability providing new UI/<abbr title="user experience">UX</abbr>.</p>
  
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="3">
@@ -1830,7 +1830,7 @@ validation to ensure correct interpretation.
 </dd>
 <dt>Automatability</dt>
 <dd>
-In some cases&mdash;Handling updates on dynamic pages using standard technologies like AJAX and implementing ARIA-live regions can be automated. However, ensuring these updates do not affect other aspects of the
+	In some cases&mdash;Handling updates on dynamic pages using standard technologies like <a href="https://developer.mozilla.org/en-US/docs/Glossary/AJAX"><abbr title="Asynchronous JavaScript And XML">AJAX</abbr></a> and implementing <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live">ARIA-live</a> regions can be automated. However, ensuring these updates do not affect other aspects of the
 	 page&apos;s functionality often requires human verification.
 </dd>
 </dl>
@@ -2475,7 +2475,7 @@ following different styling approaches. Consequently accessibility suffers becau
 		</dd>
 		<dt>Trade-Offs</dt>
 		<dd>
-		Simply relying on post-source remediation may forego an opportunity to further educate (or even require) better accessibility practices at the CMS or web team level. It may also bypass the original
+			Simply relying on post-source remediation may forego an opportunity to further educate (or even require) better accessibility practices at the <abbr title="Content Management System">CMS</abbr> or web team level. It may also bypass the original
 			content creator (or publisher) who typically has the better understanding of the content itself and how best to express its meaning.
 When remediation occurs post-source, those
 creators may not be involved, potentially leading to less contextually accurate remediations. This observation also explains why AI remediations are often inadequate and sometimes simply wrong.
@@ -2773,7 +2773,7 @@ Does Not Apply
 <dd>Many of the capabilities made available by user-triggered opt-ins are often also found in multiple places at the edge. For example, contrast adjustment is generally found  in operating system display settings, in browser and app user-agents (e.g. dark mode/light mode), in browser extensions, and in JavaScripted overlays. Such redundancy can easily lead to confusion. This confusion may be further exacerbated because certain settings the user finds helpful may be available only in one of these locations, and not in all of them. Furthermore, users are frequently not particularly knowledgeable about their operating system settings menus, especially as these tend to move with each OS revision (to take one example). This can make it difficult to locate these capabilities, especially when we recognize that once satisfactorily configured they are generally not reset&mdash;meaning that the user doesn&apos;t need to revisit that menu location and soon forgets where it is. On the other hand, locating the accommodation consistently proximate to the user offers the highest likelihood of maximal benefit provided  the accommodation  can be easily identified and invoked. This also provides the best opportunity for easing the burden of invoking the same accommodation across a user&apos;s multiple devices.</dd>
 
 <dt>Benefit</dt>
-<dd>Users can select, optimally tune, and reuse the types of accommodations that they require. Any device on the edge may also have knowledge of other devices on the edge that may need the same adjustments, and edge technology could propagate these settings to those other devices. MacOS is already doing this for Wi-Fi passwords when an IOS device configured for the same network is proximate.</dd>
+<dd>Users can select, optimally tune, and reuse the types of accommodations that they require. Any device on the edge may also have knowledge of other devices on the edge that may need the same adjustments, and edge technology could propagate these settings to those other devices. MacOS Bonjour is already doing this for Wi-Fi passwords (among other shareable services and devices) when an IOS device configured for the same network is proximate,.</dd>
 
 <dt>Automatability</dt>
 <dd>
