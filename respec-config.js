@@ -41,7 +41,7 @@ var respecConfig = {
 		{
 			name: "Janina Sajka",
 			URL: "https://linkedin.com/in/jsajka",
-			mailto: "janina@a11ynyc",
+			mailto: "janina@a11y.nyc",
 			w3cid: 33688
 		}
 ],
@@ -49,7 +49,7 @@ var respecConfig = {
 	    authors:[{
 		        name: "Janina Sajka",
 		        URL: "https://linkedin.com/in/jsajka",
-		        mailto: "janina@a11ynyc",
+		        mailto: "janina@a11y.nyc",
 		        w3cid: 33688
 		    },
 		    {
