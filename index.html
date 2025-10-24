@@ -37,8 +37,8 @@ presentation to interactive components. The outcome of the trade-offs and benefi
 Each capability is also assessed for automation
 based on the presence of
 	programmatically recognizable patterns conducive to automated adaptation.
-The technological approaches considered include the same HTML, CSS, and JavaScripted
-adaptations commonly used today achieving in-source accessibility, but effected dynamically in content delivery pipelines
+The technological approaches considered include the same HTML, CSS, and JavaScript-based
+adaptations commonly used today achieving in-source accessibility, but implemented dynamically in content delivery pipelines
 and browser extensions, all without requiring additional on-screen widgets.
 	Management and maintenance concerns, as well as
 forward-looking capabilities, are addressed using the same systematic trade-offs and benefits approach.  A closing
@@ -87,7 +87,7 @@ requiring changes to the original source.
 <ol type="I">
 	<li>Initially, 
 <ol type="A">
-	<li>The content to be rendered to the user, together  with <abbr title="hypertext markup language">HTML</abbr>, <abbr title="cascading style sheets">CSS</abbr>, and JavaScript code is sourced. This is the <q>source</q> layer, though as noted above it&apos;s generally many sources, and not a single source.
+	<li>The content to be rendered to the user, together  with <abbr title="hypertext markup language">HTML</abbr>, <abbr title="cascading style sheets">CSS</abbr>, and JavaScript code, is sourced. This is the <q>source</q> layer, though as noted above it&apos;s generally many sources, and not a single source.
 	</li>
         <li>Various adaptations may be applied to address specific accessibility needs for the content user&mdash;the first layer of post-source adaptation.
 	</li>
@@ -131,10 +131,10 @@ without recourse to additional <abbr title="user interface">UI</abbr> elements s
 							<li><strong>Post-Source Additions:</strong> As the content/code travels to the user, post-source modifications can be added. These are categorized into two types:</li>
 
 						<ol>
-							<li><em>Source-Authorized:</em> These modifications are controlled or approved by the website owner. Examples include third-party scripts and or content delivery network (CDN) assets.</li>
+							<li><em>Source-Authorized:</em> These modifications are controlled or approved by the website owner. Examples include third-party scripts and/or content delivery network (CDN) assets.</li>
 								<li><em>User-Authorized:</em> These adaptations are added by the user, without website  involvement or approval. Examples include browser extensions, antivirus filters, and custom scripts.</li>
 						</ol>
-						<li><strong>User Additions: </strong>At the bottom, the user receives and interacts with the final <a href="https://www.merriam-webster.com/dictionary/mash-up">mashed-up</a> digital content on their own devices and affordances. Examples include the browser, user agent, assistive technologies (AT) on a laptop or desktop computer, and also on a smart phone, and perhaps also on a tablet, perhaps also cast to a wall-mounted video display and perhaps also several surround-sound speakers.</li>
+						<li><strong>User Additions: </strong>At the bottom, the user receives and interacts with the final <a href="https://www.merriam-webster.com/dictionary/mash-up">mashed-up</a> digital content on their own devices and affordances. Examples include the browser, user agent, assistive technologies (AT) on a laptop or desktop computer, and also on a smartphone, and perhaps also on a tablet, perhaps also cast to a wall-mounted video display and perhaps also several surround-sound speakers.</li>
 						</ul>
 
 		<aside class="Note" title="Note" aria-label="Note">
@@ -2772,7 +2772,7 @@ Does Not Apply
 <dd>Users tend to require the same types of accommodations across all sites and all content sources. Therefore, facilitating this capability in-source is likely the least useful place to locate it, because that would require the user to select the same enhancements time and again across the succession of sites visited and likely with different menu organization site to site. </dd>
 
 <dt>Trade-Offs</dt>
-<dd>Many of the capabilities made available by user-triggered opt-ins are often also found in multiple places at the edge. For example, contrast adjustment is generally found  in operating system display settings, in browser and app user-agents (e.g. dark mode/light mode), in browser extensions, and in JavaScripted overlays. Such redundancy can easily lead to confusion. This confusion may be further exacerbated because certain settings the user finds helpful may be available only in one of these locations, and not in all of them. Furthermore, users are frequently not particularly knowledgeable about their operating system settings menus, especially as these tend to move with each OS revision (to take one example). This can make it difficult to locate these capabilities, especially when we recognize that once satisfactorily configured they are generally not reset&mdash;meaning that the user doesn&apos;t need to revisit that menu location and soon forgets where it is. On the other hand, locating the accommodation consistently proximate to the user offers the highest likelihood of maximal benefit provided  the accommodation  can be easily identified and invoked. This also provides the best opportunity for easing the burden of invoking the same accommodation across a user&apos;s multiple devices.</dd>
+<dd>Many of the capabilities made available by user-triggered opt-ins are often also found in multiple places at the edge. For example, contrast adjustment is generally found  in operating system display settings, in browser and app user-agents (e.g. dark mode/light mode), in browser extensions, and in JavaScript-based overlays. Such redundancy can easily lead to confusion. This confusion may be further exacerbated because certain settings the user finds helpful may be available only in one of these locations, and not in all of them. Furthermore, users are frequently not particularly knowledgeable about their operating system settings menus, especially as these tend to move with each OS revision (to take one example). This can make it difficult to locate these capabilities, especially when we recognize that once satisfactorily configured they are generally not reset&mdash;meaning that the user doesn&apos;t need to revisit that menu location and soon forgets where it is. On the other hand, locating the accommodation consistently proximate to the user offers the highest likelihood of maximal benefit provided  the accommodation  can be easily identified and invoked. This also provides the best opportunity for easing the burden of invoking the same accommodation across a user&apos;s multiple devices.</dd>
 
 <dt>Benefit</dt>
 <dd>Users can select, optimally tune, and reuse the types of accommodations that they require. Any device on the edge may also have knowledge of other devices on the edge that may need the same adjustments, and edge technology could propagate these settings to those other devices. MacOS Bonjour is already doing this for Wi-Fi passwords (among other shareable services and devices) when an IOS device configured for the same network is proximate.</dd>
