@@ -40,7 +40,8 @@ var respecConfig = {
 	editors: [
 		{
 			name: "Janina Sajka",
-			url: "http://a11ynyc/",
+			URL: "https://linkedin.com/in/jsajka",
+			mailto: "janina@a11ynyc",
 			w3cid: 33688
 		}
 ],
