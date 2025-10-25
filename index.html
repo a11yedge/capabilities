@@ -27,7 +27,7 @@
 	 
 
         <section id="abstract">
-		        <h2>Abstract</h2>
+		        <h3>Abstract</h3>
 
 	<p>This document examines the  trade-offs and benefits of dynamic accessibility
 remediations applied to web content. 
@@ -51,10 +51,10 @@ clarifies responsibilities across the ecosystem.
 
 
 		<section id="introduction">
-	     <h1>Introduction</h1>
+	     <h2>Introduction</h2>
 
 		<section id="relpatt">
-			<h2>Our Rationale: Multiple Sources &amp; Individual Users</h2>
+			<h3>Our Rationale: Multiple Sources &amp; Individual Users</h3>
 
 		  <p>In the main, the classic paradigm of a web domain serving content directly to end users across the Internet has long ago become a historical artifact.
 		    Today&apos;s typical web page is a dizzying composite of multiple content streams injected from various sources, including content unique to the user&apos;s locale and even to the specific user. Content
@@ -71,7 +71,7 @@ clarifies responsibilities across the ecosystem.
 		</section>
 
 	     <section id="scope">
-		     <h2>Scope</h2>
+		     <h3>Scope</h3>
 
 <p>
 What seems to be a single web page to most users today is actually anything but that.
@@ -149,13 +149,13 @@ For further discussion of our source-authorized and user-authorized client-serve
 	     </section>
 
 	<section id="edgedef">
-		<h2>Post-Source &amp; Edge</h2>
+		<h3>Post-Source &amp; Edge</h3>
 
 		<p>In this document the term <q>edge technology</q> refers to technologies closer to the user. Often, it&apos;s the technology directly in the user&apos;s hands. Or, it may reside on a content delivery network (CDN) server--in the <q>Source Authorized</q> domain (as diagrammed above)&mdash;where content is actively being personalized for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> especially to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is accomplished.</p>
 	</section>
 
 	<section id="overlays">
-		<h2>Post-Source &amp; Overlays</h2>
+		<h3>Post-Source &amp; Overlays</h3>
 
 		<p>
 
@@ -186,7 +186,7 @@ either of these rulings, the approaches referenced by the rulings do utilize som
 	</section>
 
 	<section id="capoutcome">
-		<h2>Post-Source &amp; WCAG Outcomes</h2>
+		<h3>Post-Source &amp; WCAG Outcomes</h3>
 
 <p>
 Accessibility is user-centered and outcome-driven. We refer to each potential remediation as a <q>capability</q> because our topic in this document is the technical, post-source intervention; but, we are mindful that such post-source remediations are performed in order to
@@ -206,7 +206,7 @@ We cross-reference the internationally accepted <a href="https://www.w3.org/WAI/
 	</section>
 
 	<section id="privacy">
-		<h2>Post-Source &amp; Privacy</h2>
+		<h3>Post-Source &amp; Privacy</h3>
 
 <p>It&apos;s important to acknowledge that personalizing content for individual
 users risks disclosing personal information that the user might prefer not to
@@ -225,12 +225,12 @@ as <a href="https://solidproject.org/">Solid</a>.
 		</section>
 
 		<section id="docorg">
-			<h2>About This Document</h2>
+			<h3>About This Document</h3>
 
 			<p>This section provides an overview of this document. It describes what capabilities are addressed, and then how each capability is examined and evaluated.</p>
 
 			<section id="caporg">
-				<h3>The Capabilities Discussed</h3>
+				<h4>The Capabilities Discussed</h4>
 
 			<p>Our analysis of various accessibility related capabilities is organized by the primary coding technology expected for that capability as follows:</p>
 
@@ -246,7 +246,7 @@ as <a href="https://solidproject.org/">Solid</a>.
 			</section>
 
 			<section id="capdetail">
-				<h3>How We Evaluate Each Capability</h3>
+				<h4>How We Evaluate Each Capability</h4>
 
 						<p>Each capability we examine is considered from the following perspectives:</p>
 
@@ -267,7 +267,7 @@ as <a href="https://solidproject.org/">Solid</a>.
 			</section>
 
 			<section id="automate">
-				<h3>How We Evaluate Automatability</h3>
+				<h4>How We Evaluate Automatability</h4>
 
 										<p>We evaluate the Automatability of each capability accordingly:</p>
 
@@ -297,15 +297,15 @@ Human oversight remains critical to achieve comprehensive accessibility in most 
 		</section>
 
 <section id="contentmanage">
-	<h1>Content&mdash;Usually HTML</h1>
+	<h2>Content&mdash;Usually HTML</h2>
 
 	<p>This layer of delivered content consists of words, graphics, and rich media objects. In the main it is created using  HTML, both static and dynamic.</p>
 
 <section id="contedit">
-	<h2>Content Details</h2>
+	<h3>Content Details</h3>
 
 <section id="imgalt">
-	<h3>Provide Alternative Text</h3>
+	<h4>Provide Alternative Text</h4>
 
 	<p>Alternative text is a fundamental and well established accessibility accommodation (dating to the era of HTML 3.2). No good reason for missing alt text remains, yet far too many sites are missing alt text today.</p>
 
@@ -348,7 +348,7 @@ Post-source methods can engage the services of experts in proper alternative tex
 </section>
 
 <section id="tooltip">
-	<h3>Provide Tooltips</h3>
+	<h4>Provide Tooltips</h4>
 
 <p>This capability supplies a small pop-up window that appears
 on hover to display additional information about an element on the page for users who benefit from enhanced
@@ -386,7 +386,7 @@ contextualization or clarification.</p>
 </section>
 
 <section id="lang">
-<h3>Indicate Language</h3>
+<h4>Indicate Language</h4>
 
 <p>This capability correctly specifies the primary language of a
 web page when the declaration is incorrect or missing entirely.</p>
@@ -424,7 +424,7 @@ web page when the declaration is incorrect or missing entirely.</p>
 </section>
 
 <section id="titling">
-	<h3>Provide Titles</h3>
+	<h4>Provide Titles</h4>
 
 <p>This capability provides for meaningful titles for pages and/or
 iFrames within pages and provides screen reader users a more efficient and meaningful browsing experience.</p>
@@ -471,10 +471,10 @@ ensure relevance.
 </section>
 
 <section id="richmedia">
-	<h2>Rich Media</h2>
+	<h3>Rich Media</h3>
  
 <section id="videocaption">
-	<h3>Provide Video Captions</h3>
+	<h4>Provide Video Captions</h4>
 
 	<p>This capability provides <a href="https://www.w3.org/TR/media-accessibility-reqs/#captioning">caption text</a> displaying along with
 	the video and synchronized with it. HTML also supports an <a href="https://www.w3.org/TR/media-accessibility-reqs/#enhanced-captions-subtitles">Enhanced Caption</a> mechanism.</p>
@@ -513,7 +513,7 @@ ensure relevance.
 </section>
 
 <section id="videodescript">
-	<h3>Provide Descriptions of Video</h3>
+	<h4>Provide Descriptions of Video</h4>
 
 	<p>This capability provides <a href="https://www.w3.org/TR/media-accessibility-reqs/#described-video">descriptive narration of key visual elements</a> designed to make visual media accessible to people who are blind or visually impaired. Most common descriptions are provided as an additional audio track timed not to interfere with spoken dialog. Creating descriptions that both enhance the audio experience and do not obscure dialog requires skill. Both a <a href="https://www.w3.org/TR/media-accessibility-reqs/#text-video-description">text based mechanism</a> and an <a href="https://www.w3.org/TR/media-accessibility-reqs/#extended-video-descriptions">extended mechanism</a> are supported by HTML specifically to make it easier for third parties to provide helpful descriptions post-source.</p>
 
@@ -553,7 +553,7 @@ There is no intrinsic benefit to providing descriptions post-source except in th
 </section>
 
 <section id="pdf">
-	<h2>Remediate <abbr title="Portable Document Format">PDF</abbr></h2>
+	<h3>Remediate <abbr title="Portable Document Format">PDF</abbr></h3>
 
 <p>This capability provides a much needed service because far too many PDF documents published on the web fail accessibility. It supports tagging and
 otherwise marking up PDF documents in order to make them more accessible.
@@ -598,7 +598,7 @@ full remediation remains a challenge, as automation struggles with nuanced tasks
 </section>
 
 <section id="present">
-<h1>Presentation&mdash;Usually CSS</h1>
+<h2>Presentation&mdash;Usually CSS</h2>
 
 <p>
 
@@ -606,7 +606,7 @@ The capabilities discussed in this section facilitate content re-rendering in or
 <p>We have a strong preference for CSS in presentation rendering because CSS is most fungible. Also, accessibility is natively addressed by W3C&apos;s CSS specifications. Achieving similar results through other technologies leaves the developer directly responsible for all aspects of accessibility in their code. Thus rendering the presentation layer through technologies other than CSS is highly likely to prove inaccessible and require remediation.</p>
 
 <section id="curfoc">
-	<h2>Manage Cursor &amp; Focus</h2>
+	<h3>Manage Cursor &amp; Focus</h3>
 
 	<p>This section addresses capabilities related to enhanced focus visibility
 	Isolating Specific Semantic or Interactive Components for Efficient Browsing and Access:
@@ -614,7 +614,7 @@ The capabilities discussed in this section facilitate content re-rendering in or
 	as headings or buttons.</p>
 
 <section id="cursorsize">
-<h3>Optimize Cursor Size</h3>
+<h4>Optimize Cursor Size</h4>
 
 <p>Some users require a more visible cursor and appreciate the capability that can increase the standard cursor size
 by up to 400% to ensure the pointer always remains visible to them. This facilitates faster and
@@ -646,7 +646,7 @@ Certain interactive elements may also require testing to prevent visual overlap.
 </section>
 
 <section id="linkviz">
-<h3>Optimize Hyperlink Visibility</h3>
+<h4>Optimize Hyperlink Visibility</h4>
 
 <p>Some people require greater clarity regarding which spans of text or graphics in web content are functioning as hyperlinks. This capability facilitates selecting the text or image that serves
 as a hyperlink and causing it to be displayed in a different, more perceivable way
@@ -690,7 +690,7 @@ evaluation. Edge cases, such as images serving as links without clear indicators
 </section>
 
 	<section id="keyboardaccessinteractive">
-		<h3>Ensure Keyboard Access to Interactive Elements </h3>
+		<h4>Ensure Keyboard Access to Interactive Elements </h4>
 
 		<p>Not all users of web content are able to use a mouse. Many users rely on TAB and Shift+TAB, together with arrow keys to navigate web content. Mobile device users similarly rely on various swipe and single and multiple-finger touch actions (called gestures) to navigate web content and to interact with it. Keyboard navigation is fundamental to web accessibility and needs to be ensured by content publishers.</p>
 
@@ -727,7 +727,7 @@ these changes without impacting user experience or other functionalities is not 
 	</section>
 
 		<section id="maninteractivefocus">
-		<h3>Manage Focus Through Interactive Processes</h3>
+		<h4>Manage Focus Through Interactive Processes</h4>
 
 		<p>This capability supports users in navigating content and in staying focused on those portions of content they require in the moment.</p>
 
@@ -763,7 +763,7 @@ In some cases&mdash;While focus management can be scripted, verifying that autom
 		</section>
 
 <section id="readingguide">
-<h3>Supply a Reading Guide</h3>
+<h4>Supply a Reading Guide</h4>
 
 <p>Some users benefit from a  horizontal line that appears
 below the text they&apos;re reading in order to help them keep their place as they read. This facilitates  staying focused. </p>
@@ -795,12 +795,12 @@ In many cases&mdash;Automated solutions can generate visual reading guides, but 
 </section>
 
 <section id="txtrans">
-	<h2>Optimize Text Styling</h2>
+	<h3>Optimize Text Styling</h3>
 
 	<p>Some users require different fonts (or different font characteristics) in order to comprehend and interact effectively with web content. This section groups those capabilities.</p>
 
 <section id="a11yfonts">
-<h3>Provide Accessible Fonts</h3>
+<h4>Provide Accessible Fonts</h4>
 
 <p>Not all users are able to read any font a web content publisher may choose. This capability allows the publisher&apos;s content to be reformatted in a user-chosen font the user is comfortable using.</p>
 
@@ -829,7 +829,7 @@ In many cases&mdash;Provided a valid, user-selected font choice is known.
 </section>
 
 <section id="dyslexiafont">
-	<h3>Provide <q>Dyslexia Friendly</q> Fonts</h3>
+	<h4>Provide <q>Dyslexia Friendly</q> Fonts</h4>
 
 <p>Fundamentally this capability differs from the <a href="a11yfonts">Fonts</a> section above only in that the proffered fonts are understood to be particularly usable by many people living with
 dyslexia. Typically, these fonts provide more distinctive symbols intended to  avoid user confusion through font design approaches such as increased baselines, thinner tops, and a larger x-height. Frequently they are proprietary fonts requiring licensing arrangements.</p>
@@ -862,7 +862,7 @@ equivalents.
 </section>
 
 <section id="pricing">
-<h3>Make Pricing Comparisons Accessible (Strikethroughs)</h3>
+<h4>Make Pricing Comparisons Accessible (Strikethroughs)</h4>
 
 <p>This capability ensures that screen reader users can understand the prior price of an item. Displaying the prior price using strikethrough or crossed-out fonts, and then providing the new price immediately next to these does not work for screen reader users. These users will have no idea which is the prior and which the current price without additional content and tagging.
 </p>
@@ -898,7 +898,7 @@ equivalents.
 </section>
 
 <section id="textsize">
-<h3>Optimize Text Size</h3>
+<h4>Optimize Text Size</h4>
 
 <p>Some users need enlarged, or perhaps diminished fonts in order to read content comfortably. This capability allows increased or decreased font size 
 adjustments.</p>
@@ -940,7 +940,7 @@ In many cases&mdash;Provided a valid, user-selected font size is known.
 </section>
 
 <section id="textspace">
-<h3>Optimize Text Spacing (White-spacing)</h3>
+<h4>Optimize Text Spacing (White-spacing)</h4>
 
 <p>Some users require additional white space between lines of text content in order to read comfortably. Some require adjustment between individual characters in and between words. This capability supports personalizing these adjustments to individual user&apos;s needs.
 </p>
@@ -976,7 +976,7 @@ In many cases&mdash;Provided a valid, user-selected spacing is known.
 </section>
 
 <section id="lineheight">
-<h3>Optimize Line Height</h3>
+<h4>Optimize Line Height</h4>
 
 <p>Some users benefit greatly by simply increasing white space in between lines of text.</p>
 
@@ -1015,8 +1015,8 @@ In many cases&mdash;Provided a valid, user-selected line height spacing is known
 </section>
 
 <section id="dropcap">
-<h3>Drop Cap Implementation
-</h3>
+<h4>Drop Cap Implementation
+</h4>
 
 <p>The drop cap has been popular in publications for centuries, predating the printing press. Their beauty can be compelling. However, their elaborate graphical style will certainly pose an accessibility barrier requiring careful accommodation.</p>
 Several kinds of users are impacted, including screen reader users relying on braille or TTS, and low-vision users for whom the intrinsic graphical characteristics of a given drop cap may prove challenging.
@@ -1044,12 +1044,12 @@ technical evaluation.
 </section>
 
 <section id="timemedia">
-	<h2>Timed Media</h2>
+	<h3>Timed Media</h3>
 
 	<p>Some users require pixel-level <abbr title="Red Green Blue">RGB</abbr> transformations to comprehend and interact effectively with web content. This section groups those capabilities.</p>
 
 <section id="animation">
-<h3>Animation Control</h3>
+<h4>Animation Control</h4>
 
 <p>Some users require the ability to stop animations or
 other moving elements on a web page from playing entirely. Others may wish to see them under direct user control, i.e. as a series of steps. </p>
@@ -1098,7 +1098,7 @@ intervention to ensure they do not disrupt user experience.
 </section>
 
 <section id="autoplay">
-<h3>Auto-play Videos </h3>
+<h4>Auto-play Videos </h4>
 <p>Some users are impeded when media begins playing on page load. Screen reader users may need playback paused until they&apos;ve assured themselves they&apos;ve heard all the information their TTS can provide on any given page. Others will seek to enable captions (and possibly even automated language translation) before playback begins. It is also necessary to support a mute function which can be invoked by touch, mouse, keyboard, or other control mapped for such purposes.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
@@ -1139,10 +1139,10 @@ intercepted reliably without human adjustments.
 </section>
 
 <section id="color">
-	<h2>Optimize Color Usage</h2>
+	<h3>Optimize Color Usage</h3>
 
 <section id="contrast">
-<h3>Optimize Color Contrast</h3>
+<h4>Optimize Color Contrast</h4>
 
 <p>Color and contrast adaptations such as <q>Light Mode</q>, <q>Dark Mode</q>, Inverted Colors, Color Desaturation, and related contrast pigmentation adaptations have proven highly useful
 to many people with a wide range of visual disabilities, and frankly to most users of the web in various distinct situations. They modify the difference between the
@@ -1189,7 +1189,7 @@ consistency with visual identity.
 </section>
 
 <section id="personalcolor">
-	<h3>Personalize Color Palette</h3>
+	<h4>Personalize Color Palette</h4>
 
 	<p>Many people live with visual challenges and many of these people would not self-identify as persons with disabilities. Nevertheless tuning visual display to optimize color contrast, and to otherwise adjust for severe or mild color perception challenges can only enhance the personal web experience. Ideally, these configuration adjustments should be saved as part of that individual's browsing configuration.</p>
 
@@ -1235,11 +1235,11 @@ In many cases&mdash;Automated tools can analyze existing palettes and
 </section>
 
 <section id="pagestyling">
-	<h2>Page Styling</h2>
+	<h3>Page Styling</h3>
 
 <section id="ulol">
-<h3>Styled Lists
-</h3>
+<h4>Styled Lists
+</h4>
 
 <p>
 The ability to choose from a list of options is a fundamental function in web content. All manner of accessible lists have long been well supported by HTML and CSS.
@@ -1276,8 +1276,8 @@ In some cases&mdash;Standard list implementations are highly automatable; howeve
 </section>
 
 <section id="textbox">
-<h3>Text Box Framing
-</h3>
+<h4>Text Box Framing
+</h4>
 
 <p>
 The ability to annotate primary content with related content in a styled text box has long been supported on the web. Additionally, all manner of accessible text location and styling have been well supported by HTML and CSS.
@@ -1315,8 +1315,8 @@ In some cases&mdash;While framing can be automatically applied, ensuring that th
 </section>
  
 <section id="shadowout">
-<h3>Shadow and Outline Effects
-</h3>
+<h4>Shadow and Outline Effects
+</h4>
 
 <p>Creative styling of text and graphics using shadow and related outlining approaches can be visually compelling. Unfortunately, these approaches can pose comprehension challenges for many people living with various visual (and other accessibility) challenges&mdash;many of whom would not self-identify as persons with disabilities. Tuning these effects to maximize readability will only enhance the functionality of such web content.</p>
 
@@ -1354,7 +1354,7 @@ In some cases&mdash;Shadows and outlines can be applied autonomously, but verify
 </section>
 
 <section id="transpcont">
-<h3>Text Transparency Control</h3>
+<h4>Text Transparency Control</h4>
 
 <p>Creative styling of text and graphics using various transparency approaches can be visually compelling. Unfortunately, these approaches can pose comprehension challenges for many people living with various visual (and other accessibility) challenges&mdash;many of whom would not self-identify as persons with disabilities. Tuning these effects to maximize readability will only enhance the functionality of such web content.</p>
 
@@ -1392,7 +1392,7 @@ Text transparency often serves design aesthetics. However, it can leave text unr
 </section>
 
 <section id="interact">
-<h1>Functionality&mdash;Usually JavaScript</h1>
+<h2>Functionality&mdash;Usually JavaScript</h2>
 
 <p>
 
@@ -1400,7 +1400,7 @@ The capabilities discussed in this section are those content publishers must pro
 </p>
 
 <section id="notify">
-	<h2>Notifications</h2>
+	<h3>Notifications</h3>
 
 <p>Notifications are messages shown to the end-user to
 alert them to an event, some specific data-point, or to some state.
@@ -1444,7 +1444,7 @@ In some cases&mdash;Notifications can autonomously adjust timings and support va
 </section>
 
 <section id="auth-n">
-	<h2>User Authentication</h2>
+	<h3>User Authentication</h3>
 
 	<p>Authenticating oneself is a critical gateway function to all manner of web services. There are multiple ways that authentication methods can fail accessibility, but there are also reasonable and appropriate solutions that should always be available.</p>
 
@@ -1483,10 +1483,10 @@ other site functionalities or user security is currently beyond the scope of aut
 </section>
 
 		<section id="custcomponent">
-			<h2>Interactive  Components</h2>
+			<h3>Interactive  Components</h3>
 
 	<section id="comprebuild">
-		<h3>Rebuild an Interactive Component</h3>
+		<h4>Rebuild an Interactive Component</h4>
 
 		<p>
 		Reconstruct components retaining the original <abbr title="User Interface">UI</abbr>/<abbr title="User Experience">UX</abbr> to maintain their original appearance and
@@ -1537,7 +1537,7 @@ other site functionalities or user security is currently beyond the scope of aut
 	</section>
 
 	<section id="comprepl">
-		<h3>Replace an Interactive Component</h3>
+		<h4>Replace an Interactive Component</h4>
 		<p>Replace inaccessible components with redesigned alternatives that
 		improve both accessibility and usability providing new UI/<abbr title="user experience">UX</abbr>.</p>
  
@@ -1585,10 +1585,10 @@ requirements.
 </section>
 
 <section id="forms">
-	<h2>Optimize Forms</h2>
+	<h3>Optimize Forms</h3>
 
 <section id="FormLabel">
-<h3>Form Labels</h3>
+<h4>Form Labels</h4>
 
 		<p>Forms are the fundamental interface of the interactive web. Programmatic labels for each data entry field or option selecting widget  on any form are critical for many users requiring accessibility support. Furthermore, consistent grouping and form controls on screen location is also critical.</p>
 
@@ -1627,7 +1627,7 @@ In many cases&mdash;Automation can detect and add missing labels by analyzing fo
 
 <section id="formvalid">
 
-<h3>Validate Accessibility of Forms Interaction</h3>
+<h4>Validate Accessibility of Forms Interaction</h4>
 
 <p>This capability ensures that screen reader users
 and other users requiring enhanced status support receive clear feedback on the status of a form being completed 
@@ -1671,7 +1671,7 @@ requires human testing.
 </section>
 
 	<section id="timeout">
-		<h3>Managing Time Outs</h3>
+		<h4>Managing Time Outs</h4>
 
 		<p>
 		Various interactive web functions will time-out in order to protect the user and the service provider&mdash;or both. Time-outs on the web are certainly reasonable, but they should not lock out active users who simply need more time to complete an interaction, e.g. too many sites wait for the submit function to be invoked while a user is struggling to supply data on a possibly not so accessible form. Given the importance of these interactions, the ability to have reasonable and sufficient time to complete the interactive task is a critical accessibility requirement on the web today.</p>
@@ -1710,7 +1710,7 @@ can fully engage with web content without disruption.
  
 	</section>
 		<section id="axvalid">
-			<h3>Validate Form Content Accessibly</h3>
+			<h4>Validate Form Content Accessibly</h4>
 
 			<p>Today&apos;s interactive web requires users to provide various kinds of data in order to purchase things or obtain services. Content providers properly often seek to assist users in correctly completing these interactions before accepting the resulting submission, but there are various ways this help can be inaccessible&mdash;and therefore not very helpful to certain users. This should not occur, of course, because there are known ways to provide accessible assistance in web interactions.</p>
 
@@ -1753,12 +1753,12 @@ interaction. Accessible notifications ensure that all users, including those wit
 </section>
 
 <section id="semstruct">
-	<h2>Structural Semantics Remediation</h2>
+	<h3>Structural Semantics Remediation</h3>
 
 	<p>Comprehensive structural markup is critically important to content accessibility. It is a fundamental requirement and any means to remediate or improve missing structural markup provides an immediate functional enhancement to users whose accessibility accommodations rely on explicit structural semantics.</p>
 
 <section id="structure">
-	<h3>Expose Structural Semantics</h3>
+	<h4>Expose Structural Semantics</h4>
 	<p>The various components of web content can be programmatically identified to assistive technologies because users&apos; ability to use content is significantly enhanced by this kind of data. Much work has been put into making
 	this data flow robust and reliable. It should never be missing from web content today.</p>
 
@@ -1796,7 +1796,7 @@ validation to ensure correct interpretation.
 </section>
 
 		<section id="dynamicpages">
-		<h3>Handle Dynamic Pages Accessibly</h3>
+		<h4>Handle Dynamic Pages Accessibly</h4>
 
 		<p>Much web content today provides real-time data updates for various on screen data-points. While this is compelling interactivity for many users, it also creates an enormous functional barrier for users who rely on various alternative data comprehension technologies, e.g. screen reader users who rely on braille or TTS. Dynamic data updates can also challenge some users living with cognitive and learning disabilities. These challenges should be mitigated by known remedial approaches.</p>
 
@@ -1838,7 +1838,7 @@ validation to ensure correct interpretation.
 		</section>
 
 	<section id="correctsemanticbehavior">
-		<h3>Correct Semantic Behavior</h3>
+		<h4>Correct Semantic Behavior</h4>
 
 		<p>This capability is critical to persons who rely on assistive technologies. Content publishers who choose to build their own custom components (rather than using standard HTML and CSS) also take on the responsibility of making their components behave and interact as expected by AT and the users who rely on AT. The economic cost of creating custom components cannot justifiably exclude the cost of making them accessible.</p>
 
@@ -1879,10 +1879,10 @@ disrupt user experience or other page elements.
 	</section>
 
 <section id="nav">
-	<h2>Enhance Navigation &amp; Hyper Elements</h2>
+	<h3>Enhance Navigation &amp; Hyper Elements</h3>
 
 <section id="structnav">
-	<h3>Semantic Navigation</h3>
+	<h4>Semantic Navigation</h4>
 
 	<p>Support the ability to navigate pages by semantics structural elements such as headings, buttons, and links. Screen readers, primarily used by blind users, have long provided this capability, but one needn&apos;t be blind to appreciate this capability. Most recently AI is benefiting from this kind of accessibility support!</p>
 
@@ -1923,7 +1923,7 @@ experience.
 </section>
 
 <section id="keybd">
-<h3>Provide Keyboard Navigation Enhancements</h3>
+<h4>Provide Keyboard Navigation Enhancements</h4>
 
 <p>Enhance visual indicators that
 support keyboard navigation such as underlines or color changes; optionally
@@ -1968,7 +1968,7 @@ In many cases&mdash;Automated solutions can enhance keyboard navigation by adjus
 </section>
 
 <section id="interactivelements">
-<h3>Clarify Interactive Elements Status &amp; Functionality</h3>
+<h4>Clarify Interactive Elements Status &amp; Functionality</h4>
 
 <p>This capability ensures concise
 instructions and labels that are clear to sighted, low vision, and non-sighted
@@ -2011,7 +2011,7 @@ misinterpretation.
 </section>
 
 <section id="externallinks">
-<h3>Ensure External Link Target Notification</h3>
+<h4>Ensure External Link Target Notification</h4>
 
 <p>This capability:</p>
 
@@ -2053,7 +2053,7 @@ validation.
 
 </section>
 <section id="ambiglink">
-<h3>Clarify Ambiguous Links</h3>
+<h4>Clarify Ambiguous Links</h4>
 
 <p>This capability provides descriptive and meaningful
 link text that accurately reflects the purpose or destination of the link when the source content fails to do so.
@@ -2093,7 +2093,7 @@ still requires manual oversight.
 </section>
 
 <section id="textinteract">
-<h3>Ensure Nested Text Element Accessibility</h3>
+<h4>Ensure Nested Text Element Accessibility</h4>
 
 <p>Nested elements like collapsible lists and tabs simplify and expedite site navigation. 
 	Too many choices are simply confusing and people can get lost. 
@@ -2132,7 +2132,7 @@ user experience typically demands manual oversight.
 </section>
 
 <section id="aria">
-		<h3>Support ARIA Roles &amp; Attributes Remediation</h3>
+		<h4>Support ARIA Roles &amp; Attributes Remediation</h4>
 
 		<p>The <a href="https://www.w3.org/WAI/standards-guidelines/aria/">Accessible Rich Internet Applications (ARIA)</a> standard has been a mainstay of web accessibility for several decades now. Few web sites today would be accessible to keyboard-only users, and especially to screen reader users, but for ARIA. 
 	Many of the capabilities detailed in this document are remediated using ARIA at least in part. Yet, there&apos;s much to know, to properly apply ARIA in web content as detailed by the  <a href="https://www.w3.org/WAI/ARIA/apg/">ARIA Authoring Practices Guide.</a> Unfortunately, too many sites today just don&apos;t get ARIA right. This capability is enumerated because ARIA remediation is critical on today&apos;s web.</p>
@@ -2171,7 +2171,7 @@ oversight.
 		</section>
 
 <section id="voxcom">
-	<h3>Voice Command</h3>
+	<h4>Voice Command</h4>
 
 	<p>Whether hosted through personal data assistants or by a Public Switched Telephone Network (PSTN) telephone number, voice interactive systems can provide significant accessible content and interaction access for all users, but particularly for certain users living with various disabilities. Ensuring the functionality and accessibility of voice services is an important and ongoing challenge to content providers implementing this technology.</p>
 
@@ -2209,10 +2209,10 @@ In some cases&mdash;Voice command technologies require extensive training to han
 </section>
 
 <section id="semiotics">
-	<h2>Text Services (Semiotics)</h2>
+	<h3>Text Services (Semiotics)</h3>
 
 <section id="dictionary">
-<h3>Support Dictionary On Demand</h3>
+<h4>Support Dictionary On Demand</h4>
 
 <p>This capability provides access to definitions of words or phrases that may be unfamiliar to some users, provides pronunciation guidance, and provides synonyms, which can all especially help users living with cognitive and learning disabilities better comprehend content.</p>
 
@@ -2250,7 +2250,7 @@ No significant way&mdash;Automated tools can certainly link words to dictionary 
 </section>
 
 <section id="translate">
-<h3>Support Live Site Translations</h3>
+<h4>Support Live Site Translations</h4>
 
 <p>Offering a user-triggered method to this capability changes the language of a web page in real time, by translating the current page
 into a language selected by the user.</p>
@@ -2278,7 +2278,7 @@ validation.
 </section>
 
 <section id="qualitytts">
-<h3>Read Content Aloud</h3>
+<h4>Read Content Aloud</h4>
 
 <p>This capability allows a user to hear content spoken aloud by using a cloud (or browser) hosted Text to Speech (TTS) engine. There are now high quality TTS engines and listening while reading on screen is often beneficial for users in general, including and especially users living with certain cognitive and learning disabilities.</p>
 
@@ -2307,7 +2307,7 @@ In many cases&mdash;Automated TTS can read content aloud, but proper pronunciati
 </section>
 
 <section id="numberdigit">
-	<h2>Disambiguate Numbers and Strings of Digits for TTS</h2>
+	<h3>Disambiguate Numbers and Strings of Digits for TTS</h3>
 
 	<p>
 	Not all strings of digits are numbers. Nor should all strings of digits be pronounced as though they were actual numbers. The classic example (which all screen readers and read-aloud services continue to get wrong) is the aural presentation of a telephone <q>number</q>, which is not actually a number, of course, but rather a numeric address. Consider this example of a telephone <q>number</q> as would typically be auralized by TTS: <q>Plus one, 
@@ -2345,7 +2345,7 @@ In some cases&mdash;Automated tools can infer number formats, but ensuring corre
 </section>
 
 	<section id="acronyms">
-	<h2>Provide Appropriate Acronym Expansion with TTS</h2>
+	<h3>Provide Appropriate Acronym Expansion with TTS</h3>
 
 	<p>Acronyms provide a useful short form for spoken and written communications and will always be widely used in web content. Yet they&apos;re too frequently mispronounced by the TTS engines used by various assistive technologies (such as screen readers), and by <a href="#voxcom">Voice Command</a> systems. Consider the acronym <q>CD</q> Is it a command line computer user&apos;s <q>change directory</q>" Or a music lover&apos;s <q>Compact Disk?</q> Or the computer storage <Q>Compact Disc</q> medium?  Or does it refer to a bank <q>Certificate of Deposit?</q> The correct answer, of course, is, and always will be context dependent. Yet one of the most popular TTS engines of all time, still sought by many users for their phones and computers today insists that <q>CD</q> stands for <q>candelas!</q>
 
@@ -2383,7 +2383,7 @@ In some cases&mdash;Automated tools can expand acronyms using predefined databas
 </section>
 
 <section id="resetall">
-<h2>Reset All Personalizations</h2>
+<h3>Reset All Personalizations</h3>
 
 <p>It is only smart business practice and simple courtesy to support a <q>one button click</q> capability to reset any user
 triggered enhancement and restore the page to its default state. It should be as easy as possible for users to try different settings and undo them readily. Similarly, it should be just as easy to undo any auto-applied transformations and return a page to the settings provided directly by source. Users should be empowered to adjudge for themselves whether any applied transformation actually enhances their ability to interact&mdash;and to reapply the post-source enhancements should they discover they&apos;re actually enhancing their experience, contrary to their initial doubt!</p>
@@ -2414,7 +2414,7 @@ In no significant way&mdash;While automation can revert settings to defaults, en
 </section>
 
 <section id="manage">
-<h1>Management</h1>
+<h2>Management</h2>
 
 <p>
 The capabilities discussed in this section describe various post-source approaches 
@@ -2423,7 +2423,7 @@ their digital content.
 </p>
 
 <section id="humans">
-	<h2>The Role of Humans</h2>
+	<h3>The Role of Humans</h3>
 
 		<p>We emphasize that human oversight remains critical to achieve comprehensive accessibility in most situations today. While automation and AI can help, we should not expect these can replace humans entirely. Human remediation of automatically identified checkpoints, together with the content creator&apos;s active participation to clarify meaning and intent constitutes an effective and efficient approach to accomplish accessibility. 
 		</p>
@@ -2452,7 +2452,7 @@ Does Not Apply
 </section>
 
 <section id="a11yedit">
-<h2>Post-Source Remediation&mdash;By Site Owner</h2>
+<h3>Post-Source Remediation&mdash;By Site Owner</h3>
 
 		<p> This capability describes an interface or framework made available to
 		authorized users within an organization, enabling them
@@ -2498,7 +2498,7 @@ Does Not Apply
 </section>
 
 <section id="a11yedit3rd">
-<h2>Post-Source Remediation&mdash;By third-party</h2>
+<h3>Post-Source Remediation&mdash;By third-party</h3>
 
 <p>This capability extends the above <a href="#a11yedit">Post-Source
 	Remediation&mdash;By Site Owner</a> to third parties. Third parties are typically engaged when internal
@@ -2538,10 +2538,10 @@ Does Not Apply
 </section>
 
 <section id="addenhance">
-	<h2>Additional Accessibility Enhancements</h2>
+	<h3>Additional Accessibility Enhancements</h3>
 
 <section id="profile-userint">
-<h3>Feature-Bundling Profiles</h3>
+<h4>Feature-Bundling Profiles</h4>
 
 <p>Site publishers need to support the full spectrum of accessibility features. On the other hand, individual users need certain features and will ignore those they do not need. The types of features individual users need are  often group-able
 into bundles, making it easier to enable
@@ -2570,7 +2570,7 @@ Does Not Apply
 </section>
 
 <section id="contentmod">
-<h3>Support Content Moderation</h3>
+<h4>Support Content Moderation</h4>
 
 <p>This capability helps assure that site content meets user needs as well as the publisher&apos;s content policies. Typical policies will include everyday phrases with
 racist origins, gendered or exclusive expressions, and terms that are deemed
@@ -2594,7 +2594,7 @@ to exclude audiences.</p>
 </section>
 
 <section id="a11ystmntgeneration">
-<h3>Support Accessibility Statement</h3>
+<h4>Support Accessibility Statement</h4>
 
 <p>Providing an easily located <a href="https://www.w3.org/WAI/planning/statements/generator/">Accessibility Statement</a> has become a widely accepted best practice in the industry. While there is no consensus on what all should be included, it is generally agreed that the formal Statement should define the site&apos;s commitment to accessibility of its content and services. Additional content, such as accessibility specific contact data, and accessibility specific help resources are also frequently included.
 </p>
@@ -2623,7 +2623,7 @@ In many cases
 </section>
 
 <section id="a11yprov">
-<h3>Support Accessibility Provider Identification</h3>
+<h4>Support Accessibility Provider Identification</h4>
 
 <p>This capability displays to website users the name
 (and perhaps the logo) of the primary accessibility provider, who stands behind the accessibility of
@@ -2655,7 +2655,7 @@ In some cases
 </section>
 
 <section id="reporting">
-<h3>Provide Accessibility Issue Reporting</h3>
+<h4>Provide Accessibility Issue Reporting</h4>
 
 <p>This capability provides a form, or an email link, enabling
 end-users the ability to report barriers they&apos;ve experienced on a site. Accessibility-specific reporting is an industry best practice.</p>
@@ -2686,7 +2686,7 @@ In some cases
 </section>
 
 <section id="aspire">
-<h1>Aspirational</h1>
+<h2>Aspirational</h2>
 
 <p>
 
@@ -2697,7 +2697,7 @@ It is important to understand the capabilities and services described here are n
 </p>
 
 <section id="intent">
-	<h2>Intent Driven Design</h2>
+	<h3>Intent Driven Design</h3>
 	<p>
 	<abbr>AI</abbr> assisted user interfaces leveraging task specific APIs can be deployed to more effectively service user groups with common interfacing constraints.
 		<p><a href="https://innosearch.ai">Innosearch.ai</a> is a recently launched example providing ecommerce and flight planning and ticketing services primarily for persons who are blind or low vision. Innosearch leverages 
@@ -2725,10 +2725,10 @@ Intent driven design may well provide the most effective accessibility support y
 </section>
 
 	<section id="personconfig">
-		<h2>Support Personalized &amp; Portable Configuration Profiles</h2>
+		<h3>Support Personalized &amp; Portable Configuration Profiles</h3>
 
 <section id="portable">
-<h3>Configure Once, Use Everywhere</h3>
+<h4>Configure Once, Use Everywhere</h4>
 
 <p>Users now frequently use several devices. Furthermore, users tend to have the same or very similar accessibility requirements regardless of the device they may be using in the moment. 
 	It is therefore an emerging goal in web accommodations to support the user in configuring once and having their configured preference propagate across all their devices. Such a cross-device preference profile should ideally function across all vendors and operating environments.</p>
@@ -2762,7 +2762,7 @@ Does Not Apply
 </section>
 
 <section id="choosetrans">
-<h3>Allow Users to Choose Transformations</h3>
+<h4>Allow Users to Choose Transformations</h4>
 
 <p>User can be afforded  the opportunity to opt-in to various transformations via interactive personalization menus. The end-user can access a list of available enhancements, enable those they require, and then reuse them across all sites visited day after day. </p>
 
@@ -2787,7 +2787,7 @@ In some cases
 </section>
 
 <section id="advertctrl">
-	<h2>Manage Distractions From Advertising</h2>
+	<h3>Manage Distractions From Advertising</h3>
 	<p>
 	Injected advertising has become a fact of life on the web. Content injections are sold in real-time to the highest bidder. This  has become the dominant revenue source for most online content. Nevertheless, users should not be forced to tolerate advertising content injections that impair page accessibility and functionality.</p>
 
@@ -2816,7 +2816,7 @@ Users deserve content which supports their accessibility requirements on all con
 </section>
 
 <section id="structnorm">
-		<h3>Normalize Control &amp; Content Layout</h3>
+		<h4>Normalize Control &amp; Content Layout</h4>
 
 	<p>
 	Many users with accessibility needs rely heavily on consistency in the user interface. Yet no standard exists, nor is likely ever to require certain common controls be located consistently across sites. This is very much in the design prerogative of the individual content publisher. And, while individual sites may be fully consistent in where they locate controls on the pages they publish, the user who comparison shops will encounter a different site consistently locating the same controls differently. The publisher has done nothing wrong, but the user is forced to rely on a perfect memory or put up with time-consuming strategies for locating these controls. Consider this example:</p>
@@ -2854,7 +2854,7 @@ In no significant way
 </section>
 
 <section id="a11ystmntdiscovery">
-<h3>Accessibility Statement Discoverability</h3>
+<h4>Accessibility Statement Discoverability</h4>
 
 <p>Standardizing the location of widely deployed, common components of a web site is now being addressed in the <abbr title="Internet Engineering Task Force">IETF</abbr> and in the W3C. The IETF&apos;s <a href="https://www.rfc-editor.org/rfc/rfc8615">RFC 8615: Well-Known Uniform Resource Identifiers</a> and the
 W3C&apos;s Accessible Platform Architectures (APA) Working Group <a href="https://w3c.github.io/adapt/explainers/well-known-destinations.md">Well Known Destinations</a> approach will make the location of common web content functions such as login and contact data located predictably. A predictably  located Accessibility Statement will become another. While time will be needed for most sites to adopt the newly canonized web address locations, powerful benefits will help drive adoption and end users will benefit.
@@ -2882,7 +2882,7 @@ In many cases
 	</section>
 
 	<section id="surrogacy">
-		<h2>Surrogacy Support</h2>
+		<h3>Surrogacy Support</h3>
 
 		<p>A compelling, largely unmet need exists for legal surrogacy services, whether fiduciary, medical, or probate. Whether to access data stored in the account of someone recently deceased, or in the account of a minor child, or of a parent or social agency client, only a very few major web content service providers have begun addressing this need as of this writing and only for their own systems. This need is particularly acute where print disabilities are to be factored. Most legal jurisdictions today accept such instruments executed only on paper, thus discriminating against persons incapable of managing paper on their own. When provided for persons with disabilities this capability is today increasingly known as <q><a href="https://en.wikipedia.org/wiki/Supported_decision_making">Supported Decision Making (SDM)</a></q>, and has historically also been known as <q>Guardianship</q>.</p>
 
@@ -2911,7 +2911,7 @@ In no significant way
 	</section>
 
 	<section id="formatrans">
-		<h2>Support File Format Translation</h2>
+		<h3>Support File Format Translation</h3>
 
 	<p>     Document format translation is important for most serious users of software, but arguably more so for the user relying on assistive technologies.</p>
 
@@ -2939,7 +2939,7 @@ In many cases
 </section>
 
 	<section id="caltrans">
-		<h2>Support Calendar Format Translation</h2>
+		<h3>Support Calendar Format Translation</h3>
 
 	<p>Calendar format translation is important for most any user of software, but arguably more so for the user relying on assistive technologies. While industry could long ago have solved this persistent incompatibility across operating environments, they have rather chosen to seek to impose vendor lock-in. This does not serve users who should be free to maintain calendars in the environment of their choice, or even different calendars in multiple environments with full transparency. This is not a technical challenge. Rather, it is a business choice.</p>
 
@@ -2968,7 +2968,7 @@ In some cases
 	</section>
 
 <section id="commandconversion">
-	<h3>Support Command Normalization</h3>
+	<h4>Support Command Normalization</h4>
  
 <p>Sometimes vendors support accessibility by mapping a series of keystrokes for screen reader users (and others who prefer keyboard commands to mouse clicks) to their own proprietary definitions. Often these duplicate standard command sequences used for similar purposes in widely used software. This capability proposes that post-source technology can remap unfamiliar command mappings to more familiar command mappings, thus greatly reducing or even eliminating an unnecessary learning challenge for the end user.</p>
 
@@ -2997,7 +2997,7 @@ In some cases
 </section>
  
 <section id="SigningSupport">
-	<h2>Support Sign Language Alternatives in Media</h2>
+	<h3>Support Sign Language Alternatives in Media</h3>
 
 	<p>This capability envisions provision of <a href="https://www.w3.org/TR/media-accessibility-reqs/#sign-translation">Sign Translation</a> displaying along with
 	video and synchronized with it (as provided in HTML).</p>
@@ -3036,7 +3036,7 @@ The cost of generating human-mediated sign language translation is prohibitive, 
 </section>
 
 	<section id="skim">
-		<h2>Mediate Content Skimming</h2>
+		<h3>Mediate Content Skimming</h3>
 
 	<p>It is often useful to skim through content to determine what, if any of it, might benefit the user by a more careful reading. Good user agent support for such a feature would not only support sequential summarization, but the marking of particular sections to return to for greater study.</p>
 
@@ -3065,7 +3065,7 @@ In many cases
 </section>
 
 <section class="summarize-sl">
-	<h2>Mediate Skimming Sign-Language Content</h2>
+	<h3>Mediate Skimming Sign-Language Content</h3>
 
 	<p>Skimming through content to determine what, if any of it, might benefit the user by a more careful reading is just as valuable to users who depend on sign-language, or who utilize Augmentative and Alternative Communication (<abbr title="Augmentative and Alternative Communication">AAC</abbr>) symbolic languages, as it is for those who read text. As with summation services with text, good user agent support for such a feature would not only support sequential summarization, but the marking of particular sections to return to for greater study.</p>
 
@@ -3096,7 +3096,7 @@ In no significant way
 	</section>
 
         <section class="appendix" id="Appendix-A">
-		<h1>Our Design Principles</h1>
+		<h2>Our Design Principles</h2>
 
 <p>Our approach to design and analysis in this document is rooted in the principles often called: <q>Human-Centered
 Design (HCD).</q> As an outlook that places people at its core, we believe HCD  aligns perfectly with the goals of accessibility. This method of design prioritizes empathy, collaboration, and user empowerment, which aligns with
@@ -3141,7 +3141,7 @@ more than just accessible - it is truly human-centered.</p>
 	</section>
 
         <section class="appendix" id="Appendix-B">
-		<h1>Who&apos;s Responsible for What?</h1>
+		<h2>Who&apos;s Responsible for What?</h2>
 
 	<p>The capabilities discussed in this document were originally organized under two primary categories with several subcategories under each primary section conforming with client-server architecture, the backbone of all digital transactions and interactions that take place over the web. These roles are still important to note, so we have preserved our analysis in this Appendix. The primary categories are:</p>
 
@@ -3229,7 +3229,7 @@ s own hardware and software may render it in ways the Content Provider never ima
 <p>This two-poled digital communication model is not a one-way broadcast, but a dynamic conversation. Feedback from end users can influence and improve the content generated by providers, while content providers continuously adapt their strategies based on user behavior and needs. The feedback loops become more complex as edge technologies come into play.
 
 	<section id="3rd-party">
-		<h3>My Site, Their Service</h3>
+		<h4>My Site, Their Service</h4>
 
 		  <p>Third-party services not hosted by the Content Provider, providing services in support of the Content Provider&apos;s value proposition. Typically invoked by JavaScript or the Content Delivery Network, they meet the planned needs of end users. </p> 
 			<dl>
@@ -3250,7 +3250,7 @@ Does Not Apply
 	</section>
 
 	<section id="knowledge">
-		<h3>Having Sufficient Knowledge & Skills</h3>
+		<h4>Having Sufficient Knowledge & Skills</h4>
 
 		  <p>Accessibility is a complex subject, and approaches differ per role. Suitably trained designers, brand owners, marketing managers, software developers and quality assurance are difficult to hire and retain. </p> 
 			<dl>
@@ -3282,7 +3282,7 @@ For a structured and systematic approach to managing both the human individuals 
 	</section>
 		     
 <section id="onlyedgeknows">
-<h3>What Only The Edge Knows For Sure</h3>
+<h4>What Only The Edge Knows For Sure</h4>
 
 <p>While some rare web pages may yet serve up a single experience like a short order cook handing over a hamburger, most are like the food court at a shopping mall with many independent services rallying to the end user&apos;s needs. Content providers pack their pages with services such as cookie permissions, chat, payment gateways, user-generated reviews, and most prolifically advertisements. Whether these mashups are accessible can only ever be discovered by evaluating the end user&apos;s experience.</p>
 	
@@ -3299,7 +3299,7 @@ application for AI analysis). Source can only impute what the edge can confident
 	</section>
 
         <section class="appendix" id="Appendix-C">
-            <h1>Acknowledgments</h1>
+            <h2>Acknowledgments</h2>
 			<p>The following individual participants of the <a href="https://www.w3.org/community/a11yedge/">Accessibility at the Edge (A11yEdge) Community Group</a> contributed to the development of this document:</p>
         		<ul>
 <li>Murathan Biliktu</li>
