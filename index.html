@@ -25,9 +25,8 @@
 
 <body>
 	 
-
         <section id="abstract">
-		        <h3>Abstract</h3>
+		        <h2>Abstract</h2>
 
 	<p>This document examines the  trade-offs and benefits of dynamic accessibility
 remediations applied to web content. 
@@ -101,13 +100,15 @@ requiring changes to the original source.
 			</li>
 </ol>
 
-<aside class="Note" title="Note">
+		<aside class="Note" title="Note" aria-label="Note">
+									<div>
 	<p>
 The wide range of specific web accessibility outcomes
 sought in this document can be accomplished through the application of appropriate post-source methods
 without recourse to additional <abbr title="user interface">UI</abbr> elements such as pop-up control panels or
 	<q>accessibility widgets.</q> Indeed the same technologies and methods applied in-source&mdash;HTML, CSS, and JavaScript&mdash;also constitute the post-source toolkit.
 	</p>
+									</div>
 	</aside>
 
 <figure>
@@ -129,15 +130,17 @@ without recourse to additional <abbr title="user interface">UI</abbr> elements s
 
 						<ol>
 							<li><em><q>Source-Authorized:</q></em> These modifications are controlled or approved by the website owner. Examples include third-party scripts and/or content delivery network (CDN) assets.</li>
-							<li><em></q>User-Authorized:</q></em> These adaptations are added by the user, without website  involvement or approval. Examples include browser extensions, antivirus filters, and custom scripts.</li>
+							<li><em><q>User-Authorized</q>:</em> These adaptations are added by the user, without website  involvement or approval. Examples include browser extensions, antivirus filters, and custom scripts.</li>
 						</ol>
 						<li><strong><q>User additions</q>: </strong>At the bottom, the user receives and interacts with the final <a href="https://www.merriam-webster.com/dictionary/mash-up">mashed-up</a> digital content on their own devices and affordances. Examples include the browser, user agent, assistive technologies (AT) on a laptop or desktop computer, and also on a smartphone, and perhaps also on a tablet, perhaps also cast to a wall-mounted video display and perhaps also several surround-sound speakers.</li>
 						</ul>
 
-						<aside class="Note" title="Note">
+		<aside class="Note" title="Note" aria-label="Note">
+									<div>
 							<p>
 For further discussion of our source-authorized and user-authorized client-server model see <a href="#Appendix-B">Appendix B: Who&apos;s Responsible for What?</a>
 							</p>
+									</div>
 	</aside>
 
 	     </section>
@@ -189,10 +192,14 @@ experience would otherwise fail.
 We cross-reference the internationally accepted <a href="https://www.w3.org/WAI/standards-guidelines/wcag/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Success Criteria</a> throughout our publication because they remain valid whether applied in source or post-source.
 </p>
 
-<aside class="Note" title="Note">
+	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
+	<div role="heading" class="wcag2x-title marker" aria-level="4">
+		</div>
+									<div>
 	<p>
 			Cross references to the WCAG specification (and occasionally to related WCAG resources) are provided throughout this document in notes marked <q>WCAG Reference</q> aligning our document&apos;s post-source <q>capabilities</q> with <a href="https://www.w3.org/TR/wcag-3.0-explainer/#guidelines">WCAG&apos;s technology-agnostic, user-centered outcomes guidelines</a>.
 	</p>
+									</div>
 																							        </aside>
 																								 
 	</section>
@@ -301,13 +308,15 @@ Human oversight remains critical to achieve comprehensive accessibility in most 
 
 	<p>Alternative text is a fundamental and well established accessibility accommodation (dating to the era of HTML 3.2). No good reason for missing alt text remains, yet far too many sites are missing alt text today.</p>
 
-	<aside class="wcag2x" Title="WCAG Reference: Alternative Text">
-		<p>
+	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
+		</div>
+		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#non-text-content">SC 1.1.1: Non-text Content</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#images-of-text">SC 1.4.5: Images of Text</a></li>
 </ul>
-		</p>
+		</div>
 	</aside>
 <dl>
 <dt>Source</dt>
@@ -343,12 +352,14 @@ Post-source methods can engage the services of experts in proper alternative tex
 on hover to display additional information about an element on the page for users who benefit from enhanced
 contextualization or clarification.</p>
 
-<aside class="wcag2x" title="WCAG Reference: Tooltips">
-	<p>
+	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
+		</div>
+	<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus">SC 1.4.13: Content on Hover or Focus</a></li>
 </ul>
-</p>
+</div>
 	</aside>
 <dl>
 <dt>Source</dt>
@@ -377,13 +388,15 @@ contextualization or clarification.</p>
 <p>This capability correctly specifies the primary language of a
 web page when the declaration is incorrect or missing entirely.</p>
 
-<aside class="wcag2x" title="WCAG Reference: Indicate Language">
-	<p>
+	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
+		</div>
+	<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#language-of-page">SC 3.1.1: Language of Page</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#language-of-parts">SC 3.1.2: Language of Parts</a></li>
 </ul>
-	</p>
+	</div>
 	</aside>
 <dl>
 	<dt>Source</dt>
@@ -412,13 +425,15 @@ web page when the declaration is incorrect or missing entirely.</p>
 <p>This capability provides for meaningful titles for pages and/or
 iFrames within pages and provides screen reader users a more efficient and meaningful browsing experience.</p>
 
-<aside class="wcag2x"> title="WCAG Reference: Provide Titles">
-	<p>
+	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
+		</div>
+	<div>
 <ul>
 	<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html">SC 2.4.2: Understanding Page Titles</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#name-role-value">SC 4.1.2: Name, Role, Value</a></li>
 </ul>
-	</p>
+	</div>
 	</aside>
 <dl>
 <dt>Source</dt>
@@ -459,14 +474,16 @@ ensure relevance.
 	<p>This capability provides <a href="https://www.w3.org/TR/media-accessibility-reqs/#captioning">caption text</a> displaying along with
 	the video and synchronized with it. HTML also supports an <a href="https://www.w3.org/TR/media-accessibility-reqs/#enhanced-captions-subtitles">Enhanced Caption</a> mechanism.</p>
 	
-	<aside class="wcag2x"> title="WCAG Reference: Video Captions">
-		<p>
+	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
+		</div>
+		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#captions-prerecorded">SC 1.2.2: Captions (Prerecorded)</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#captions-live">SC 1.2.4: Captions (Live)</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#media-alternative-prerecorded">SC 1.2.8: Media Alternative (Prerecorded)</a></li>
 </ul>
-		</p>
+		</div>
 	</aside>
 <dl>
 <dt>Source</dt>
@@ -494,15 +511,17 @@ ensure relevance.
 
 	<p>This capability provides <a href="https://www.w3.org/TR/media-accessibility-reqs/#described-video">descriptive narration of key visual elements</a> designed to make visual media accessible to people who are blind or visually impaired. Most common descriptions are provided as an additional audio track timed not to interfere with spoken dialog. Creating descriptions that both enhance the audio experience and do not obscure dialog requires skill. Both a <a href="https://www.w3.org/TR/media-accessibility-reqs/#text-video-description">text based mechanism</a> and an <a href="https://www.w3.org/TR/media-accessibility-reqs/#extended-video-descriptions">extended mechanism</a> are supported by HTML specifically to make it easier for third parties to provide helpful descriptions post-source.</p>
 
-	<aside class="wcag2x"> title="WCAG Reference: Descriptions of Video">
-		<p>
+	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
+		</div>
+		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded">SC 1.2.3: Audio Description or Media Alternative (Prerecorded)</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#audio-description-prerecorded">SC 1.2.5: Audio Description (Prerecorded)</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#extended-audio-description-prerecorded">SC 1.2.7: Extended Audio Description (Prerecorded)</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#media-alternative-prerecorded">SC 1.2.8: Media Alternative (Prerecorded)</a></li>
 </ul>
-		</p>
+		</div>
 	</aside>
 <dl>
 <dt>Source</dt>
@@ -533,12 +552,14 @@ There is no intrinsic benefit to providing descriptions post-source except in th
 otherwise marking up PDF documents in order to make them more accessible.
 </p>
 
-<aside class="wcag2x"> title="WCAG Reference: PDF">
-	<p>
+	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
+	<div role="heading" class="wcag2x-title marker" aria-level="4">
+		</div>
+	<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG20-TECHS/pdf">PDF Techniques for WCAG 2.0</a> (A W3C Working Group Note)</li>
 </ul>
-	</p>
+	</div>
 	</aside>
 <dl>
 <dt>Source</dt>
@@ -624,8 +645,7 @@ as a hyperlink and causing it to be displayed in a different, more perceivable w
 to help users more easily identify the hyperlinks on a page. </p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -666,8 +686,7 @@ evaluation. Edge cases, such as images serving as links without clear indicators
 		<p>Not all users of web content are able to use a mouse. Many users rely on TAB and Shift+TAB, together with arrow keys to navigate web content. Mobile device users similarly rely on various swipe and single and multiple-finger touch actions (called gestures) to navigate web content and to interact with it. Keyboard navigation is fundamental to web accessibility and needs to be ensured by content publishers.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -703,8 +722,7 @@ these changes without impacting user experience or other functionalities is not 
 		<p>This capability supports users in navigating content and in staying focused on those portions of content they require in the moment.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -875,8 +893,7 @@ equivalents.
 adjustments.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -917,8 +934,7 @@ In many cases&mdash;Provided a valid, user-selected font size is known.
 </p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -952,8 +968,7 @@ In many cases&mdash;Provided a valid, user-selected spacing is known.
 <p>Some users benefit greatly by simply increasing white space in between lines of text.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1026,8 +1041,7 @@ technical evaluation.
 other moving elements on a web page from playing entirely. Others may wish to see them under direct user control, i.e. as a series of steps. </p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1042,7 +1056,6 @@ other moving elements on a web page from playing entirely. Others may wish to se
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-
 There is no particular benefit to performing this mediation post-source.
 </dd>
 <dt>Benefit</dt>
@@ -1060,7 +1073,8 @@ intervention to ensure they do not disrupt user experience.
 </dl>
  
 		<aside class="Note" title="Note" aria-label="Note">
-					                <span>Note</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
+		</div>
 									<div>
 	<p>See also this W3C Accessible Platform Architectures (APA) Working Group issue: <a href="https://github.com/w3c/a11y-tracking/issues/192">CSS View Transitions Issue</a>
 		</p>
@@ -1073,8 +1087,7 @@ intervention to ensure they do not disrupt user experience.
 <p>Some users are impeded when media begins playing on page load. Screen reader users may need playback paused until they&apos;ve assured themselves they&apos;ve heard all the information their TTS can provide on any given page. Others will seek to enable captions (and possibly even automated language translation) before playback begins. It is also necessary to support a mute function which can be invoked by touch, mouse, keyboard, or other control mapped for such purposes.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1121,8 +1134,7 @@ lightest and darkest parts of a web page, reverse colors, or reduce their
 intensity.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1165,8 +1177,7 @@ consistency with visual identity.
 	<p>Many people live with visual challenges and many of these people would not self-identify as persons with disabilities. Nevertheless tuning visual display to optimize color contrast, and to otherwise adjust for severe or mild color perception challenges can only enhance the personal web experience. Ideally, these configuration adjustments should be saved as part of that individual's browsing configuration.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1217,8 +1228,7 @@ The ability to choose from a list of options is a fundamental function in web co
 No good reason for inaccessible lists in web content remains, yet far too many sites continue to publish content utilizing inaccessible lists today.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1255,8 +1265,7 @@ The ability to annotate primary content with related content in a styled text bo
 No good reason for annotating content inaccessibly remains, yet far too many sites continue to publish content utilizing inaccessible textbox approaches today.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1292,8 +1301,7 @@ In some cases&mdash;While framing can be automatically applied, ensuring that th
 <p>Creative styling of text and graphics using shadow and related outlining approaches can be visually compelling. Unfortunately, these approaches can pose comprehension challenges for many people living with various visual (and other accessibility) challenges&mdash;many of whom would not self-identify as persons with disabilities. Tuning these effects to maximize readability will only enhance the functionality of such web content.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1330,8 +1338,7 @@ In some cases&mdash;Shadows and outlines can be applied autonomously, but verify
 <p>Creative styling of text and graphics using various transparency approaches can be visually compelling. Unfortunately, these approaches can pose comprehension challenges for many people living with various visual (and other accessibility) challenges&mdash;many of whom would not self-identify as persons with disabilities. Tuning these effects to maximize readability will only enhance the functionality of such web content.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1380,8 +1387,7 @@ Designing effective notifications that are both timely and accessible often requ
 </p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="4">
 		</div>
 		<div>
 <ul>
@@ -1420,8 +1426,7 @@ In some cases&mdash;Notifications can autonomously adjust timings and support va
 	<p>Authenticating oneself is a critical gateway function to all manner of web services. There are multiple ways that authentication methods can fail accessibility, but there are also reasonable and appropriate solutions that should always be available.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="4">
 		</div>
 		<div>
 <ul>
@@ -1465,8 +1470,7 @@ other site functionalities or user security is currently beyond the scope of aut
 		</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1513,8 +1517,7 @@ other site functionalities or user security is currently beyond the scope of aut
 		improve both accessibility and usability providing new UI/<abbr title="user experience">UX</abbr>.</p>
  
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1564,8 +1567,7 @@ requirements.
 		<p>Forms are the fundamental interface of the interactive web. Programmatic labels for each data entry field or option selecting widget  on any form are critical for many users requiring accessibility support. Furthermore, consistent grouping and form controls on screen location is also critical.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1607,8 +1609,7 @@ to the form field, and the time-sensitive nature of the screen reader
 announcement. </p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1648,8 +1649,7 @@ requires human testing.
 		Various interactive web functions will time-out in order to protect the user and the service provider&mdash;or both. Time-outs on the web are certainly reasonable, but they should not lock out active users who simply need more time to complete an interaction, e.g. too many sites wait for the submit function to be invoked while a user is struggling to supply data on a possibly not so accessible form. Given the importance of these interactions, the ability to have reasonable and sufficient time to complete the interactive task is a critical accessibility requirement on the web today.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1686,8 +1686,7 @@ can fully engage with web content without disruption.
 			<p>Today&apos;s interactive web requires users to provide various kinds of data in order to purchase things or obtain services. Content providers properly often seek to assist users in correctly completing these interactions before accepting the resulting submission, but there are various ways this help can be inaccessible&mdash;and therefore not very helpful to certain users. This should not occur, of course, because there are known ways to provide accessible assistance in web interactions.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1734,8 +1733,7 @@ interaction. Accessible notifications ensure that all users, including those wit
 	this data flow robust and reliable. It should never be missing from web content today.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1772,8 +1770,7 @@ validation to ensure correct interpretation.
 		<p>Much web content today provides real-time data updates for various on screen data-points. While this is compelling interactivity for many users, it also creates an enormous functional barrier for users who rely on various alternative data comprehension technologies, e.g. screen reader users who rely on braille or TTS. Dynamic data updates can also challenge some users living with cognitive and learning disabilities. These challenges should be mitigated by known remedial approaches.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1814,8 +1811,7 @@ validation to ensure correct interpretation.
 		<p>This capability is critical to persons who rely on assistive technologies. Content publishers who choose to build their own custom components (rather than using standard HTML and CSS) also take on the responsibility of making their components behave and interact as expected by AT and the users who rely on AT. The economic cost of creating custom components cannot justifiably exclude the cost of making them accessible.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1858,8 +1854,7 @@ disrupt user experience or other page elements.
 	<p>Support the ability to navigate pages by semantics structural elements such as headings, buttons, and links. Screen readers, primarily used by blind users, have long provided this capability, but one needn&apos;t be blind to appreciate this capability. Most recently AI is benefiting from this kind of accessibility support!</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1902,8 +1897,7 @@ provide other assistance such as mapping interactive elements to keyboard
 shortcuts. </p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1947,8 +1941,7 @@ users alike, and that the elements can be controlled through keyboard navigation
 It also provides feedback on the status of the element and on any status changes that may occur. </p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -1993,8 +1986,7 @@ misinterpretation.
 	</ul>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -2032,8 +2024,7 @@ This is particularly needed for link text such as <q>click here</q> or
 <q>more</q>.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -2071,8 +2062,7 @@ still requires manual oversight.
 	</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -2109,8 +2099,7 @@ user experience typically demands manual oversight.
 	Many of the capabilities detailed in this document are remediated using ARIA at least in part. Yet, there&apos;s much to know, to properly apply ARIA in web content as detailed by the  <a href="https://www.w3.org/WAI/ARIA/apg/">ARIA Authoring Practices Guide.</a> Unfortunately, too many sites today just don&apos;t get ARIA right. This capability is enumerated because ARIA remediation is critical on today&apos;s web.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -2147,8 +2136,7 @@ oversight.
 	<p>Whether hosted through personal data assistants or by a Public Switched Telephone Network (PSTN) telephone number, voice interactive systems can provide significant accessible content and interaction access for all users, but particularly for certain users living with various disabilities. Ensuring the functionality and accessibility of voice services is an important and ongoing challenge to content providers implementing this technology.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -2188,8 +2176,7 @@ In some cases&mdash;Voice command technologies require extensive training to han
 <p>This capability provides access to definitions of words or phrases that may be unfamiliar to some users, provides pronunciation guidance, and provides synonyms, which can all especially help users living with cognitive and learning disabilities better comprehend content.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="5">
 		</div>
 		<div>
 <ul>
@@ -2285,8 +2272,7 @@ In many cases&mdash;Automated TTS can read content aloud, but proper pronunciati
 		two hundred twelve, five hundred fifty-five, one thousand two hundred and thirty-four.</q></p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="4">
 		</div>
 		<div>
 <ul>
@@ -2321,8 +2307,7 @@ In some cases&mdash;Automated tools can infer number formats, but ensuring corre
 	<p>Acronyms provide a useful short form for spoken and written communications and will always be widely used in web content. Yet they&apos;re too frequently mispronounced by the TTS engines used by various assistive technologies (such as screen readers), and by <a href="#voxcom">Voice Command</a> systems. Consider the acronym <q>CD</q> Is it a command line computer user&apos;s <q>change directory</q>" Or a music lover&apos;s <q>Compact Disk?</q> Or the computer storage <Q>Compact Disc</q> medium?  Or does it refer to a bank <q>Certificate of Deposit?</q> The correct answer, of course, is, and always will be context dependent. Yet one of the most popular TTS engines of all time, still sought by many users for their phones and computers today insists that <q>CD</q> stands for <q>candelas!</q>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="4">
 		</div>
 		<div>
 <ul>
@@ -2974,8 +2959,7 @@ In some cases
 	video and synchronized with it (as provided in HTML).</p>
 	
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
-	<div role="heading" class="wcag2x-title marker" aria-level="3">
-		<span>WCAG Reference</span>
+	<div role="heading" class="wcag2x-title marker" aria-level="4">
 		</div>
 		<div>
 <ul>
@@ -3122,7 +3106,6 @@ more than just accessible - it is truly human-centered.</p>
 	</ul>
 
 		<aside class="Note" title="Note" aria-label="Note">
-					                <span>Note</span>
 									<div>
 <p>
 For a graphical representation of this model see our <a href="#diagram">Flow Diagram</a> above.
@@ -3240,16 +3223,13 @@ In some cases
 
 			</dl>
 
-
 		<aside class="Note" title="Note" aria-label="Note">
-					                <span>Note</span>
 									<div>
 <p>
 For a structured and systematic approach to managing both the human individuals serving in these myriad roles and the various technology components comprising an organization&apos;s web presence consult the W3C <a href="https://www.w3.org/TR/maturity-model/">Accessibility Maturity Model (AMM).</a>
 </p>
 									</div>
 	</aside>
-
 	</section>
 		     
 <section id="onlyedgeknows">
