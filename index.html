@@ -102,7 +102,7 @@ requiring changes to the original source.
 </ol>
 
 <aside class="Note" title="Note">
-	<div role="complimentary">
+	<div>
 The wide range of specific web accessibility outcomes
 sought in this document can be accomplished through the application of appropriate post-source methods
 without recourse to additional <abbr title="user interface">UI</abbr> elements such as pop-up control panels or
@@ -135,7 +135,7 @@ without recourse to additional <abbr title="user interface">UI</abbr> elements s
 						</ul>
 
 						<aside class="Note" title="Note">
-							<div role="complimentary">
+							<div>
 For further discussion of our source-authorized and user-authorized client-server model see <a href="#Appendix-B">Appendix B: Who&apos;s Responsible for What?</a>
 							</div>
 	</aside>
@@ -189,9 +189,10 @@ experience would otherwise fail.
 We cross-reference the internationally accepted <a href="https://www.w3.org/WAI/standards-guidelines/wcag/"><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Success Criteria</a> throughout our publication because they remain valid whether applied in source or post-source.
 </p>
 
-<aside class="wcag2x"
-	<h4>WCAG Reference</h4>
+<aside class="wcag2x" Title="WCAG Reference Note">
+	<div>
 			Cross references to the WCAG specification (and occasionally to related WCAG resources) are provided throughout this document in notes marked <q>WCAG Reference</q> aligning our document&apos;s post-source <q>capabilities</q> with <a href="https://www.w3.org/TR/wcag-3.0-explainer/#guidelines">WCAG&apos;s technology-agnostic, user-centered outcomes guidelines</a>.
+	</div>
 																							        </aside>
 																								 
 	</section>
@@ -300,12 +301,13 @@ Human oversight remains critical to achieve comprehensive accessibility in most 
 
 	<p>Alternative text is a fundamental and well established accessibility accommodation (dating to the era of HTML 3.2). No good reason for missing alt text remains, yet far too many sites are missing alt text today.</p>
 
-	<aside class="wcag2x">
-		<h5>WCAG Reference: Alternative Text</h5>
+	<aside class="wcag2x" Title="WCAG Reference Note: Alternative Text">
+		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#non-text-content">SC 1.1.1: Non-text Content</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#images-of-text">SC 1.4.5: Images of Text</a></li>
 </ul>
+		</div>
 	</aside>
 <dl>
 <dt>Source</dt>
@@ -341,11 +343,12 @@ Post-source methods can engage the services of experts in proper alternative tex
 on hover to display additional information about an element on the page for users who benefit from enhanced
 contextualization or clarification.</p>
 
-<aside class="wcag2x">
-	<h5>WCAG Reference: Tooltips</h5>
+<aside class="wcag2x" title="WCAG Reference Note: Tooltips">
+	<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus">SC 1.4.13: Content on Hover or Focus</a></li>
 </ul>
+</div>
 	</aside>
 <dl>
 <dt>Source</dt>
@@ -374,12 +377,13 @@ contextualization or clarification.</p>
 <p>This capability correctly specifies the primary language of a
 web page when the declaration is incorrect or missing entirely.</p>
 
-<aside class="wcag2x">
-	<h5>WCAG Reference: Indicate Language</h5>
+<aside class="wcag2x" title="WCAG Reference: Indicate Language">
+	<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#language-of-page">SC 3.1.1: Language of Page</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#language-of-parts">SC 3.1.2: Language of Parts</a></li>
 </ul>
+	</div>
 	</aside>
 <dl>
 	<dt>Source</dt>
@@ -408,12 +412,13 @@ web page when the declaration is incorrect or missing entirely.</p>
 <p>This capability provides for meaningful titles for pages and/or
 iFrames within pages and provides screen reader users a more efficient and meaningful browsing experience.</p>
 
-<aside class="wcag2x">
-	<h5>WCAG Reference: Provide Titles</h5>
+<aside class="wcag2x"> title="WCAG Reference: Provide Titles">
+	<div>
 <ul>
 	<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html">SC 2.4.2: Understanding Page Titles</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#name-role-value">SC 4.1.2: Name, Role, Value</a></li>
 </ul>
+	</div>
 	</aside>
 <dl>
 <dt>Source</dt>
@@ -454,13 +459,14 @@ ensure relevance.
 	<p>This capability provides <a href="https://www.w3.org/TR/media-accessibility-reqs/#captioning">caption text</a> displaying along with
 	the video and synchronized with it. HTML also supports an <a href="https://www.w3.org/TR/media-accessibility-reqs/#enhanced-captions-subtitles">Enhanced Caption</a> mechanism.</p>
 	
-	<aside class="wcag2x">
-		<h5>WCAG Reference: Video Captions</h5>
+	<aside class="wcag2x"> title="WCAG Reference: Video Captions">
+		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#captions-prerecorded">SC 1.2.2: Captions (Prerecorded)</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#captions-live">SC 1.2.4: Captions (Live)</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#media-alternative-prerecorded">SC 1.2.8: Media Alternative (Prerecorded)</a></li>
 </ul>
+		</div>
 	</aside>
 <dl>
 <dt>Source</dt>
@@ -488,13 +494,14 @@ ensure relevance.
 
 	<p>This capability provides <a href="https://www.w3.org/TR/media-accessibility-reqs/#described-video">descriptive narration of key visual elements</a> designed to make visual media accessible to people who are blind or visually impaired. Most common descriptions are provided as an additional audio track timed not to interfere with spoken dialog. Creating descriptions that both enhance the audio experience and do not obscure dialog requires skill. Both a <a href="https://www.w3.org/TR/media-accessibility-reqs/#text-video-description">text based mechanism</a> and an <a href="https://www.w3.org/TR/media-accessibility-reqs/#extended-video-descriptions">extended mechanism</a> are supported by HTML specifically to make it easier for third parties to provide helpful descriptions post-source.</p>
 
-	<aside class="wcag2x">
-		<h5>WCAG Reference: Descriptions of Video</h5>
+	<aside class="wcag2x"> title="WCAG Reference: Descriptions of Video">
+		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded">SC 1.2.3: Audio Description or Media Alternative (Prerecorded)</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#audio-description-prerecorded">SC 1.2.5: Audio Description (Prerecorded)</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#extended-audio-description-prerecorded">SC 1.2.7: Extended Audio Description (Prerecorded)</a></li>
 	<li><a href="https://www.w3.org/TR/WCAG22/#media-alternative-prerecorded">SC 1.2.8: Media Alternative (Prerecorded)</a></li>
+		</div>
 </ul>
 	</aside>
 <dl>
@@ -526,11 +533,12 @@ There is no intrinsic benefit to providing descriptions post-source except in th
 otherwise marking up PDF documents in order to make them more accessible.
 </p>
 
-<aside class="wcag2x">
-	<h4>WCAG Reference: PDF</h4>
+<aside class="wcag2x"> title="WCAG Reference: PDF">
+	<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG20-TECHS/pdf">PDF Techniques for WCAG 2.0</a> (A W3C Working Group Note)</li>
 </ul>
+	</div>
 	</aside>
 <dl>
 <dt>Source</dt>
