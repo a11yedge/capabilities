@@ -154,15 +154,10 @@ For further discussion of our source-authorized and user-authorized client-serve
 	<section id="edgedef">
 		<h3>Post-Source &amp; Edge</h3>
 
-		<p>In this document the term <q>edge technology</q> refers to technologies closer to the user. Often, it&apos;s the technology directly in the user&apos;s hands. Or, it may reside on a content delivery network (CDN) server--in the <q>Source Authorized</q> domain (as diagrammed above)&mdash;where content is actively being personalized for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> especially to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is accomplished.
+		<p>In this document the term <q>edge technology</q> refers to technologies closer to the user. 
+			Often, it&apos;s the technology directly in the user&apos;s hands. Or, it may reside on a content delivery network (CDN) server--in the <q>Source Authorized</q> domain (as diagrammed above)&mdash;where content is actively being personalized for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> especially to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is accomplished.
 		</p>
-		<p class="Jason">
-			Edge adaptations benefit most when they honor the native web platform contract: HTML for semantics, CSS for presentation, JavaScript for behavior. 
-			When presentation is delivered through CSS, adaptations inherit user‑agent and <abbr title="Operating System">OS</abbr> accessibility features (e.g., prefers-reduced-motion, dark mode) without extra code, and they degrade gracefully. 
-			By contrast, when presentation is painted or simulated through non‑CSS means (e.g., script‑drawn canvases, text as image‑only text, bespoke rendering), <q>you break it—you own it</q>. 
-			The implementer now assumes full responsibility to reproduce accessibility behaviors (semantics exposure, focus visibility, contrast responsiveness, motion preferences, zoom/reflow, AT announcements) that the platform would otherwise provide for free. 
-			Our posture throughout this report is therefore: change presentation with CSS by default; use other techniques only when necessary and with explicit accessibility safeguards.
-		</p>
+
 	</section>
 
 	<section id="overlays">
@@ -313,7 +308,7 @@ Human oversight remains critical to achieve comprehensive accessibility in most 
 <section id="contentmanage">
 	<h2>Content&mdash;Usually HTML</h2>
 
-	<p class="Jason">
+	<p>
 	This section covers post‑source capabilities with respect to HTML‑encoded content&mdash;text, images, and rich media. Dynamic patterns that rely more heavily on scripted behavior, such as form interaction, are treated in the Functionality section.
 		</p>
 
@@ -616,11 +611,20 @@ full remediation remains a challenge, as automation struggles with nuanced tasks
 <section id="present">
 <h2>Presentation&mdash;Usually CSS</h2>
 
-<p class="Jason">
+<p>
 This section addresses post‑source capabilities that benefit from CSS&mdash;allowing content to be re‑styled so that each user can perceive and understand information in a way that meets their needs. These embrace the <q>perceiveable</q> WCAG principle as they impact users with low vision. Whatever visual design a content provider may have published, user‑driven adaptations take precedence for accessibility. In short: the author proposes, but the user disposes.
 	</p>
-<p  class="Jason">We have a strong preference for CSS in presentation rendering because CSS is most fungible. Also, accessibility is natively addressed by W3C's CSS specifications. It enables changes without altering underlying semantics or requiring script‑based behavior.
+<p>We have a strong preference for CSS in presentation rendering because CSS is most fungible. Also, accessibility is natively addressed by W3C's CSS specifications. It enables changes without altering underlying semantics or requiring script‑based behavior.
 	</p>
+
+<aside class="Note" title="Note" aria-label="Note">
+	<span>Note</span>
+	<div>
+	<p>
+	When presentation is delivered through CSS, adaptations inherit user‑agent and operating‑system accessibility features&mdash;such as high‑contrast settings&mdash;and they degrade gracefully. By contrast, painting or simulating presentation through non‑CSS means, such as hardcoded dark mode, means <em>you break it—you own it</em>: the implementer assumes full responsibility to replicate accessibility behaviors the platform would otherwise provide for free. Our posture throughout this report is therefore clear: change presentation with CSS by default; use other techniques only when necessary and with explicit accessibility safeguards.
+	</p>
+	</div>
+</aside>
 
 <section id="curfoc">
 	<h3>Manage Cursor &amp; Focus</h3>
@@ -1410,7 +1414,7 @@ Text transparency often serves design aesthetics. However, it can leave text unr
 <section id="interact">
 <h2>Functionality&mdash;Usually JavaScript</h2>
 
-<p class="Jason">
+<p>
 This section addresses post‑source capabilities that align with the WCAG principle of Operable. In practice, most are achieved using JavaScript, as it governs dynamic behaviors, event handling, and state changes. CSS remains important as it styles such changes (e.g., focus, hover) to provide visual cues.
 </p>
 
@@ -2431,7 +2435,7 @@ In no significant way&mdash;While automation can revert settings to defaults, en
 <section id="manage">
 <h2>Management</h2>
 
-<p class="Jason">
+<p>
 While earlier sections focus on individual capabilities&mdash;content, presentation, and functionality&mdash;management strategies consider the role of post-source in how organizations coordinate, monitor, and sustain accessibility across diverse platforms and delivery pipelines.
 </p>
 
@@ -2701,7 +2705,7 @@ In some cases
 <section id="aspire">
 <h2>Aspirational</h2>
 
-<p class="Jason">
+<p>
 This section explores forward‑looking post-source capabilities&mdash;ideas that either anticipate advances in emerging W3C specifications, or innovations in accessibility technologies and adaptive delivery models. These concepts are exploratory and are not necessarily mutually compatible or mutually exclusive. 
 </p>
 
