@@ -614,13 +614,11 @@ full remediation remains a challenge, as automation struggles with nuanced tasks
 <p>
 This section addresses post‑source capabilities that benefit from CSS&mdash;allowing content to be re‑styled so that each user can perceive and understand information in a way that meets their needs. These embrace the <q>perceiveable</q> WCAG principle as they impact users with low vision. Whatever visual design a content provider may have published, user‑driven adaptations take precedence for accessibility. In short: the author proposes, but the user disposes.
 	</p>
-<p>We have a strong preference for CSS in presentation rendering because CSS is most fungible. Also, accessibility is natively addressed by W3C's CSS specifications. It enables changes without altering underlying semantics or requiring script‑based behavior.
-	</p>
 
 <aside class="Note" title="Note" aria-label="Note">
 	<span>Note</span>
 	<div>
-	<p>
+<p>We have a strong preference for CSS in presentation rendering because CSS is most fungible. Also, accessibility is natively addressed by W3C's CSS specifications. It enables changes without altering underlying semantics or requiring script‑based behavior.
 	When presentation is delivered through CSS, adaptations inherit user‑agent and operating‑system accessibility features&mdash;such as high‑contrast settings&mdash;and they degrade gracefully. By contrast, painting or simulating presentation through non‑CSS means, such as hardcoded dark mode, means <em>you break it—you own it</em>: the implementer assumes full responsibility to replicate accessibility behaviors the platform would otherwise provide for free. Our posture throughout this report is therefore clear: change presentation with CSS by default; use other techniques only when necessary and with explicit accessibility safeguards.
 	</p>
 	</div>
