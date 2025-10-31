@@ -2591,22 +2591,25 @@ Does not apply
 <section id="contentmod">
 <h4>Support Content Moderation</h4>
 
-<p>This capability helps assure that site content meets user needs as well as the publisher&apos;s content policies. Typical policies will include everyday phrases with
-racist origins, gendered or exclusive expressions, and terms that are deemed
-to exclude audiences.</p>
+<p>
+	Content moderation software, policies, and workflow enforcement are used to protect brand integrity, ensure legal and regulatory compliance, and maintain a safe, trustworthy user experience at scale. Content moderation poses unique challenges when content on a web page is not authored in-source. 
+</p>
 
 <dl>
 	<dt>Source</dt>
 		<dd>
+			Source systems typically have limited visibility into dynamically injected or externally sourced content. These elements are delivered outside the source’s control, making it difficult to evaluate or guarantee accessibility prior to display.
 		</dd>
 	<dt>Trade-Offs</dt>
 		<dd>
+			Source-based moderation can only address content it directly manages. Post-source processing, however, can evaluate all injected content consistently.
 		</dd>
 	<dt>Benefit</dt>
 		<dd>
+			Post-source moderation ensures that content policies are upheld across all displayed content. While earlier integration is ideal, enabling this capability post-source still provides significant value compared to no support at all.
 		</dd>
 	<dt>Automatability</dt>
-		<dd>In some cases
+		<dd>In many cases&mdash;Detecting a policy violation is automatable in many cases; remediating it is possible in some cases.
 		</dd>
 </dl>
  
