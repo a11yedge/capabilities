@@ -336,7 +336,8 @@ Human oversight remains critical to achieve comprehensive accessibility in most 
 <dd>
 WCAG has always expected sites would supply alternative text for all images&mdash;yet missing alt text is still pervasive in web content.
 Images and other graphical elements within many modern web pages are set as editable elements that can be added to templates and web pages by different team members, such as Marketing, after the core website structures have
-been coded. This often leads to situations where images are added by non-technical people who are not required to enter alternative text or are unfamiliar with authoring appropriate alternative text. So, while there&apos;s every reason to expect alternative text in source, it remains missing far too often.
+been coded. This often leads to situations where images are added by non-technical people who are not required to enter alternative text or are unfamiliar with authoring appropriate alternative text. 
+So, while there&apos;s every reason to expect alternative text in source, it remains missing far too often.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
@@ -3221,20 +3222,28 @@ s own hardware and software may render it in ways the Content Provider never ima
 	<section id="3rd-party">
 		<h4>My Site, Their Service</h4>
 
-		  <p>Third-party services not hosted by the Content Provider, providing services in support of the Content Provider&apos;s value proposition. Typically invoked by JavaScript or the Content Delivery Network, they meet the planned needs of end users. </p> 
+		  <p>The typical website today is a platform for interaction—a space where an organization meets its customers. End users expect a broad range of services that are often outside the core competency of the site owner. Well-executed “build or buy” decisions can mean the difference between success or failure for a business. Just as most companies do not construct the buildings they occupy or the elevators within them, they do not program the intricate digital services required on their websites, such as GDPR cookie handling, chatbots, or shopping carts. Procurement can request accessibility conformance statements from service providers as a gating decision.
+		  </p> 
 			<dl>
 				<dt>Source</dt>
-				<dd>They typical website today is a platform for interaction, a space where an organization meets its customers. End users expect a broad range of services that are likely outside the core competency of the site owner. A company cannot become jack-of-all-trades and master of none. Well executed <q>build or buy</q> decisions can mean the difference between success of failure for a business. Just as most companies don&apos;t build the buildings they inhabit or the elevators that operate within, they do not program the intricate digital services required on their websites such as <abbr title="General Data Protection Regulation">GDPR</abbr> cookie handling, chatbots, or shopping carts. Procurement can request accessibility conformance statements from services as a gating decision point to include them on the page or not. </dd>
+				<dd>
+					Source content does not implement these services directly. Instead, it integrates third-party components, making accessibility dependent on vendor compliance and proper accessibility practices.
+				</dd>
 
 				<dt>Trade-Offs</dt>
-				<dd>Companies relinquish some control when they host functions via third parties. But they cannot relinquish  responsibility for the accessibility of the composite user experience. </dd>
+				<dd>
+					Most companies will not seek to become "<q>jack-of-all-trades and master of none.</q> 
+					Yet any third-party code injected via JavaScript remains out of reach of the content provider's source control.
+				</dd>
 
 				<dt>Benefit</dt>
-				<dd>Given the bewildering range of possible experiences with all these third-party plugins operating, the edge becomes the only place where a proper validation can occur.</dd>
+				<dd>
+					Because third-party plugins introduce significant variability in user experience, edge-based validation is essential to maintain consistent accessibility across all components.
+				</dd>
 
 <dt>Automatability</dt>
 <dd>
-Does not apply
+In some cases
 </dd>
 			</dl>
 	</section>
