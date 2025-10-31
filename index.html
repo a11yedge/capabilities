@@ -7,7 +7,7 @@
 </title>
 
 <style>
-.wcag2x {
+.wcag2x
 	  font-weight: bold;
 	      font-size: 110%;
 	                           color: DodgerBlue;
@@ -105,7 +105,8 @@ requiring changes to the original source.
 </ol>
 
 		<aside class="Note" title="Note" aria-label="Note">
-									<div>
+			<span>Note</span>
+<div>
 	<p>
 The wide range of specific web accessibility outcomes
 sought in this document can be accomplished through the application of appropriate post-source methods
@@ -140,11 +141,12 @@ without recourse to additional <abbr title="user interface">UI</abbr> elements s
 						</ul>
 
 		<aside class="Note" title="Note" aria-label="Note">
-									<div>
+			<span>Note</span>
+			<div>
 							<p>
 For further discussion of our source-authorized and user-authorized client-server model see <a href="#Appendix-B">Appendix B: Who&apos;s Responsible for What?</a>
 							</p>
-									</div>
+</div>
 	</aside>
 
 	     </section>
@@ -152,7 +154,10 @@ For further discussion of our source-authorized and user-authorized client-serve
 	<section id="edgedef">
 		<h3>Post-Source &amp; Edge</h3>
 
-		<p>In this document the term <q>edge technology</q> refers to technologies closer to the user. Often, it&apos;s the technology directly in the user&apos;s hands. Or, it may reside on a content delivery network (CDN) server--in the <q>Source Authorized</q> domain (as diagrammed above)&mdash;where content is actively being personalized for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> especially to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is accomplished.</p>
+		<p>In this document the term <q>edge technology</q> refers to technologies closer to the user. 
+			Often, it&apos;s the technology directly in the user&apos;s hands. Or, it may reside on a content delivery network (CDN) server--in the <q>Source Authorized</q> domain (as diagrammed above)&mdash;where content is actively being personalized for the user. The terms <q>post-source</q> and <q>edge</q> are essentially synonymous. We use the term <q>edge</q> especially to emphasize that it is the user&apos;s experience that really matters when considering accessibility, rather than where in the data flow remediation is accomplished.
+		</p>
+
 	</section>
 
 	<section id="overlays">
@@ -198,12 +203,13 @@ We cross-reference the internationally accepted <a href="https://www.w3.org/WAI/
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="4">
+		<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
 		</div>
-									<div>
+<div>
 	<p>
 			Cross references to the WCAG specification (and occasionally to related WCAG resources) are provided throughout this document in notes marked <q>WCAG Reference</q> aligning our document&apos;s post-source <q>capabilities</q> with <a href="https://www.w3.org/TR/wcag-3.0-explainer/#guidelines">WCAG&apos;s technology-agnostic, user-centered outcomes guidelines</a>.
 	</p>
-									</div>
+</div>
 																							        </aside>
 																								 
 	</section>
@@ -238,9 +244,9 @@ as <a href="https://solidproject.org/">Solid</a>.
 			<p>Our analysis of various accessibility related capabilities is organized by the primary coding technology expected for that capability as follows:</p>
 
 			<ul>
-				<li>Content&mdash;Usually HTML</li>
-				<li>Presentation&mdash;Usually CSS</li>
-				<li>Functionality&mdash;Usually JavaScript</li>
+				<li>Content&mdash;Preferably HTML</li>
+				<li>Presentation&mdash;Preferably CSS</li>
+				<li>Functionality&mdash;Preferably JavaScript</li>
 			</ul>
 
 			<p>We next discuss capabilities related to <a href="#manage">Management</a> of accessible web service delivery that can be accomplished with edge and post-source technologies. This is followed by a discussion of <a href="#aspire">capabilities and edge services we consider aspirational</a> because they are yet to be realized in the web world.
@@ -278,7 +284,7 @@ as <a href="https://solidproject.org/">Solid</a>.
 	<li><em>In many cases</em> &mdash; Suggesting that automation can successfully remediate and verify outcomes across a broad set of websites.</li>
 	<li><em>In some cases</em> &mdash; Pointing to potential success in specific implementations where the variables, website structures and code are well-understood and controlled.</li>
 	<li><em>In no significant way</em> &mdash; Indicating scenarios where current automation strategies are unlikely to be effective without significant human oversight.</li>
-	<li><em>Does Not Apply</em> &mdash; Is sometimes indicated for completeness.</li>
+	<li><em>Does not apply</em> &mdash; Is sometimes indicated for completeness.</li>
 </ul>
 
 <p>We take a pragmatic approach to evaluating the potential for
@@ -300,9 +306,11 @@ Human oversight remains critical to achieve comprehensive accessibility in most 
 		</section>
 
 <section id="contentmanage">
-	<h2>Content&mdash;Usually HTML</h2>
+	<h2>Content&mdash;Preferably HTML</h2>
 
-	<p>This layer of delivered content consists of words, graphics, and rich media objects. In the main it is created using  HTML, both static and dynamic.</p>
+	<p>
+	This section covers post‑source capabilities with respect to HTML‑encoded content&mdash;text, images, and rich media. Dynamic patterns that rely more heavily on scripted behavior, such as form interaction, are treated in the  <a href="#interact">Functionality</a> section.
+		</p>
 
 <section id="contedit">
 	<h3>Content Details</h3>
@@ -314,7 +322,8 @@ Human oversight remains critical to achieve comprehensive accessibility in most 
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+			<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+	</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#non-text-content">SC 1.1.1: Non-text Content</a></li>
@@ -327,7 +336,8 @@ Human oversight remains critical to achieve comprehensive accessibility in most 
 <dd>
 WCAG has always expected sites would supply alternative text for all images&mdash;yet missing alt text is still pervasive in web content.
 Images and other graphical elements within many modern web pages are set as editable elements that can be added to templates and web pages by different team members, such as Marketing, after the core website structures have
-been coded. This often leads to situations where images are added by non-technical people who are not required to enter alternative text or are unfamiliar with authoring appropriate alternative text. So, while there&apos;s every reason to expect alternative text in source, it remains missing far too often.
+been coded. This often leads to situations where images are added by non-technical people who are not required to enter alternative text or are unfamiliar with authoring appropriate alternative text. 
+So, while there&apos;s every reason to expect alternative text in source, it remains missing far too often.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
@@ -358,7 +368,8 @@ contextualization or clarification.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 	<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#content-on-hover-or-focus">SC 1.4.13: Content on Hover or Focus</a></li>
@@ -394,7 +405,8 @@ web page when the declaration is incorrect or missing entirely.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 	<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#language-of-page">SC 3.1.1: Language of Page</a></li>
@@ -431,7 +443,8 @@ iFrames within pages and provides screen reader users a more efficient and meani
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 	<div>
 <ul>
 	<li><a href="https://www.w3.org/WAI/WCAG22/Understanding/page-titled.html">SC 2.4.2: Understanding Page Titles</a></li>
@@ -480,7 +493,8 @@ ensure relevance.
 	
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#captions-prerecorded">SC 1.2.2: Captions (Prerecorded)</a></li>
@@ -517,7 +531,8 @@ ensure relevance.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#audio-description-or-media-alternative-prerecorded">SC 1.2.3: Audio Description or Media Alternative (Prerecorded)</a></li>
@@ -558,10 +573,11 @@ otherwise marking up PDF documents in order to make them more accessible.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="4">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 	<div>
 <ul>
-	<li><a href="https://www.w3.org/TR/WCAG20-TECHS/pdf">PDF Techniques for WCAG 2.0</a> (A W3C Working Group Note)</li>
+	<li><a href="https://www.w3.org/TR/WCAG20-TECHS/pdf">PDF Techniques for WCAG 2.0</a> &mdash; a W3C Working Group Note</li>
 </ul>
 	</div>
 	</aside>
@@ -594,12 +610,20 @@ full remediation remains a challenge, as automation struggles with nuanced tasks
 </section>
 
 <section id="present">
-<h2>Presentation&mdash;Usually CSS</h2>
+<h2>Presentation&mdash;Preferably CSS</h2>
 
 <p>
+This section addresses post‑source capabilities that benefit from CSS&mdash;allowing content to be re‑styled so that each user can perceive and understand information in a way that meets their needs. These embrace the <q>perceiveable</q> WCAG principle as they impact users with low vision. Whatever visual design a content provider may have published, user‑driven adaptations take precedence for accessibility. In short: the author proposes, but the user disposes.
+	</p>
 
-The capabilities discussed in this section facilitate content re-rendering in order to render content with the specific presentational characteristics each user finds most accommodative. These accommodations allow users to <a href="https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility">perceive and understand</a> <a href="#manage">published content and services</a>. For persons with print disabilities, these capabilities starkly illustrate the superior accessibility of web content over printed media, because printed media cannot be similarly accommodating. Whatever <q>look and feel</q> a content provider may have chosen and published, the user&apos;s adaptations must necessarily take precedence for reasons of accessibility. To put it in other words: <q>The author proposes, but the user disposes.</q></p>
-<p>We have a strong preference for CSS in presentation rendering because CSS is most fungible. Also, accessibility is natively addressed by W3C&apos;s CSS specifications. Achieving similar results through other technologies leaves the developer directly responsible for all aspects of accessibility in their code. Thus rendering the presentation layer through technologies other than CSS is highly likely to prove inaccessible and require remediation.</p>
+<aside class="Note" title="Note" aria-label="Note">
+	<span>Note</span>
+	<div>
+<p>We have a strong preference for CSS in presentation rendering because CSS is most fungible. Also, accessibility is natively addressed by W3C's CSS specifications. It enables changes without altering underlying semantics or requiring script‑based behavior.
+	When presentation is delivered through CSS, adaptations inherit user‑agent and operating‑system accessibility features&mdash;such as high‑contrast settings&mdash;and they degrade gracefully. By contrast, painting or simulating presentation through non‑CSS means, such as hardcoded dark mode, means <em>you break it—you own it</em>: the implementer assumes full responsibility to replicate accessibility behaviors the platform would otherwise provide for free. Our posture throughout this report is therefore clear: change presentation with CSS by default; use other techniques only when necessary and with explicit accessibility safeguards.
+	</p>
+	</div>
+</aside>
 
 <section id="curfoc">
 	<h3>Manage Cursor &amp; Focus</h3>
@@ -650,7 +674,8 @@ to help users more easily identify the hyperlinks on a page. </p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#use-of-color">SC 1.4.1: Use of Color</a></li>
@@ -691,7 +716,8 @@ evaluation. Edge cases, such as images serving as links without clear indicators
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#keyboard-accessible">SC 2.1: Keyboard Accessible</a></li>
@@ -727,7 +753,8 @@ these changes without impacting user experience or other functionalities is not 
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#focus-order">SC 2.4.3: Focus Order</a></li>
@@ -793,9 +820,9 @@ In many cases&mdash;Automated solutions can generate visual reading guides, but 
 	<p>Some users require different fonts (or different font characteristics) in order to comprehend and interact effectively with web content. This section groups those capabilities.</p>
 
 <section id="a11yfonts">
-<h4>Provide Accessible Fonts</h4>
+<h4>Provide Font Choices</h4>
 
-<p>Not all users are able to read any font a web content publisher may choose. This capability allows the publisher&apos;s content to be reformatted in a user-chosen font the user is comfortable using.</p>
+<p>Not all users are able to read any font a web content publisher may choose. This capability allows the publisher&apos;s content to be rendered in a user-chosen font the user is comfortable using.</p>
 
 <dl>
 <dt>Source</dt>
@@ -824,8 +851,9 @@ In many cases&mdash;Provided a valid, user-selected font choice is known.
 <section id="dyslexiafont">
 	<h4>Provide <q>Dyslexia Friendly</q> Fonts</h4>
 
-<p>Fundamentally this capability differs from the <a href="a11yfonts">Fonts</a> section above only in that the proffered fonts are understood to be particularly usable by many people living with
-dyslexia. Typically, these fonts provide more distinctive symbols intended to  avoid user confusion through font design approaches such as increased baselines, thinner tops, and a larger x-height. Frequently they are proprietary fonts requiring licensing arrangements.</p>
+<p>Fundamentally, this capability is a special case of the above <a href="a11yfonts">Fonts</a>, with the proffered fonts believed to be usable by many people living with dyslexia.
+	 Typically, these fonts provide more distinctive symbols intended to  avoid user confusion through font design approaches such as increased baselines, thinner tops, and a larger x-height. 
+	Frequently they are proprietary fonts requiring licensing arrangements.</p>
 
 <dl>
 <dt>Source</dt>
@@ -898,7 +926,8 @@ adjustments.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#resize-text">SC 1.4.4: Resize Text</a></li>
@@ -939,7 +968,8 @@ In many cases&mdash;Provided a valid, user-selected font size is known.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#text-spacing">SC 1.4.10: Text Spacing</a></li>
@@ -973,7 +1003,8 @@ In many cases&mdash;Provided a valid, user-selected spacing is known.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#text-spacing">SC 1.4.12: Text Spacing</a></li>
@@ -1008,12 +1039,13 @@ In many cases&mdash;Provided a valid, user-selected line height spacing is known
 <h4>Drop Cap Implementation
 </h4>
 
-<p>The drop cap has been popular in publications for centuries, predating the printing press. Their beauty can be compelling. However, their elaborate graphical style will certainly pose an accessibility barrier requiring careful accommodation.</p>
-Several kinds of users are impacted, including screen reader users relying on braille or TTS, and low-vision users for whom the intrinsic graphical characteristics of a given drop cap may prove challenging.
+<p>The drop cap has been popular in publications for centuries, predating the printing press. Their beauty can be compelling. However, their elaborate graphical style tends to pose an accessibility barrier requiring careful accommodation. 
+	Several kinds of users are impacted, including screen reader users relying on braille or TTS, and low-vision users for whom the intrinsic graphical characteristics of a given drop cap may prove challenging.
+</p>	
 <dl>
 <dt>Source</dt>
 <dd>
-If the publication system supports it, drop cap accessibility can be accomplished in source.
+If the publication system supports it, drop cap accessibility can be accomplished in source, generally with complex CSS.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
@@ -1046,7 +1078,8 @@ other moving elements on a web page from playing entirely. Others may wish to se
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#pause-stop-hide">SC 2.2.2: Pause, Stop, Hide</a></li>
@@ -1077,9 +1110,8 @@ intervention to ensure they do not disrupt user experience.
 </dl>
  
 		<aside class="Note" title="Note" aria-label="Note">
-	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
-									<div>
+			<span>Note</span>
+		<div>
 	<p>See also this W3C Accessible Platform Architectures (APA) Working Group issue: <a href="https://github.com/w3c/a11y-tracking/issues/192">CSS View Transitions Issue</a>
 		</p>
 									</div>
@@ -1092,7 +1124,8 @@ intervention to ensure they do not disrupt user experience.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/WAI/WCAG22/quickref/#audio-control">SC 1.4.2: Audio Control</a></li>
@@ -1139,7 +1172,8 @@ intensity.</p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">SC 1.4.3: Contrast Minimum</a></li>
@@ -1182,7 +1216,8 @@ consistency with visual identity.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">SC 1.4.3: Contrast Minimum</a></li>
@@ -1233,7 +1268,8 @@ No good reason for inaccessible lists in web content remains, yet far too many s
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">SC 1.3.1: Info and Relationships</a></li>
@@ -1270,7 +1306,8 @@ No good reason for annotating content inaccessibly remains, yet far too many sit
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#use-of-color">SC 1.4.1: Use of Color</a></li>
@@ -1306,7 +1343,8 @@ In some cases&mdash;While framing can be automatically applied, ensuring that th
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#use-of-color">SC 1.4.1: Use of Color</a></li>
@@ -1343,7 +1381,8 @@ In some cases&mdash;Shadows and outlines can be applied autonomously, but verify
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#contrast-minimum">SC 1.4.3: Contrast Minimum</a></li>
@@ -1374,11 +1413,10 @@ Text transparency often serves design aesthetics. However, it can leave text unr
 </section>
 
 <section id="interact">
-<h2>Functionality&mdash;Usually JavaScript</h2>
+<h2>Functionality&mdash;Preferably JavaScript</h2>
 
 <p>
-
-The capabilities discussed in this section are those content publishers must provide users in order to facilitate accessible user interaction with <a href="manage">published content and web services</a>. These are described by the fundamental WCAG principle: <a href="https://www.w3.org/WAI/WCAG21/Understanding/intro#understanding-the-four-principles-of-accessibility"><q>operable</q></a>. In the main, they are achieved using JavaScript.
+This section addresses post‑source capabilities that align with the WCAG principle of Operable. In practice, most are achieved using JavaScript, as it governs dynamic behaviors, event handling, and state changes. CSS remains important as it styles such changes (e.g., focus, hover) to provide visual cues.
 </p>
 
 <section id="notify">
@@ -1392,7 +1430,8 @@ Designing effective notifications that are both timely and accessible often requ
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="4">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#status-messages">SC 4.1.3: Status Messages</a></li>
@@ -1431,7 +1470,8 @@ In some cases&mdash;Notifications can autonomously adjust timings and support va
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="4">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#accessible-authentication-minimum">SC 3.3.8: Accessible Authentication (Minimum)</a></li>
@@ -1475,7 +1515,8 @@ other site functionalities or user security is currently beyond the scope of aut
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#name-role-value">SC 4.1.2: Name, Role, Value</a></li>
@@ -1522,7 +1563,8 @@ other site functionalities or user security is currently beyond the scope of aut
  
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#name-role-value">SC 4.1.2: Name, Role, Value</a></li>
@@ -1572,7 +1614,8 @@ requirements.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">SC 1.3.1: Info and Relationships</a></li>
@@ -1614,7 +1657,8 @@ announcement. </p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#error-identification">SC 3.3.1: Error Identification</a></li>
@@ -1654,7 +1698,8 @@ requires human testing.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 <li><a href="https://www.w3.org/TR/WCAG22/#timing-adjustable">SC 2.2.1: Timing Adjustable</a></li>  
@@ -1691,7 +1736,8 @@ can fully engage with web content without disruption.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#error-identification">SC 3.3.1: Error Identification</a></li>
@@ -1738,7 +1784,8 @@ interaction. Accessible notifications ensure that all users, including those wit
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">SC 1.3.1: Info and Relationships</a></li>
@@ -1775,7 +1822,8 @@ validation to ensure correct interpretation.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#info-and-relationships">SC 1.3.1: Info and Relationships</a></li>
@@ -1816,7 +1864,8 @@ validation to ensure correct interpretation.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#name-role-value">SC 4.1.2: Name, Role, Value</a></li>
@@ -1859,7 +1908,8 @@ disrupt user experience or other page elements.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#name-role-value">SC 4.1.2: Name, Role, Value</a></li>
@@ -1902,7 +1952,8 @@ shortcuts. </p>
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#keyboard">SC 2.1.1: Keyboard</a></li>
@@ -1946,6 +1997,7 @@ It also provides feedback on the status of the element and on any status changes
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
+		<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
 		</div>
 		<div>
 <ul>
@@ -1991,7 +2043,8 @@ misinterpretation.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#link-purpose-in-context">SC 2.4.4: Link Purpose (In Context)</a></li>
@@ -2029,7 +2082,8 @@ This is particularly needed for link text such as <q>click here</q> or
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#link-purpose-in-context">SC 2.4.4: Link Purpose (In Context)</a></li>
@@ -2067,7 +2121,8 @@ still requires manual oversight.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#name-role-value">SC 4.1.2: Name, Role, Value</a></li>
@@ -2104,7 +2159,8 @@ user experience typically demands manual oversight.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+				<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#name-role-value">SC 4.1.2: Name, Role, Value</a></li>
@@ -2141,6 +2197,7 @@ oversight.
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
+		<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
 		</div>
 		<div>
 <ul>
@@ -2181,7 +2238,8 @@ In some cases&mdash;Voice command technologies require extensive training to han
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="5">
-		</div>
+		<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+	</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#unusual-words">SC 3.1.3: Unusual Words</a></li>
@@ -2277,7 +2335,8 @@ In many cases&mdash;Automated TTS can read content aloud, but proper pronunciati
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="4">
-		</div>
+		<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+	</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#pronunciation">SC 3.1.6: Pronunciation</a></li>
@@ -2312,7 +2371,8 @@ In some cases&mdash;Automated tools can infer number formats, but ensuring corre
 
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="4">
-		</div>
+		<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+	</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#abbreviations">SC 3.1.4: Abbreviations</a></li>
@@ -2377,9 +2437,7 @@ In no significant way&mdash;While automation can revert settings to defaults, en
 <h2>Management</h2>
 
 <p>
-The capabilities discussed in this section describe various post-source approaches 
-content providers might adopt to manage  accessibility in
-their digital content.
+While earlier sections focus on individual capabilities&mdash;content, presentation, and functionality&mdash;management strategies consider the role of post-source in how organizations coordinate, monitor, and sustain accessibility across diverse platforms and delivery pipelines.
 </p>
 
 <section id="humans">
@@ -2404,7 +2462,7 @@ their digital content.
 
 <dt>Automatability</dt>
 <dd>
-Does Not Apply
+Does not apply
 </dd>
 
 		</dl>
@@ -2450,7 +2508,7 @@ A dedicated internal accessibility team can monitor and remediate accessibility 
 
 <dt>Automatability</dt>
 <dd>
-Does Not Apply
+Does not apply
 </dd>
 
 		</dl>
@@ -2490,7 +2548,7 @@ Just as post-source authentication and post-source payment processing services h
 
 <dt>Automatability</dt>
 <dd>
-Does Not Apply
+Does not apply
 </dd>
 
 </dl>
@@ -2499,6 +2557,8 @@ Does Not Apply
 
 <section id="addenhance">
 	<h3>Additional Accessibility Enhancements</h3>
+	<p>This section outlines post-source management strategies that extend accessibility beyond core requirements, emphasizing usability, personalization, and transparency.
+	</p>
 
 <section id="profile-userint">
 <h4>Feature-Bundling Profiles</h4>
@@ -2523,7 +2583,7 @@ As previously noted, users will need the same (or very similar) feature support 
 
 <dt>Automatability</dt>
 <dd>
-Does Not Apply
+Does not apply
 </dd>
 
 </dl>
@@ -2532,23 +2592,26 @@ Does Not Apply
 <section id="contentmod">
 <h4>Support Content Moderation</h4>
 
-<p>This capability helps assure that site content meets user needs as well as the publisher&apos;s content policies. Typical policies will include everyday phrases with
-racist origins, gendered or exclusive expressions, and terms that are deemed
-to exclude audiences.</p>
+<p>
+	Content moderation software, policies, and workflow enforcement are used to protect brand integrity, ensure legal and regulatory compliance, and maintain a safe, trustworthy user experience at scale. Content moderation poses unique challenges when content on a web page is not authored in-source. 
+</p>
 
 <dl>
-<dt>Source</dt>
-<dd>
-</dd>
-<dt>Trade-Offs</dt>
-<dd>
-</dd>
-<dt>Benefit</dt>
-<dd>
-</dd>
-<dt>Automatability</dt>
-<dd>In some cases
-</dd>
+	<dt>Source</dt>
+		<dd>
+			Source systems typically have limited visibility into dynamically injected or externally sourced content. These elements are delivered outside the source’s control, making it difficult to evaluate or guarantee accessibility prior to display.
+		</dd>
+	<dt>Trade-Offs</dt>
+		<dd>
+			Source-based moderation can only address content it directly manages. Post-source processing, however, can evaluate all injected content consistently.
+		</dd>
+	<dt>Benefit</dt>
+		<dd>
+			Post-source moderation ensures that content policies are upheld across all displayed content. While earlier integration is ideal, enabling this capability post-source still provides significant value compared to no support at all.
+		</dd>
+	<dt>Automatability</dt>
+		<dd>In many cases&mdash;Detecting a policy violation is automatable in many cases; remediating it is possible in some cases.
+		</dd>
 </dl>
  
 </section>
@@ -2556,17 +2619,17 @@ to exclude audiences.</p>
 <section id="a11ystmntgeneration">
 <h4>Support Accessibility Statement</h4>
 
-<p>Providing an easily located <a href="https://www.w3.org/WAI/planning/statements/generator/">Accessibility Statement</a> has become a widely accepted best practice in the industry. While there is no consensus on what all should be included, it is generally agreed that the formal Statement should define the site&apos;s commitment to accessibility of its content and services. Additional content, such as accessibility specific contact data, and accessibility specific help resources are also frequently included.
+<p>Providing an easily located <a href="https://www.w3.org/WAI/planning/statements/generator/">accessibility statement</a> has become a widely accepted best practice in the industry. While there is no consensus on what all should be included, it is generally agreed that the formal Statement should define the site&apos;s commitment to accessibility of its content and services. Additional content, such as accessibility specific contact data, and accessibility specific help resources are also frequently included.
 </p>
 
 <dl>
 <dt>Source</dt>
 <dd>
-	It is currently a best practice to link to the Accessibility Statement (and related resources) from the site&apos;s footer.
+	It is currently a best practice to link to the accessibility statement (and related resources) from the site&apos;s footer.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	An Accessibility Statement introduced by post-source technologies isn&apos;t intrinsically more valuable than a statement produced in-source, unless it also includes locale or other context-aware information unavailable in-source.
+	An accessibility statement introduced by post-source technologies isn&apos;t intrinsically more valuable than a statement produced in-source, unless it also includes locale or other context-aware information unavailable in-source.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -2623,7 +2686,7 @@ end-users the ability to report barriers they&apos;ve experienced on a site. Acc
 <dl>
 <dt>Source</dt>
 <dd>
-	Clearly, such a form-based reporting mechanism can be in source content. It is another feature that would likely be best provided along with the <a href="#a11ystmntgeneration">Accessibility Statement</a> and related resources.
+	Clearly, such a form-based reporting mechanism can be in source content. It is another feature that would likely be best provided along with the <a href="#a11ystmntgeneration">accessibility statement</a> and related resources.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
@@ -2649,36 +2712,33 @@ In some cases
 <h2>Aspirational</h2>
 
 <p>
-
-The capabilities and edge services discussed in this section are aspirational because they describe development directions, we believe edge technologies will take in the coming decade. They will rely on various specifications from the W3C around authentication, security, and privacy in addition to developments in W3C accessibility technologies.
-</p>
-<p>
-It is important to understand the capabilities and services described here are not necessarily mutually compatible nor mutually exclusive.
+This section explores forward‑looking post-source capabilities&mdash;ideas that either anticipate advances in emerging W3C specifications, or innovations in accessibility technologies and adaptive delivery models. These concepts are exploratory and are not necessarily mutually compatible or mutually exclusive. 
 </p>
 
 <section id="intent">
 	<h3>Intent Driven Design</h3>
 	<p>
-	<abbr>AI</abbr> assisted user interfaces leveraging task specific APIs can be deployed to more effectively service user groups with common interfacing constraints.
-		<p><a href="https://innosearch.ai">Innosearch.ai</a> is a recently launched example providing ecommerce and flight planning and ticketing services primarily for persons who are blind or low vision. Innosearch leverages 
-		the <a href="https://www.expedia.com/static/mobile/APIConsole/flight.html">Expedia flight API</a> to provide flight planning and ticketing to its users. The ecommerce service is available over the web and by voice telephone. Interactive AI is integrated to allow users the ability to ask questions and obtain detailed information on products.</p>
+Modern web interfaces traditionally rely on the browser user agent, which attempts to expose all possible actions and engagement options for human review and interaction. This “all-inclusive” approach seeks to accommodate every user scenario within a single interface, and can result in complexity, inefficiency and confusion for many end users.
+Intent-driven design represents a fundamentally different paradigm. Rather than presenting a universal interface, it focuses on performing one task exceptionally well for a specific user group. This approach leverages agentic AI and task-specific APIs to deliver streamlined experiences tailored to common needs within that group. It is not merely an alternative&mdash;it is orthogonal to the traditional model and, in many respects, antithetical to it. Where the browser user agent aggregates possibilities, an AI agent executes intent directly.
+Emerging examples illustrate this shift. <a href="https://innosearch.ai">Innosearch.ai</a>, for instance (at the time of writing), provides e-commerce and flight booking services optimized for users who are blind or have low vision. Innosearch enables users to plan and purchase travel through web or voice channels, while also offering detailed product information via interactive queries.
+	</p>
 
 <dl>
 <dt>Source</dt>
 <dd>
-	By definition intent driven user interface design constitutes the antithesis of today&apos;s design approach. Intent driven design does not seek to meet the needs of all users through a single web site. Rather, it meets the common needs of certain user groups starkly and efficiently, relying on other instantiations, likely leveraging the same set of APIs, to meet the rather different interface needs of other user groups.
+	An intent-driven interface is, by definition, not intended for all users. However, regulatory and societal expectations are likely to require solutions for every user.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-Rather than a single branded interface users will utilize one of several optional interfaces of their choosing because the one they choose is tailored expressly to their particular needs. Most tellingly these services are not also seeking to serve the particular needs of a different target group whose requirements may complicate or confuse them.
+Currently, intent-driven design is implemented only at the edge. Its implications for source-based solutions remain unclear.
 </dd>
 <dt>Benefit</dt>
 <dd>
-Intent driven design may well provide the most effective accessibility support yet in web services by serving just one group of users with common interface needs rather than by attempting to serve all comers in a single site.
+Intent-driven design has already demonstrated success in meeting specific user needs when deployed post-source. For example, recent implementations have enhanced functionality in screen readers.
 </dd>
 <dt>Automatability</dt>
 <dd>
-	In many cases
+	In many cases&mdash;Automation is integral to intent-driven design. AI agents are likely to dynamically orchestrate API calls, validate accessibility, and adapt workflows without manual intervention.
 </dd>
 </dl>
  
@@ -2695,7 +2755,7 @@ Intent driven design may well provide the most effective accessibility support y
 
 <dl>
 <dt>Source</dt>
-<dd>While technically feasible in source, this is not being done by content source today, and we are not aware of any proposals to add such functionality in content source&mdash;likely for a multiplicity of reasons.
+<dd>While technically feasible in source, this is not being done by content source today, and we are not aware of any proposals to add such functionality in content source.
 	People, regardless of ability or disability, may often want to withhold this information from a source provider, and would certainly not want it to propagate to 
 	source providers outside of their knowledge or control.</dd>
 
@@ -2714,7 +2774,7 @@ Intent driven design may well provide the most effective accessibility support y
 
 <dt>Automatability</dt>
 <dd>
-Does Not Apply
+Does not apply
 </dd>
 
 </dl>
@@ -2731,7 +2791,7 @@ Does Not Apply
 <dd>Users tend to require the same types of accommodations across all sites and all content sources. Therefore, facilitating this capability in-source is likely the least useful place to locate it, because that would require the user to select the same enhancements time and again across the succession of sites visited and likely with different menu organization site to site. </dd>
 
 <dt>Trade-Offs</dt>
-<dd>Many of the capabilities made available by user-triggered opt-ins are often also found in multiple places at the edge. For example, contrast adjustment is generally found  in operating system display settings, in browser and app user-agents (e.g. dark mode/light mode), in browser extensions, and in JavaScript-based overlays. Such redundancy can easily lead to confusion. This confusion may be further exacerbated because certain settings the user finds helpful may be available only in one of these locations, and not in all of them. Furthermore, users are frequently not particularly knowledgeable about their operating system settings menus, especially as these tend to move with each OS revision (to take one example). This can make it difficult to locate these capabilities, especially when we recognize that once satisfactorily configured they are generally not reset&mdash;meaning that the user doesn&apos;t need to revisit that menu location and soon forgets where it is. On the other hand, locating the accommodation consistently proximate to the user offers the highest likelihood of maximal benefit provided  the accommodation  can be easily identified and invoked. This also provides the best opportunity for easing the burden of invoking the same accommodation across a user&apos;s multiple devices.</dd>
+<dd>Many of the capabilities made available by user-triggered opt-ins are often also found in multiple places at the edge. For example, contrast adjustment is generally found  in operating system display settings, in browser and app user agents (e.g. dark mode/light mode), in browser extensions, and in JavaScript-based overlays. Such redundancy can easily lead to confusion. This confusion may be further exacerbated because certain settings the user finds helpful may be available only in one of these locations, and not in all of them. Furthermore, users are frequently not particularly knowledgeable about their operating system settings menus, especially as these tend to move with each OS revision (to take one example). This can make it difficult to locate these capabilities, especially when we recognize that once satisfactorily configured they are generally not reset&mdash;meaning that the user doesn&apos;t need to revisit that menu location and soon forgets where it is. On the other hand, locating the accommodation consistently proximate to the user offers the highest likelihood of maximal benefit provided  the accommodation  can be easily identified and invoked. This also provides the best opportunity for easing the burden of invoking the same accommodation across a user&apos;s multiple devices.</dd>
 
 <dt>Benefit</dt>
 <dd>Users can select, optimally tune, and reuse the types of accommodations that they require. Any device on the edge may also have knowledge of other devices on the edge that may need the same adjustments, and edge technology could propagate these settings to those other devices. MacOS Bonjour is already doing this for Wi-Fi passwords (among other shareable services and devices) when an IOS device configured for the same network is proximate.</dd>
@@ -2747,7 +2807,7 @@ In some cases
 </section>
 
 <section id="advertctrl">
-	<h3>Manage Distractions From Advertising</h3>
+	<h3>Manage Accessibility of Advertising</h3>
 	<p>
 	Injected advertising has become a fact of life on the web. Content injections are sold in real-time to the highest bidder. This  has become the dominant revenue source for most online content. Nevertheless, users should not be forced to tolerate advertising content injections that impair page accessibility and functionality.</p>
 
@@ -2757,19 +2817,19 @@ In some cases
 <dl>
 <dt>Source</dt>
 <dd>
-	This capability is available to source.
+	Source systems typically have no visibility into advertisements injected dynamically by external mechanisms such as real-time bidding platforms or ad rotation networks. These ads are selected and delivered outside the source’s control, meaning the source cannot evaluate or guarantee their accessibility prior to display.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	Source hosted evaluations are necessarily limited to those injections of which source is aware. Edge processing, on the other hand, can evaluate all candidate content injections.
+	Source-hosted evaluations are necessarily limited to those advertisements of which source is aware. Post-source processing, on the other hand, can evaluate all content injections.
 </dd>
 <dt>Benefit</dt>
 <dd>
-Users deserve content which supports their accessibility requirements on all content they access. Only edge injection evaluation can consistently and ubiquitously serve this user requirement.
+Post-source injection evaluation can consistently and ubiquitously serve this user requirement.
 </dd>
 <dt>Automatability</dt>
 <dd>
-	In many cases&mdash;By definition, actually, inasmuch as questionable and failing injections are rejected until a conformant injection is obtained.
+	In many cases
 </dd>
 </dl>
  
@@ -2797,11 +2857,11 @@ Users deserve content which supports their accessibility requirements on all con
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-	None&mdash;Only an edge technology can hope to ameliorate the situation.
+	None&mdash;Only a post-source technology can hope to ameliorate the situation.
 </dd>
 <dt>Benefit</dt>
 <dd>
-	An edge technology can bring consistency and predictability to the user experience across whatever sites the user may access by locating similar controls similarly.
+	A post-source technology can bring consistency and predictability to the user experience across whatever sites the user may access by locating similar controls similarly.
 </dd>
 
 <dt>Automatability</dt>
@@ -2812,34 +2872,6 @@ In no significant way
 </dl>
 
 </section>
-
-<section id="a11ystmntdiscovery">
-<h4>Accessibility Statement Discoverability</h4>
-
-<p>Standardizing the location of widely deployed, common components of a web site is now being addressed in the <abbr title="Internet Engineering Task Force">IETF</abbr> and in the W3C. The IETF&apos;s <a href="https://www.rfc-editor.org/rfc/rfc8615">RFC 8615: Well-Known Uniform Resource Identifiers</a> and the
-W3C&apos;s Accessible Platform Architectures (APA) Working Group <a href="https://w3c.github.io/adapt/explainers/well-known-destinations.md">Well Known Destinations</a> approach will make the location of common web content functions such as login and contact data located predictably. A predictably  located Accessibility Statement will become another. While time will be needed for most sites to adopt the newly canonized web address locations, powerful benefits will help drive adoption and end users will benefit.
-</p>
-
-<dl>
-<dt>Source</dt>
-<dd>
-	It is currently a best practice to link to the Accessibility Statement (and related resources) from the site&apos;s footer. Nothing about the emerging standard need change this practice. Rather, it will provide an additional mechanism for direct access and for capture by web crawlers.
-</dd>
-<dt>Trade-Offs</dt>
-<dd>
-</dd>
-<dt>Benefit</dt>
-<dd>
-</dd>
-
-<dt>Automatability</dt>
-<dd>
-In many cases
-</dd>
-
-</dl>
-
-	</section>
 
 	<section id="surrogacy">
 		<h3>Surrogacy Support</h3>
@@ -2964,7 +2996,8 @@ In some cases
 	
 	<aside class="wcag2x" title="WCAG Reference" aria-label="WCAG Reference">
 	<div role="heading" class="wcag2x-title marker" aria-level="4">
-		</div>
+		<span><abbr title="Web Content Accessibility Guidelines">WCAG</abbr> Reference</span>
+	</div>
 		<div>
 <ul>
 	<li><a href="https://www.w3.org/TR/WCAG22/#sign-language-prerecorded">SC 1.2.6: Sign Language (Prerecorded)</a></li>
@@ -2979,7 +3012,7 @@ This capability is rarely provided.
 </dd>
 <dt>Trade-Offs</dt>
 <dd>
-There is no particular benefit to performing this mediation post-source. However, HTML was designed to support this capability in edge technologies.
+There is no particular benefit to performing this mediation post-source. However, HTML was designed to support this capability in post-source technologies.
 </dd>
 <dt>Benefit</dt>
 <dd>
@@ -3110,7 +3143,8 @@ more than just accessible - it is truly human-centered.</p>
 	</ul>
 
 		<aside class="Note" title="Note" aria-label="Note">
-									<div>
+			<span>Note</span>
+<div>
 <p>
 For a graphical representation of this model see our <a href="#diagram">Flow Diagram</a> above.
 </p>
@@ -3159,7 +3193,7 @@ s own hardware and software may render it in ways the Content Provider never ima
     <th>Description</th>
   </tr>
   <tr>
-    <td>User-Agent (Browser)</td>
+    <td>User Agent (Browser)</td>
     <td>Interprets and presents web content to the end user. Different browsers may render web content in different ways due to their different rendering engines.</td>
   </tr>
   <tr>
@@ -3189,20 +3223,28 @@ s own hardware and software may render it in ways the Content Provider never ima
 	<section id="3rd-party">
 		<h4>My Site, Their Service</h4>
 
-		  <p>Third-party services not hosted by the Content Provider, providing services in support of the Content Provider&apos;s value proposition. Typically invoked by JavaScript or the Content Delivery Network, they meet the planned needs of end users. </p> 
+		  <p>The typical website today is a platform for interaction—a space where an organization meets its customers. End users expect a broad range of services that are often outside the core competency of the site owner. Well-executed “build or buy” decisions can mean the difference between success or failure for a business. Just as most companies do not construct the buildings they occupy or the elevators within them, they do not program the intricate digital services required on their websites, such as GDPR cookie handling, chatbots, or shopping carts. Procurement can request accessibility conformance statements from service providers as a gating decision.
+		  </p> 
 			<dl>
 				<dt>Source</dt>
-				<dd>They typical website today is a platform for interaction, a space where an organization meets its customers. End users expect a broad range of services that are likely outside the core competency of the site owner. A company cannot become jack-of-all-trades and master of none. Well executed <q>build or buy</q> decisions can mean the difference between success of failure for a business. Just as most companies don&apos;t build the buildings they inhabit or the elevators that operate within, they do not program the intricate digital services required on their websites such as <abbr title="General Data Protection Regulation">GDPR</abbr> cookie handling, chatbots, or shopping carts. Procurement can request accessibility conformance statements from services as a gating decision point to include them on the page or not. </dd>
+				<dd>
+					Source content does not implement these services directly. Instead, it integrates third-party components, making accessibility dependent on vendor compliance and proper accessibility practices.
+				</dd>
 
 				<dt>Trade-Offs</dt>
-				<dd>Companies relinquish some control when they host functions via third parties. But they cannot relinquish  responsibility for the accessibility of the composite user experience. </dd>
+				<dd>
+					Most companies will not seek to become "<q>jack-of-all-trades and master of none.</q> 
+					Yet any third-party code injected via JavaScript remains out of reach of the content provider's source control.
+				</dd>
 
 				<dt>Benefit</dt>
-				<dd>Given the bewildering range of possible experiences with all these third-party plugins operating, the edge becomes the only place where a proper validation can occur.</dd>
+				<dd>
+					Because third-party plugins introduce significant variability in user experience, edge-based validation is essential to maintain consistent accessibility across all components.
+				</dd>
 
 <dt>Automatability</dt>
 <dd>
-Does Not Apply
+In some cases
 </dd>
 			</dl>
 	</section>
@@ -3228,7 +3270,8 @@ In some cases
 			</dl>
 
 		<aside class="Note" title="Note" aria-label="Note">
-									<div>
+			<span>Note</span>
+<div>
 <p>
 For a structured and systematic approach to managing both the human individuals serving in these myriad roles and the various technology components comprising an organization&apos;s web presence consult the W3C <a href="https://www.w3.org/TR/maturity-model/">Accessibility Maturity Model (AMM).</a>
 </p>
@@ -3255,7 +3298,7 @@ application for AI analysis). Source can only impute what the edge can confident
 
         <section class="appendix" id="Appendix-C">
             <h2>Acknowledgments</h2>
-			<p>The following individual participants of the <a href="https://www.w3.org/community/a11yedge/">Accessibility at the Edge (A11yEdge) Community Group</a> contributed to the development of this document:</p>
+			<p>The following individual participants of the <a href="https://www.w3.org/community/a11yedge/">Accessibility at the Edge Community Group</a> and the <a href="https://www.w3.org/community/informationarchitecture">Information Architecture Community Group</a> contributed to the development of this document:</p>
         		<ul>
 <li>Murathan Biliktu</li>
 <li>Bev Corwin</li>
@@ -3267,7 +3310,7 @@ application for AI analysis). Source can only impute what the edge can confident
 <li>Mike Paciello (AudioEye)</li>
 <li>Raghavendra Peri (Level Access)</li>
 <li>Janina Sajka (Invited Expert)</li>
-<li>Jason Taylor, (UsableNet)</li>
+<li>Jason Taylor (UsableNet)</li>
 <li>Shari Thurow</li>
 <li>Kate Whilhelm</li>
 <li>Lionel Wolberger (Level Access)</li>
